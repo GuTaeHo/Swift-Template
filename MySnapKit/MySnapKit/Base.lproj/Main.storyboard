@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MySnapKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="390" placeholderIntrinsicHeight="88" translatesAutoresizingMaskIntoConstraints="NO" id="mWQ-Mh-UTa">
+                                <rect key="frame" x="0.0" y="756" width="390" height="88"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="장바구니" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wru-Nk-bJN">
+                                        <rect key="frame" x="161" y="32" width="69.5" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="390" placeholderIntrinsicHeight="756" translatesAutoresizingMaskIntoConstraints="NO" id="i0M-6t-muF">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgl-oC-QCI">
+                                        <rect key="frame" x="75" y="314" width="240" height="128"/>
+                                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="bgl-oC-QCI" firstAttribute="leading" secondItem="i0M-6t-muF" secondAttribute="leading" constant="75" id="O8Z-78-azi"/>
+                                    <constraint firstItem="bgl-oC-QCI" firstAttribute="top" secondItem="i0M-6t-muF" secondAttribute="top" constant="314" id="dC0-vC-PMd"/>
+                                    <constraint firstAttribute="bottom" secondItem="bgl-oC-QCI" secondAttribute="bottom" constant="314" id="oT6-SP-bap"/>
+                                    <constraint firstAttribute="trailing" secondItem="bgl-oC-QCI" secondAttribute="trailing" constant="75" id="piA-Gh-3Jt"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="i0M-6t-muF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OXz-S9-6SU"/>
+                            <constraint firstItem="mWQ-Mh-UTa" firstAttribute="top" secondItem="i0M-6t-muF" secondAttribute="bottom" id="QEj-Pd-wG2"/>
+                            <constraint firstItem="mWQ-Mh-UTa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yju-f3-vKE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i0M-6t-muF" secondAttribute="trailing" id="bbD-U5-OUs"/>
+                            <constraint firstAttribute="bottom" secondItem="mWQ-Mh-UTa" secondAttribute="bottom" id="p0z-xl-co0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mWQ-Mh-UTa" secondAttribute="trailing" id="pz3-gZ-hQC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blueView" destination="i0M-6t-muF" id="xkp-D5-v9E"/>
+                        <outlet property="cartView" destination="mWQ-Mh-UTa" id="iHb-ao-WLa"/>
+                        <outlet property="greenView" destination="bgl-oC-QCI" id="xa0-2O-2GO"/>
+                        <outlet property="lbCart" destination="Wru-Nk-bJN" id="kVG-Nm-Gyy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

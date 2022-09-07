@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="MyUIComponents" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1NP-XM-EBT" customClass="CocobeanTextField" customModule="MyUIComponents" customModuleProvider="target">
+                                <rect key="frame" x="18" y="44" width="378" height="48"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="fb3-uJ-lp0"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="textPlaceholder" value="플레이스 홀더"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="textMaxCount">
+                                        <integer key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="countHidden" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="imageHidden" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonImage" value="imgSearch"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="g5b-9W-bnK">
+                                <rect key="frame" x="18" y="829" width="378" height="31"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="olj-we-ka0">
+                                        <rect key="frame" x="0.0" y="0.0" width="378" height="31"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbi-Ks-TME">
+                                                <rect key="frame" x="0.0" y="0.0" width="378" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Move PageControl"/>
+                                                <connections>
+                                                    <segue destination="SBO-Ap-PpM" kind="show" id="g4b-84-JVc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="7fn-GY-ibE">
+                                <rect key="frame" x="18" y="745" width="378" height="48"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeM-TG-suV">
+                                        <rect key="frame" x="0.0" y="0.0" width="53" height="48"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Haptic 1"/>
+                                        <connections>
+                                            <action selector="haptic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bda-K2-tU1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBy-QV-D6X">
+                                        <rect key="frame" x="65" y="0.0" width="53" height="48"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Haptic 2"/>
+                                        <connections>
+                                            <action selector="haptic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JdO-Jz-E9w"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUu-9g-VLt">
+                                        <rect key="frame" x="130" y="0.0" width="53" height="48"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Haptic 3"/>
+                                        <connections>
+                                            <action selector="haptic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oi0-e0-QBI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCr-OM-Ldf">
+                                        <rect key="frame" x="195" y="0.0" width="53" height="48"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Haptic 4"/>
+                                        <connections>
+                                            <action selector="haptic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FEP-MA-RE7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gu1-2a-3ef">
+                                        <rect key="frame" x="260" y="0.0" width="53" height="48"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Haptic 5"/>
+                                        <connections>
+                                            <action selector="haptic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fyh-Ry-MO4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYp-pk-Adw">
+                                        <rect key="frame" x="325" y="0.0" width="53" height="48"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Haptic 6"/>
+                                        <connections>
+                                            <action selector="haptic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H8d-Y5-KNn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1NP-XM-EBT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="EsR-Jk-M2o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="g5b-9W-bnK" secondAttribute="trailing" constant="18" id="KAx-Ag-umU"/>
+                            <constraint firstItem="7fn-GY-ibE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="SQB-bT-aaQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1NP-XM-EBT" secondAttribute="trailing" constant="18" id="ZSz-VS-SdX"/>
+                            <constraint firstAttribute="bottom" secondItem="g5b-9W-bnK" secondAttribute="bottom" constant="36" id="gjC-PH-vWq"/>
+                            <constraint firstItem="g5b-9W-bnK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="iHe-MD-ZBv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7fn-GY-ibE" secondAttribute="trailing" constant="18" id="wxs-cW-njp"/>
+                            <constraint firstItem="1NP-XM-EBT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="yRa-vl-iss"/>
+                            <constraint firstItem="g5b-9W-bnK" firstAttribute="top" secondItem="7fn-GY-ibE" secondAttribute="bottom" constant="36" id="zjE-D8-yjd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btMovePageControl" destination="pbi-Ks-TME" id="EXu-c2-Uq2"/>
+                        <outlet property="cocobeanView" destination="1NP-XM-EBT" id="mC5-Hw-wUb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="98"/>
+        </scene>
+        <!--PageControl-->
+        <scene sceneID="GtV-sR-T2b">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PageControl" id="SBO-Ap-PpM" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="p1S-h9-cLd"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wNP-Su-bx5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="36" y="530"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

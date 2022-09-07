@@ -1,0 +1,20 @@
+PODS:
+  - DeviceKit (4.6.0)
+  - SnapKit (5.0.1)
+
+DEPENDENCIES:
+  - DeviceKit (~> 4.0)
+  - SnapKit (~> 5.0.0)
+
+SPEC REPOS:
+  trunk:
+    - DeviceKit
+    - SnapKit
+
+SPEC CHECKSUMS:
+  DeviceKit: 834dd8aa1be53cd85364d8f49aa5d98bfac397c4
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+
+PODFILE CHECKSUM: e315dc618d1a13003dd86deb7adf77ff5249387a
+
+COCOAPODS: 1.11.3
