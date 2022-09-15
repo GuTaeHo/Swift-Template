@@ -108,4 +108,7 @@ iOSInjectionProject/
 # Do not commit DS_Store files to git
 .DS_Store
 
+# Do not commit .xcuserstate
+*.xcuserstate
+
 # End of https://www.toptal.com/developers/gitignore/api/swift,xcode,cocoapods
