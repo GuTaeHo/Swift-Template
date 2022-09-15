@@ -111,7 +111,9 @@ iOSInjectionProject/
 # Do not commit .xcuserstate
 *.xcuserstate
 
-# Do not commit specific Info.plist files
+# Do not commit API keys Info.plist files
+GoogleService-Info.plist
 ApiKeys.plist
+
 
 # End of https://www.toptal.com/developers/gitignore/api/swift,xcode,cocoapods

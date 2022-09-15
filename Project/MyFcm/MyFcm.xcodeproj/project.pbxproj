@@ -15,6 +15,7 @@
 		05AF465228D30B1300BDF340 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05AF465028D30B1300BDF340 /* LaunchScreen.storyboard */; };
 		05AF465A28D30B2000BDF340 /* InfoPlistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AF465928D30B2000BDF340 /* InfoPlistManager.swift */; };
 		05AF465C28D30B3100BDF340 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05AF465B28D30B3100BDF340 /* ApiKeys.plist */; };
+		05AF465E28D30C7D00BDF340 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05AF465D28D30C7D00BDF340 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		05AF465328D30B1300BDF340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05AF465928D30B2000BDF340 /* InfoPlistManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPlistManager.swift; sourceTree = "<group>"; };
 		05AF465B28D30B3100BDF340 /* ApiKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
+		05AF465D28D30C7D00BDF340 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				05AF465928D30B2000BDF340 /* InfoPlistManager.swift */,
 				05AF465328D30B1300BDF340 /* Info.plist */,
 				05AF465B28D30B3100BDF340 /* ApiKeys.plist */,
+				05AF465D28D30C7D00BDF340 /* GoogleService-Info.plist */,
 			);
 			path = MyFcm;
 			sourceTree = "<group>";
@@ -133,6 +136,7 @@
 			files = (
 				05AF465228D30B1300BDF340 /* LaunchScreen.storyboard in Resources */,
 				05AF465C28D30B3100BDF340 /* ApiKeys.plist in Resources */,
+				05AF465E28D30C7D00BDF340 /* GoogleService-Info.plist in Resources */,
 				05AF464F28D30B1300BDF340 /* Assets.xcassets in Resources */,
 				05AF464D28D30B1200BDF340 /* Main.storyboard in Resources */,
 			);
