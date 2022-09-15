@@ -111,4 +111,7 @@ iOSInjectionProject/
 # Do not commit .xcuserstate
 *.xcuserstate
 
+# Do not commit specific Info.plist files
+MyFcm/ApiKeys.plist
+
 # End of https://www.toptal.com/developers/gitignore/api/swift,xcode,cocoapods
