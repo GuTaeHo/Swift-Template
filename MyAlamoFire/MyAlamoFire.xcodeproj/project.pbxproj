@@ -86,8 +86,8 @@
 				0583C88628617F4D0083277D /* AppDelegate.swift */,
 				0583C88828617F4D0083277D /* SceneDelegate.swift */,
 				0583C88A28617F4D0083277D /* ViewController.swift */,
-				0583C88C28617F4D0083277D /* Main.storyboard */,
 				0583C88F28617F4E0083277D /* Assets.xcassets */,
+				0583C88C28617F4D0083277D /* Main.storyboard */,
 				0583C89128617F4E0083277D /* LaunchScreen.storyboard */,
 				0583C89428617F4E0083277D /* Info.plist */,
 			);

@@ -14,6 +14,12 @@ import Alamofire
 class DataParser {
     public static func parseWithDecodable<T: Codable>(request: DataRequest, type: T, completion: @escaping (T?, Any?) -> Void) {
         request.responseDecodable(of: T.self) { response in
+            /// DataResponse의 response 필드의 statusCode에는 URL 요청에 대한 서버의 HTTP Status Code 가 담겨 있음
+            /// DataResponse의 result 필드와 조합하여 Status Code에 따라 분기처리가 가능함
+            /// ex) 응답을 받았지만 URL에 해당하는 페이지가 없는 경우 [.success, 404]
+            print("@@@ \(response.response?.statusCode ?? -999)")
+            
+            
             switch response.result {
             /// 서버와 통신이 성공했다면 value 인자를 통해 값이 넘어옴
             case .success(let value):
