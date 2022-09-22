@@ -16,6 +16,7 @@
 		05AF465A28D30B2000BDF340 /* InfoPlistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AF465928D30B2000BDF340 /* InfoPlistManager.swift */; };
 		05AF465C28D30B3100BDF340 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05AF465B28D30B3100BDF340 /* ApiKeys.plist */; };
 		05AF465E28D30C7D00BDF340 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05AF465D28D30C7D00BDF340 /* GoogleService-Info.plist */; };
+		FFDCDA71E667A33B0EFC1EC1 /* Pods_MyFcm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52EEA847FDCCE6A368D74611 /* Pods_MyFcm.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,9 @@
 		05AF465928D30B2000BDF340 /* InfoPlistManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPlistManager.swift; sourceTree = "<group>"; };
 		05AF465B28D30B3100BDF340 /* ApiKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
 		05AF465D28D30C7D00BDF340 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		52EEA847FDCCE6A368D74611 /* Pods_MyFcm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFcm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7343208FEA0353340541ECB2 /* Pods-MyFcm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFcm.release.xcconfig"; path = "Target Support Files/Pods-MyFcm/Pods-MyFcm.release.xcconfig"; sourceTree = "<group>"; };
+		BF2AB011C2B83EEF5DEC83D1 /* Pods-MyFcm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFcm.debug.xcconfig"; path = "Target Support Files/Pods-MyFcm/Pods-MyFcm.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFDCDA71E667A33B0EFC1EC1 /* Pods_MyFcm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +53,8 @@
 			children = (
 				05AF464428D30B1200BDF340 /* MyFcm */,
 				05AF464328D30B1200BDF340 /* Products */,
+				CAC25293650C90A4F2419A29 /* Pods */,
+				32050366FCF11468C36CB392 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +83,23 @@
 			path = MyFcm;
 			sourceTree = "<group>";
 		};
+		32050366FCF11468C36CB392 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52EEA847FDCCE6A368D74611 /* Pods_MyFcm.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CAC25293650C90A4F2419A29 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BF2AB011C2B83EEF5DEC83D1 /* Pods-MyFcm.debug.xcconfig */,
+				7343208FEA0353340541ECB2 /* Pods-MyFcm.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05AF465628D30B1300BDF340 /* Build configuration list for PBXNativeTarget "MyFcm" */;
 			buildPhases = (
+				ABB69F89CB5827C07E79305B /* [CP] Check Pods Manifest.lock */,
 				05AF463E28D30B1200BDF340 /* Sources */,
 				05AF463F28D30B1200BDF340 /* Frameworks */,
 				05AF464028D30B1200BDF340 /* Resources */,
+				CAE6F50CA7E14FFBA47021C3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -143,6 +169,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ABB69F89CB5827C07E79305B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyFcm-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CAE6F50CA7E14FFBA47021C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyFcm/Pods-MyFcm-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyFcm/Pods-MyFcm-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyFcm/Pods-MyFcm-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		05AF463E28D30B1200BDF340 /* Sources */ = {
@@ -228,7 +296,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -282,7 +350,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -294,6 +362,7 @@
 		};
 		05AF465728D30B1300BDF340 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF2AB011C2B83EEF5DEC83D1 /* Pods-MyFcm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -316,12 +385,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		05AF465828D30B1300BDF340 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7343208FEA0353340541ECB2 /* Pods-MyFcm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -344,7 +414,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
