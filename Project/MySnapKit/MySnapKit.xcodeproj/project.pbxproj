@@ -13,6 +13,7 @@
 		05450287287C18B7002FEBC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05450285287C18B7002FEBC8 /* Main.storyboard */; };
 		05450289287C18B8002FEBC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05450288287C18B8002FEBC8 /* Assets.xcassets */; };
 		0545028C287C18B8002FEBC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0545028A287C18B8002FEBC8 /* LaunchScreen.storyboard */; };
+		05BD25A728DD58340000646A /* StackTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BD25A628DD58340000646A /* StackTestViewController.swift */; };
 		05F73C8F287D04B1007E2227 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F73C8E287D04B1007E2227 /* DeviceManager.swift */; };
 		9BEB63B224F40BAC117EAC87 /* Pods_MySnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 086BD7F7E024D2DA27400B1D /* Pods_MySnapKit.framework */; };
 /* End PBXBuildFile section */
@@ -26,6 +27,7 @@
 		05450288287C18B8002FEBC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0545028B287C18B8002FEBC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0545028D287C18B8002FEBC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05BD25A628DD58340000646A /* StackTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackTestViewController.swift; sourceTree = "<group>"; };
 		05F73C8E287D04B1007E2227 /* DeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
 		086BD7F7E024D2DA27400B1D /* Pods_MySnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1882797E38B2D43D4408BFBD /* Pods-MySnapKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySnapKit.release.xcconfig"; path = "Target Support Files/Pods-MySnapKit/Pods-MySnapKit.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				0545028A287C18B8002FEBC8 /* LaunchScreen.storyboard */,
 				0545028D287C18B8002FEBC8 /* Info.plist */,
 				05F73C8E287D04B1007E2227 /* DeviceManager.swift */,
+				05BD25A628DD58340000646A /* StackTestViewController.swift */,
 			);
 			path = MySnapKit;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05BD25A728DD58340000646A /* StackTestViewController.swift in Sources */,
 				05450284287C18B7002FEBC8 /* ViewController.swift in Sources */,
 				05F73C8F287D04B1007E2227 /* DeviceManager.swift in Sources */,
 				05450280287C18B7002FEBC8 /* AppDelegate.swift in Sources */,
