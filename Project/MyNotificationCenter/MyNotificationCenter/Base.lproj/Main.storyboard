@@ -1,24 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Notification Send View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="NotificationSendViewController" customModule="MyNotificationCenter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W1l-H3-ivr">
+                                <rect key="frame" x="110" y="384.66666666666669" width="170" height="75"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="전송하고 싶은 값 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j18-DX-Crx">
+                                        <rect key="frame" x="0.0" y="0.0" width="170" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFK-9q-8et">
+                                        <rect key="frame" x="0.0" y="40" width="170" height="35"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="3초 카운트 후 값 전송"/>
+                                        <connections>
+                                            <action selector="onClickSendButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ctJ-lP-U65"/>
+                                            <segue destination="ZM9-L1-YQu" kind="show" id="8R4-oo-qO8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="j18-DX-Crx" firstAttribute="leading" secondItem="W1l-H3-ivr" secondAttribute="leading" id="0yO-QU-rl5"/>
+                                    <constraint firstAttribute="bottom" secondItem="yFK-9q-8et" secondAttribute="bottom" id="3kJ-uv-2Qs"/>
+                                    <constraint firstAttribute="trailing" secondItem="yFK-9q-8et" secondAttribute="trailing" id="B39-DC-iyD"/>
+                                    <constraint firstItem="j18-DX-Crx" firstAttribute="top" secondItem="W1l-H3-ivr" secondAttribute="top" id="DJD-tN-czg"/>
+                                    <constraint firstItem="yFK-9q-8et" firstAttribute="leading" secondItem="W1l-H3-ivr" secondAttribute="leading" id="dX2-Jv-dTS"/>
+                                    <constraint firstAttribute="trailing" secondItem="j18-DX-Crx" secondAttribute="trailing" id="raC-XB-Mz6"/>
+                                    <constraint firstItem="yFK-9q-8et" firstAttribute="top" secondItem="j18-DX-Crx" secondAttribute="bottom" constant="6" id="z7Y-4p-Hrb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="W1l-H3-ivr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GNq-oo-eK9"/>
+                            <constraint firstItem="W1l-H3-ivr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u7q-FA-LPu"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="j18-DX-Crx" id="kaG-yE-Bbm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="4"/>
+        </scene>
+        <!--Notification Receive View Controller-->
+        <scene sceneID="N5E-P1-OBg">
+            <objects>
+                <viewController id="ZM9-L1-YQu" customClass="NotificationReceiveViewController" customModule="MyNotificationCenter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6BL-LJ-1qP">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3초 후 수신됩니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deH-3i-o8C">
+                                <rect key="frame" x="134" y="383" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="e9g-Qw-CEP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="deH-3i-o8C" firstAttribute="centerY" secondItem="6BL-LJ-1qP" secondAttribute="centerY" id="E2Z-6v-icc"/>
+                            <constraint firstItem="deH-3i-o8C" firstAttribute="centerX" secondItem="6BL-LJ-1qP" secondAttribute="centerX" id="ZsI-02-toi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Eyw-63-o4F"/>
+                    <connections>
+                        <outlet property="lbReceive" destination="deH-3i-o8C" id="Ds8-0r-1h5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aow-wu-EVt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="862" y="4"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

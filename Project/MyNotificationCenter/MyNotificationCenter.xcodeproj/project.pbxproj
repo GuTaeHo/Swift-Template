@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		05564F5228E551400062667E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05564F5128E551400062667E /* AppDelegate.swift */; };
 		05564F5428E551400062667E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05564F5328E551400062667E /* SceneDelegate.swift */; };
-		05564F5628E551400062667E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05564F5528E551400062667E /* ViewController.swift */; };
+		05564F5628E551400062667E /* NotificationSendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05564F5528E551400062667E /* NotificationSendViewController.swift */; };
 		05564F5928E551400062667E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05564F5728E551400062667E /* Main.storyboard */; };
 		05564F5B28E551410062667E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05564F5A28E551410062667E /* Assets.xcassets */; };
 		05564F5E28E551410062667E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05564F5C28E551410062667E /* LaunchScreen.storyboard */; };
+		05564F6628E5522F0062667E /* NotificationReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05564F6528E5522F0062667E /* NotificationReceiveViewController.swift */; };
+		05564F6828E55ACD0062667E /* NotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05564F6728E55ACD0062667E /* NotificationNameExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		05564F4E28E551400062667E /* MyNotificationCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNotificationCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05564F5128E551400062667E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05564F5328E551400062667E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		05564F5528E551400062667E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		05564F5528E551400062667E /* NotificationSendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSendViewController.swift; sourceTree = "<group>"; };
 		05564F5828E551400062667E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		05564F5A28E551410062667E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05564F5D28E551410062667E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05564F5F28E551410062667E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05564F6528E5522F0062667E /* NotificationReceiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationReceiveViewController.swift; sourceTree = "<group>"; };
+		05564F6728E55ACD0062667E /* NotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNameExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +62,13 @@
 			children = (
 				05564F5128E551400062667E /* AppDelegate.swift */,
 				05564F5328E551400062667E /* SceneDelegate.swift */,
-				05564F5528E551400062667E /* ViewController.swift */,
+				05564F5528E551400062667E /* NotificationSendViewController.swift */,
+				05564F6528E5522F0062667E /* NotificationReceiveViewController.swift */,
 				05564F5728E551400062667E /* Main.storyboard */,
 				05564F5A28E551410062667E /* Assets.xcassets */,
 				05564F5C28E551410062667E /* LaunchScreen.storyboard */,
 				05564F5F28E551410062667E /* Info.plist */,
+				05564F6728E55ACD0062667E /* NotificationNameExtension.swift */,
 			);
 			path = MyNotificationCenter;
 			sourceTree = "<group>";
@@ -138,9 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05564F5628E551400062667E /* ViewController.swift in Sources */,
+				05564F5628E551400062667E /* NotificationSendViewController.swift in Sources */,
 				05564F5228E551400062667E /* AppDelegate.swift in Sources */,
 				05564F5428E551400062667E /* SceneDelegate.swift in Sources */,
+				05564F6628E5522F0062667E /* NotificationReceiveViewController.swift in Sources */,
+				05564F6828E55ACD0062667E /* NotificationNameExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +303,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,6 +332,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
