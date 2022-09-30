@@ -14,8 +14,6 @@
 
 
 ### Notification -> 알림을 등록한 옵저버에게 전달되는 구조체, 발송 시 데이터를 가지고 있음
-#### 구성은 다음과 같음
-
 ```swift
 // 전달하고자 하는 notification의 이름 (이걸로 알림을 식별함)
 public var name: Notification.Name
@@ -25,6 +23,7 @@ public var object: Any?
 public var userInfo: [AnyHashable : Any]?
 ```
 
+### 식별자 관리 꿀팁
 ```swift
 /* 관측할 Notification의 이름을 extension에 정의하면 깔끔하게 노티 이름을 관리 및 사용할 수 있음*/
 extension Notification.Name {
@@ -32,6 +31,7 @@ extension Notification.Name {
     static let NOTIFICATION_NAME = Notification.Name("notificationName")
 }
 ```
+
 
 ### NotificationCenter.default.post() -> 메소드를 통해 메시지를 발송할 수 있음
 ```swift
@@ -49,6 +49,7 @@ extension Notification.Name {
 }
 ```
 
+
 ### NotificationCenter.default.addObserver() -> 옵저버를 등록함
 ```swift
 // 수신자 등록
@@ -60,6 +61,7 @@ NotificationCenter.default.addObserver(self, selector: #selector(didReceiveText(
     }
 }
 ```
+
 
 ### NotificationCenter.default.removeObserver() -> 옵저버를 해제함
 ```
