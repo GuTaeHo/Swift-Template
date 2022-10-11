@@ -7,9 +7,9 @@
 
 import UIKit
 
-// @IBDesignable 이 적용되면 InterfaceBuilder가 즉시 커스텀 뷰를 업데이트하며,
-// storyboard 에서 실시간으로 렌더링되는것을 볼 수 있음
-// 소스코드로 구성된 CustomView 일 경우에도 어노테이션을 적용하면 storyboard에서 볼 수 있음
+// @IBDesignable 이 적용되면 Interface Builder 가 즉시 커스텀 뷰를 업데이트하며,
+// storyboard 에서 실시간으로 렌더링 되는것을 볼 수 있음
+// 소스 코드로 구성된 CustomView 일 경우에도 어노테이션을 적용하면 storyboard에서 볼 수 있음
 @IBDesignable
 class CocobeanView: UIView {
     

@@ -16,11 +16,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         speechBubble = SpeechBubble(
-            message: "라벨의 텍스트가 길어지면 길어질수록, 말풍선의 크기가 커집니다.",
-            color: UIColor.blue,
+            message: "Hello, World!",
+            color: UIColor(red: 0.1137, green: 0.1216, blue: 0.2, alpha: 1),
             parentView: self.view,
-            width: self.view.frame.width / 2)
+            direction: .RIGHT,
+            width: self.view.frame.width / 3)
     }
 }
 

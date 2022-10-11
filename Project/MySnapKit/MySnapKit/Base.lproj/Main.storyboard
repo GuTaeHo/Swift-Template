@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MySnapKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" placeholderIntrinsicWidth="390" placeholderIntrinsicHeight="88" translatesAutoresizingMaskIntoConstraints="NO" id="mWQ-Mh-UTa">
-                                <rect key="frame" x="0.0" y="756" width="390" height="88"/>
+                                <rect key="frame" x="0.0" y="808" width="414" height="88"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="장바구니" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wru-Nk-bJN">
                                         <rect key="frame" x="161" y="32" width="69.5" height="24"/>
@@ -31,25 +31,35 @@
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                             </view>
                             <view contentMode="scaleToFill" placeholderIntrinsicWidth="390" placeholderIntrinsicHeight="756" translatesAutoresizingMaskIntoConstraints="NO" id="i0M-6t-muF">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
+                                <rect key="frame" x="0.0" y="52" width="414" height="756"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgl-oC-QCI">
-                                        <rect key="frame" x="75" y="314" width="240" height="128"/>
+                                        <rect key="frame" x="75" y="314" width="264" height="128"/>
                                         <color key="backgroundColor" systemColor="systemMintColor"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZi-Wu-aeQ">
-                                        <rect key="frame" x="38.666666666666657" y="94" width="313" height="35"/>
+                                        <rect key="frame" x="50.5" y="94" width="313" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Change UIView Height in UIStackView"/>
                                         <connections>
                                             <segue destination="wjy-Z4-Zqe" kind="show" id="Eyu-GX-g0J"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drr-Pp-w16">
+                                        <rect key="frame" x="74" y="141" width="266" height="35"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Make UIView from Source Code"/>
+                                        <connections>
+                                            <segue destination="rWh-wm-9Nn" kind="show" id="kFE-Wr-4gV"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="Drr-Pp-w16" firstAttribute="centerX" secondItem="i0M-6t-muF" secondAttribute="centerX" id="CYP-1R-6xv"/>
                                     <constraint firstItem="bgl-oC-QCI" firstAttribute="leading" secondItem="i0M-6t-muF" secondAttribute="leading" constant="75" id="O8Z-78-azi"/>
                                     <constraint firstItem="rZi-Wu-aeQ" firstAttribute="centerX" secondItem="i0M-6t-muF" secondAttribute="centerX" id="P93-oG-glL"/>
+                                    <constraint firstItem="Drr-Pp-w16" firstAttribute="top" secondItem="rZi-Wu-aeQ" secondAttribute="bottom" constant="12" id="cXE-vR-dYb"/>
                                     <constraint firstItem="bgl-oC-QCI" firstAttribute="top" secondItem="i0M-6t-muF" secondAttribute="top" constant="314" id="dC0-vC-PMd"/>
                                     <constraint firstAttribute="bottom" secondItem="bgl-oC-QCI" secondAttribute="bottom" constant="314" id="oT6-SP-bap"/>
                                     <constraint firstAttribute="trailing" secondItem="bgl-oC-QCI" secondAttribute="trailing" constant="75" id="piA-Gh-3Jt"/>
@@ -79,36 +89,67 @@
             </objects>
             <point key="canvasLocation" x="35" y="98"/>
         </scene>
+        <!--Make View Test View Controller-->
+        <scene sceneID="zC0-1i-YkN">
+            <objects>
+                <viewController storyboardIdentifier="MakeViewTestViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rWh-wm-9Nn" customClass="MakeViewTestViewController" customModule="MySnapKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TdA-Bb-RSS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Xv-Br-M9M">
+                                <rect key="frame" x="18" y="394.5" width="378" height="107.5"/>
+                                <string key="text">소스코드로 계층적인 뷰 생성
+(UIView &gt; UIView &gt; UIStackView &gt; UILabel)</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oF5-Gk-9dp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0Xv-Br-M9M" firstAttribute="centerY" secondItem="TdA-Bb-RSS" secondAttribute="centerY" id="46w-BM-aHg"/>
+                            <constraint firstAttribute="trailing" secondItem="0Xv-Br-M9M" secondAttribute="trailing" constant="18" id="NKT-zh-9TA"/>
+                            <constraint firstItem="0Xv-Br-M9M" firstAttribute="leading" secondItem="TdA-Bb-RSS" secondAttribute="leading" constant="18" id="W0o-Wc-6Ij"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="btm-fl-0eA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tgO-lX-tob" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="793" y="834"/>
+        </scene>
         <!--Stack Test View Controller-->
         <scene sceneID="7YZ-yj-HWg">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="wjy-Z4-Zqe" customClass="StackTestViewController" customModule="MySnapKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EfH-XX-Ldw">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="AyM-gs-kwy">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dyX-lh-ZEZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="1120"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1120"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zMU-TE-T7r" userLabel="First View">
-                                                <rect key="frame" x="0.0" y="0.0" width="390" height="160"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
                                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="160" id="poN-5i-tkE"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OiU-Ln-OaK">
-                                                <rect key="frame" x="0.0" y="180" width="390" height="120"/>
+                                                <rect key="frame" x="0.0" y="180" width="414" height="120"/>
                                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="120" id="Bj6-yK-YWW"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vhN-0j-YgY">
-                                                <rect key="frame" x="0.0" y="320" width="390" height="800"/>
+                                                <rect key="frame" x="0.0" y="320" width="414" height="800"/>
                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="800" id="roc-nu-eVZ"/>
@@ -147,7 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nbh-EZ-kEm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="798" y="104"/>
+            <point key="canvasLocation" x="35" y="834"/>
         </scene>
     </scenes>
     <resources>

@@ -16,7 +16,7 @@ class StackTestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        secondView.
+        
         thirdView.snp.updateConstraints { make in
             make.height.equalTo(secondView)
         }
