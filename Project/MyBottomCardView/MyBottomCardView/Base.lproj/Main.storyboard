@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyBottomCardView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="SOM-ZU-5e1">
+                                <rect key="frame" x="18" y="65" width="354" height="708"/>
+                                <string key="text">오아이스도 고행을 튼튼하며, 새 운다. 같지 찾아 구하지 우리는 원대하고, 있을 것이다. 목숨이 힘차게 기쁘며, 이상, 방황하여도, 천고에 미인을 것이다. 너의 생생하며, 전인 영원히 청춘 무엇이 맺어, 이것이다. 위하여, 곳으로 가치를 방황하였으며, 몸이 위하여서, 스며들어 있음으로써 봄바람이다. 뜨거운지라, 우리는 심장은 작고 얼마나 소담스러운 커다란 자신과 것이다. 끝에 같은 용기가 그와 사는가 과실이 그리하였는가? 맺어, 때에, 우리의 아름다우냐? 가슴이 새 그들은 있음으로써 보는 운다.
+
+석가는 청춘의 청춘 봄날의 끓는다. 들어 눈에 별과 가치를 얼음이 투명하되 청춘에서만 있는가? 하는 그들은 청춘을 것이다. 있는 인간의 두손을 넣는 때까지 바로 이상이 이것이다. 우리 이상 청춘의 곳으로 것이다. 할지라도 위하여서, 그와 피에 쓸쓸하랴? 위하여 피가 그들은 아름답고 있음으로써 창공에 이상은 심장의 칼이다. 인생의 목숨을 이상의 수 바이며, 이상 황금시대다. 그들의 목숨을 보내는 힘있다.
+
+방지하는 대중을 있는 사라지지 영락과 끓는다. 바이며, 그들의 너의 피어나기 듣는다. 산야에 길을 돋고, 철환하였는가? 고행을 그들의 위하여 청춘에서만 장식하는 뭇 꽃 천자만홍이 천하를 부패뿐이다. 실현에 착목한는 그들을 뛰노는 청춘 피고, 현저하게 할지라도 것이다. 앞이 있을 목숨이 일월과 없으면 사막이다. 심장의 가치를 그와 있으랴? 피부가 대고, 위하여 품고 실현에 것은 위하여서. 전인 풀밭에 이상 봄바람을 끝까지 거친 보이는 아니다. 소담스러운 싹이 피는 불어 사랑의 것이다.
+
+석가는 청춘의 청춘 봄날의 끓는다. 들어 눈에 별과 가치를 얼음이 투명하되 청춘에서만 있는가? 하는 그들은 청춘을 것이다. 있는 인간의 두손을 넣는 때까지 바로 이상이 이것이다. 우리 이상 청춘의 곳으로 것이다. 할지라도 위하여서, 그와 피에 쓸쓸하랴? 위하여 피가 그들은 아름답고 있음으로써 창공에 이상은 심장의 칼이다. 인생의 목숨을 이상의 수 바이며, 이상 황금시대다. 그들의 목숨을 보내는 힘있다.
+
+오아이스도 고행을 튼튼하며, 새 운다. 같지 찾아 구하지 우리는 원대하고, 있을 것이다. 목숨이 힘차게 기쁘며, 이상, 방황하여도, 천고에 미인을 것이다. 너의 생생하며, 전인 영원히 청춘 무엇이 맺어, 이것이다. 위하여, 곳으로 가치를 방황하였으며, 몸이 위하여서, 스며들어 있음으로써 봄바람이다. 뜨거운지라, 우리는 심장은 작고 얼마나 소담스러운 커다란 자신과 것이다. 끝에 같은 용기가 그와 사는가 과실이 그리하였는가? 맺어, 때에, 우리의 아름다우냐? 가슴이 새 그들은 있음으로써 보는 운다.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yja-kJ-tQX">
+                                <rect key="frame" x="18" y="791" width="354" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="showCardViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dns-WX-BuO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Yja-kJ-tQX" firstAttribute="top" secondItem="SOM-ZU-5e1" secondAttribute="bottom" constant="18" id="3da-uF-9cf"/>
+                            <constraint firstItem="SOM-ZU-5e1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="18" id="8Ke-M7-eAs"/>
+                            <constraint firstItem="Yja-kJ-tQX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="A1i-J9-ihc"/>
+                            <constraint firstItem="SOM-ZU-5e1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="Lm9-zj-S3N"/>
+                            <constraint firstAttribute="trailing" secondItem="SOM-ZU-5e1" secondAttribute="trailing" constant="18" id="eKz-gT-Xav"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yja-kJ-tQX" secondAttribute="trailing" constant="18" id="ew2-If-iF1"/>
+                            <constraint firstAttribute="bottom" secondItem="Yja-kJ-tQX" secondAttribute="bottom" constant="18" id="fQJ-vN-VV5"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="4"/>
+        </scene>
+        <!--Bottom Card View Controller-->
+        <scene sceneID="yhq-nG-Lw9">
+            <objects>
+                <viewController storyboardIdentifier="BottomCardViewController" modalPresentationStyle="overFullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OYL-61-gJx" customClass="BottomCardViewController" customModule="MyBottomCardView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1qm-kY-Glu">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gdm-zr-otn">
+                                <rect key="frame" x="0.0" y="588" width="390" height="256"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XnU-NH-x3k">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="256"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n5H-AM-BUR">
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="30"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MWc-GP-lHN">
+                                                        <rect key="frame" x="175" y="12.666666666666629" width="40" height="5"/>
+                                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="5" id="7WE-y2-rph"/>
+                                                            <constraint firstAttribute="width" constant="40" id="RIB-3j-dLI"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="MWc-GP-lHN" firstAttribute="centerY" secondItem="n5H-AM-BUR" secondAttribute="centerY" id="WUf-2j-AZD"/>
+                                                    <constraint firstItem="MWc-GP-lHN" firstAttribute="centerX" secondItem="n5H-AM-BUR" secondAttribute="centerX" id="cxd-J4-qal"/>
+                                                    <constraint firstAttribute="height" constant="30" id="v8V-SQ-KOc"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="250" constant="256" id="ah0-hb-qnC"/>
+                                            <constraint firstAttribute="trailing" secondItem="n5H-AM-BUR" secondAttribute="trailing" id="bze-pP-T2w"/>
+                                            <constraint firstItem="n5H-AM-BUR" firstAttribute="top" secondItem="XnU-NH-x3k" secondAttribute="top" id="dMB-OW-BYg"/>
+                                            <constraint firstItem="n5H-AM-BUR" firstAttribute="leading" secondItem="XnU-NH-x3k" secondAttribute="leading" id="iYA-dC-lgz"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LdG-C6-UlR"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="gdm-zr-otn" secondAttribute="bottom" id="KpT-YU-NYh"/>
+                            <constraint firstItem="gdm-zr-otn" firstAttribute="leading" secondItem="LdG-C6-UlR" secondAttribute="leading" id="OYT-cz-Gge"/>
+                            <constraint firstAttribute="trailing" secondItem="gdm-zr-otn" secondAttribute="trailing" id="rdK-dL-xTd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerStackView" destination="gdm-zr-otn" id="dF9-5A-KDD"/>
+                        <outlet property="containerView" destination="XnU-NH-x3k" id="eJp-up-KOu"/>
+                        <outlet property="handleKnobView" destination="MWc-GP-lHN" id="fNb-pY-6Ae"/>
+                        <outlet property="handleView" destination="n5H-AM-BUR" id="y0B-9V-goI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UAA-Rd-qoU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1002" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
