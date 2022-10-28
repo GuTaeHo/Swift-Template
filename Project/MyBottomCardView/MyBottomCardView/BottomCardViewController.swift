@@ -19,11 +19,11 @@ class BottomCardViewController: UIViewController {
     @IBOutlet var buttonContainerView: UIView!
     /// 실질적인 내용이 들어가는 View
     @IBOutlet var contentView: UIView!
-    @IBOutlet var ivThumbnail: UIImageView!
     /// 상단 클릭 Button View
     @IBOutlet var btCancel: UIButton!
     @IBOutlet var ButtonDummyView: UIView!
     @IBOutlet var btSubmit: UIButton!
+    public var customContentView: UIView?
     /// 핸들 표시 여부
     public var isHandleVisible: Bool?
     /// containerView 모서리 라운딩 값
@@ -42,11 +42,30 @@ class BottomCardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        requireData()
+    }
+    
+    private func requireData() {
+        guard let customContentView = customContentView else {
+            print("customContentView 를 읽어올 수 없습니다")
+            DispatchQueue.main.async {
+                self.dismiss(animated: true)
+            }
+            return
+        }
+        
+        contentView.addSubview(customContentView)
+        
         initLayout()
         initAction()
     }
     
     private func initLayout() {
+        // contentView 사이즈 초기화
+        contentView.snp.remakeConstraints {
+            $0.height.equalTo(self.customContentView!.frame.height)
+        }
+        
         // 버튼 사이즈 조정
         buttonContainerView.snp.remakeConstraints {
             $0.height.equalTo(0)
@@ -96,12 +115,13 @@ class BottomCardViewController: UIViewController {
         print("최초 버튼 스택 뷰 사이즈 -> \(buttonContainerView.frame.height)")
         print("최초 컨테이너 뷰 사이즈 -> \(containerView.frame.height)")
         print("최초 오리지널 컨테이너 뷰 사이즈 -> \(originalContainerViewHeight!)")
+        print("최초 컨텐츠 뷰 사이즈 -> \(contentView.frame.height)")
         
         handleKnobView.layer.cornerRadius = handleKnobView.frame.height / 2
         containerView.clipsToBounds = true
         containerView.layer.cornerRadius = cornerRadius ?? 0
         containerView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
-        ivThumbnail.layer.cornerRadius = 24
+        containerView.layer.cornerRadius = 24
         
         // X Series 이외의 기기라면 safeArea, handleViewHeight 크기만큼 뺌
         if let safeAreaBottomHeight = UIApplication.shared.windows.first?.safeAreaInsets.bottom {
@@ -172,9 +192,11 @@ class BottomCardViewController: UIViewController {
     /* 프로젝트에서 사용 시 addAction() 사용 */
     @IBAction func onClickCancel(_ sender: UIButton) {
         cancelCompletion?()
+        self.dismiss(animated: true)
     }
     
     @IBAction func onClickSubmit(_ sender: UIButton) {
         submitCompletion?()
+        print("확인 클릭됨")
     }
 }

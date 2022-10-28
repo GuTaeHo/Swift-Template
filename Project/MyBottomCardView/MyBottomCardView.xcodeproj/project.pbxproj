@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05D24517290B6DAF00C9BDAC /* ContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05D24516290B6DAF00C9BDAC /* ContentView.xib */; };
+		05D24519290B6F8B00C9BDAC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D24518290B6F8B00C9BDAC /* ContentView.swift */; };
 		05DF08822908F1E800E38911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DF08812908F1E800E38911 /* AppDelegate.swift */; };
 		05DF08842908F1E800E38911 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DF08832908F1E800E38911 /* SceneDelegate.swift */; };
 		05DF08862908F1E800E38911 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DF08852908F1E800E38911 /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05D24516290B6DAF00C9BDAC /* ContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentView.xib; sourceTree = "<group>"; };
+		05D24518290B6F8B00C9BDAC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		05DF087E2908F1E800E38911 /* MyBottomCardView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBottomCardView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05DF08812908F1E800E38911 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05DF08832908F1E800E38911 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +80,8 @@
 				05DF088F2908F1EA00E38911 /* Info.plist */,
 				05DF08952908F3AD00E38911 /* BottomCardViewController.swift */,
 				05DF08972908FB1000E38911 /* CardViewUtil.swift */,
+				05D24516290B6DAF00C9BDAC /* ContentView.xib */,
+				05D24518290B6F8B00C9BDAC /* ContentView.swift */,
 			);
 			path = MyBottomCardView;
 			sourceTree = "<group>";
@@ -159,6 +165,7 @@
 			files = (
 				05DF088E2908F1EA00E38911 /* LaunchScreen.storyboard in Resources */,
 				05DF088B2908F1EA00E38911 /* Assets.xcassets in Resources */,
+				05D24517290B6DAF00C9BDAC /* ContentView.xib in Resources */,
 				05DF08892908F1E800E38911 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,6 +221,7 @@
 			files = (
 				05DF08862908F1E800E38911 /* ViewController.swift in Sources */,
 				05DF08822908F1E800E38911 /* AppDelegate.swift in Sources */,
+				05D24519290B6F8B00C9BDAC /* ContentView.swift in Sources */,
 				05DF08982908FB1000E38911 /* CardViewUtil.swift in Sources */,
 				05DF08842908F1E800E38911 /* SceneDelegate.swift in Sources */,
 				05DF08962908F3AD00E38911 /* BottomCardViewController.swift in Sources */,

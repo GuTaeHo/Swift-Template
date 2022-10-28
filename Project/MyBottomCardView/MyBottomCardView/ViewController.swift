@@ -15,7 +15,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showCardViewController(_ sender: UIButton) {
-        CardViewUtil.showCardViewController(context: self, isHandleVisible: false, cornerRadius: 24, isCancelButtonVisible: true, isSubmitButtonVisible: true)
+        let contentView = ContentView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height / 4))
+        
+        CardViewUtil.showCardViewController(context: self, contentView: contentView, isHandleVisible: true, cornerRadius: 24, isCancelButtonVisible: true, isSubmitButtonVisible: true)
     }
 }
 
