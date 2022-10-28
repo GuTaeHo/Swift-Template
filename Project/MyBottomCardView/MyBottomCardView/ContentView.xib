@@ -14,65 +14,82 @@
             <rect key="frame" x="0.0" y="0.0" width="420" height="420"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KR1-KP-JrR">
-                    <rect key="frame" x="12" y="12" width="396" height="396"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qtf-Nc-pl7">
+                    <rect key="frame" x="0.0" y="0.0" width="420" height="420"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cocobean's UILabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vA-YQ-OVk">
-                            <rect key="frame" x="0.0" y="0.0" width="396" height="30"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="30" id="MN7-vu-Jyp"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mA5-Jy-T7r">
-                            <rect key="frame" x="0.0" y="30" width="396" height="326"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KR1-KP-JrR">
+                            <rect key="frame" x="0.0" y="0.0" width="420" height="304"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgCocoa6" translatesAutoresizingMaskIntoConstraints="NO" id="S3U-ei-3Le">
-                                    <rect key="frame" x="0.0" y="12" width="396" height="302"/>
-                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cocobean's UILabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vA-YQ-OVk">
+                                    <rect key="frame" x="0.0" y="0.0" width="420" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="MN7-vu-Jyp"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mA5-Jy-T7r">
+                                    <rect key="frame" x="0.0" y="30" width="420" height="234"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgCocoa6" translatesAutoresizingMaskIntoConstraints="NO" id="S3U-ei-3Le">
+                                            <rect key="frame" x="0.0" y="12" width="420" height="210"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="S3U-ei-3Le" secondAttribute="height" multiplier="2:1" id="J7e-CX-DgK"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="S3U-ei-3Le" firstAttribute="top" secondItem="mA5-Jy-T7r" secondAttribute="top" constant="12" id="NWW-hr-Umd"/>
+                                        <constraint firstItem="S3U-ei-3Le" firstAttribute="leading" secondItem="mA5-Jy-T7r" secondAttribute="leading" id="T7x-ei-2sj"/>
+                                        <constraint firstAttribute="trailing" secondItem="S3U-ei-3Le" secondAttribute="trailing" id="VTB-K1-KHL"/>
+                                        <constraint firstAttribute="bottom" secondItem="S3U-ei-3Le" secondAttribute="bottom" constant="12" id="mUp-VX-oGG"/>
+                                    </constraints>
+                                </view>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Gtb-85-Lmg">
+                                    <rect key="frame" x="0.0" y="264" width="420" height="40"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q69-MA-utQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="132" height="40"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="filled" title="CB UIButton"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvI-QL-g9S">
+                                            <rect key="frame" x="144" y="0.0" width="132" height="40"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="filled" title="CB UIButton"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9y7-F3-Wwa">
+                                            <rect key="frame" x="288" y="0.0" width="132" height="40"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="filled" title="CB UIButton"/>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="KWv-rV-fA8"/>
+                                    </constraints>
+                                </stackView>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <constraints>
-                                <constraint firstItem="S3U-ei-3Le" firstAttribute="top" secondItem="mA5-Jy-T7r" secondAttribute="top" constant="12" id="NWW-hr-Umd"/>
-                                <constraint firstItem="S3U-ei-3Le" firstAttribute="leading" secondItem="mA5-Jy-T7r" secondAttribute="leading" id="T7x-ei-2sj"/>
-                                <constraint firstAttribute="trailing" secondItem="S3U-ei-3Le" secondAttribute="trailing" id="VTB-K1-KHL"/>
-                                <constraint firstAttribute="bottom" secondItem="S3U-ei-3Le" secondAttribute="bottom" constant="12" id="mUp-VX-oGG"/>
-                            </constraints>
-                        </view>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Gtb-85-Lmg">
-                            <rect key="frame" x="0.0" y="356" width="396" height="40"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q69-MA-utQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="124" height="40"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="filled" title="CB UIButton"/>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvI-QL-g9S">
-                                    <rect key="frame" x="136" y="0.0" width="124" height="40"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="filled" title="CB UIButton"/>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9y7-F3-Wwa">
-                                    <rect key="frame" x="272" y="0.0" width="124" height="40"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="filled" title="CB UIButton"/>
-                                </button>
-                            </subviews>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="40" id="KWv-rV-fA8"/>
-                            </constraints>
                         </stackView>
                     </subviews>
-                </stackView>
+                    <constraints>
+                        <constraint firstItem="KR1-KP-JrR" firstAttribute="trailing" secondItem="6mr-Ib-jD5" secondAttribute="trailing" id="5Pq-UT-TLY"/>
+                        <constraint firstItem="KR1-KP-JrR" firstAttribute="width" secondItem="Zcx-A5-ouh" secondAttribute="width" id="BFk-EK-Bi6"/>
+                        <constraint firstItem="KR1-KP-JrR" firstAttribute="leading" secondItem="6mr-Ib-jD5" secondAttribute="leading" id="ERK-IM-7Ju"/>
+                        <constraint firstItem="KR1-KP-JrR" firstAttribute="top" secondItem="6mr-Ib-jD5" secondAttribute="top" id="foa-nl-sZ4"/>
+                        <constraint firstItem="KR1-KP-JrR" firstAttribute="bottom" secondItem="6mr-Ib-jD5" secondAttribute="bottom" id="swZ-Qf-QNM"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="6mr-Ib-jD5"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="Zcx-A5-ouh"/>
+                </scrollView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="KR1-KP-JrR" secondAttribute="trailing" constant="12" id="aot-aM-8KR"/>
-                <constraint firstItem="KR1-KP-JrR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="iWs-9R-RYs"/>
-                <constraint firstAttribute="bottom" secondItem="KR1-KP-JrR" secondAttribute="bottom" constant="12" id="ouL-pm-KnC"/>
-                <constraint firstItem="KR1-KP-JrR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="ozK-G7-iB0"/>
+                <constraint firstAttribute="bottom" secondItem="Qtf-Nc-pl7" secondAttribute="bottom" id="Egp-hC-cMM"/>
+                <constraint firstAttribute="trailing" secondItem="Qtf-Nc-pl7" secondAttribute="trailing" id="J0A-7z-eEc"/>
+                <constraint firstItem="Qtf-Nc-pl7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="O7H-ls-Kuv"/>
+                <constraint firstItem="Qtf-Nc-pl7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="tSu-X4-BdV"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="140" y="21"/>

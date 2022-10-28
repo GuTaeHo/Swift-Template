@@ -9,6 +9,11 @@ import UIKit
 import SnapKit
 
 /* 하단 카드뷰 제약조건 및 이벤트 설정 UIViewController */
+// 각 뷰 설명
+// 1. containerView: 카드 뷰 자체
+// 2. handleView: 사용자가 카드뷰와 인터렉션 할 수 있는 영역
+// 3. buttonContainer: 취소 및 확인 버튼 영역
+// 4. contentView: 커스텀 가능한 영역 (외부에서 ContentView(frame) 형태로 주입가능)
 class BottomCardViewController: UIViewController {
     /// 컨테이너 뷰
     @IBOutlet var containerView: UIView!
@@ -17,18 +22,22 @@ class BottomCardViewController: UIViewController {
     @IBOutlet var handleKnobView: UIView!
     /// 버튼 컨테이너 View
     @IBOutlet var buttonContainerView: UIView!
+    /// 버튼 View
+    @IBOutlet var cancelView: UIView!
+    @IBOutlet var lbCancel: UILabel!
+    @IBOutlet var ButtonDummyView: UIView!
+    @IBOutlet var submitView: UIView!
+    @IBOutlet var lbSubmit: UILabel!
     /// 실질적인 내용이 들어가는 View
     @IBOutlet var contentView: UIView!
-    /// 상단 클릭 Button View
-    @IBOutlet var btCancel: UIButton!
-    @IBOutlet var ButtonDummyView: UIView!
-    @IBOutlet var btSubmit: UIButton!
-    public var customContentView: UIView?
+    
+    /// 외부에서 주입된 ContentView
+    public var customContentView: UIView!
     /// 핸들 표시 여부
     public var isHandleVisible: Bool?
     /// containerView 모서리 라운딩 값
     public var cornerRadius: CGFloat?
-    /// 카드 뷰 기능 관련 변수
+    
     public var isCancelButtonVisible: Bool?
     public var cancelText: String!
     public var cancelCompletion: (() -> ())?
@@ -61,19 +70,14 @@ class BottomCardViewController: UIViewController {
     }
     
     private func initLayout() {
-        // contentView 사이즈 초기화
-        contentView.snp.remakeConstraints {
-            $0.height.equalTo(self.customContentView!.frame.height)
-        }
-        
         // 버튼 사이즈 조정
         buttonContainerView.snp.remakeConstraints {
             $0.height.equalTo(0)
         }
-        btCancel.snp.remakeConstraints {
+        cancelView.snp.remakeConstraints {
             $0.width.equalTo(0)
         }
-        btSubmit.snp.remakeConstraints {
+        submitView.snp.remakeConstraints {
             $0.width.equalTo(0)
         }
         
@@ -90,7 +94,7 @@ class BottomCardViewController: UIViewController {
         
         // 버튼 컨테이너 뷰 높이 및 표시여부 재 지정
         if isCancelButtonVisible == true {
-            btCancel.snp.remakeConstraints {
+            cancelView.snp.remakeConstraints {
                 $0.width.equalTo(60)
             }
             buttonContainerView.snp.remakeConstraints {
@@ -99,11 +103,26 @@ class BottomCardViewController: UIViewController {
         }
         
         if isSubmitButtonVisible == true {
-            btSubmit.snp.remakeConstraints {
+            submitView.snp.remakeConstraints {
                 $0.width.equalTo(60)
             }
             buttonContainerView.snp.remakeConstraints {
                 $0.height.equalTo(50)
+            }
+        }
+        
+        view.layoutIfNeeded()
+        // contentView 사이즈 초기화
+        // 커스텀 콘텐츠 뷰의 최대크기는 핸들바 + 버튼 컨테이너 + 콘텐츠 뷰 - topSafeArea - 50 정도로 하면 될듯?
+        contentView.snp.remakeConstraints {
+            let handleViewHeight = handleView.frame.height
+            let buttonViewHeight = buttonContainerView.frame.height
+            let contentViewHeight = customContentView!.frame.height
+            let cardViewHeight = handleViewHeight + buttonViewHeight + contentViewHeight
+            if self.view.frame.height > cardViewHeight {
+                $0.height.equalTo(contentViewHeight)
+            } else {
+                $0.height.equalTo(self.view.frame.height - 200)
             }
         }
         
@@ -122,6 +141,8 @@ class BottomCardViewController: UIViewController {
         containerView.layer.cornerRadius = cornerRadius ?? 0
         containerView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
         containerView.layer.cornerRadius = 24
+        lbCancel.text = cancelText
+        lbSubmit.text = submitText
         
         // X Series 이외의 기기라면 safeArea, handleViewHeight 크기만큼 뺌
         if let safeAreaBottomHeight = UIApplication.shared.windows.first?.safeAreaInsets.bottom {
@@ -131,6 +152,15 @@ class BottomCardViewController: UIViewController {
     }
     
     private func initAction() {
+        cancelView.addAction {
+            self.cancelCompletion?()
+            self.dismiss(animated: true)
+        }
+        
+        submitView.addAction {
+            self.submitCompletion?()
+        }
+        
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePanning))
         panGesture.maximumNumberOfTouches = 1
         handleView.addGestureRecognizer(panGesture)
@@ -187,16 +217,5 @@ class BottomCardViewController: UIViewController {
                 break
             }
         }
-    }
-    
-    /* 프로젝트에서 사용 시 addAction() 사용 */
-    @IBAction func onClickCancel(_ sender: UIButton) {
-        cancelCompletion?()
-        self.dismiss(animated: true)
-    }
-    
-    @IBAction func onClickSubmit(_ sender: UIButton) {
-        submitCompletion?()
-        print("확인 클릭됨")
     }
 }
