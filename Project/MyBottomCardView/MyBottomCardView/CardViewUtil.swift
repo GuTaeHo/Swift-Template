@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: 프로젝트에서 사용할 경우 UIViewController extension 에서 사용하기 (굳이 유틸 형태로 분리 할 필요 없을듯...?)
 class CardViewUtil {
     /// 하단 카드뷰 표시
     /// - Parameter context: 카드뷰가 표시될 UIViewController
