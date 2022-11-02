@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  MyAVFoundation
+//  MyNavigationViewController
 //
-//  Created by 구태호 on 2022/10/29.
+//  Created by 구태호 on 2022/11/02.
 //
 
 import UIKit

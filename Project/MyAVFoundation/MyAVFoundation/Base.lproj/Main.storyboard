@@ -18,9 +18,18 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KGL-ST-jnw">
                                 <rect key="frame" x="18" y="65.000000000000014" width="354" height="244.33333333333337"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mId-MA-L1X">
+                                        <rect key="frame" x="135.66666666666666" y="104.66666666666666" width="83" height="35"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="다시재생"/>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="tintColor"/>
                                 <constraints>
+                                    <constraint firstItem="mId-MA-L1X" firstAttribute="centerX" secondItem="KGL-ST-jnw" secondAttribute="centerX" id="3x3-L6-VEK"/>
                                     <constraint firstAttribute="width" secondItem="KGL-ST-jnw" secondAttribute="height" multiplier="177:128" constant="16" id="6JZ-sV-6cB"/>
+                                    <constraint firstItem="mId-MA-L1X" firstAttribute="centerY" secondItem="KGL-ST-jnw" secondAttribute="centerY" id="NXf-Xb-Kfk"/>
                                 </constraints>
                             </view>
                         </subviews>
