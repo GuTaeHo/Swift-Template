@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyViewControllerProtocol" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kP-40-TtU">
+                                <rect key="frame" x="110" y="405" width="170" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="자식 뷰 컨트롤러 호출"/>
+                                <connections>
+                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DaH-tP-q7B"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프로토콜 및 델리게이트를 활용한  이전 뷰 컨트롤러 전환 및 데이터 이동 예제" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xeI-wi-Fp7">
+                                <rect key="frame" x="18" y="175" width="354" height="96.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfX-lt-Ta2">
+                                <rect key="frame" x="18" y="503.33333333333331" width="354" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nfX-lt-Ta2" secondAttribute="trailing" constant="18" id="6tH-rJ-OaW"/>
+                            <constraint firstItem="0kP-40-TtU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CZv-AJ-hLC"/>
+                            <constraint firstItem="0kP-40-TtU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ds6-IS-CNb"/>
+                            <constraint firstItem="nfX-lt-Ta2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="Qb4-Re-wzh"/>
+                            <constraint firstItem="nfX-lt-Ta2" firstAttribute="top" secondItem="0kP-40-TtU" secondAttribute="bottom" constant="64" id="Yf2-T7-OzI"/>
+                            <constraint firstItem="xeI-wi-Fp7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="18" id="iwJ-m2-k6r"/>
+                            <constraint firstItem="xeI-wi-Fp7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="128" id="mpQ-NC-neI"/>
+                            <constraint firstAttribute="trailing" secondItem="xeI-wi-Fp7" secondAttribute="trailing" constant="18" id="tLG-Zf-ne6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lbResponse" destination="nfX-lt-Ta2" id="aTU-Bb-iNo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="4"/>
+        </scene>
+        <!--Child View Controller-->
+        <scene sceneID="gax-hP-PGR">
+            <objects>
+                <viewController storyboardIdentifier="ChildViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YEZ-jB-6vc" customClass="ChildViewController" customModule="MyViewControllerProtocol" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qQW-aS-XYf">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0g-Dj-YBm">
+                                <rect key="frame" x="95.666666666666686" y="404.66666666666669" width="199" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="이전 뷰 컨트롤러로 보내기"/>
+                                <connections>
+                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kgb-AJ-w3B"/>
+                                    <action selector="onClickButton:" destination="YEZ-jB-6vc" eventType="touchUpInside" id="q32-Sx-BCZ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LET-Ez-mQg">
+                                <rect key="frame" x="131" y="338.66666666666669" width="128" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="caI-cm-qvR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ktc-hh-NJj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="A0g-Dj-YBm" firstAttribute="centerY" secondItem="qQW-aS-XYf" secondAttribute="centerY" id="ACE-PL-g2R"/>
+                            <constraint firstItem="A0g-Dj-YBm" firstAttribute="centerX" secondItem="qQW-aS-XYf" secondAttribute="centerX" id="QMu-Uu-qNb"/>
+                            <constraint firstItem="A0g-Dj-YBm" firstAttribute="top" secondItem="LET-Ez-mQg" secondAttribute="bottom" constant="32" id="gai-vU-Sa3"/>
+                            <constraint firstItem="LET-Ez-mQg" firstAttribute="centerX" secondItem="qQW-aS-XYf" secondAttribute="centerX" id="qtC-eG-yC2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tfUserInput" destination="LET-Ez-mQg" id="ROU-Sq-mbU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BJH-c7-bU8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1069" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

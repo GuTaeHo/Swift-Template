@@ -15,8 +15,7 @@ class NavigationViewController: UINavigationController {
     }
     
     private func initViewController() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let splashViewController = storyboard.instantiateViewController(withIdentifier: "SplashViewController") as? SplashViewController {
+        if let splashViewController = self.viewController(storyboardName: "Main", viewController: SplashViewController().self) {
             self.viewControllers = [splashViewController]
         } else {
             print("최초 뷰 컨트롤러 초기화 오류...")
