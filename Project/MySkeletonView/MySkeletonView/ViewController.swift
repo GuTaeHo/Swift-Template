@@ -32,12 +32,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-            // self.ivTitle.isSkeletonable = false
-            // self.lbTitle.isSkeletonable = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
             self.view.hideSkeleton()
         }
         
@@ -89,3 +85,18 @@ extension ViewController: SkeletonTableViewDataSource {
     }
 }
 
+/*
+ extension ViewController: SkeletonTableViewDelegate {
+ func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+ 
+ guard let clickedCell = tableView.dequeueReusableCell(withIdentifier: "SkeletonCell", for: indexPath) as? SkeletonCell
+ else { return }
+ 
+ clickedCell.showAnimatedGradientSkeleton()
+ 
+ DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+ clickedCell.hideSkeleton()
+ }
+ }
+ }
+ */

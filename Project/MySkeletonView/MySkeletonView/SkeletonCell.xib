@@ -64,6 +64,9 @@
                     <constraint firstAttribute="trailing" secondItem="Bdg-YI-fZZ" secondAttribute="trailing" constant="12" id="gC9-qS-Ddo"/>
                     <constraint firstItem="V8g-WC-5s0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="juf-dA-UrS"/>
                 </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                </userDefinedRuntimeAttributes>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <userDefinedRuntimeAttributes>
