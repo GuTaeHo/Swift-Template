@@ -20,7 +20,6 @@ class ViewController: UIViewController {
         if let viewController = storyboard?.instantiateViewController(withIdentifier: "ChildViewController") as? ChildViewController {
             
             viewController.childIsGoneDelegate = self
-            
             self.present(viewController, animated: true)
         }
     }
