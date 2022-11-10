@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (5.6.2)
+  - SkeletonView (1.30.4)
+  - SnapKit (5.6.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - SkeletonView
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - SkeletonView
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
+  SkeletonView: 5a050f6411e697abd4cda0a8d767013399dccd69
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+
+PODFILE CHECKSUM: e5a9153dd36a8bdae15475e74c54b58e42b5003f
+
+COCOAPODS: 1.11.3

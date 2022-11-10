@@ -9,9 +9,12 @@ import UIKit
 import SnapKit
 
 class ViewController: UIViewController {
+    // 유틸아님(직접 좌표를 지정해서 사용)
+    @IBOutlet var speechBubbleForGuildLinkView: UIView!
     private var speechBubbleWidth: CGFloat!
     
     private var speechBubble: SpeechBubble!
+    private var speechBubbleForGuildLink: SpeechBubbleForGuildLink!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +24,12 @@ class ViewController: UIViewController {
             message: "Hello, World!",
             color: UIColor(red: 0.1137, green: 0.1216, blue: 0.2, alpha: 1),
             parentView: self.view,
-            direction: .RIGHT,
+            centerDirection: .BOTTOM,
+            edgeDirection: .RIGHT,
             width: self.view.frame.width / 3)
+        
+        
+        speechBubbleForGuildLink = SpeechBubbleForGuildLink(message: "버블 꼬리 위치 변경 중...", color: UIColor(red: 0.1137, green: 0.1216, blue: 0.2, alpha: 1), parentView: self.speechBubbleForGuildLinkView, width: self.speechBubbleForGuildLinkView.frame.width)
     }
 }
 

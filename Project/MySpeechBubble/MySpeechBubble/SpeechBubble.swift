@@ -8,12 +8,19 @@
 import UIKit
 import SnapKit
 
-/* 말풍선 꼬리 방향 */
-enum TipDirection: Int {
+/* 말풍선 꼬리 방향 (상, 우, 하, 좌) */
+enum TipCenterDirection: Int {
     case TOP = 0
     case RIGHT = 1
     case BOTTOM = 2
     case LEFT = 3
+}
+
+/* 말풍선 꼬리 위치 (중, 우, 좌) */
+enum TipEdgeDirection: Int {
+    case CENTER = 0
+    case RIGHT = 1
+    case LEFT = 2
 }
 
 /* UIView 에 CGMutablePath 및 CALayer 를 사용하여 삼각형(말풍선 꼬리)을 만든 다음 해당 UIView 에 추가하는 예제임 */
@@ -21,7 +28,8 @@ class SpeechBubble: UIView {
     private var message: String!
     private var color: UIColor!
     private var parentView: UIView!
-    private var direction: TipDirection!
+    private var centerDirection: TipCenterDirection!
+    private var edgeDirection: TipEdgeDirection!
     private var width: CGFloat!
     private var height: CGFloat!
     private var tipWidth: CGFloat!
@@ -34,7 +42,8 @@ class SpeechBubble: UIView {
     /// - Parameter message: 말풍선에 표시될 텍스트
     /// - Parameter color: 말풍선 색상
     /// - Parameter parentView: 말풍선이 표시될 View의 상위 View
-    /// - Parameter direction: 말풍선 꼬리 방향
+    /// - Parameter centerDirection: 말풍선 꼬리 방향 (상, 하, 좌, 우)
+    /// - Parameter edgeDirection: 말풍선 꼬리 위치 (가운데, 오른쪽, 왼쪽),  (꼬리 방향 기준으로 위치지정 centerDirection == .RIGHT 고 edgeDirection == .RIGHT 면 꼬리방향이 우측이고, 꼬리 위치는 아래쪽에 생김)
     /// - Parameter width: 말풍선 너비
     /// - Parameter tipWidth: 말풍선 꼬리 너비 (default: 20)
     /// - Parameter tipHeight: 말풍선 꼬리 높이 (default: 10)
@@ -42,7 +51,8 @@ class SpeechBubble: UIView {
         message: String,
         color: UIColor,
         parentView: UIView,
-        direction: TipDirection,
+        centerDirection: TipCenterDirection,
+        edgeDirection: TipEdgeDirection,
         width: CGFloat,
         tipWidth: CGFloat = 20,
         tipHeight: CGFloat = 10
@@ -50,7 +60,8 @@ class SpeechBubble: UIView {
         super.init(frame: .zero)
         self.message = message
         self.color = color
-        self.direction = direction
+        self.centerDirection = centerDirection
+        self.edgeDirection = edgeDirection
         self.parentView = parentView
         self.width = width
         self.tipWidth = tipWidth
@@ -59,7 +70,7 @@ class SpeechBubble: UIView {
         addView()
     }
     
-    /* 말풍선 View에 추가*/
+    /* 말풍선 View에 추가 */
     private func addView() {
         self.parentView.addSubview(self)
         self.snp.makeConstraints {
@@ -96,11 +107,34 @@ class SpeechBubble: UIView {
     /* 말풍선 꼬리 추가 */
     private func addTail() {
         self.backgroundColor = color
+        var path = CGMutablePath()
+        // 삼각형의 세 점의 사이에 선분을 그림
+        if edgeDirection == .CENTER {
+            path = edgeDirectionCenterLayout()
+        } else if edgeDirection == .RIGHT {
+            path = edgeDirectionRightLayout()
+        } else {
+            path = edgeDirectionLeftLayout()
+        }
         
+        
+        // 설정된 경로(path) 내부에 색상을 칠함
+        let shape = CAShapeLayer()
+        shape.path = path
+        shape.fillColor = color.cgColor
+        
+        // 현재 뷰에 생성된 삼각형을 추가
+        self.layer.insertSublayer(shape, at: 0)
+        // UIView를 벗어난 텍스트를 안보이도록 설정 (꼬리 표시)
+        self.layer.masksToBounds = false
+        // 말풍선 둥글게 표시
+        self.layer.cornerRadius = 6
+    }
+    
+    private func edgeDirectionCenterLayout() -> CGMutablePath {
         let path = CGMutablePath()
         
-        // 삼각형의 세 점의 사이에 선분을 그림
-        switch direction {
+        switch centerDirection {
         case .TOP:
             // path 시작 x 위치 (tip 시작 x 위치)
             let tipStartXPosition = (width / 2) - (tipWidth / 2)
@@ -138,16 +172,94 @@ class SpeechBubble: UIView {
             break
         }
         
-        // 설정된 경로(path) 내부에 색상을 칠함
-        let shape = CAShapeLayer()
-        shape.path = path
-        shape.fillColor = color.cgColor
+        return path
+    }
+    
+    private func edgeDirectionRightLayout() -> CGMutablePath {
+        let path = CGMutablePath()
         
-        // 현재 뷰에 생성된 삼각형을 추가
-        self.layer.insertSublayer(shape, at: 0)
-        // UIView를 벗어난 텍스트를 안보이도록 설정 (꼬리 표시)
-        self.layer.masksToBounds = false
-        // 말풍선 둥글게 표시
-        self.layer.cornerRadius = 6
+        switch centerDirection {
+        case .TOP:
+            // path 시작 x 위치 (tip 시작 x 위치)
+            let tipStartXPosition = (width / 2) - (tipWidth / 2)
+            path.move(to: CGPoint(x: tipStartXPosition, y: 0))
+            path.addLine(to: CGPoint(x: width / 2, y: -tipHeight))
+            path.addLine(to: CGPoint(x: tipStartXPosition + tipWidth, y: 0))
+            path.addLine(to: CGPoint(x: 0, y: 0))
+            break
+            
+        case .RIGHT:
+            let tipStartYPosition = (height / 2) - (tipWidth / 2)
+            path.move(to: CGPoint(x: width, y: tipStartYPosition))
+            path.addLine(to: CGPoint(x: width + tipHeight, y: height / 2))
+            path.addLine(to: CGPoint(x: width, y: (height / 2) + (tipWidth / 2)))
+            path.addLine(to: CGPoint(x: width, y: tipStartYPosition))
+            break
+            
+        case .BOTTOM:
+            let tipStartXPosition = (width / 2) - (tipWidth / 2)
+            path.move(to: CGPoint(x: tipStartXPosition, y: height))
+            path.addLine(to: CGPoint(x: width / 2, y: height + tipHeight))
+            path.addLine(to: CGPoint(x: tipStartXPosition + tipWidth, y: height))
+            path.addLine(to: CGPoint(x: tipStartXPosition, y: height))
+            break
+            
+        case .LEFT:
+            let tipStartYPosition = (height / 2) - (tipWidth / 2)
+            path.move(to: CGPoint(x: 0, y: tipStartYPosition))
+            path.addLine(to: CGPoint(x: -tipHeight, y: height / 2))
+            path.addLine(to: CGPoint(x: 0, y: (height / 2) + (tipWidth / 2)))
+            path.addLine(to: CGPoint(x: 0, y: tipStartYPosition))
+            break
+            
+        default:
+            break
+        }
+        
+        return path
+    }
+    
+    private func edgeDirectionLeftLayout() -> CGMutablePath {
+        let path = CGMutablePath()
+        
+        switch centerDirection {
+        case .TOP:
+            // path 시작 x 위치 (tip 시작 x 위치)
+            let tipStartXPosition = (width / 2) - (tipWidth / 2)
+            path.move(to: CGPoint(x: tipStartXPosition, y: 0))
+            path.addLine(to: CGPoint(x: width / 2, y: -tipHeight))
+            path.addLine(to: CGPoint(x: tipStartXPosition + tipWidth, y: 0))
+            path.addLine(to: CGPoint(x: 0, y: 0))
+            break
+            
+        case .RIGHT:
+            let tipStartYPosition = (height / 2) - (tipWidth / 2)
+            path.move(to: CGPoint(x: width, y: tipStartYPosition))
+            path.addLine(to: CGPoint(x: width + tipHeight, y: height / 2))
+            path.addLine(to: CGPoint(x: width, y: (height / 2) + (tipWidth / 2)))
+            path.addLine(to: CGPoint(x: width, y: tipStartYPosition))
+            break
+            
+        case .BOTTOM:
+            let tipStartXPosition = (width / 2) - (tipWidth / 2)
+            path.move(to: CGPoint(x: tipStartXPosition, y: height))
+            path.addLine(to: CGPoint(x: width / 2, y: height + tipHeight))
+            path.addLine(to: CGPoint(x: tipStartXPosition + tipWidth, y: height))
+            path.addLine(to: CGPoint(x: tipStartXPosition, y: height))
+            break
+            
+        case .LEFT:
+            let tipStartYPosition = (height / 2) - (tipWidth / 2)
+            path.move(to: CGPoint(x: 0, y: tipStartYPosition))
+            path.addLine(to: CGPoint(x: -tipHeight, y: height / 2))
+            path.addLine(to: CGPoint(x: 0, y: (height / 2) + (tipWidth / 2)))
+            path.addLine(to: CGPoint(x: 0, y: tipStartYPosition))
+            break
+            
+        default:
+            break
+        }
+        
+        return path
     }
 }

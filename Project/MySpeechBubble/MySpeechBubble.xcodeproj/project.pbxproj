@@ -14,6 +14,7 @@
 		05B2D24928EDB0DA00779418 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05B2D24828EDB0DA00779418 /* Assets.xcassets */; };
 		05B2D24C28EDB0DA00779418 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05B2D24A28EDB0DA00779418 /* LaunchScreen.storyboard */; };
 		05B2D25428EDB0FD00779418 /* SpeechBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B2D25328EDB0FD00779418 /* SpeechBubble.swift */; };
+		05D070BF291CDD900004A3B8 /* SpeechBubbleForGuildLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D070BE291CDD900004A3B8 /* SpeechBubbleForGuildLink.swift */; };
 		6102E77E0CC60C4180C9B54A /* Pods_MySpeechBubble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3007EF182C84B1A4341E1002 /* Pods_MySpeechBubble.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		05B2D24B28EDB0DA00779418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05B2D24D28EDB0DA00779418 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05B2D25328EDB0FD00779418 /* SpeechBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechBubble.swift; sourceTree = "<group>"; };
+		05D070BE291CDD900004A3B8 /* SpeechBubbleForGuildLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechBubbleForGuildLink.swift; sourceTree = "<group>"; };
 		3007EF182C84B1A4341E1002 /* Pods_MySpeechBubble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySpeechBubble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F5C21977EAF49CA863C3BB0 /* Pods-MySpeechBubble.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySpeechBubble.release.xcconfig"; path = "Target Support Files/Pods-MySpeechBubble/Pods-MySpeechBubble.release.xcconfig"; sourceTree = "<group>"; };
 		C8D1C1F2C44A53C85C2E72C9 /* Pods-MySpeechBubble.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySpeechBubble.debug.xcconfig"; path = "Target Support Files/Pods-MySpeechBubble/Pods-MySpeechBubble.debug.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				05B2D24A28EDB0DA00779418 /* LaunchScreen.storyboard */,
 				05B2D24D28EDB0DA00779418 /* Info.plist */,
 				05B2D25328EDB0FD00779418 /* SpeechBubble.swift */,
+				05D070BE291CDD900004A3B8 /* SpeechBubbleForGuildLink.swift */,
 			);
 			path = MySpeechBubble;
 			sourceTree = "<group>";
@@ -91,7 +94,6 @@
 				C8D1C1F2C44A53C85C2E72C9 /* Pods-MySpeechBubble.debug.xcconfig */,
 				9F5C21977EAF49CA863C3BB0 /* Pods-MySpeechBubble.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -213,6 +215,7 @@
 				05B2D24428EDB0D800779418 /* ViewController.swift in Sources */,
 				05B2D25428EDB0FD00779418 /* SpeechBubble.swift in Sources */,
 				05B2D24028EDB0D800779418 /* AppDelegate.swift in Sources */,
+				05D070BF291CDD900004A3B8 /* SpeechBubbleForGuildLink.swift in Sources */,
 				05B2D24228EDB0D800779418 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
