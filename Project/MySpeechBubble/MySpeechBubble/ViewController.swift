@@ -29,7 +29,7 @@ class ViewController: UIViewController {
             width: self.view.frame.width / 3)
         
         
-        speechBubbleForGuildLink = SpeechBubbleForGuildLink(message: "버블 꼬리 위치 변경 중...", color: UIColor(red: 0.1137, green: 0.1216, blue: 0.2, alpha: 1), parentView: self.speechBubbleForGuildLinkView, width: self.speechBubbleForGuildLinkView.frame.width)
+        speechBubbleForGuildLink = SpeechBubbleForGuildLink(message: "버블 꼬리 위치 변경 중...", color: UIColor(red: 0.1137, green: 0.1216, blue: 0.2, alpha: 1), parentView: self.speechBubbleForGuildLinkView)
     }
 }
 

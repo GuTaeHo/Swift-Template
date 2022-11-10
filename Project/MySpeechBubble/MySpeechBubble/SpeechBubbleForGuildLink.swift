@@ -24,54 +24,48 @@ class SpeechBubbleForGuildLink: UIView {
     /// - Parameter message: 말풍선에 표시될 텍스트
     /// - Parameter color: 말풍선 색상
     /// - Parameter parentView: 말풍선이 표시될 View의 상위 View
-    /// - Parameter width: 말풍선 너비
     init(
         message: String,
         color: UIColor,
-        parentView: UIView,
-        width: CGFloat
+        parentView: UIView
     ) {
         super.init(frame: .zero)
         self.message = message
         self.color = color
         self.parentView = parentView
-        self.width = width
         self.tipWidth = 20
         self.tipHeight = 10
         
-        addView()
+        initLabel()
     }
     
-    /* 말풍선 View에 추가 */
-    private func addView() {
+    private func initLabel() {
         self.parentView.addSubview(self)
-        self.snp.makeConstraints {
-            $0.center.equalToSuperview()
-            $0.width.equalTo(width)
-        }
         
-        addLabel()
-    }
-    
-    /* 말풍선 라벨 추가 */
-    private func addLabel() {
         let titleLabel = UILabel()
         titleLabel.textColor = .white
         titleLabel.text = message
         titleLabel.numberOfLines = 0
         titleLabel.lineBreakMode = .byCharWrapping // 글자 단위로 줄바꿈 (디폴트는 어절 단위)
         
+        let bubbleViewPadding: CGFloat = 24
+        width = titleLabel.intrinsicContentSize.width + bubbleViewPadding
+        height = titleLabel.intrinsicContentSize.height + bubbleViewPadding
+        
         self.addSubview(titleLabel)
         titleLabel.snp.makeConstraints {
-            $0.top.bottom.equalToSuperview().inset(10)
-            $0.left.right.equalToSuperview().inset(16)
+            $0.edges.equalToSuperview().inset(12)
+        }
+        
+        self.snp.makeConstraints {
+            $0.bottom.trailing.equalToSuperview()
+            $0.width.equalTo(width)
+            $0.height.equalTo(height)
         }
         
         // Constraints 를 적용한 뒤 드로잉 사이클을 초기화 하여 View 를 미리 그림.
         // UILabel 이 그려졌기 때문에 View 의 사이즈를 특정할 수 있음
         self.layoutIfNeeded()
-        
-        height = self.frame.height
         
         addTail()
     }
