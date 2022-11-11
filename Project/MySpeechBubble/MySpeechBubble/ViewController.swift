@@ -24,12 +24,10 @@ class ViewController: UIViewController {
             message: "Hello, World!",
             color: UIColor(red: 0.1137, green: 0.1216, blue: 0.2, alpha: 1),
             parentView: self.view,
-            centerDirection: .BOTTOM,
-            edgeDirection: .RIGHT,
-            width: self.view.frame.width / 3)
+            centerDirection: .BOTTOM)
         
         
-        speechBubbleForGuildLink = SpeechBubbleForGuildLink(message: "버블 꼬리 위치 변경 중...", color: UIColor(red: 0.1137, green: 0.1216, blue: 0.2, alpha: 1), parentView: self.speechBubbleForGuildLinkView)
+        speechBubbleForGuildLink = SpeechBubbleForGuildLink(message: "버블 꼬리 위치 변경 중... \n가나다라마바사아자차카타파하", color: UIColor(red: 0.1137, green: 0.1216, blue: 0.2, alpha: 1), parentView: self.speechBubbleForGuildLinkView)
     }
 }
 

@@ -44,9 +44,10 @@ class SpeechBubbleForGuildLink: UIView {
         
         let titleLabel = UILabel()
         titleLabel.textColor = .white
-        titleLabel.text = message
         titleLabel.numberOfLines = 0
         titleLabel.lineBreakMode = .byCharWrapping // 글자 단위로 줄바꿈 (디폴트는 어절 단위)
+        titleLabel.text = message
+        titleLabel.font = UIFont.systemFont(ofSize: 20.0)
         
         let bubbleViewPadding: CGFloat = 24
         width = titleLabel.intrinsicContentSize.width + bubbleViewPadding
@@ -60,7 +61,6 @@ class SpeechBubbleForGuildLink: UIView {
         self.snp.makeConstraints {
             $0.bottom.trailing.equalToSuperview()
             $0.width.equalTo(width)
-            $0.height.equalTo(height)
         }
         
         // Constraints 를 적용한 뒤 드로잉 사이클을 초기화 하여 View 를 미리 그림.
