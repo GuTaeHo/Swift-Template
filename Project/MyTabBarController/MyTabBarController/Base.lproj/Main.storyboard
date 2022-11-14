@@ -16,14 +16,88 @@
                     <view key="view" contentMode="scaleToFill" id="BHR-OE-WIB">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mps-cl-ceh">
+                                <rect key="frame" x="0.0" y="59" width="393" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="탭 &gt; 뷰컨 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfn-Aa-FJI">
+                                        <rect key="frame" x="151.66666666666666" y="13" width="90" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uVA-Bu-ifz">
+                                        <rect key="frame" x="0.0" y="49" width="393" height="1"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="i2M-1H-G6O"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tml-Od-W4j">
+                                        <rect key="frame" x="10" y="13.333333333333332" width="28" height="23.333333333333339"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="H3J-5u-dtO"/>
+                                            <constraint firstAttribute="width" constant="28" id="Xzs-SG-FtN"/>
+                                        </constraints>
+                                        <imageReference key="image" image="bell" catalog="system" symbolScale="small"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HJZ-54-Ehz"/>
+                                    <constraint firstItem="kfn-Aa-FJI" firstAttribute="centerX" secondItem="Mps-cl-ceh" secondAttribute="centerX" id="JfD-qy-15j"/>
+                                    <constraint firstAttribute="trailing" secondItem="uVA-Bu-ifz" secondAttribute="trailing" id="KG0-it-yy3"/>
+                                    <constraint firstItem="Tml-Od-W4j" firstAttribute="leading" secondItem="Mps-cl-ceh" secondAttribute="leading" constant="10" id="Kgd-na-XTc"/>
+                                    <constraint firstAttribute="bottom" secondItem="uVA-Bu-ifz" secondAttribute="bottom" id="Q8h-Pr-dJP"/>
+                                    <constraint firstItem="Tml-Od-W4j" firstAttribute="centerY" secondItem="Mps-cl-ceh" secondAttribute="centerY" id="QNF-pG-ckO"/>
+                                    <constraint firstItem="uVA-Bu-ifz" firstAttribute="leading" secondItem="Mps-cl-ceh" secondAttribute="leading" id="RVj-EC-TYf"/>
+                                    <constraint firstItem="kfn-Aa-FJI" firstAttribute="centerY" secondItem="Mps-cl-ceh" secondAttribute="centerY" id="vwi-ff-B0s"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="a1B-y4-21d"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Mps-cl-ceh" firstAttribute="leading" secondItem="a1B-y4-21d" secondAttribute="leading" id="DPm-VO-GGb"/>
+                            <constraint firstAttribute="trailing" secondItem="Mps-cl-ceh" secondAttribute="trailing" id="Swz-Iw-Mn2"/>
+                            <constraint firstItem="Mps-cl-ceh" firstAttribute="top" secondItem="a1B-y4-21d" secondAttribute="top" id="flf-HP-csX"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="iPad" image="ipad.gen1" catalog="system" id="cgn-vJ-KQH"/>
+                    <connections>
+                        <outlet property="ivBell" destination="Tml-Od-W4j" id="eIu-B7-B3Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8yo-mS-VgH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1688" y="465"/>
+        </scene>
+        <!--Embeded View Controller For Second View Controller-->
+        <scene sceneID="C2s-1C-2fP">
+            <objects>
+                <viewController storyboardIdentifier="EmbededViewControllerForSecondViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XFZ-qZ-g1y" customClass="EmbededViewControllerForSecondViewController" customModule="MyTabBarController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i0u-xZ-UTJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XD5-C9-RXk">
+                                <rect key="frame" x="155" y="409" width="83" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="돌아가기"/>
+                                <connections>
+                                    <action selector="onClickButton:" destination="XFZ-qZ-g1y" eventType="touchUpInside" id="ojg-bi-ZlF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="b9m-zv-b2m"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RIu-9K-hYy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2592" y="465"/>
         </scene>
         <!--Pencel-->
         <scene sceneID="1L7-8z-dPD">

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		05877848292206260002B6E9 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05877847292206260002B6E9 /* UINavigationController.swift */; };
+		0587784A29221D180002B6E9 /* EmbededViewControllerForSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0587784929221D180002B6E9 /* EmbededViewControllerForSecondViewController.swift */; };
 		0592FAC82921F78C0046A717 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0592FAC72921F78C0046A717 /* AppDelegate.swift */; };
 		0592FACA2921F78C0046A717 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0592FAC92921F78C0046A717 /* SceneDelegate.swift */; };
 		0592FACC2921F78C0046A717 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0592FACB2921F78C0046A717 /* FirstViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		05877847292206260002B6E9 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
+		0587784929221D180002B6E9 /* EmbededViewControllerForSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbededViewControllerForSecondViewController.swift; sourceTree = "<group>"; };
 		0592FAC42921F78C0046A717 /* MyTabBarController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTabBarController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0592FAC72921F78C0046A717 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0592FAC92921F78C0046A717 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				0592FADF2921FEAC0046A717 /* EmbededViewControllerOnFirstViewController.swift */,
 				0592FAE12922026B0046A717 /* MainNavigationController.swift */,
 				05877847292206260002B6E9 /* UINavigationController.swift */,
+				0587784929221D180002B6E9 /* EmbededViewControllerForSecondViewController.swift */,
 			);
 			path = MyTabBarController;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			files = (
 				0592FACC2921F78C0046A717 /* FirstViewController.swift in Sources */,
 				05877848292206260002B6E9 /* UINavigationController.swift in Sources */,
+				0587784A29221D180002B6E9 /* EmbededViewControllerForSecondViewController.swift in Sources */,
 				0592FADC2921F81D0046A717 /* MainTabBarViewController.swift in Sources */,
 				0592FAC82921F78C0046A717 /* AppDelegate.swift in Sources */,
 				0592FADE2921F93A0046A717 /* SecondViewController.swift in Sources */,
