@@ -19,6 +19,8 @@
 		0592FADE2921F93A0046A717 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0592FADD2921F93A0046A717 /* SecondViewController.swift */; };
 		0592FAE02921FEAC0046A717 /* EmbededViewControllerOnFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0592FADF2921FEAC0046A717 /* EmbededViewControllerOnFirstViewController.swift */; };
 		0592FAE22922026B0046A717 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0592FAE12922026B0046A717 /* MainNavigationController.swift */; };
+		05CB57A6292B101600F7C008 /* UITabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB57A5292B101600F7C008 /* UITabBar.swift */; };
+		05CB57A8292B1F9000F7C008 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB57A7292B1F9000F7C008 /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		0592FADD2921F93A0046A717 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		0592FADF2921FEAC0046A717 /* EmbededViewControllerOnFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbededViewControllerOnFirstViewController.swift; sourceTree = "<group>"; };
 		0592FAE12922026B0046A717 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		05CB57A5292B101600F7C008 /* UITabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBar.swift; sourceTree = "<group>"; };
+		05CB57A7292B1F9000F7C008 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 				0592FAE12922026B0046A717 /* MainNavigationController.swift */,
 				05877847292206260002B6E9 /* UINavigationController.swift */,
 				0587784929221D180002B6E9 /* EmbededViewControllerForSecondViewController.swift */,
+				05CB57A5292B101600F7C008 /* UITabBar.swift */,
+				05CB57A7292B1F9000F7C008 /* ThirdViewController.swift */,
 			);
 			path = MyTabBarController;
 			sourceTree = "<group>";
@@ -157,12 +163,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0592FACC2921F78C0046A717 /* FirstViewController.swift in Sources */,
+				05CB57A6292B101600F7C008 /* UITabBar.swift in Sources */,
 				05877848292206260002B6E9 /* UINavigationController.swift in Sources */,
 				0587784A29221D180002B6E9 /* EmbededViewControllerForSecondViewController.swift in Sources */,
 				0592FADC2921F81D0046A717 /* MainTabBarViewController.swift in Sources */,
 				0592FAC82921F78C0046A717 /* AppDelegate.swift in Sources */,
 				0592FADE2921F93A0046A717 /* SecondViewController.swift in Sources */,
 				0592FAE22922026B0046A717 /* MainNavigationController.swift in Sources */,
+				05CB57A8292B1F9000F7C008 /* ThirdViewController.swift in Sources */,
 				0592FAE02921FEAC0046A717 /* EmbededViewControllerOnFirstViewController.swift in Sources */,
 				0592FACA2921F78C0046A717 /* SceneDelegate.swift in Sources */,
 			);

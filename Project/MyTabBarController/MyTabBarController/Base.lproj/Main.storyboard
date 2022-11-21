@@ -256,13 +256,79 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <outlet property="tabbar" destination="5Md-sx-FWg" id="DTx-rz-ueb"/>
                         <segue destination="wmC-L1-8ZR" kind="relationship" relationship="viewControllers" id="59a-1n-EVP"/>
                         <segue destination="DEM-WV-w7q" kind="relationship" relationship="viewControllers" id="r8c-91-K7Q"/>
+                        <segue destination="n2c-tE-2xf" kind="relationship" relationship="viewControllers" id="MyS-Oq-z4P"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j69-pi-Mk5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="783" y="83"/>
+        </scene>
+        <!--iPad-->
+        <scene sceneID="Xkq-DH-S6S">
+            <objects>
+                <viewController storyboardIdentifier="ThirdViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="n2c-tE-2xf" customClass="ThirdViewController" customModule="MyTabBarController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yW6-K2-6PL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mqY-Nn-dNQ">
+                                <rect key="frame" x="0.0" y="59" width="393" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="탭 &gt; 뷰컨 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pc4-cv-MH7">
+                                        <rect key="frame" x="151" y="13" width="91" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFz-7k-9YM">
+                                        <rect key="frame" x="0.0" y="49" width="393" height="1"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="2xf-ed-Gkv"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kvp-r7-Qb2">
+                                        <rect key="frame" x="10" y="13.333333333333332" width="28" height="23.333333333333339"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="3SF-qR-WNu"/>
+                                            <constraint firstAttribute="width" constant="28" id="DaR-aS-q57"/>
+                                        </constraints>
+                                        <imageReference key="image" image="bell" catalog="system" symbolScale="small"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="pc4-cv-MH7" firstAttribute="centerY" secondItem="mqY-Nn-dNQ" secondAttribute="centerY" id="Eiq-QS-yEP"/>
+                                    <constraint firstItem="Kvp-r7-Qb2" firstAttribute="centerY" secondItem="mqY-Nn-dNQ" secondAttribute="centerY" id="U5t-QR-y1G"/>
+                                    <constraint firstAttribute="trailing" secondItem="gFz-7k-9YM" secondAttribute="trailing" id="aEa-qN-EgP"/>
+                                    <constraint firstItem="gFz-7k-9YM" firstAttribute="leading" secondItem="mqY-Nn-dNQ" secondAttribute="leading" id="ajh-9j-rcP"/>
+                                    <constraint firstAttribute="bottom" secondItem="gFz-7k-9YM" secondAttribute="bottom" id="fgs-Wi-odS"/>
+                                    <constraint firstItem="pc4-cv-MH7" firstAttribute="centerX" secondItem="mqY-Nn-dNQ" secondAttribute="centerX" id="hzO-Mk-v5u"/>
+                                    <constraint firstItem="Kvp-r7-Qb2" firstAttribute="leading" secondItem="mqY-Nn-dNQ" secondAttribute="leading" constant="10" id="kXQ-p3-D4U"/>
+                                    <constraint firstAttribute="height" constant="50" id="q0i-Bd-hcV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xz8-8S-hDA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mqY-Nn-dNQ" secondAttribute="trailing" id="9Rk-Ir-lmp"/>
+                            <constraint firstItem="mqY-Nn-dNQ" firstAttribute="leading" secondItem="xz8-8S-hDA" secondAttribute="leading" id="mpJ-sR-kLI"/>
+                            <constraint firstItem="mqY-Nn-dNQ" firstAttribute="top" secondItem="xz8-8S-hDA" secondAttribute="top" id="oNa-Gf-F4z"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="iPad" image="watchface.applewatch.case" catalog="system" id="ouK-AS-lIB"/>
+                    <connections>
+                        <outlet property="ivBell" destination="Kvp-r7-Qb2" id="kF4-Q1-5eM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jwf-UO-9jZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1688" y="1271"/>
         </scene>
     </scenes>
     <resources>
@@ -270,6 +336,7 @@
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="ipad.gen1" catalog="system" width="109" height="128"/>
         <image name="pencil.slash" catalog="system" width="128" height="113"/>
+        <image name="watchface.applewatch.case" catalog="system" width="128" height="128"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
