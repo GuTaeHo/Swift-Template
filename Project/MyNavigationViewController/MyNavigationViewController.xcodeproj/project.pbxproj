@@ -13,6 +13,7 @@
 		0551FCB62912361E0057C729 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0551FCB42912361E0057C729 /* Main.storyboard */; };
 		0551FCB82912361F0057C729 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0551FCB72912361F0057C729 /* Assets.xcassets */; };
 		0551FCBB2912361F0057C729 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0551FCB92912361F0057C729 /* LaunchScreen.storyboard */; };
+		05814D32292F6491004A871A /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05814D31292F6491004A871A /* UINavigationController.swift */; };
 		05F7A126291243A40010F67F /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F7A125291243A40010F67F /* IntroViewController.swift */; };
 		05F7A128291244700010F67F /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F7A127291244700010F67F /* NavigationViewController.swift */; };
 		05F7A12A291245450010F67F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F7A129291245450010F67F /* LoginViewController.swift */; };
@@ -29,6 +30,7 @@
 		0551FCB72912361F0057C729 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0551FCBA2912361F0057C729 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0551FCBC2912361F0057C729 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05814D31292F6491004A871A /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 		05F7A125291243A40010F67F /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		05F7A127291244700010F67F /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		05F7A129291245450010F67F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				05F7A129291245450010F67F /* LoginViewController.swift */,
 				05F7A12B291250B30010F67F /* DeviceViewController.swift */,
 				05F7A12F2912618E0010F67F /* UIViewController.swift */,
+				05814D31292F6491004A871A /* UINavigationController.swift */,
 			);
 			path = MyNavigationViewController;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 				0551FCAF2912361E0057C729 /* AppDelegate.swift in Sources */,
 				0551FCB12912361E0057C729 /* SceneDelegate.swift in Sources */,
 				05F7A128291244700010F67F /* NavigationViewController.swift in Sources */,
+				05814D32292F6491004A871A /* UINavigationController.swift in Sources */,
 				05F7A1302912618E0010F67F /* UIViewController.swift in Sources */,
 				05F7A126291243A40010F67F /* IntroViewController.swift in Sources */,
 			);

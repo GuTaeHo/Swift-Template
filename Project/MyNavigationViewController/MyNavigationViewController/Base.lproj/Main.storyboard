@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6E2-9c-tfq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6E2-9c-tfq">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,26 +25,47 @@
                                     <action selector="next:" destination="nIr-D8-H8x" eventType="touchUpInside" id="5nk-C4-J9p"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwp-HD-eDt">
+                                <rect key="frame" x="128" y="404.66666666666669" width="134" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="현재 뷰 컨 이름?"/>
+                                <connections>
+                                    <action selector="currentViewController:" destination="nIr-D8-H8x" eventType="touchUpInside" id="c9h-6j-ZQv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cu3-bV-zPE">
+                                <rect key="frame" x="18" y="386.66666666666669" width="354" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gEz-o3-WlB"/>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                         <constraints>
                             <constraint firstItem="N14-Tf-0Am" firstAttribute="top" secondItem="gEz-o3-WlB" secondAttribute="top" constant="18" id="D2W-UJ-kvf"/>
+                            <constraint firstItem="Vwp-HD-eDt" firstAttribute="centerY" secondItem="HxS-Oe-HyH" secondAttribute="centerY" id="Hpy-lu-8nb"/>
+                            <constraint firstItem="cu3-bV-zPE" firstAttribute="leading" secondItem="gEz-o3-WlB" secondAttribute="leading" constant="18" id="Qn1-Rh-7bf"/>
+                            <constraint firstItem="gEz-o3-WlB" firstAttribute="trailing" secondItem="cu3-bV-zPE" secondAttribute="trailing" constant="18" id="XTM-L8-sgu"/>
+                            <constraint firstItem="Vwp-HD-eDt" firstAttribute="top" secondItem="cu3-bV-zPE" secondAttribute="bottom" constant="18" id="Zbc-xv-Qwg"/>
+                            <constraint firstItem="Vwp-HD-eDt" firstAttribute="centerX" secondItem="HxS-Oe-HyH" secondAttribute="centerX" id="cwW-rb-rQn"/>
                             <constraint firstItem="gEz-o3-WlB" firstAttribute="trailing" secondItem="N14-Tf-0Am" secondAttribute="trailing" constant="18" id="nfc-bd-arm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="스플래시" id="3PF-jX-Sia">
                         <barButtonItem key="rightBarButtonItem" title="인트로" id="pF9-go-YUf"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="lbCurrentViewController" destination="cu3-bV-zPE" id="ZHq-r8-NIa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vB5-MB-vhv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="688" y="314"/>
+            <point key="canvasLocation" x="687.69230769230762" y="313.50710900473933"/>
         </scene>
         <!--인트로-->
         <scene sceneID="cwk-Gc-SIE">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="F1A-2e-KIm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="IntroViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kzK-TQ-gkG" customClass="IntroViewController" customModule="MyNavigationViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EVB-na-uJm">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
@@ -58,23 +79,46 @@
                                     <action selector="next:" destination="kzK-TQ-gkG" eventType="touchUpInside" id="b1S-lP-bwc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qI-cB-sHu">
+                                <rect key="frame" x="128" y="404.66666666666669" width="134" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="이전 뷰 컨 이름?"/>
+                                <connections>
+                                    <action selector="currentViewController:" destination="nIr-D8-H8x" eventType="touchUpInside" id="MNJ-QN-gRg"/>
+                                    <action selector="previousViewController:" destination="kzK-TQ-gkG" eventType="touchUpInside" id="V5f-of-IKv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvC-KG-nCl">
+                                <rect key="frame" x="18" y="386.66666666666669" width="354" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="V88-Ke-ndX"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
+                            <constraint firstItem="9qI-cB-sHu" firstAttribute="centerX" secondItem="EVB-na-uJm" secondAttribute="centerX" id="0Gb-3J-ABk"/>
+                            <constraint firstItem="9qI-cB-sHu" firstAttribute="centerY" secondItem="EVB-na-uJm" secondAttribute="centerY" id="Iog-qB-xi7"/>
+                            <constraint firstAttribute="trailing" secondItem="yvC-KG-nCl" secondAttribute="trailing" constant="18" id="XHe-sE-2DB"/>
+                            <constraint firstItem="yvC-KG-nCl" firstAttribute="leading" secondItem="EVB-na-uJm" secondAttribute="leading" constant="18" id="oUc-cB-k5M"/>
                             <constraint firstItem="HUn-KT-lyd" firstAttribute="top" secondItem="V88-Ke-ndX" secondAttribute="top" constant="18" id="run-Aa-aBe"/>
                             <constraint firstItem="V88-Ke-ndX" firstAttribute="trailing" secondItem="HUn-KT-lyd" secondAttribute="trailing" constant="18" id="ufU-kb-RhB"/>
+                            <constraint firstItem="9qI-cB-sHu" firstAttribute="top" secondItem="yvC-KG-nCl" secondAttribute="bottom" constant="18" id="wKT-dS-gQD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="인트로" id="pW7-b7-ypd"/>
+                    <connections>
+                        <outlet property="lbCurrentViewController" destination="yvC-KG-nCl" id="EoC-tY-v9r"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F1A-2e-KIm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1468" y="314"/>
         </scene>
         <!--로그인-->
         <scene sceneID="JR2-by-fwW">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VIU-bN-jFe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="LoginViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AIJ-2b-GXG" customClass="LoginViewController" customModule="MyNavigationViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cpi-NW-p7e">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
@@ -98,6 +142,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="로그인" id="KCH-TN-aSX"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VIU-bN-jFe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2258" y="314"/>
         </scene>
