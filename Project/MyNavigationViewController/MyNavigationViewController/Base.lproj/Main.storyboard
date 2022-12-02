@@ -162,11 +162,22 @@
                                     <action selector="next:" destination="nPb-B4-7mV" eventType="touchUpInside" id="XGQ-9U-dw0"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3x-es-dcN">
+                                <rect key="frame" x="113.66666666666669" y="404.66666666666669" width="163" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="pop 하고 push 하기"/>
+                                <connections>
+                                    <action selector="next:" destination="nPb-B4-7mV" eventType="touchUpInside" id="3uX-8e-tt7"/>
+                                    <action selector="popAndPush:" destination="nPb-B4-7mV" eventType="touchUpInside" id="jl4-Rm-4qh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XlZ-L0-7Pt"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
                             <constraint firstItem="E6n-2O-Vfd" firstAttribute="top" secondItem="XlZ-L0-7Pt" secondAttribute="top" constant="18" id="VBm-rs-cZQ"/>
+                            <constraint firstItem="E3x-es-dcN" firstAttribute="centerY" secondItem="EpZ-At-d2K" secondAttribute="centerY" id="cDF-tX-mQx"/>
+                            <constraint firstItem="E3x-es-dcN" firstAttribute="centerX" secondItem="EpZ-At-d2K" secondAttribute="centerX" id="gte-Cc-Ckw"/>
                             <constraint firstItem="XlZ-L0-7Pt" firstAttribute="trailing" secondItem="E6n-2O-Vfd" secondAttribute="trailing" constant="18" id="pnR-ko-yNU"/>
                         </constraints>
                     </view>
@@ -191,10 +202,45 @@
             </objects>
             <point key="canvasLocation" x="688" y="-447"/>
         </scene>
+        <!--기기 인증-->
+        <scene sceneID="yGn-vn-NcI">
+            <objects>
+                <viewController storyboardIdentifier="HopeViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LUs-VE-btB" customClass="HopeViewController" customModule="MyNavigationViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Gn-jG-F3P">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vx-Jy-0Go">
+                                <rect key="frame" x="299" y="65" width="73" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="첫 화면"/>
+                                <connections>
+                                    <action selector="next:" destination="LUs-VE-btB" eventType="touchUpInside" id="vTP-HI-a2T"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="O8O-cw-JrJ"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="O8O-cw-JrJ" firstAttribute="trailing" secondItem="8vx-Jy-0Go" secondAttribute="trailing" constant="18" id="4zN-xj-R23"/>
+                            <constraint firstItem="O8O-cw-JrJ" firstAttribute="trailing" secondItem="8vx-Jy-0Go" secondAttribute="trailing" constant="18" id="jFq-Ne-Hsp"/>
+                            <constraint firstItem="8vx-Jy-0Go" firstAttribute="top" secondItem="O8O-cw-JrJ" secondAttribute="top" constant="18" id="lDy-YY-PMC"/>
+                            <constraint firstItem="8vx-Jy-0Go" firstAttribute="top" secondItem="O8O-cw-JrJ" secondAttribute="top" constant="18" id="yWS-IO-PNu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="기기 인증" id="MBr-Yb-23Q"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fKs-Xg-Yka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2997" y="1041"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

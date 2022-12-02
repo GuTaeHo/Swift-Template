@@ -11,6 +11,10 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // 현재 최 상단 뷰 컨트롤러 (LoginViewController 자기 자신) 프린트
+        if let viewController = self.navigationController?.topViewController as? LoginViewController {
+            print("\(String(describing: type(of: viewController)))")
+        }
     }
     
     @IBAction func next(_ sender: Any) {

@@ -20,4 +20,11 @@ extension UINavigationController {
         
         return viewController
     }
+    
+    /// 현재 뷰 컨트롤러 pop -> 이전 뷰 컨트롤러 -> 원하는 뷰 컨트롤러(생성 후) 이동
+    /// - parameter moveViewController: 이동 할 뷰 컨트롤러
+    func popAndPushViewController(moveViewController: UIViewController) {
+        self.popToRootViewController(animated: false)
+        self.pushViewController(moveViewController, animated: true)
+    }
 }

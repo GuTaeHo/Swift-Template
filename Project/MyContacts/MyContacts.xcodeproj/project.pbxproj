@@ -7,33 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05564F5228E551400062667E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05564F5128E551400062667E /* AppDelegate.swift */; };
-		05564F5428E551400062667E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05564F5328E551400062667E /* SceneDelegate.swift */; };
-		05564F5628E551400062667E /* NotificationSendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05564F5528E551400062667E /* NotificationSendViewController.swift */; };
-		05564F5928E551400062667E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05564F5728E551400062667E /* Main.storyboard */; };
-		05564F5B28E551410062667E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05564F5A28E551410062667E /* Assets.xcassets */; };
-		05564F5E28E551410062667E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05564F5C28E551410062667E /* LaunchScreen.storyboard */; };
-		05564F6628E5522F0062667E /* NotificationReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05564F6528E5522F0062667E /* NotificationReceiveViewController.swift */; };
-		05564F6828E55ACD0062667E /* NotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05564F6728E55ACD0062667E /* NotificationNameExtension.swift */; };
-		057ECE74293494D00058A974 /* NotificationReceiveSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057ECE73293494D00058A974 /* NotificationReceiveSecondViewController.swift */; };
+		057ECE82293595A70058A974 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057ECE81293595A70058A974 /* AppDelegate.swift */; };
+		057ECE84293595A70058A974 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057ECE83293595A70058A974 /* SceneDelegate.swift */; };
+		057ECE86293595A70058A974 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057ECE85293595A70058A974 /* ViewController.swift */; };
+		057ECE89293595A70058A974 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 057ECE87293595A70058A974 /* Main.storyboard */; };
+		057ECE8B293595A80058A974 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 057ECE8A293595A80058A974 /* Assets.xcassets */; };
+		057ECE8E293595A80058A974 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 057ECE8C293595A80058A974 /* LaunchScreen.storyboard */; };
+		057ECE9629359BAC0058A974 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057ECE9529359BAC0058A974 /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		05564F4E28E551400062667E /* MyNotificationCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNotificationCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		05564F5128E551400062667E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		05564F5328E551400062667E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		05564F5528E551400062667E /* NotificationSendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSendViewController.swift; sourceTree = "<group>"; };
-		05564F5828E551400062667E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		05564F5A28E551410062667E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		05564F5D28E551410062667E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		05564F5F28E551410062667E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		05564F6528E5522F0062667E /* NotificationReceiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationReceiveViewController.swift; sourceTree = "<group>"; };
-		05564F6728E55ACD0062667E /* NotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNameExtension.swift; sourceTree = "<group>"; };
-		057ECE73293494D00058A974 /* NotificationReceiveSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationReceiveSecondViewController.swift; sourceTree = "<group>"; };
+		057ECE7E293595A70058A974 /* MyContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		057ECE81293595A70058A974 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		057ECE83293595A70058A974 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		057ECE85293595A70058A974 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		057ECE88293595A70058A974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		057ECE8A293595A80058A974 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		057ECE8D293595A80058A974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		057ECE8F293595A80058A974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		057ECE9529359BAC0058A974 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		05564F4B28E551400062667E /* Frameworks */ = {
+		057ECE7B293595A70058A974 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,75 +39,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		05564F4528E551400062667E = {
+		057ECE75293595A70058A974 = {
 			isa = PBXGroup;
 			children = (
-				05564F5028E551400062667E /* MyNotificationCenter */,
-				05564F4F28E551400062667E /* Products */,
+				057ECE80293595A70058A974 /* MyContacts */,
+				057ECE7F293595A70058A974 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		05564F4F28E551400062667E /* Products */ = {
+		057ECE7F293595A70058A974 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				05564F4E28E551400062667E /* MyNotificationCenter.app */,
+				057ECE7E293595A70058A974 /* MyContacts.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		05564F5028E551400062667E /* MyNotificationCenter */ = {
+		057ECE80293595A70058A974 /* MyContacts */ = {
 			isa = PBXGroup;
 			children = (
-				05564F5128E551400062667E /* AppDelegate.swift */,
-				05564F5328E551400062667E /* SceneDelegate.swift */,
-				05564F5528E551400062667E /* NotificationSendViewController.swift */,
-				05564F6528E5522F0062667E /* NotificationReceiveViewController.swift */,
-				05564F5728E551400062667E /* Main.storyboard */,
-				05564F5A28E551410062667E /* Assets.xcassets */,
-				05564F5C28E551410062667E /* LaunchScreen.storyboard */,
-				05564F5F28E551410062667E /* Info.plist */,
-				05564F6728E55ACD0062667E /* NotificationNameExtension.swift */,
-				057ECE73293494D00058A974 /* NotificationReceiveSecondViewController.swift */,
+				057ECE81293595A70058A974 /* AppDelegate.swift */,
+				057ECE83293595A70058A974 /* SceneDelegate.swift */,
+				057ECE85293595A70058A974 /* ViewController.swift */,
+				057ECE87293595A70058A974 /* Main.storyboard */,
+				057ECE8A293595A80058A974 /* Assets.xcassets */,
+				057ECE8C293595A80058A974 /* LaunchScreen.storyboard */,
+				057ECE8F293595A80058A974 /* Info.plist */,
+				057ECE9529359BAC0058A974 /* Contact.swift */,
 			);
-			path = MyNotificationCenter;
+			path = MyContacts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		05564F4D28E551400062667E /* MyNotificationCenter */ = {
+		057ECE7D293595A70058A974 /* MyContacts */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 05564F6228E551410062667E /* Build configuration list for PBXNativeTarget "MyNotificationCenter" */;
+			buildConfigurationList = 057ECE92293595A80058A974 /* Build configuration list for PBXNativeTarget "MyContacts" */;
 			buildPhases = (
-				05564F4A28E551400062667E /* Sources */,
-				05564F4B28E551400062667E /* Frameworks */,
-				05564F4C28E551400062667E /* Resources */,
+				057ECE7A293595A70058A974 /* Sources */,
+				057ECE7B293595A70058A974 /* Frameworks */,
+				057ECE7C293595A70058A974 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MyNotificationCenter;
-			productName = MyNotificationCenter;
-			productReference = 05564F4E28E551400062667E /* MyNotificationCenter.app */;
+			name = MyContacts;
+			productName = MyContacts;
+			productReference = 057ECE7E293595A70058A974 /* MyContacts.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		05564F4628E551400062667E /* Project object */ = {
+		057ECE76293595A70058A974 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1400;
-				LastUpgradeCheck = 1400;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
 				TargetAttributes = {
-					05564F4D28E551400062667E = {
-						CreatedOnToolsVersion = 14.0;
+					057ECE7D293595A70058A974 = {
+						CreatedOnToolsVersion = 14.1;
 					};
 				};
 			};
-			buildConfigurationList = 05564F4928E551400062667E /* Build configuration list for PBXProject "MyNotificationCenter" */;
+			buildConfigurationList = 057ECE79293595A70058A974 /* Build configuration list for PBXProject "MyContacts" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -119,58 +113,56 @@
 				en,
 				Base,
 			);
-			mainGroup = 05564F4528E551400062667E;
-			productRefGroup = 05564F4F28E551400062667E /* Products */;
+			mainGroup = 057ECE75293595A70058A974;
+			productRefGroup = 057ECE7F293595A70058A974 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				05564F4D28E551400062667E /* MyNotificationCenter */,
+				057ECE7D293595A70058A974 /* MyContacts */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		05564F4C28E551400062667E /* Resources */ = {
+		057ECE7C293595A70058A974 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05564F5E28E551410062667E /* LaunchScreen.storyboard in Resources */,
-				05564F5B28E551410062667E /* Assets.xcassets in Resources */,
-				05564F5928E551400062667E /* Main.storyboard in Resources */,
+				057ECE8E293595A80058A974 /* LaunchScreen.storyboard in Resources */,
+				057ECE8B293595A80058A974 /* Assets.xcassets in Resources */,
+				057ECE89293595A70058A974 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		05564F4A28E551400062667E /* Sources */ = {
+		057ECE7A293595A70058A974 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05564F5628E551400062667E /* NotificationSendViewController.swift in Sources */,
-				05564F5228E551400062667E /* AppDelegate.swift in Sources */,
-				05564F5428E551400062667E /* SceneDelegate.swift in Sources */,
-				05564F6628E5522F0062667E /* NotificationReceiveViewController.swift in Sources */,
-				05564F6828E55ACD0062667E /* NotificationNameExtension.swift in Sources */,
-				057ECE74293494D00058A974 /* NotificationReceiveSecondViewController.swift in Sources */,
+				057ECE9629359BAC0058A974 /* Contact.swift in Sources */,
+				057ECE86293595A70058A974 /* ViewController.swift in Sources */,
+				057ECE82293595A70058A974 /* AppDelegate.swift in Sources */,
+				057ECE84293595A70058A974 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		05564F5728E551400062667E /* Main.storyboard */ = {
+		057ECE87293595A70058A974 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				05564F5828E551400062667E /* Base */,
+				057ECE88293595A70058A974 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		05564F5C28E551410062667E /* LaunchScreen.storyboard */ = {
+		057ECE8C293595A80058A974 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				05564F5D28E551410062667E /* Base */,
+				057ECE8D293595A80058A974 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -178,7 +170,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		05564F6028E551410062667E /* Debug */ = {
+		057ECE90293595A80058A974 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -228,7 +220,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -238,7 +230,7 @@
 			};
 			name = Debug;
 		};
-		05564F6128E551410062667E /* Release */ = {
+		057ECE91293595A80058A974 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -282,7 +274,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -292,7 +284,7 @@
 			};
 			name = Release;
 		};
-		05564F6328E551410062667E /* Debug */ = {
+		057ECE93293595A80058A974 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -301,7 +293,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L8WFLHVUYX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyNotificationCenter/Info.plist;
+				INFOPLIST_FILE = MyContacts/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -313,7 +305,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyNotificationCenter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyContacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -321,7 +313,7 @@
 			};
 			name = Debug;
 		};
-		05564F6428E551410062667E /* Release */ = {
+		057ECE94293595A80058A974 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -330,7 +322,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L8WFLHVUYX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyNotificationCenter/Info.plist;
+				INFOPLIST_FILE = MyContacts/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -342,7 +334,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyNotificationCenter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyContacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -353,25 +345,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		05564F4928E551400062667E /* Build configuration list for PBXProject "MyNotificationCenter" */ = {
+		057ECE79293595A70058A974 /* Build configuration list for PBXProject "MyContacts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				05564F6028E551410062667E /* Debug */,
-				05564F6128E551410062667E /* Release */,
+				057ECE90293595A80058A974 /* Debug */,
+				057ECE91293595A80058A974 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		05564F6228E551410062667E /* Build configuration list for PBXNativeTarget "MyNotificationCenter" */ = {
+		057ECE92293595A80058A974 /* Build configuration list for PBXNativeTarget "MyContacts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				05564F6328E551410062667E /* Debug */,
-				05564F6428E551410062667E /* Release */,
+				057ECE93293595A80058A974 /* Debug */,
+				057ECE94293595A80058A974 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 05564F4628E551400062667E /* Project object */;
+	rootObject = 057ECE76293595A70058A974 /* Project object */;
 }

@@ -1,13 +1,13 @@
 //
-//  NotificationReceiveViewController.swift
+//  NotificationReceiveSecondViewController.swift
 //  MyNotificationCenter
 //
-//  Created by 구태호 on 2022/09/29.
+//  Created by 구태호 on 2022/11/28.
 //
 
 import UIKit
 
-class NotificationReceiveViewController: UIViewController {
+class NotificationReceiveSecondViewController: UIViewController {
     
     @IBOutlet var lbReceive: UILabel!
     
@@ -23,12 +23,5 @@ class NotificationReceiveViewController: UIViewController {
             lbReceive.text = text
         }
     }
-    
-    @IBAction func nextController(_ sender: Any) {
-        guard let viewController = storyboard?.instantiateViewController(withIdentifier: "NotificationReceiveSecondViewController" ) else {
-            return
-        }
-        
-        self.navigationController?.pushViewController(viewController, animated: true)
-    }
 }
+

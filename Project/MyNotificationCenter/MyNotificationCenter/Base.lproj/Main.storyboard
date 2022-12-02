@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ABO-8f-gD9">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="WIW-BW-b2W">
+            <objects>
+                <navigationController id="ABO-8f-gD9" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8ad-Ty-JUO">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="7N6-9S-57H"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sdY-nD-HrK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-981" y="-392"/>
+        </scene>
         <!--Notification Send View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -54,44 +70,87 @@
                             <constraint firstItem="W1l-H3-ivr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u7q-FA-LPu"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="YJW-4R-aJb"/>
                     <connections>
                         <outlet property="textField" destination="j18-DX-Crx" id="kaG-yE-Bbm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="4"/>
+            <point key="canvasLocation" x="-157" y="-392"/>
         </scene>
         <!--Notification Receive View Controller-->
         <scene sceneID="N5E-P1-OBg">
             <objects>
                 <viewController id="ZM9-L1-YQu" customClass="NotificationReceiveViewController" customModule="MyNotificationCenter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6BL-LJ-1qP">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3초 후 수신됩니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deH-3i-o8C">
-                                <rect key="frame" x="134" y="383" width="122" height="21"/>
+                                <rect key="frame" x="134" y="411.66666666666669" width="122" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJB-rf-tGr">
+                                <rect key="frame" x="168.33333333333334" y="647" width="53.666666666666657" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="다음"/>
+                                <connections>
+                                    <action selector="nextController:" destination="ZM9-L1-YQu" eventType="touchUpInside" id="mh7-SC-79t"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="e9g-Qw-CEP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="deH-3i-o8C" firstAttribute="centerY" secondItem="6BL-LJ-1qP" secondAttribute="centerY" id="E2Z-6v-icc"/>
                             <constraint firstItem="deH-3i-o8C" firstAttribute="centerX" secondItem="6BL-LJ-1qP" secondAttribute="centerX" id="ZsI-02-toi"/>
+                            <constraint firstItem="NJB-rf-tGr" firstAttribute="centerX" secondItem="6BL-LJ-1qP" secondAttribute="centerX" id="mlI-u7-gsV"/>
+                            <constraint firstItem="e9g-Qw-CEP" firstAttribute="bottom" secondItem="NJB-rf-tGr" secondAttribute="bottom" constant="128" id="rAw-is-JdE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Eyw-63-o4F"/>
                     <connections>
                         <outlet property="lbReceive" destination="deH-3i-o8C" id="Ds8-0r-1h5"/>
+                        <segue destination="3oN-b7-n2f" kind="show" id="J9p-8o-GOc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aow-wu-EVt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="862" y="4"/>
+            <point key="canvasLocation" x="677" y="-392"/>
+        </scene>
+        <!--Notification Receive Second View Controller-->
+        <scene sceneID="upN-ar-u79">
+            <objects>
+                <viewController storyboardIdentifier="NotificationReceiveSecondViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3oN-b7-n2f" customClass="NotificationReceiveSecondViewController" customModule="MyNotificationCenter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nNC-Fb-BOz">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3초 후 수신됩니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rpw-Qq-QoJ">
+                                <rect key="frame" x="134" y="411.66666666666669" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kCJ-GK-9TL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Rpw-Qq-QoJ" firstAttribute="centerX" secondItem="nNC-Fb-BOz" secondAttribute="centerX" id="Mme-YT-jhp"/>
+                            <constraint firstItem="Rpw-Qq-QoJ" firstAttribute="centerY" secondItem="nNC-Fb-BOz" secondAttribute="centerY" id="ltS-yf-ZdJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="AJl-Ho-vVC"/>
+                    <connections>
+                        <outlet property="lbReceive" destination="Rpw-Qq-QoJ" id="wTO-k1-oWc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pvi-PG-uM7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1508" y="-392"/>
         </scene>
     </scenes>
     <resources>
