@@ -11,13 +11,20 @@ class DefaultSecondViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     
-    private var tableViewItems = ["가나다", "라마바", "사아자", "차카타", "파하"]
+    private var items = ["imgCocoa6.jpg", "imgCocoa4.jpg", "imgJar1.jpg", "imgCocoa2.jpg"]
+    private var tableViewItems = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let nib = UINib(nibName: "DefaultTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "DefaultTableViewCell")
+        
+        for _ in 0..<5 {
+            for item in items {
+                tableViewItems.append(item)
+            }
+        }
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -38,9 +45,9 @@ extension DefaultSecondViewController: UITableViewDelegate, UITableViewDataSourc
         }
         
         let index = indexPath.row
-        let title = tableViewItems[index]
+        let imageName = tableViewItems[index]
         
-        cell.lbTitle.text = title
+        cell.ivThumbNail.image = UIImage(named: imageName)
         
         return cell
     }

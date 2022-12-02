@@ -9,7 +9,7 @@ import UIKit
 
 class DefaultTableViewCell: UITableViewCell {
 
-    @IBOutlet var lbTitle: UILabel!
+    @IBOutlet var ivThumbNail: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
