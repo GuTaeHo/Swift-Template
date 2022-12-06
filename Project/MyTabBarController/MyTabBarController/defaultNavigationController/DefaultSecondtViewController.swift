@@ -17,6 +17,8 @@ class DefaultSecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        initNavigationItemLayout()
+        
         let nib = UINib(nibName: "DefaultTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "DefaultTableViewCell")
         
@@ -29,8 +31,14 @@ class DefaultSecondViewController: UIViewController {
         tableView.dataSource = self
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    private func initNavigationItemLayout() {
+        let backButtonImage = UIImage(systemName: "arrow.backward")
+        
+        navigationController?.navigationItem.backBarButtonItem = UIBarButtonItem(image: backButtonImage, style: .plain, target: self, action: #selector(popToPrevious))
+    }
+    
+    @objc func popToPrevious() {
+        self.navigationController?.popViewController(animated: true)
     }
 }
 

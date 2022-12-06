@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     
     @IBOutlet var skeletonTableView: UITableView!
     
+    @IBOutlet var btCollection: UIButton!
+    
     var packages = [
         Package(thumbnail: "imgCocoa3", title: "CocoaPods", subTitle: "iOS"),
         Package(thumbnail: "imgCocoa2", title: "Gradle", subTitle: "Android"),
@@ -33,6 +35,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        btCollection.addTarget(self, action: #selector(onClickButton), for: .touchUpInside)
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
             self.view.hideSkeleton()
         }
@@ -44,6 +48,12 @@ class ViewController: UIViewController {
         skeletonTableView.reloadData()
         
         view.showAnimatedGradientSkeleton()
+    }
+    
+    @objc func onClickButton() {
+        if let viewController = storyboard?.instantiateViewController(withIdentifier: "PackageCollectionViewController") as? PackageCollectionViewController {
+            present(viewController, animated: true)
+        }
     }
 }
 

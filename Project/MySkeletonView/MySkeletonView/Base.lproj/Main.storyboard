@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -39,6 +39,11 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OlD-v8-2Xi">
+                                        <rect key="frame" x="297" y="24.666666666666671" width="75" height="35"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -47,6 +52,8 @@
                                     <constraint firstAttribute="trailing" secondItem="Stz-DC-qS9" secondAttribute="trailing" constant="12" id="H70-bG-t2x"/>
                                     <constraint firstItem="lfx-Ci-Rcq" firstAttribute="leading" secondItem="nVV-Dq-uYq" secondAttribute="leading" constant="12" id="Nda-ES-nb4"/>
                                     <constraint firstItem="Stz-DC-qS9" firstAttribute="centerY" secondItem="nVV-Dq-uYq" secondAttribute="centerY" id="cvh-x2-BiJ"/>
+                                    <constraint firstItem="OlD-v8-2Xi" firstAttribute="centerY" secondItem="nVV-Dq-uYq" secondAttribute="centerY" id="fO2-Ym-d5c"/>
+                                    <constraint firstAttribute="trailing" secondItem="OlD-v8-2Xi" secondAttribute="trailing" constant="18" id="l6D-eG-qOC"/>
                                     <constraint firstAttribute="bottom" secondItem="lfx-Ci-Rcq" secondAttribute="bottom" constant="12" id="ywz-U0-92J"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -78,6 +85,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
+                        <outlet property="btCollection" destination="OlD-v8-2Xi" id="uEd-eT-Rpd"/>
                         <outlet property="ivTitle" destination="lfx-Ci-Rcq" id="cDP-x5-Le2"/>
                         <outlet property="lbTitle" destination="Stz-DC-qS9" id="rFW-Fc-PIT"/>
                         <outlet property="skeletonTableView" destination="RUE-2V-r8E" id="6GX-ZC-gcg"/>
@@ -87,6 +95,91 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="125" y="4"/>
+        </scene>
+        <!--Package Collection View Controller-->
+        <scene sceneID="Ipt-xH-1IM">
+            <objects>
+                <viewController storyboardIdentifier="PackageCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xbB-7V-P9E" customClass="PackageCollectionViewController" customModule="MySkeletonView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zNr-d4-2f3">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6LC-51-GbH">
+                                <rect key="frame" x="0.0" y="47" width="390" height="84"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgCocoa1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="3Fo-If-5th">
+                                        <rect key="frame" x="12" y="12" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="4CF-Ne-y0h"/>
+                                            <constraint firstAttribute="width" constant="60" id="rlw-Pf-I8m"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skeleton UILabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oUY-z2-Gnn">
+                                        <rect key="frame" x="84" y="27" width="294" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="oUY-z2-Gnn" secondAttribute="trailing" constant="12" id="2ff-r9-nFr"/>
+                                    <constraint firstItem="3Fo-If-5th" firstAttribute="top" secondItem="6LC-51-GbH" secondAttribute="top" constant="12" id="B0u-Co-6Ce"/>
+                                    <constraint firstItem="3Fo-If-5th" firstAttribute="leading" secondItem="6LC-51-GbH" secondAttribute="leading" constant="12" id="JLx-gz-qZG"/>
+                                    <constraint firstItem="oUY-z2-Gnn" firstAttribute="centerY" secondItem="6LC-51-GbH" secondAttribute="centerY" id="N54-Ng-Ru4"/>
+                                    <constraint firstItem="oUY-z2-Gnn" firstAttribute="leading" secondItem="3Fo-If-5th" secondAttribute="trailing" constant="12" id="Q0e-N4-V1p"/>
+                                    <constraint firstAttribute="bottom" secondItem="3Fo-If-5th" secondAttribute="bottom" constant="12" id="fKB-Pk-gix"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CWu-6y-GjX">
+                                <rect key="frame" x="0.0" y="131" width="390" height="713"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="js0-yN-6Am">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="C2d-8Z-NgZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="CWu-6y-GjX" secondAttribute="bottom" id="2ih-GL-DLW"/>
+                            <constraint firstItem="CWu-6y-GjX" firstAttribute="top" secondItem="6LC-51-GbH" secondAttribute="bottom" id="6Md-n9-KSN"/>
+                            <constraint firstItem="6LC-51-GbH" firstAttribute="top" secondItem="C2d-8Z-NgZ" secondAttribute="top" id="8K9-Ja-F6z"/>
+                            <constraint firstItem="CWu-6y-GjX" firstAttribute="leading" secondItem="C2d-8Z-NgZ" secondAttribute="leading" id="TcS-QX-o4v"/>
+                            <constraint firstItem="C2d-8Z-NgZ" firstAttribute="trailing" secondItem="6LC-51-GbH" secondAttribute="trailing" id="ZHX-ZB-sr5"/>
+                            <constraint firstItem="6LC-51-GbH" firstAttribute="leading" secondItem="C2d-8Z-NgZ" secondAttribute="leading" id="cKD-X6-dSv"/>
+                            <constraint firstItem="C2d-8Z-NgZ" firstAttribute="trailing" secondItem="CWu-6y-GjX" secondAttribute="trailing" id="tdi-Rm-8OJ"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <connections>
+                        <outlet property="ivTitle" destination="3Fo-If-5th" id="llf-fH-bzX"/>
+                        <outlet property="lbTitle" destination="oUY-z2-Gnn" id="cIR-St-uZD"/>
+                        <outlet property="packageCollectionView" destination="CWu-6y-GjX" id="odU-zb-xkp"/>
+                        <outlet property="titleView" destination="6LC-51-GbH" id="SaX-WY-ZcB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hw8-AU-zgk" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="915" y="4"/>
         </scene>
     </scenes>
     <resources>

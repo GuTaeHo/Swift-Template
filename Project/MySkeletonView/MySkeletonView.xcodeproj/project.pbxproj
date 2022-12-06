@@ -19,6 +19,9 @@
 		05C23FD5291B439A00F5F329 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05C23FD3291B439A00F5F329 /* Main.storyboard */; };
 		05C23FD7291B439B00F5F329 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05C23FD6291B439B00F5F329 /* Assets.xcassets */; };
 		05C23FDA291B439B00F5F329 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05C23FD8291B439B00F5F329 /* LaunchScreen.storyboard */; };
+		05E894E1293A59EB000FD4ED /* PackageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E894E0293A59EB000FD4ED /* PackageCollectionViewController.swift */; };
+		05E894E4293A5A63000FD4ED /* PackageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E894E2293A5A63000FD4ED /* PackageCollectionViewCell.swift */; };
+		05E894E5293A5A63000FD4ED /* PackageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05E894E3293A5A63000FD4ED /* PackageCollectionViewCell.xib */; };
 		9BB565B09BC03EE684FDD395 /* Pods_MySkeletonView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D4354DDF848F20A88AF5C5 /* Pods_MySkeletonView.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +41,9 @@
 		05C23FD6291B439B00F5F329 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05C23FD9291B439B00F5F329 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05C23FDB291B439B00F5F329 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05E894E0293A59EB000FD4ED /* PackageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageCollectionViewController.swift; sourceTree = "<group>"; };
+		05E894E2293A5A63000FD4ED /* PackageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageCollectionViewCell.swift; sourceTree = "<group>"; };
+		05E894E3293A5A63000FD4ED /* PackageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PackageCollectionViewCell.xib; sourceTree = "<group>"; };
 		A7E5BEF6E5F11E582F13E7CB /* Pods-MySkeletonView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySkeletonView.release.xcconfig"; path = "Target Support Files/Pods-MySkeletonView/Pods-MySkeletonView.release.xcconfig"; sourceTree = "<group>"; };
 		EA59566765F4FE7D2050D4D5 /* Pods-MySkeletonView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySkeletonView.debug.xcconfig"; path = "Target Support Files/Pods-MySkeletonView/Pods-MySkeletonView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +94,9 @@
 				0598359F291B60BB0003640B /* SkeletonCell.xib */,
 				05C23FD8291B439B00F5F329 /* LaunchScreen.storyboard */,
 				05C23FD3291B439A00F5F329 /* Main.storyboard */,
+				05E894E0293A59EB000FD4ED /* PackageCollectionViewController.swift */,
+				05E894E2293A5A63000FD4ED /* PackageCollectionViewCell.swift */,
+				05E894E3293A5A63000FD4ED /* PackageCollectionViewCell.xib */,
 			);
 			path = MySkeletonView;
 			sourceTree = "<group>";
@@ -170,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05C23FDA291B439B00F5F329 /* LaunchScreen.storyboard in Resources */,
+				05E894E5293A5A63000FD4ED /* PackageCollectionViewCell.xib in Resources */,
 				05C23FD7291B439B00F5F329 /* Assets.xcassets in Resources */,
 				059835AB291B6B910003640B /* imgCocoa2.jpg in Resources */,
 				059835A1291B60BB0003640B /* SkeletonCell.xib in Resources */,
@@ -228,11 +238,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05E894E4293A5A63000FD4ED /* PackageCollectionViewCell.swift in Sources */,
 				059835A9291B69D50003640B /* Package.swift in Sources */,
 				05C23FD2291B439A00F5F329 /* ViewController.swift in Sources */,
 				05C23FCE291B439A00F5F329 /* AppDelegate.swift in Sources */,
 				059835A0291B60BB0003640B /* SkeletonCell.swift in Sources */,
 				05C23FD0291B439A00F5F329 /* SceneDelegate.swift in Sources */,
+				05E894E1293A59EB000FD4ED /* PackageCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
