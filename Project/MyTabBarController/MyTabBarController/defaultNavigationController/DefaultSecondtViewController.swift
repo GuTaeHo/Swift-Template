@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DefaultSecondViewController: UIViewController {
+class DefaultSecondViewController: BaseViewController {
     
     @IBOutlet var tableView: UITableView!
     

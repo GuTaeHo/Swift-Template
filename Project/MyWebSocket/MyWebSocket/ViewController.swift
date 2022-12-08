@@ -19,11 +19,12 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        // socketIOConnetion()
+        socketIOConnetion()
     }
 
     func socketIOConnetion() {
-        manager = SocketManager(socketURL: URL(string: "http://192.168.67.204:3000")!, config: [.log(true), .compress])
+        let url = "http://192.168.1.2:3000"
+        manager = SocketManager(socketURL: URL(string: url)!, config: [.log(true), .compress])
         socket = manager.defaultSocket
 
         socket.on(clientEvent: .connect) {data, ack in
@@ -34,6 +35,8 @@ class ViewController: UIViewController {
         socket.on("msg") {data, ack in
             print("@@@ \(data), \(ack)")
         }
+        
+        socket.connect()
     }
 }
 

@@ -64,14 +64,14 @@
 			children = (
 				05564F5128E551400062667E /* AppDelegate.swift */,
 				05564F5328E551400062667E /* SceneDelegate.swift */,
+				05564F6728E55ACD0062667E /* NotificationNameExtension.swift */,
 				05564F5528E551400062667E /* NotificationSendViewController.swift */,
 				05564F6528E5522F0062667E /* NotificationReceiveViewController.swift */,
+				057ECE73293494D00058A974 /* NotificationReceiveSecondViewController.swift */,
 				05564F5728E551400062667E /* Main.storyboard */,
 				05564F5A28E551410062667E /* Assets.xcassets */,
 				05564F5C28E551410062667E /* LaunchScreen.storyboard */,
 				05564F5F28E551410062667E /* Info.plist */,
-				05564F6728E55ACD0062667E /* NotificationNameExtension.swift */,
-				057ECE73293494D00058A974 /* NotificationReceiveSecondViewController.swift */,
 			);
 			path = MyNotificationCenter;
 			sourceTree = "<group>";

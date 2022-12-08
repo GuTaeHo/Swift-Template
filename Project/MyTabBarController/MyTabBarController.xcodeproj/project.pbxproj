@@ -31,6 +31,7 @@
 		0592FAE22922026B0046A717 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0592FAE12922026B0046A717 /* MainNavigationController.swift */; };
 		05CB57A6292B101600F7C008 /* UITabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB57A5292B101600F7C008 /* UITabBar.swift */; };
 		05CB57A8292B1F9000F7C008 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB57A7292B1F9000F7C008 /* ThirdViewController.swift */; };
+		05CF29AF294016DE008CA35B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CF29AE294016DE008CA35B /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		0592FAE12922026B0046A717 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		05CB57A5292B101600F7C008 /* UITabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBar.swift; sourceTree = "<group>"; };
 		05CB57A7292B1F9000F7C008 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		05CF29AE294016DE008CA35B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				0536828C2939BC6C00B64013 /* imgCocoa2.jpg */,
 				0536828E2939C97D00B64013 /* UIViewController.swift */,
 				053682902939C9E800B64013 /* CustomNavigationBar.swift */,
+				05CF29AE294016DE008CA35B /* BaseViewController.swift */,
 			);
 			path = MyTabBarController;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				053682912939C9E800B64013 /* CustomNavigationBar.swift in Sources */,
 				0587784A29221D180002B6E9 /* EmbededViewControllerForSecondViewController.swift in Sources */,
 				0592FADC2921F81D0046A717 /* MainTabBarViewController.swift in Sources */,
+				05CF29AF294016DE008CA35B /* BaseViewController.swift in Sources */,
 				0592FAC82921F78C0046A717 /* AppDelegate.swift in Sources */,
 				0536827F29399CB400B64013 /* DefaultSecondtViewController.swift in Sources */,
 				0592FADE2921F93A0046A717 /* SecondViewController.swift in Sources */,

@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        socketIOConnetion()
+        // initSocketIOClient()
         return true
     }
     
@@ -31,9 +31,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
     
-    func socketIOConnetion() {
+    func initSocketIOClient() {
 #if DEBUG
-        let url = "http://test.blossom.bumblebeecrew.com"
+         let url = "http://192.168.1.2:3000"
+//        let url = "http://test.blossom.bumblebeecrew.com"
 #elseif RELEASE
         let url = "http://blossom.bumblebeecrew.com"
 #endif
@@ -46,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // socket.emit("chat message", "cocobean has connected")
         }
         
-        socket.on("@@@ chat message") {data, ack in
+        socket.on("chat message") {data, ack in
             print(data)
         }
         

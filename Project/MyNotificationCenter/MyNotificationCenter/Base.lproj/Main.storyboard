@@ -94,18 +94,28 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJB-rf-tGr">
-                                <rect key="frame" x="168.33333333333334" y="647" width="53.666666666666657" height="35"/>
+                                <rect key="frame" x="110" y="647" width="170" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="다음"/>
+                                <buttonConfiguration key="configuration" style="filled" title="다음 뷰 컨트롤러 진입"/>
                                 <connections>
                                     <action selector="nextController:" destination="ZM9-L1-YQu" eventType="touchUpInside" id="mh7-SC-79t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZs-PG-hMJ">
+                                <rect key="frame" x="94.666666666666686" y="730" width="201" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="다음 뷰 컨트롤러로 post()"/>
+                                <connections>
+                                    <action selector="methodCallTestNextViewController:" destination="ZM9-L1-YQu" eventType="touchUpInside" id="aFZ-Gx-HVu"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="e9g-Qw-CEP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="aZs-PG-hMJ" firstAttribute="top" secondItem="NJB-rf-tGr" secondAttribute="bottom" constant="48" id="9wV-al-948"/>
                             <constraint firstItem="deH-3i-o8C" firstAttribute="centerY" secondItem="6BL-LJ-1qP" secondAttribute="centerY" id="E2Z-6v-icc"/>
+                            <constraint firstItem="aZs-PG-hMJ" firstAttribute="centerX" secondItem="6BL-LJ-1qP" secondAttribute="centerX" id="K32-ls-n9e"/>
                             <constraint firstItem="deH-3i-o8C" firstAttribute="centerX" secondItem="6BL-LJ-1qP" secondAttribute="centerX" id="ZsI-02-toi"/>
                             <constraint firstItem="NJB-rf-tGr" firstAttribute="centerX" secondItem="6BL-LJ-1qP" secondAttribute="centerX" id="mlI-u7-gsV"/>
                             <constraint firstItem="e9g-Qw-CEP" firstAttribute="bottom" secondItem="NJB-rf-tGr" secondAttribute="bottom" constant="128" id="rAw-is-JdE"/>
@@ -129,24 +139,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3초 후 수신됩니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rpw-Qq-QoJ">
-                                <rect key="frame" x="134" y="411.66666666666669" width="122" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOd-EO-e5j">
+                                <rect key="frame" x="18" y="254.99999999999997" width="354" height="334.33333333333326"/>
+                                <mutableString key="text">1. 현재 뷰 컨트롤러에 옵저버 등록 2. 뷰 컨트롤러가 사라질 때, 옵저버 해제를 하지 않음 3. 해당 뷰 컨트롤러는 deinit() 이 호출 될까? 
+4. 이전 뷰 컨트롤러에서 post() 날림 5. 해당 뷰 컨트롤러의 addObserver() 에 등록된 메소드가 호출 될까?
+
+3의 결과: 호출됨 5의 결과: 호출되지 않음, deinit이 호출되었으므로 해당 메소드가 삭제됨 단, 뷰 컨트롤러의 deinit이 호출되지 않아, 뷰 컨트롤러가 완전히 제거 되지않았다면 호출될 가능성 있음</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bqn-2I-MOn">
+                                <rect key="frame" x="129" y="705" width="132" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="methodCheck"/>
+                                <connections>
+                                    <action selector="methodCheck:" destination="3oN-b7-n2f" eventType="touchUpInside" id="hyS-fH-SKS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kCJ-GK-9TL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Rpw-Qq-QoJ" firstAttribute="centerX" secondItem="nNC-Fb-BOz" secondAttribute="centerX" id="Mme-YT-jhp"/>
-                            <constraint firstItem="Rpw-Qq-QoJ" firstAttribute="centerY" secondItem="nNC-Fb-BOz" secondAttribute="centerY" id="ltS-yf-ZdJ"/>
+                            <constraint firstItem="YOd-EO-e5j" firstAttribute="centerY" secondItem="nNC-Fb-BOz" secondAttribute="centerY" id="8Ae-Hh-c3n"/>
+                            <constraint firstItem="kCJ-GK-9TL" firstAttribute="bottom" secondItem="Bqn-2I-MOn" secondAttribute="bottom" constant="70" id="WOc-yL-rIW"/>
+                            <constraint firstItem="kCJ-GK-9TL" firstAttribute="trailing" secondItem="YOd-EO-e5j" secondAttribute="trailing" constant="18" id="aEz-M6-Gy9"/>
+                            <constraint firstItem="YOd-EO-e5j" firstAttribute="leading" secondItem="kCJ-GK-9TL" secondAttribute="leading" constant="18" id="k6q-cY-2GD"/>
+                            <constraint firstItem="Bqn-2I-MOn" firstAttribute="centerX" secondItem="nNC-Fb-BOz" secondAttribute="centerX" id="pQS-lx-J5z"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AJl-Ho-vVC"/>
-                    <connections>
-                        <outlet property="lbReceive" destination="Rpw-Qq-QoJ" id="wTO-k1-oWc"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pvi-PG-uM7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
