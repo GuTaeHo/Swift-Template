@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="500" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSc-ty-U6x">
-                                <rect key="frame" x="24" y="160" width="100.5" height="31"/>
+                                <rect key="frame" x="24" y="164" width="117" height="34.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="키보드 내리기"/>
                                 <connections>
@@ -25,20 +26,29 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="키보드 높이 표시" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slh-W2-bnc">
-                                <rect key="frame" x="48" y="92" width="318" height="36"/>
+                                <rect key="frame" x="48" y="96" width="318" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vUs-eb-6wK">
-                                <rect key="frame" x="148.5" y="160" width="241.5" height="34"/>
+                                <rect key="frame" x="165" y="164" width="225" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCd-3V-mp5">
+                                <rect key="frame" x="36" y="791" width="342" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="다음 뷰 컨트롤러"/>
+                                <connections>
+                                    <segue destination="IgS-ML-7f9" kind="show" id="RuI-SP-N9h"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wCd-3V-mp5" secondAttribute="bottom" constant="36" id="2Fr-hC-lVM"/>
                             <constraint firstItem="vUs-eb-6wK" firstAttribute="leading" secondItem="KSc-ty-U6x" secondAttribute="trailing" constant="24" id="5Wc-TF-g4o"/>
                             <constraint firstItem="slh-W2-bnc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="48" id="Elm-ei-fJY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="slh-W2-bnc" secondAttribute="trailing" constant="48" id="HZJ-ca-PmD"/>
@@ -47,6 +57,8 @@
                             <constraint firstItem="vUs-eb-6wK" firstAttribute="top" secondItem="slh-W2-bnc" secondAttribute="bottom" constant="32" id="Y0R-zX-97F"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vUs-eb-6wK" secondAttribute="trailing" constant="24" id="rbx-35-ITH"/>
                             <constraint firstItem="KSc-ty-U6x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="tM3-1Y-oFF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wCd-3V-mp5" secondAttribute="trailing" constant="36" id="xsv-Cd-czm"/>
+                            <constraint firstItem="wCd-3V-mp5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="yLz-Td-k7I"/>
                         </constraints>
                     </view>
                     <connections>
@@ -58,6 +70,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="83.705357142857139"/>
+        </scene>
+        <!--Keyboard Extension Text View Controller-->
+        <scene sceneID="Gtw-2a-KoI">
+            <objects>
+                <viewController storyboardIdentifier="KeyboardExtensionTextViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IgS-ML-7f9" customClass="KeyboardExtensionTextViewController" customModule="MyKeyboardNotification" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gdx-GM-sNR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w9N-KR-6Zp">
+                                <rect key="frame" x="18" y="792" width="378" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="N5O-yJ-EHt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="N5O-yJ-EHt" firstAttribute="bottom" secondItem="w9N-KR-6Zp" secondAttribute="bottom" priority="250" constant="36" id="Bh0-Gl-41c"/>
+                            <constraint firstItem="N5O-yJ-EHt" firstAttribute="trailing" secondItem="w9N-KR-6Zp" secondAttribute="trailing" constant="18" id="NQI-Y7-jFL"/>
+                            <constraint firstItem="w9N-KR-6Zp" firstAttribute="leading" secondItem="N5O-yJ-EHt" secondAttribute="leading" constant="18" id="gFX-dE-RdM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="AwR-0q-16j"/>
+                    <connections>
+                        <outlet property="tfDummy" destination="w9N-KR-6Zp" id="rB1-aH-lYH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ebv-Q4-0gk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="861" y="84"/>
         </scene>
     </scenes>
     <resources>

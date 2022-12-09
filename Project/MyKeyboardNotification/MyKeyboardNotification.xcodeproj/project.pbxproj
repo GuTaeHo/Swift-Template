@@ -13,6 +13,8 @@
 		05716F0D28A0C805000A366E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05716F0B28A0C805000A366E /* Main.storyboard */; };
 		05716F0F28A0C806000A366E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05716F0E28A0C806000A366E /* Assets.xcassets */; };
 		05716F1228A0C806000A366E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05716F1028A0C806000A366E /* LaunchScreen.storyboard */; };
+		05A79D9E2942C5B100150544 /* KeyboardExtensionTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A79D9D2942C5B100150544 /* KeyboardExtensionTextViewController.swift */; };
+		05A79DA02942C60100150544 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A79D9F2942C60100150544 /* UIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		05716F0E28A0C806000A366E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05716F1128A0C806000A366E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05716F1328A0C806000A366E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05A79D9D2942C5B100150544 /* KeyboardExtensionTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardExtensionTextViewController.swift; sourceTree = "<group>"; };
+		05A79D9F2942C60100150544 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +63,12 @@
 				05716F0528A0C805000A366E /* AppDelegate.swift */,
 				05716F0728A0C805000A366E /* SceneDelegate.swift */,
 				05716F0928A0C805000A366E /* ViewController.swift */,
+				05A79D9D2942C5B100150544 /* KeyboardExtensionTextViewController.swift */,
 				05716F0B28A0C805000A366E /* Main.storyboard */,
 				05716F0E28A0C806000A366E /* Assets.xcassets */,
 				05716F1028A0C806000A366E /* LaunchScreen.storyboard */,
 				05716F1328A0C806000A366E /* Info.plist */,
+				05A79D9F2942C60100150544 /* UIViewController.swift */,
 			);
 			path = MyKeyboardNotification;
 			sourceTree = "<group>";
@@ -140,7 +146,9 @@
 			files = (
 				05716F0A28A0C805000A366E /* ViewController.swift in Sources */,
 				05716F0628A0C805000A366E /* AppDelegate.swift in Sources */,
+				05A79D9E2942C5B100150544 /* KeyboardExtensionTextViewController.swift in Sources */,
 				05716F0828A0C805000A366E /* SceneDelegate.swift in Sources */,
+				05A79DA02942C60100150544 /* UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
