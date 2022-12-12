@@ -2,6 +2,16 @@ import UIKit
 
 var greeting = "Hello, playground"
 
+extension Date {
+    static func - (lhs: Date, rhs: Date) -> TimeInterval {
+        return lhs.timeIntervalSinceReferenceDate - rhs.timeIntervalSinceReferenceDate
+    }
+}
+
+var intervalDateCurrent = Int(Date(timeIntervalSinceNow: 0).timeIntervalSinceReferenceDate)
+var intervalDateCurrentPlusFiveMinuate = Int(Date(timeIntervalSinceNow: 300).timeIntervalSinceReferenceDate)
+
+print(intervalDateCurrentPlusFiveMinuate - intervalDateCurrent)
 
 class DateUtil {
     public static func getDate(format: String = "MM-dd") -> String {
