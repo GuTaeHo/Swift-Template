@@ -2,8 +2,7 @@
 //  ViewController.swift
 //  MyTimer
 //
-//  Created by 김경환 on 2021/11/23.
-//
+//  Created by 구태호 on 2021/11/23.
 
 import UIKit
 

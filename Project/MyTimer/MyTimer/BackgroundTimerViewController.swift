@@ -7,17 +7,17 @@
 
 import UIKit
 
-enum TimerStatus: String {
-    case start
-    case pause
-    case stop
-}
-
 class BackgroundTimerViewController: UIViewController {
     
     @IBOutlet var lbTimer: UILabel!
     @IBOutlet var btStartAndPause: UIButton!
     @IBOutlet var btStop: UIButton!
+    
+    enum TimerStatus: String {
+        case start
+        case pause
+        case stop
+    }
     
     var timer: DispatchSourceTimer?
     var timerStatus: TimerStatus = .pause

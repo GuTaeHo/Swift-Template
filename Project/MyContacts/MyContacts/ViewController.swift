@@ -84,9 +84,12 @@ extension ViewController: CNContactPickerDelegate {
         setTextData(contact: selectedContact)
     }
 
-    func setTextData(contact: Contact){
+    func setTextData(contact: Contact) {
         lbName.text = "이름 : \(contact.givenName ?? "error")"
-        lbPhoneNumber.text = "전화번호 : \(contact.phoneNumber ?? "erro")"
+        let phoneNumber = contact.phoneNumber ?? ""
+        // MARK: 휴대전화번호에 하이픈이 있는 경우와 없는 경우가 있음, 필터 필요
+        let hyphenRemovedPhoneNumber = phoneNumber.components(separatedBy: ["-"]).joined()
+        lbPhoneNumber.text = "전화번호 : \(hyphenRemovedPhoneNumber)"
     }
 
     func contactPickerDidCancel(_ picker: CNContactPickerViewController) {
