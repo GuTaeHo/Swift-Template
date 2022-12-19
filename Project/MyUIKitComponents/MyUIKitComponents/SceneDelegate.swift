@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  MyLayoutIfNeeds
+//  MyUIKitComponents
 //
-//  Created by 구태호 on 2022/10/18.
+//  Created by 구태호 on 2022/12/19.
 //
 
 import UIKit
