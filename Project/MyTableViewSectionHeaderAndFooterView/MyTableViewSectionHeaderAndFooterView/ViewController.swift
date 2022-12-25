@@ -27,27 +27,40 @@ class ViewController: UIViewController {
             testTableViewAdapter.addItem(item: "\(index). 텍스트")
         }
         
-        let header = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 150))
+        let header = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 80))
         let footer = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 150))
         
         header.backgroundColor = .systemOrange
         footer.backgroundColor = .systemTeal
-//        let headerLabel = UILabel(frame: header.bounds)
-//        headerLabel.text = "testTableView.tableHeaderView\n프로퍼티를 이용한 헤더 뷰"
-//        headerLabel.numberOfLines = 0
-//        headerLabel.textAlignment = .center
-//        header.addSubview(headerLabel)
         
-        let headerButton = UIButton(type: .system)
-        headerButton.configuration = .filled()
-        headerButton.setTitle("스크롤 뷰로 만들어진 헤더뷰로 이동", for: .normal)
-        headerButton.addTarget(self, action: #selector(onClickButton(_:)), for: .touchUpInside)
-        header.addSubview(headerButton)
-        headerButton.snp.remakeConstraints {
-            $0.edges.equalToSuperview().inset(32)
+        let headerFirstButton = UIButton(type: .system)
+        headerFirstButton.configuration = .filled()
+        headerFirstButton.setTitle("스크롤 뷰로 만들어진 헤더뷰로 이동", for: .normal)
+        headerFirstButton.addTarget(self, action: #selector(onClickButton(_:)), for: .touchUpInside)
+        
+        let headerSecondButton = UIButton(type: .system)
+        headerSecondButton.configuration = .filled()
+        headerSecondButton.setTitle("UIStackView 에 뷰를 집어넣을 때\naddArrangedSubview() 사용", for: .normal)
+        headerSecondButton.titleLabel?.numberOfLines = 1
+        headerSecondButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        headerSecondButton.titleLabel?.minimumScaleFactor = 0.5
+        
+        // MARK: UIStackView 의 생성자를 이용해서 뷰를 넣을 수도 있고,
+        // let headerStackView = UIStackView(arrangedSubviews: [headerFirstButton, headerSecondButton])
+        let headerStackView = UIStackView()
+        headerStackView.axis = .horizontal
+        headerStackView.distribution = .fillEqually
+        headerStackView.spacing = 15
+        
+        // MARK: UIStackView 의 addArrangedSubview() 메소드를 이용해서 뷰를 집어넣을 수도 있음
+        headerStackView.addArrangedSubview(headerFirstButton)
+        headerStackView.addArrangedSubview(headerSecondButton)
+        
+        header.addSubview(headerStackView)
+        headerStackView.snp.remakeConstraints {
+            $0.edges.equalToSuperview().inset(15)
         }
         
-        header.layoutIfNeeded()
         
         let footerLabel = UILabel(frame: footer.bounds)
         footerLabel.text = "testTableView.tableHeaderView\n프로퍼티를 이용한 푸터 뷰"
@@ -57,7 +70,6 @@ class ViewController: UIViewController {
         
         testTableView.tableHeaderView = header
         testTableView.tableFooterView = footer
-        testTableView.layoutIfNeeded()
         testTableView.reloadData()
     }
     

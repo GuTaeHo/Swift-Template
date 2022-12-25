@@ -10,8 +10,7 @@ import UIKit
 class UIButtonViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+
         // iOS 15 부터 UIButton 의 Configuration 을 통해 관련 속성을 지정할 수 있게 됨.
         let tintConfiguration = UIButton.Configuration.tinted()
         let tintButton = UIButton(configuration: tintConfiguration)
@@ -29,7 +28,7 @@ class UIButtonViewController: UIViewController {
         
         
         view.addSubview(tintButton)
-        view.addSubview(fillButton)
+        // view.addSubview(fillButton)
         
         tintButton.translatesAutoresizingMaskIntoConstraints = false
         tintButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 18).isActive = true
