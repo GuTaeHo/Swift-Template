@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Alpha View Controller-->
+        <scene sceneID="KoB-S2-QA0">
+            <objects>
+                <viewController storyboardIdentifier="AlphaViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="43C-2j-eeW" customClass="AlphaViewController" customModule="MyViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="80u-Zz-Gb5">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alpha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMD-H2-Or9">
+                                <rect key="frame" x="151.33333333333334" y="411" width="90.333333333333343" height="30.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Hd-ei-hXC">
+                                <rect key="frame" x="18" y="77" width="54" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="뒤로"/>
+                                <connections>
+                                    <action selector="onClickBack:" destination="43C-2j-eeW" eventType="touchUpInside" id="biL-RA-ibp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQm-uD-GqI">
+                                <rect key="frame" x="18" y="765" width="114" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Show Bravo"/>
+                                <connections>
+                                    <action selector="showBravo:" destination="43C-2j-eeW" eventType="touchUpInside" id="ngW-Nq-isC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dMP-EY-6Ry"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1Hd-ei-hXC" firstAttribute="leading" secondItem="dMP-EY-6Ry" secondAttribute="leading" constant="18" id="7y4-ma-ecQ"/>
+                            <constraint firstItem="dMP-EY-6Ry" firstAttribute="bottom" secondItem="RQm-uD-GqI" secondAttribute="bottom" constant="18" id="CwH-Cj-gEp"/>
+                            <constraint firstItem="RMD-H2-Or9" firstAttribute="centerY" secondItem="80u-Zz-Gb5" secondAttribute="centerY" id="Fiy-wt-BqS"/>
+                            <constraint firstItem="RMD-H2-Or9" firstAttribute="centerX" secondItem="80u-Zz-Gb5" secondAttribute="centerX" id="JJJ-VY-hnE"/>
+                            <constraint firstItem="RQm-uD-GqI" firstAttribute="leading" secondItem="dMP-EY-6Ry" secondAttribute="leading" constant="18" id="eUh-c0-Xlb"/>
+                            <constraint firstItem="1Hd-ei-hXC" firstAttribute="top" secondItem="dMP-EY-6Ry" secondAttribute="top" constant="18" id="xgN-9b-F8L"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pEc-43-HXq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2" y="799"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="MyViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tz-rl-CEu">
+                                <rect key="frame" x="160.66666666666666" y="411" width="72" height="30.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBW-2M-Qft">
+                                <rect key="frame" x="18" y="765" width="357" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="SHOW AlphaViewController"/>
+                                <connections>
+                                    <action selector="onClickBack:" destination="43C-2j-eeW" eventType="touchUpInside" id="XnB-8w-Rir"/>
+                                    <action selector="showAlpha:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zPD-LO-xSb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0tz-rl-CEu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aNa-RX-k7M"/>
+                            <constraint firstItem="0tz-rl-CEu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bEN-6p-lI7"/>
+                            <constraint firstItem="pBW-2M-Qft" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="dJT-Rf-6is"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pBW-2M-Qft" secondAttribute="trailing" constant="18" id="sis-qs-yz4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pBW-2M-Qft" secondAttribute="bottom" constant="18" id="yyL-hu-dxc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1" y="4"/>
+        </scene>
+        <!--Bravo View Controller-->
+        <scene sceneID="7xC-9i-46T">
+            <objects>
+                <viewController storyboardIdentifier="BravoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WpK-HR-JKq" customClass="BravoViewController" customModule="MyViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MQC-2S-6Uw">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bravo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVM-a9-PGi">
+                                <rect key="frame" x="150.66666666666666" y="411" width="92" height="30.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ufo-Z8-D9M">
+                                <rect key="frame" x="18" y="77" width="54" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="뒤로"/>
+                                <connections>
+                                    <action selector="onClickBack:" destination="WpK-HR-JKq" eventType="touchUpInside" id="I1m-3F-tvc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9ue-YC-TXH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ufo-Z8-D9M" firstAttribute="leading" secondItem="9ue-YC-TXH" secondAttribute="leading" constant="18" id="5cs-sX-OGZ"/>
+                            <constraint firstItem="Ufo-Z8-D9M" firstAttribute="top" secondItem="9ue-YC-TXH" secondAttribute="top" constant="18" id="SO2-hE-T7A"/>
+                            <constraint firstItem="NVM-a9-PGi" firstAttribute="centerY" secondItem="MQC-2S-6Uw" secondAttribute="centerY" id="j2b-ws-d8Y"/>
+                            <constraint firstItem="NVM-a9-PGi" firstAttribute="centerX" secondItem="MQC-2S-6Uw" secondAttribute="centerX" id="z48-WM-Emi"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NHd-hl-5M8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="781" y="799"/>
+        </scene>
+        <!--Charlie View Controller-->
+        <scene sceneID="eJE-eO-GWO">
+            <objects>
+                <viewController storyboardIdentifier="CharlieViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="etg-Ng-XdP" customClass="CharlieViewController" customModule="MyViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YgT-eW-tjV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charlie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nv5-r4-j5S">
+                                <rect key="frame" x="136.33333333333334" y="411" width="120.33333333333334" height="30.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgl-QT-y6H">
+                                <rect key="frame" x="18" y="77" width="54" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="뒤로"/>
+                                <connections>
+                                    <action selector="onClickBack:" destination="etg-Ng-XdP" eventType="touchUpInside" id="xeS-IT-1GK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yDZ-hW-fHO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hgl-QT-y6H" firstAttribute="top" secondItem="yDZ-hW-fHO" secondAttribute="top" constant="18" id="NlJ-cU-fSd"/>
+                            <constraint firstItem="nv5-r4-j5S" firstAttribute="centerX" secondItem="YgT-eW-tjV" secondAttribute="centerX" id="Rhy-63-cnN"/>
+                            <constraint firstItem="hgl-QT-y6H" firstAttribute="leading" secondItem="yDZ-hW-fHO" secondAttribute="leading" constant="18" id="myt-RC-daI"/>
+                            <constraint firstItem="nv5-r4-j5S" firstAttribute="centerY" secondItem="YgT-eW-tjV" secondAttribute="centerY" id="tx1-ge-zmh"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r5Q-X7-mFH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1502" y="799"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -21,9 +21,11 @@ extension UIViewController {
         let animationView: LottieAnimationView = .init(name: fileName)
         animationView.tag = indicatorTag
         animationView.frame = view.bounds
+        animationView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.3)
         animationView.contentMode = .scaleAspectFit
         animationView.loopMode = .loop
         animationView.animationSpeed = 1
+        
         view.addSubview(animationView)
         animationView.play()
     }

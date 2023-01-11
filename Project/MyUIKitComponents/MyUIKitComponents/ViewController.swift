@@ -13,7 +13,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        let tintConfiguration = UIButton.Configuration.tinted()
+        var tintConfiguration = UIButton.Configuration.tinted()
+        tintConfiguration.image = UIImage(systemName: "pencil.tip")
         let tintButton = UIButton(configuration: tintConfiguration)
         // 틴트 버튼 타이틀 지정
         var tintButtonTitleAttr = AttributedString.init("UIButton")

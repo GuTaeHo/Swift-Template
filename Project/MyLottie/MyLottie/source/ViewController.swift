@@ -9,6 +9,8 @@ import UIKit
 import Lottie
 
 class ViewController: UIViewController {
+    @IBOutlet var testLottieView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

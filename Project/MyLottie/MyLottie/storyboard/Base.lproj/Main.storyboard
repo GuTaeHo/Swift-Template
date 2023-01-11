@@ -25,15 +25,28 @@
                                     <action selector="showIndicator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kER-fg-Hnq"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2VV-yu-4Yo">
+                                <rect key="frame" x="343" y="77" width="32" height="32"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="Bbn-Nf-Lbn"/>
+                                    <constraint firstAttribute="height" constant="32" id="Kyu-XO-dRN"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zMo-hE-nDN" secondAttribute="trailing" constant="18" id="Jqi-7i-17w"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zMo-hE-nDN" secondAttribute="bottom" constant="18" id="WmO-ZS-ZPm"/>
+                            <constraint firstItem="2VV-yu-4Yo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="huk-pL-vNj"/>
                             <constraint firstItem="zMo-hE-nDN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="saF-7k-wud"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2VV-yu-4Yo" secondAttribute="trailing" constant="18" id="vif-kY-sSe"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="testLottieView" destination="2VV-yu-4Yo" id="Mg3-4g-k0K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
