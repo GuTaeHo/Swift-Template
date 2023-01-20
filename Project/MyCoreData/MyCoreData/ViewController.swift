@@ -45,7 +45,7 @@ class ViewController: UIViewController {
               let phoneNumber = tfPhoneNumber.text?.trimmingCharacters(in: .whitespacesAndNewlines), phoneNumber.count != 0,
               let etc = tfEtc.text?.trimmingCharacters(in: .whitespacesAndNewlines), etc.count != 0
         else {
-            return showToast("텍스트 필드에 전부 입력해주세요")
+            return print("전부 입력해주세요")
         }
         
         let person = Person(name: name, phoneNumber: phoneNumber, etc: etc)
@@ -100,28 +100,6 @@ extension ViewController: UITextFieldDelegate {
         }
         
         return true
-    }
-}
-
-extension ViewController {
-    func showToast(_ message: String) {
-        let view = UIView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: view.frame.width, height: 40)))
-        let label = UILabel()
-        label.text = message
-        label.textAlignment = .center
-        label.textColor = .white
-        view.addSubview(label)
-        view.layer.cornerRadius = 6
-        view.backgroundColor = .black
-        
-        label.translatesAutoresizingMaskIntoConstraints = false
-        let guide = view.safeAreaLayoutGuide
-        label.topAnchor.constraint(equalTo: guide.topAnchor).isActive = true
-        label.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        label.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        label.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        
-        self.view.addSubview(view)
     }
 }
 

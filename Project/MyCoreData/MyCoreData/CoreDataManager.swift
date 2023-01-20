@@ -8,6 +8,25 @@
 import CoreData
 import Foundation
 
+/**
+ 코어 데이터(Core Data)의 핵심은 Core Data Stack 이며, Core Data Stack 으로 모델을 관리 및 유지함
+ Core Data Stack 은 NSManagedObjectModel, NSManagedObjectContext, NSPersistentStoreCoordinator, NSPersistentContainer 로 이루어져 있음
+ 1. NSManagedObjectModel >> Entity[테이블]를 설명하는 데이터베이스 스키마(모델의 구조 및 테이블 간 관계를 정의하는 느낌?) 임
+ 2. NSPersistentStoreCoordinator >> persistent storage (영구 저장소) 와 managed object model 을 연결해주는 중계자 역할을 함
+ 3. NSManagedObjectContext >> 트랜잭션. 특정 오브젝트를 생성 및 저장, 가져오는 작업을 제공
+ 4. NSPersistentContainer >> 위 1, 2, 3 을 모두 포함한 컨테이너
+ 
+ 영구적인 저장소로 Core Data를 사용하려면...
+ 1. NSPersistentContainer(name:) 를 통해 컨테이너 획득
+ 2. 컨테이너에서 트랜잭션(NSManagedObjectContext.viewContext) 획득
+ 3. 트랜잭션에서 Entity(NSEntityDescription.entity()) 획득
+ 4. NSManagedObject 생성 하고 값을 씀
+ 5. 값을 저장
+ 
+ - note: 코어데이터 관련 내용 참조
+ https://sihyungyou.github.io/iOS-coredata-multithreaded/
+ https://zeddios.tistory.com/987
+ */
 class CoreDataManager {
     static var shared: CoreDataManager = CoreDataManager()
     
@@ -22,7 +41,7 @@ class CoreDataManager {
         return container
     }()
     
-    /// Core Data 내부 저장소에 접근할 수 있는 context
+    /// - note: CoreData 프레임워크는  컨테이너(NSPersistentContainer)의 컨텍스트(NSManagedObjectContext)를 통해 CRUD 연산이 가능함
     var context: NSManagedObjectContext {
         return persistentContainer.viewContext
     }
@@ -36,9 +55,9 @@ class CoreDataManager {
         }
     }
     
-    /// 만들어둔 엔티티(개체) 에 접근할 때 사용
+    /// 만들어둔 엔티티(테이블) 에 접근할 때 사용
     var contactEntity: NSEntityDescription? {
-        return  NSEntityDescription.entity(forEntityName: "Contact", in: context)
+        return NSEntityDescription.entity(forEntityName: "Contact", in: context)
     }
     
     /// CoreData 내부에 저장된 리스트 반환
