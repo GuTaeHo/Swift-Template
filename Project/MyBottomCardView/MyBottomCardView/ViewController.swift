@@ -15,7 +15,7 @@ class ViewController: UIViewController {
 
     @IBAction func showCardViewController(_ sender: UIButton) {
         // 커스텀 뷰 생성
-        let contentView = ContentView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height / 3))
+        let contentView = ContentView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height / 4))
         
         let cancelClosure = {
             print("취소 됨...")
