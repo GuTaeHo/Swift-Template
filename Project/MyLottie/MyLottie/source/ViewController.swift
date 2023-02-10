@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showIndicator(_ sender: Any) {
-        showIndicator()
+        checkIndicator()
     }
 }
 
