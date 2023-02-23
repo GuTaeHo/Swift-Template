@@ -9,11 +9,12 @@ import UIKit
 
 extension UIView {
     /// Xib 파일 로딩 시 사용
-    /// - note: T
     /**
     ```
-    /// 해당 메소드 인스턴스화 시
-     if let customView: CustomView = UIView.loadFromNib() { do something }
+    // 해당 메소드 인스턴스화 시
+     if let customView: CustomView = UIView.loadFromNib() {
+        // do something
+     }
     ```
      */
     static func loadFromNib<T>() -> T? {
