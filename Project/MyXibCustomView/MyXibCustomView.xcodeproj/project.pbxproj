@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0517A5E8299F74FE00055F9C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0517A5E7299F74FE00055F9C /* UIView.swift */; };
 		0565F66F291B22F400878B12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565F66E291B22F400878B12 /* AppDelegate.swift */; };
 		0565F671291B22F400878B12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565F670291B22F400878B12 /* SceneDelegate.swift */; };
 		0565F673291B22F400878B12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565F672291B22F400878B12 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0517A5E7299F74FE00055F9C /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		0565F66B291B22F400878B12 /* MyXibCustomView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyXibCustomView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0565F66E291B22F400878B12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0565F670291B22F400878B12 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				0565F67C291B22F500878B12 /* Info.plist */,
 				05C23FBB291B2CB700F5F329 /* CocobeanView.xib */,
 				05C23FBD291B2CC500F5F329 /* CocobeanView.swift */,
+				0517A5E7299F74FE00055F9C /* UIView.swift */,
 			);
 			path = MyXibCustomView;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0517A5E8299F74FE00055F9C /* UIView.swift in Sources */,
 				0565F673291B22F400878B12 /* ViewController.swift in Sources */,
 				0565F66F291B22F400878B12 /* AppDelegate.swift in Sources */,
 				05C23FBE291B2CC500F5F329 /* CocobeanView.swift in Sources */,

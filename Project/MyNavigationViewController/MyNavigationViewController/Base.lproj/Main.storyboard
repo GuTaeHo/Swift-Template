@@ -12,7 +12,7 @@
         <!--스플래시-->
         <scene sceneID="Hjd-Y7-0Ib">
             <objects>
-                <viewController storyboardIdentifier="SplashViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nIr-D8-H8x" customClass="SplashViewController" customModule="MyNavigationViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RedViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nIr-D8-H8x" customClass="RedViewController" customModule="MyNavigationViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HxS-Oe-HyH">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,10 +33,16 @@
                                     <action selector="currentViewController:" destination="nIr-D8-H8x" eventType="touchUpInside" id="c9h-6j-ZQv"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cu3-bV-zPE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cu3-bV-zPE">
                                 <rect key="frame" x="18" y="386.66666666666669" width="354" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RedViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24G-aI-iXC">
+                                <rect key="frame" x="74.666666666666686" y="164" width="241" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" systemColor="systemGray6Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -49,6 +55,8 @@
                             <constraint firstItem="gEz-o3-WlB" firstAttribute="trailing" secondItem="cu3-bV-zPE" secondAttribute="trailing" constant="18" id="XTM-L8-sgu"/>
                             <constraint firstItem="Vwp-HD-eDt" firstAttribute="top" secondItem="cu3-bV-zPE" secondAttribute="bottom" constant="18" id="Zbc-xv-Qwg"/>
                             <constraint firstItem="Vwp-HD-eDt" firstAttribute="centerX" secondItem="HxS-Oe-HyH" secondAttribute="centerX" id="cwW-rb-rQn"/>
+                            <constraint firstItem="24G-aI-iXC" firstAttribute="top" secondItem="N14-Tf-0Am" secondAttribute="bottom" constant="64" id="gtt-mx-aUS"/>
+                            <constraint firstItem="24G-aI-iXC" firstAttribute="centerX" secondItem="HxS-Oe-HyH" secondAttribute="centerX" id="jHO-ac-UDn"/>
                             <constraint firstItem="gEz-o3-WlB" firstAttribute="trailing" secondItem="N14-Tf-0Am" secondAttribute="trailing" constant="18" id="nfc-bd-arm"/>
                         </constraints>
                     </view>
@@ -66,7 +74,7 @@
         <!--인트로-->
         <scene sceneID="cwk-Gc-SIE">
             <objects>
-                <viewController storyboardIdentifier="IntroViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kzK-TQ-gkG" customClass="IntroViewController" customModule="MyNavigationViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OrangeViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kzK-TQ-gkG" customClass="OrangeViewController" customModule="MyNavigationViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EVB-na-uJm">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,12 +102,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OrangeViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3b-FK-jIZ">
+                                <rect key="frame" x="52.666666666666657" y="164" width="285" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="V88-Ke-ndX"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
                             <constraint firstItem="9qI-cB-sHu" firstAttribute="centerX" secondItem="EVB-na-uJm" secondAttribute="centerX" id="0Gb-3J-ABk"/>
+                            <constraint firstItem="P3b-FK-jIZ" firstAttribute="top" secondItem="HUn-KT-lyd" secondAttribute="bottom" constant="64" id="2Za-59-ifN"/>
                             <constraint firstItem="9qI-cB-sHu" firstAttribute="centerY" secondItem="EVB-na-uJm" secondAttribute="centerY" id="Iog-qB-xi7"/>
+                            <constraint firstItem="P3b-FK-jIZ" firstAttribute="centerX" secondItem="EVB-na-uJm" secondAttribute="centerX" id="X35-N8-vN8"/>
                             <constraint firstAttribute="trailing" secondItem="yvC-KG-nCl" secondAttribute="trailing" constant="18" id="XHe-sE-2DB"/>
                             <constraint firstItem="yvC-KG-nCl" firstAttribute="leading" secondItem="EVB-na-uJm" secondAttribute="leading" constant="18" id="oUc-cB-k5M"/>
                             <constraint firstItem="HUn-KT-lyd" firstAttribute="top" secondItem="V88-Ke-ndX" secondAttribute="top" constant="18" id="run-Aa-aBe"/>
@@ -119,7 +135,7 @@
         <!--로그인-->
         <scene sceneID="JR2-by-fwW">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AIJ-2b-GXG" customClass="LoginViewController" customModule="MyNavigationViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="YellowViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AIJ-2b-GXG" customClass="YellowViewController" customModule="MyNavigationViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cpi-NW-p7e">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -132,10 +148,18 @@
                                     <action selector="next:" destination="AIJ-2b-GXG" eventType="touchUpInside" id="Jsk-vA-4zm"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YellowViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fs-mA-0Dc">
+                                <rect key="frame" x="59" y="164" width="272.33333333333331" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="f9W-3h-zxK"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
+                            <constraint firstItem="3fs-mA-0Dc" firstAttribute="top" secondItem="dSd-2t-9AE" secondAttribute="bottom" constant="64" id="JZL-oc-lfQ"/>
+                            <constraint firstItem="3fs-mA-0Dc" firstAttribute="centerX" secondItem="cpi-NW-p7e" secondAttribute="centerX" id="SfI-tq-V2g"/>
                             <constraint firstItem="f9W-3h-zxK" firstAttribute="trailing" secondItem="dSd-2t-9AE" secondAttribute="trailing" constant="18" id="XTI-6Y-EsK"/>
                             <constraint firstItem="dSd-2t-9AE" firstAttribute="top" secondItem="f9W-3h-zxK" secondAttribute="top" constant="18" id="tUb-xe-FdD"/>
                         </constraints>
@@ -149,7 +173,7 @@
         <!--기기 인증-->
         <scene sceneID="KUp-e8-zCE">
             <objects>
-                <viewController storyboardIdentifier="DeviceViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nPb-B4-7mV" customClass="DeviceViewController" customModule="MyNavigationViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GreenViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nPb-B4-7mV" customClass="GreenViewController" customModule="MyNavigationViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EpZ-At-d2K">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -171,10 +195,18 @@
                                     <action selector="popAndPush:" destination="nPb-B4-7mV" eventType="touchUpInside" id="jl4-Rm-4qh"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GreenViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbs-Pt-rkA">
+                                <rect key="frame" x="62" y="164" width="266" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" systemColor="systemGray6Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XlZ-L0-7Pt"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
+                            <constraint firstItem="zbs-Pt-rkA" firstAttribute="centerX" secondItem="EpZ-At-d2K" secondAttribute="centerX" id="Fsa-qT-f4a"/>
+                            <constraint firstItem="zbs-Pt-rkA" firstAttribute="top" secondItem="E6n-2O-Vfd" secondAttribute="bottom" constant="64" id="HsI-BY-5Cc"/>
                             <constraint firstItem="E6n-2O-Vfd" firstAttribute="top" secondItem="XlZ-L0-7Pt" secondAttribute="top" constant="18" id="VBm-rs-cZQ"/>
                             <constraint firstItem="E3x-es-dcN" firstAttribute="centerY" secondItem="EpZ-At-d2K" secondAttribute="centerY" id="cDF-tX-mQx"/>
                             <constraint firstItem="E3x-es-dcN" firstAttribute="centerX" secondItem="EpZ-At-d2K" secondAttribute="centerX" id="gte-Cc-Ckw"/>
@@ -185,12 +217,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aJo-uL-K53" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2998" y="314"/>
+            <point key="canvasLocation" x="3017" y="314"/>
         </scene>
-        <!--Navigation View Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="CiW-l5-IjM">
             <objects>
-                <navigationController storyboardIdentifier="NavigationViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6E2-9c-tfq" customClass="NavigationViewController" customModule="MyNavigationViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6E2-9c-tfq" customClass="NavigationController" customModule="MyNavigationViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="P2b-hS-YUp">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
@@ -205,7 +237,7 @@
         <!--기기 인증-->
         <scene sceneID="yGn-vn-NcI">
             <objects>
-                <viewController storyboardIdentifier="HopeViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LUs-VE-btB" customClass="HopeViewController" customModule="MyNavigationViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BlueViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LUs-VE-btB" customClass="BlueViewController" customModule="MyNavigationViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Gn-jG-F3P">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -218,24 +250,35 @@
                                     <action selector="next:" destination="LUs-VE-btB" eventType="touchUpInside" id="vTP-HI-a2T"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BlueViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3GB-vB-xQ4">
+                                <rect key="frame" x="72" y="164" width="246" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" systemColor="systemGray6Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="O8O-cw-JrJ"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                         <constraints>
                             <constraint firstItem="O8O-cw-JrJ" firstAttribute="trailing" secondItem="8vx-Jy-0Go" secondAttribute="trailing" constant="18" id="4zN-xj-R23"/>
+                            <constraint firstItem="3GB-vB-xQ4" firstAttribute="top" secondItem="8vx-Jy-0Go" secondAttribute="bottom" constant="64" id="DtX-Gj-fsa"/>
                             <constraint firstItem="O8O-cw-JrJ" firstAttribute="trailing" secondItem="8vx-Jy-0Go" secondAttribute="trailing" constant="18" id="jFq-Ne-Hsp"/>
                             <constraint firstItem="8vx-Jy-0Go" firstAttribute="top" secondItem="O8O-cw-JrJ" secondAttribute="top" constant="18" id="lDy-YY-PMC"/>
                             <constraint firstItem="8vx-Jy-0Go" firstAttribute="top" secondItem="O8O-cw-JrJ" secondAttribute="top" constant="18" id="yWS-IO-PNu"/>
+                            <constraint firstItem="3GB-vB-xQ4" firstAttribute="centerX" secondItem="3Gn-jG-F3P" secondAttribute="centerX" id="zZ4-OH-QJG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="기기 인증" id="MBr-Yb-23Q"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fKs-Xg-Yka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2997" y="1041"/>
+            <point key="canvasLocation" x="3774" y="314"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

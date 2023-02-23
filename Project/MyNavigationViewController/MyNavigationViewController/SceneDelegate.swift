@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // 최초 Window 및 RootViewController 를 스스로 주입
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = NavigationViewController()
+            window.rootViewController = NavigationController()
             self.window = window
             window.makeKeyAndVisible()
         }

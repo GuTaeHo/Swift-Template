@@ -7,36 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0536827B2938EA4300B64013 /* HopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0536827A2938EA4300B64013 /* HopeViewController.swift */; };
+		0536827B2938EA4300B64013 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0536827A2938EA4300B64013 /* BlueViewController.swift */; };
 		0551FCAF2912361E0057C729 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0551FCAE2912361E0057C729 /* AppDelegate.swift */; };
 		0551FCB12912361E0057C729 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0551FCB02912361E0057C729 /* SceneDelegate.swift */; };
-		0551FCB32912361E0057C729 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0551FCB22912361E0057C729 /* SplashViewController.swift */; };
+		0551FCB32912361E0057C729 /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0551FCB22912361E0057C729 /* RedViewController.swift */; };
 		0551FCB62912361E0057C729 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0551FCB42912361E0057C729 /* Main.storyboard */; };
 		0551FCB82912361F0057C729 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0551FCB72912361F0057C729 /* Assets.xcassets */; };
 		0551FCBB2912361F0057C729 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0551FCB92912361F0057C729 /* LaunchScreen.storyboard */; };
 		05814D32292F6491004A871A /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05814D31292F6491004A871A /* UINavigationController.swift */; };
-		05F7A126291243A40010F67F /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F7A125291243A40010F67F /* IntroViewController.swift */; };
-		05F7A128291244700010F67F /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F7A127291244700010F67F /* NavigationViewController.swift */; };
-		05F7A12A291245450010F67F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F7A129291245450010F67F /* LoginViewController.swift */; };
-		05F7A12C291250B30010F67F /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F7A12B291250B30010F67F /* DeviceViewController.swift */; };
+		05F7A126291243A40010F67F /* OrangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F7A125291243A40010F67F /* OrangeViewController.swift */; };
+		05F7A128291244700010F67F /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F7A127291244700010F67F /* NavigationController.swift */; };
+		05F7A12A291245450010F67F /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F7A129291245450010F67F /* YellowViewController.swift */; };
+		05F7A12C291250B30010F67F /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F7A12B291250B30010F67F /* GreenViewController.swift */; };
 		05F7A1302912618E0010F67F /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F7A12F2912618E0010F67F /* UIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0536827A2938EA4300B64013 /* HopeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopeViewController.swift; sourceTree = "<group>"; };
+		0536827A2938EA4300B64013 /* BlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
 		0551FCAB2912361E0057C729 /* MyNavigationViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNavigationViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0551FCAE2912361E0057C729 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0551FCB02912361E0057C729 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0551FCB22912361E0057C729 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		0551FCB22912361E0057C729 /* RedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
 		0551FCB52912361E0057C729 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0551FCB72912361F0057C729 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0551FCBA2912361F0057C729 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0551FCBC2912361F0057C729 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05814D31292F6491004A871A /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
-		05F7A125291243A40010F67F /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
-		05F7A127291244700010F67F /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
-		05F7A129291245450010F67F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		05F7A12B291250B30010F67F /* DeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
+		05F7A125291243A40010F67F /* OrangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeViewController.swift; sourceTree = "<group>"; };
+		05F7A127291244700010F67F /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		05F7A129291245450010F67F /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
+		05F7A12B291250B30010F67F /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
 		05F7A12F2912618E0010F67F /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,6 +51,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0545E91A29A7A84D0076C334 /* viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				05F7A127291244700010F67F /* NavigationController.swift */,
+				0551FCB22912361E0057C729 /* RedViewController.swift */,
+				05F7A125291243A40010F67F /* OrangeViewController.swift */,
+				05F7A129291245450010F67F /* YellowViewController.swift */,
+				05F7A12B291250B30010F67F /* GreenViewController.swift */,
+				0536827A2938EA4300B64013 /* BlueViewController.swift */,
+			);
+			path = viewcontrollers;
+			sourceTree = "<group>";
+		};
+		0545E91B29A7A8650076C334 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				05F7A12F2912618E0010F67F /* UIViewController.swift */,
+				05814D31292F6491004A871A /* UINavigationController.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
 		0551FCA22912361E0057C729 = {
 			isa = PBXGroup;
 			children = (
@@ -70,20 +92,14 @@
 		0551FCAD2912361E0057C729 /* MyNavigationViewController */ = {
 			isa = PBXGroup;
 			children = (
+				0545E91B29A7A8650076C334 /* extensions */,
+				0545E91A29A7A84D0076C334 /* viewcontrollers */,
 				0551FCAE2912361E0057C729 /* AppDelegate.swift */,
 				0551FCB02912361E0057C729 /* SceneDelegate.swift */,
 				0551FCB42912361E0057C729 /* Main.storyboard */,
 				0551FCB72912361F0057C729 /* Assets.xcassets */,
 				0551FCB92912361F0057C729 /* LaunchScreen.storyboard */,
 				0551FCBC2912361F0057C729 /* Info.plist */,
-				05F7A127291244700010F67F /* NavigationViewController.swift */,
-				0551FCB22912361E0057C729 /* SplashViewController.swift */,
-				05F7A125291243A40010F67F /* IntroViewController.swift */,
-				05F7A129291245450010F67F /* LoginViewController.swift */,
-				05F7A12B291250B30010F67F /* DeviceViewController.swift */,
-				05F7A12F2912618E0010F67F /* UIViewController.swift */,
-				05814D31292F6491004A871A /* UINavigationController.swift */,
-				0536827A2938EA4300B64013 /* HopeViewController.swift */,
 			);
 			path = MyNavigationViewController;
 			sourceTree = "<group>";
@@ -159,16 +175,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05F7A12A291245450010F67F /* LoginViewController.swift in Sources */,
-				05F7A12C291250B30010F67F /* DeviceViewController.swift in Sources */,
-				0551FCB32912361E0057C729 /* SplashViewController.swift in Sources */,
+				05F7A12A291245450010F67F /* YellowViewController.swift in Sources */,
+				05F7A12C291250B30010F67F /* GreenViewController.swift in Sources */,
+				0551FCB32912361E0057C729 /* RedViewController.swift in Sources */,
 				0551FCAF2912361E0057C729 /* AppDelegate.swift in Sources */,
 				0551FCB12912361E0057C729 /* SceneDelegate.swift in Sources */,
-				05F7A128291244700010F67F /* NavigationViewController.swift in Sources */,
-				0536827B2938EA4300B64013 /* HopeViewController.swift in Sources */,
+				05F7A128291244700010F67F /* NavigationController.swift in Sources */,
+				0536827B2938EA4300B64013 /* BlueViewController.swift in Sources */,
 				05814D32292F6491004A871A /* UINavigationController.swift in Sources */,
 				05F7A1302912618E0010F67F /* UIViewController.swift in Sources */,
-				05F7A126291243A40010F67F /* IntroViewController.swift in Sources */,
+				05F7A126291243A40010F67F /* OrangeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

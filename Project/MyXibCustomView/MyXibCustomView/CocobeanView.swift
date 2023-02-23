@@ -7,22 +7,34 @@
 
 import UIKit
 
+// loadNibNamed() 메소드는 결과적으로 파일의 init(coder:) 를 호출함
+/// - warning: xib 파일의 Custom Class 에 커스텀 클래스 명을 입력한 뒤, 앱을 호출하면 무한 루프가 돌면서 죽게됨
+/// 원인은 ViewController 가 실행되면서 커스텀 뷰의 init(coder:) 가 한번 호출되는데,
+/// 현재 선언된 loadView() 메소드가 loadNibNamed() 를 통해 init(coder:) 를 다시 호출하기 때문에
+/// 무한루프에 빠짐
+
+// MARK: 무한 루프를 방지하기 위해 init(coder: NSCoder)나, init(frame: CGRect)와 같은 init 메서드에서 같은 클래스의 xib를 로드하지말 것!
+// MARK: custom class 대신, 부모 클래스나 다른 곳에서 xib를 로드할 것!
+// MARK: UIView extension 에 loadFromNib() 메소드 참조할 것
 class CocobeanView: UIView {
     // 소스코드에서 호출 (인스턴스 생성 시)
     override init(frame: CGRect) {
         super.init(frame: frame)
-        loadView()
+        // loadView()
     }
     
-    // 스토리보드에서 호출
+    // 스토리보드에서 호출될 경우 아래 호출
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        loadView()
+        // loadView()
     }
     
     func loadView() {
+        
+        /*
         let view = Bundle.main.loadNibNamed("CocobeanView", owner: self, options: nil)?.first as! UIView
         view.frame = bounds
         addSubview(view)
+         */
     }
 }

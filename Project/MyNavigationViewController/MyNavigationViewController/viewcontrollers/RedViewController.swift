@@ -1,5 +1,5 @@
 //
-//  SplashViewController.swift
+//  RedViewController.swift
 //  MyNavigationViewController
 //
 //  Created by 구태호 on 2022/11/02.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SplashViewController: UIViewController, UIGestureRecognizerDelegate {
+class RedViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet var lbCurrentViewController: UILabel!
     
     public var dummyDataNextViewController = "아아 한잔 주세요"
@@ -31,7 +31,7 @@ class SplashViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     @IBAction func next(_ sender: Any) {
-        if let viewController = storyboard?.instantiateViewController(withIdentifier: "IntroViewController") {
+        if let viewController = storyboard?.instantiateViewController(withIdentifier: "OrangeViewController") {
             self.navigationController?.pushViewController(viewController, animated: true)
         } else {
             print("뷰 컨트롤러 추가 오류...")
@@ -39,11 +39,7 @@ class SplashViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     @IBAction func currentViewController(_ sender: Any) {
-        guard let viewController = self.navigationController?.visibleViewController as? SplashViewController else {
-            return print("뷰 컨트롤러 못찾음...")
-        }
-        
-        lbCurrentViewController.text = String(describing: type(of: viewController))
+        lbCurrentViewController.text = String(describing: type(of: self))
     }
 }
 

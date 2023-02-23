@@ -1,5 +1,5 @@
 //
-//  HopeViewController.swift
+//  BlueViewController.swift
 //  MyNavigationViewController
 //
 //  Created by 구태호 on 2022/12/01.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HopeViewController: UIViewController {
+class BlueViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
