@@ -36,7 +36,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cu3-bV-zPE">
                                 <rect key="frame" x="18" y="386.66666666666669" width="354" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <color key="textColor" systemColor="systemGray5Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RedViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24G-aI-iXC">
@@ -96,10 +96,10 @@
                                     <action selector="previousViewController:" destination="kzK-TQ-gkG" eventType="touchUpInside" id="V5f-of-IKv"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvC-KG-nCl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvC-KG-nCl">
                                 <rect key="frame" x="18" y="386.66666666666669" width="354" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="systemGray5Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OrangeViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3b-FK-jIZ">
@@ -108,15 +108,25 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4I-80-dso">
+                                <rect key="frame" x="62.666666666666657" y="627" width="265" height="55"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="이전 뷰 컨트롤러 데이터(안녕!) 전달 (제스처 동일)"/>
+                                <connections>
+                                    <action selector="sendDataPreviousViewController:" destination="kzK-TQ-gkG" eventType="touchUpInside" id="NVj-Vd-QHv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="V88-Ke-ndX"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
                             <constraint firstItem="9qI-cB-sHu" firstAttribute="centerX" secondItem="EVB-na-uJm" secondAttribute="centerX" id="0Gb-3J-ABk"/>
                             <constraint firstItem="P3b-FK-jIZ" firstAttribute="top" secondItem="HUn-KT-lyd" secondAttribute="bottom" constant="64" id="2Za-59-ifN"/>
+                            <constraint firstItem="V88-Ke-ndX" firstAttribute="bottom" secondItem="g4I-80-dso" secondAttribute="bottom" constant="128" id="C8M-MK-ez2"/>
                             <constraint firstItem="9qI-cB-sHu" firstAttribute="centerY" secondItem="EVB-na-uJm" secondAttribute="centerY" id="Iog-qB-xi7"/>
                             <constraint firstItem="P3b-FK-jIZ" firstAttribute="centerX" secondItem="EVB-na-uJm" secondAttribute="centerX" id="X35-N8-vN8"/>
                             <constraint firstAttribute="trailing" secondItem="yvC-KG-nCl" secondAttribute="trailing" constant="18" id="XHe-sE-2DB"/>
+                            <constraint firstItem="g4I-80-dso" firstAttribute="centerX" secondItem="EVB-na-uJm" secondAttribute="centerX" id="dPu-LK-mk3"/>
                             <constraint firstItem="yvC-KG-nCl" firstAttribute="leading" secondItem="EVB-na-uJm" secondAttribute="leading" constant="18" id="oUc-cB-k5M"/>
                             <constraint firstItem="HUn-KT-lyd" firstAttribute="top" secondItem="V88-Ke-ndX" secondAttribute="top" constant="18" id="run-Aa-aBe"/>
                             <constraint firstItem="V88-Ke-ndX" firstAttribute="trailing" secondItem="HUn-KT-lyd" secondAttribute="trailing" constant="18" id="ufU-kb-RhB"/>
@@ -222,10 +232,9 @@
         <!--Navigation Controller-->
         <scene sceneID="CiW-l5-IjM">
             <objects>
-                <navigationController storyboardIdentifier="NavigationViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6E2-9c-tfq" customClass="NavigationController" customModule="MyNavigationViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="6E2-9c-tfq" customClass="NavigationController" customModule="MyNavigationViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="P2b-hS-YUp">
-                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -276,6 +285,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

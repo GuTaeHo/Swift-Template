@@ -10,6 +10,8 @@ import UIKit
 class OrangeViewController: UIViewController {
     @IBOutlet var lbCurrentViewController: UILabel!
     
+    public var dataClosure: ((Any) -> ())?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,6 +23,10 @@ class OrangeViewController: UIViewController {
         } else {
             print("뷰 컨트롤러 추가 오류...")
         }
+    }
+    
+    @IBAction func sendDataPreviousViewController(_ sender: UIButton) {
+        dataClosure?("안녕!")
     }
     
     @IBAction func previousViewController(_ sender: Any) {
