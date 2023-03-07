@@ -3,35 +3,37 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05716F0628A0C805000A366E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05716F0528A0C805000A366E /* AppDelegate.swift */; };
-		05716F0828A0C805000A366E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05716F0728A0C805000A366E /* SceneDelegate.swift */; };
-		05716F0A28A0C805000A366E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05716F0928A0C805000A366E /* ViewController.swift */; };
-		05716F0D28A0C805000A366E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05716F0B28A0C805000A366E /* Main.storyboard */; };
-		05716F0F28A0C806000A366E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05716F0E28A0C806000A366E /* Assets.xcassets */; };
-		05716F1228A0C806000A366E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05716F1028A0C806000A366E /* LaunchScreen.storyboard */; };
-		05A79D9E2942C5B100150544 /* KeyboardExtensionTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A79D9D2942C5B100150544 /* KeyboardExtensionTextViewController.swift */; };
-		05A79DA02942C60100150544 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A79D9F2942C60100150544 /* UIViewController.swift */; };
+		05FF735129B7527B00696212 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FF735029B7527B00696212 /* AppDelegate.swift */; };
+		05FF735329B7527B00696212 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FF735229B7527B00696212 /* SceneDelegate.swift */; };
+		05FF735529B7527B00696212 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FF735429B7527B00696212 /* ViewController.swift */; };
+		05FF735829B7527B00696212 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05FF735629B7527B00696212 /* Main.storyboard */; };
+		05FF735A29B7527C00696212 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05FF735929B7527C00696212 /* Assets.xcassets */; };
+		05FF735D29B7527C00696212 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05FF735B29B7527C00696212 /* LaunchScreen.storyboard */; };
+		05FF736A29B7555300696212 /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FF736929B7555300696212 /* LoadingButton.swift */; };
+		05FF736C29B7593200696212 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FF736B29B7593200696212 /* UIButton.swift */; };
+		05FF737129B75FBB00696212 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FF737029B75FBB00696212 /* UIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		05716F0228A0C805000A366E /* MyKeyboardNotification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyKeyboardNotification.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		05716F0528A0C805000A366E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		05716F0728A0C805000A366E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		05716F0928A0C805000A366E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		05716F0C28A0C805000A366E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		05716F0E28A0C806000A366E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		05716F1128A0C806000A366E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		05716F1328A0C806000A366E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		05A79D9D2942C5B100150544 /* KeyboardExtensionTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardExtensionTextViewController.swift; sourceTree = "<group>"; };
-		05A79D9F2942C60100150544 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		05FF734D29B7527B00696212 /* MyToast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyToast.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05FF735029B7527B00696212 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		05FF735229B7527B00696212 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		05FF735429B7527B00696212 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		05FF735729B7527B00696212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		05FF735929B7527C00696212 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		05FF735C29B7527C00696212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		05FF735E29B7527C00696212 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05FF736929B7555300696212 /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
+		05FF736B29B7593200696212 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		05FF737029B75FBB00696212 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		05716EFF28A0C805000A366E /* Frameworks */ = {
+		05FF734A29B7527B00696212 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,156 +43,174 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		05716EF928A0C805000A366E = {
+		05FF734429B7527B00696212 = {
 			isa = PBXGroup;
 			children = (
-				05716F0428A0C805000A366E /* MyKeyboardNotification */,
-				05716F0328A0C805000A366E /* Products */,
+				05FF734F29B7527B00696212 /* MyToast */,
+				05FF734E29B7527B00696212 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		05716F0328A0C805000A366E /* Products */ = {
+		05FF734E29B7527B00696212 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				05716F0228A0C805000A366E /* MyKeyboardNotification.app */,
+				05FF734D29B7527B00696212 /* MyToast.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		05716F0428A0C805000A366E /* MyKeyboardNotification */ = {
+		05FF734F29B7527B00696212 /* MyToast */ = {
 			isa = PBXGroup;
 			children = (
-				05FF736F29B75E0200696212 /* storyboard */,
-				05FF736E29B75DC800696212 /* viewcontroller */,
-				05FF736D29B75D3900696212 /* extension */,
-				05716F0528A0C805000A366E /* AppDelegate.swift */,
-				05716F0728A0C805000A366E /* SceneDelegate.swift */,
-				05716F0E28A0C806000A366E /* Assets.xcassets */,
-				05716F1328A0C806000A366E /* Info.plist */,
+				05FF736829B7553800696212 /* customview */,
+				05FF735029B7527B00696212 /* AppDelegate.swift */,
+				05FF735229B7527B00696212 /* SceneDelegate.swift */,
+				05FF736729B752BD00696212 /* viewcontroller */,
+				05FF736629B752AD00696212 /* extension */,
+				05FF736529B752A600696212 /* storyboard */,
+				05FF736429B7529800696212 /* resource */,
 			);
-			path = MyKeyboardNotification;
+			path = MyToast;
 			sourceTree = "<group>";
 		};
-		05FF736D29B75D3900696212 /* extension */ = {
+		05FF736429B7529800696212 /* resource */ = {
 			isa = PBXGroup;
 			children = (
-				05A79D9F2942C60100150544 /* UIViewController.swift */,
+				05FF735929B7527C00696212 /* Assets.xcassets */,
+				05FF735E29B7527C00696212 /* Info.plist */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+		05FF736529B752A600696212 /* storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				05FF735629B7527B00696212 /* Main.storyboard */,
+				05FF735B29B7527C00696212 /* LaunchScreen.storyboard */,
+			);
+			path = storyboard;
+			sourceTree = "<group>";
+		};
+		05FF736629B752AD00696212 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				05FF736B29B7593200696212 /* UIButton.swift */,
+				05FF737029B75FBB00696212 /* UIViewController.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
 		};
-		05FF736E29B75DC800696212 /* viewcontroller */ = {
+		05FF736729B752BD00696212 /* viewcontroller */ = {
 			isa = PBXGroup;
 			children = (
-				05716F0928A0C805000A366E /* ViewController.swift */,
-				05A79D9D2942C5B100150544 /* KeyboardExtensionTextViewController.swift */,
+				05FF735429B7527B00696212 /* ViewController.swift */,
 			);
 			path = viewcontroller;
 			sourceTree = "<group>";
 		};
-		05FF736F29B75E0200696212 /* storyboard */ = {
+		05FF736829B7553800696212 /* customview */ = {
 			isa = PBXGroup;
 			children = (
-				05716F0B28A0C805000A366E /* Main.storyboard */,
-				05716F1028A0C806000A366E /* LaunchScreen.storyboard */,
+				05FF736929B7555300696212 /* LoadingButton.swift */,
 			);
-			path = storyboard;
+			path = customview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		05716F0128A0C805000A366E /* MyKeyboardNotification */ = {
+		05FF734C29B7527B00696212 /* MyToast */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 05716F1628A0C806000A366E /* Build configuration list for PBXNativeTarget "MyKeyboardNotification" */;
+			buildConfigurationList = 05FF736129B7527C00696212 /* Build configuration list for PBXNativeTarget "MyToast" */;
 			buildPhases = (
-				05716EFE28A0C805000A366E /* Sources */,
-				05716EFF28A0C805000A366E /* Frameworks */,
-				05716F0028A0C805000A366E /* Resources */,
+				05FF734929B7527B00696212 /* Sources */,
+				05FF734A29B7527B00696212 /* Frameworks */,
+				05FF734B29B7527B00696212 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MyKeyboardNotification;
-			productName = MyKeyboardNotification;
-			productReference = 05716F0228A0C805000A366E /* MyKeyboardNotification.app */;
+			name = MyToast;
+			productName = MyToast;
+			productReference = 05FF734D29B7527B00696212 /* MyToast.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		05716EFA28A0C805000A366E /* Project object */ = {
+		05FF734529B7527B00696212 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
 				TargetAttributes = {
-					05716F0128A0C805000A366E = {
-						CreatedOnToolsVersion = 13.4.1;
+					05FF734C29B7527B00696212 = {
+						CreatedOnToolsVersion = 14.2;
 					};
 				};
 			};
-			buildConfigurationList = 05716EFD28A0C805000A366E /* Build configuration list for PBXProject "MyKeyboardNotification" */;
-			compatibilityVersion = "Xcode 13.0";
+			buildConfigurationList = 05FF734829B7527B00696212 /* Build configuration list for PBXProject "MyToast" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 05716EF928A0C805000A366E;
-			productRefGroup = 05716F0328A0C805000A366E /* Products */;
+			mainGroup = 05FF734429B7527B00696212;
+			productRefGroup = 05FF734E29B7527B00696212 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				05716F0128A0C805000A366E /* MyKeyboardNotification */,
+				05FF734C29B7527B00696212 /* MyToast */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		05716F0028A0C805000A366E /* Resources */ = {
+		05FF734B29B7527B00696212 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05716F1228A0C806000A366E /* LaunchScreen.storyboard in Resources */,
-				05716F0F28A0C806000A366E /* Assets.xcassets in Resources */,
-				05716F0D28A0C805000A366E /* Main.storyboard in Resources */,
+				05FF735D29B7527C00696212 /* LaunchScreen.storyboard in Resources */,
+				05FF735A29B7527C00696212 /* Assets.xcassets in Resources */,
+				05FF735829B7527B00696212 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		05716EFE28A0C805000A366E /* Sources */ = {
+		05FF734929B7527B00696212 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05716F0A28A0C805000A366E /* ViewController.swift in Sources */,
-				05716F0628A0C805000A366E /* AppDelegate.swift in Sources */,
-				05A79D9E2942C5B100150544 /* KeyboardExtensionTextViewController.swift in Sources */,
-				05716F0828A0C805000A366E /* SceneDelegate.swift in Sources */,
-				05A79DA02942C60100150544 /* UIViewController.swift in Sources */,
+				05FF736C29B7593200696212 /* UIButton.swift in Sources */,
+				05FF736A29B7555300696212 /* LoadingButton.swift in Sources */,
+				05FF737129B75FBB00696212 /* UIViewController.swift in Sources */,
+				05FF735529B7527B00696212 /* ViewController.swift in Sources */,
+				05FF735129B7527B00696212 /* AppDelegate.swift in Sources */,
+				05FF735329B7527B00696212 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		05716F0B28A0C805000A366E /* Main.storyboard */ = {
+		05FF735629B7527B00696212 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				05716F0C28A0C805000A366E /* Base */,
+				05FF735729B7527B00696212 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		05716F1028A0C806000A366E /* LaunchScreen.storyboard */ = {
+		05FF735B29B7527C00696212 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				05716F1128A0C806000A366E /* Base */,
+				05FF735C29B7527C00696212 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -198,13 +218,13 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		05716F1428A0C806000A366E /* Debug */ = {
+		05FF735F29B7527C00696212 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -248,7 +268,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -258,13 +278,13 @@
 			};
 			name = Debug;
 		};
-		05716F1528A0C806000A366E /* Release */ = {
+		05FF736029B7527C00696212 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -302,7 +322,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -312,27 +332,28 @@
 			};
 			name = Release;
 		};
-		05716F1728A0C806000A366E /* Debug */ = {
+		05FF736229B7527C00696212 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K3T4DBPF55;
+				DEVELOPMENT_TEAM = L8WFLHVUYX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyKeyboardNotification/Info.plist;
+				INFOPLIST_FILE = MyToast/resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyKeyboardNotification;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyToast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -340,27 +361,28 @@
 			};
 			name = Debug;
 		};
-		05716F1828A0C806000A366E /* Release */ = {
+		05FF736329B7527C00696212 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K3T4DBPF55;
+				DEVELOPMENT_TEAM = L8WFLHVUYX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyKeyboardNotification/Info.plist;
+				INFOPLIST_FILE = MyToast/resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyKeyboardNotification;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyToast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -371,25 +393,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		05716EFD28A0C805000A366E /* Build configuration list for PBXProject "MyKeyboardNotification" */ = {
+		05FF734829B7527B00696212 /* Build configuration list for PBXProject "MyToast" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				05716F1428A0C806000A366E /* Debug */,
-				05716F1528A0C806000A366E /* Release */,
+				05FF735F29B7527C00696212 /* Debug */,
+				05FF736029B7527C00696212 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		05716F1628A0C806000A366E /* Build configuration list for PBXNativeTarget "MyKeyboardNotification" */ = {
+		05FF736129B7527C00696212 /* Build configuration list for PBXNativeTarget "MyToast" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				05716F1728A0C806000A366E /* Debug */,
-				05716F1828A0C806000A366E /* Release */,
+				05FF736229B7527C00696212 /* Debug */,
+				05FF736329B7527C00696212 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 05716EFA28A0C805000A366E /* Project object */;
+	rootObject = 05FF734529B7527B00696212 /* Project object */;
 }

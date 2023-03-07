@@ -84,13 +84,23 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="408-gG-1uT">
+                                <rect key="frame" x="18" y="66" width="53.5" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="뒤로"/>
+                                <connections>
+                                    <action selector="backClicked:" destination="IgS-ML-7f9" eventType="touchUpInside" id="ekR-10-YIC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="N5O-yJ-EHt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="N5O-yJ-EHt" firstAttribute="bottom" secondItem="w9N-KR-6Zp" secondAttribute="bottom" priority="250" constant="36" id="Bh0-Gl-41c"/>
                             <constraint firstItem="N5O-yJ-EHt" firstAttribute="trailing" secondItem="w9N-KR-6Zp" secondAttribute="trailing" constant="18" id="NQI-Y7-jFL"/>
+                            <constraint firstItem="408-gG-1uT" firstAttribute="top" secondItem="N5O-yJ-EHt" secondAttribute="top" constant="18" id="ZxB-nf-PuB"/>
                             <constraint firstItem="w9N-KR-6Zp" firstAttribute="leading" secondItem="N5O-yJ-EHt" secondAttribute="leading" constant="18" id="gFX-dE-RdM"/>
+                            <constraint firstItem="408-gG-1uT" firstAttribute="leading" secondItem="N5O-yJ-EHt" secondAttribute="leading" constant="18" id="jTh-X9-mn1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AwR-0q-16j"/>

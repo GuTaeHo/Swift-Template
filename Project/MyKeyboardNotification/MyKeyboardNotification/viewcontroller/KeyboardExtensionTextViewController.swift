@@ -35,4 +35,8 @@ class KeyboardExtensionTextViewController: UIViewController {
     @objc func hideKeyboard(_ notification: Notification) {
         
     }
+    
+    @IBAction func backClicked(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
 }
