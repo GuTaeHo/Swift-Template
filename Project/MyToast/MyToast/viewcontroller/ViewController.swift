@@ -11,6 +11,7 @@ class ViewController: UIViewController {
     @IBOutlet var containerView: UIView!
     @IBOutlet var btToast: UIButton!
     @IBOutlet var btSnackbar: UIButton!
+    @IBOutlet var tfMessage: UITextField!
     
     private var keyboardHeight: CGFloat = 0
     
@@ -32,13 +33,16 @@ class ViewController: UIViewController {
         
     }
     
-    /// 인디케이터 일정 시간 표시
+    /// 토스트 표시
     @IBAction func toastButtonClicked(_ sender: UIButton) {
+        let message = (tfMessage.text == "") ? "입력란 공백" : tfMessage.text!
+        showToast(message: message)
+        
         UIView.animate(withDuration: 0.2, animations: { [weak self] in
             self?.btToast.showIndicator()
             self?.view.layoutIfNeeded()
         })
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             UIView.animate(withDuration: 0.2, animations: { [weak self] in
                 self?.btToast.hideIndicator()
                 self?.view.layoutIfNeeded()

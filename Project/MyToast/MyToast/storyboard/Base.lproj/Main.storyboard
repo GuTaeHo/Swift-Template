@@ -79,6 +79,7 @@
                         <outlet property="btSnackbar" destination="KD1-3F-b7u" id="ny0-ul-qDl"/>
                         <outlet property="btToast" destination="bew-9t-fHc" id="kai-FR-6hs"/>
                         <outlet property="containerView" destination="CcK-6f-bCB" id="5iP-fI-OrK"/>
+                        <outlet property="tfMessage" destination="gtD-Hg-PDi" id="tOc-Ir-k89"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

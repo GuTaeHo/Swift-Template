@@ -16,6 +16,7 @@
 		05FF736A29B7555300696212 /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FF736929B7555300696212 /* LoadingButton.swift */; };
 		05FF736C29B7593200696212 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FF736B29B7593200696212 /* UIButton.swift */; };
 		05FF737129B75FBB00696212 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FF737029B75FBB00696212 /* UIViewController.swift */; };
+		05FF737329B76B2600696212 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FF737229B76B2600696212 /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		05FF736929B7555300696212 /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
 		05FF736B29B7593200696212 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		05FF737029B75FBB00696212 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		05FF737229B76B2600696212 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				05FF736B29B7593200696212 /* UIButton.swift */,
 				05FF737029B75FBB00696212 /* UIViewController.swift */,
+				05FF737229B76B2600696212 /* UIColor.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05FF736C29B7593200696212 /* UIButton.swift in Sources */,
+				05FF737329B76B2600696212 /* UIColor.swift in Sources */,
 				05FF736A29B7555300696212 /* LoadingButton.swift in Sources */,
 				05FF737129B75FBB00696212 /* UIViewController.swift in Sources */,
 				05FF735529B7527B00696212 /* ViewController.swift in Sources */,
