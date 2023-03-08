@@ -21,48 +21,51 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CcK-6f-bCB">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bew-9t-fHc">
-                                        <rect key="frame" x="143.66666666666666" y="420.66666666666669" width="105.66666666666666" height="47"/>
-                                        <buttonConfiguration key="configuration" style="filled" imagePlacement="leading" title="토스트!" subtitle="Toast" imagePadding="6" cornerStyle="capsule" titleAlignment="center">
-                                            <imageReference key="image" image="info.circle.fill" catalog="system" symbolScale="large"/>
-                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
-                                            <directionalEdgeInsets key="contentInsets" top="5" leading="10" bottom="5" trailing="15"/>
-                                            <color key="baseForegroundColor" systemColor="systemGray6Color"/>
-                                            <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="toastButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gOd-Tu-bel"/>
-                                        </connections>
-                                    </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gtD-Hg-PDi">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="KPo-q5-Lx0">
+                                        <rect key="frame" x="65" y="420.66666666666669" width="263.33333333333331" height="47"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bew-9t-fHc">
+                                                <rect key="frame" x="0.0" y="0.0" width="113.66666666666667" height="47"/>
+                                                <buttonConfiguration key="configuration" style="filled" imagePlacement="leading" title="토스트!" subtitle="Toast" imagePadding="6" cornerStyle="capsule" titleAlignment="center">
+                                                    <imageReference key="image" image="info.circle.fill" catalog="system" symbolScale="large"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                                    <directionalEdgeInsets key="contentInsets" top="5" leading="10" bottom="5" trailing="15"/>
+                                                    <color key="baseForegroundColor" systemColor="systemGray6Color"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="toastButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gOd-Tu-bel"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KD1-3F-b7u">
+                                                <rect key="frame" x="149.66666666666666" y="0.0" width="113.66666666666666" height="47"/>
+                                                <buttonConfiguration key="configuration" style="filled" imagePlacement="leading" title="스낵바!" subtitle="Snackbar" imagePadding="6" cornerStyle="capsule" titleAlignment="center">
+                                                    <imageReference key="image" image="info.circle.fill" catalog="system" symbolScale="large"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                                    <directionalEdgeInsets key="contentInsets" top="5" leading="10" bottom="5" trailing="15"/>
+                                                    <color key="baseForegroundColor" systemColor="systemGray6Color"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="snackbarButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nuF-EW-cd1"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="애국가는 대한민국의 국가이다. 1919년 안창호에 의해 대한민국 임시정부에서 스코틀랜드 민요인 〈작별〉에 삽입해서 부르기 시작하다가 1935년 한국의 작곡가 안익태가 지은 《한국환상곡》에 가사를 삽입해서 현재까지 부르고 있다." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gtD-Hg-PDi">
                                         <rect key="frame" x="24" y="362.66666666666669" width="345" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KD1-3F-b7u">
-                                        <rect key="frame" x="139.66666666666666" y="291.66666666666669" width="113.66666666666666" height="47"/>
-                                        <buttonConfiguration key="configuration" style="filled" imagePlacement="leading" title="스낵바!" subtitle="Snackbar" imagePadding="6" cornerStyle="capsule" titleAlignment="center">
-                                            <imageReference key="image" image="info.circle.fill" catalog="system" symbolScale="large"/>
-                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
-                                            <directionalEdgeInsets key="contentInsets" top="5" leading="10" bottom="5" trailing="15"/>
-                                            <color key="baseForegroundColor" systemColor="systemGray6Color"/>
-                                            <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="snackbarButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nuF-EW-cd1"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="KD1-3F-b7u" firstAttribute="centerX" secondItem="CcK-6f-bCB" secondAttribute="centerX" id="744-N9-YjC"/>
-                                    <constraint firstItem="gtD-Hg-PDi" firstAttribute="top" secondItem="KD1-3F-b7u" secondAttribute="bottom" constant="24" id="91W-zB-rvM"/>
-                                    <constraint firstItem="bew-9t-fHc" firstAttribute="top" secondItem="gtD-Hg-PDi" secondAttribute="bottom" constant="24" id="BM5-K7-PDR"/>
+                                    <constraint firstItem="KPo-q5-Lx0" firstAttribute="centerX" secondItem="CcK-6f-bCB" secondAttribute="centerX" id="BgT-ML-Q3B"/>
+                                    <constraint firstItem="KPo-q5-Lx0" firstAttribute="top" secondItem="gtD-Hg-PDi" secondAttribute="bottom" constant="24" id="CWN-Qd-Swp"/>
                                     <constraint firstItem="gtD-Hg-PDi" firstAttribute="centerX" secondItem="CcK-6f-bCB" secondAttribute="centerX" id="LBt-6g-nzJ"/>
                                     <constraint firstItem="gtD-Hg-PDi" firstAttribute="centerY" secondItem="CcK-6f-bCB" secondAttribute="centerY" id="YTZ-ZP-Oqn"/>
                                     <constraint firstItem="gtD-Hg-PDi" firstAttribute="leading" secondItem="CcK-6f-bCB" secondAttribute="leading" constant="24" id="ZnH-kW-VlA"/>
                                     <constraint firstAttribute="trailing" secondItem="gtD-Hg-PDi" secondAttribute="trailing" constant="24" id="fPh-b2-60I"/>
-                                    <constraint firstItem="bew-9t-fHc" firstAttribute="centerX" secondItem="CcK-6f-bCB" secondAttribute="centerX" id="iER-QE-PgA"/>
                                 </constraints>
                             </view>
                         </subviews>

@@ -13,7 +13,7 @@ extension UIViewController {
     /// - parameter paddingView: 해당 뷰를 제외한 영역에 토스트 표시
     // TODO: paddingView 및 방향에 따라 토스트 위치 변경하기
     func showToast(message: String, paddingView: UIView? = nil) {
-        let toastLabel = UILabel()
+        let toastLabel = ToastLabel()
         toastLabel.backgroundColor = UIColor(r: 51, g: 51, b: 51, a: 1)
         toastLabel.lineBreakMode = .byWordWrapping
         toastLabel.textColor = .white
@@ -34,7 +34,7 @@ extension UIViewController {
         
         toastLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        let toastWidthConstrains = toastLabel.widthAnchor.constraint(equalToConstant: toastLabel.intrinsicContentSize.width + 36)
+        let toastWidthConstrains = toastLabel.widthAnchor.constraint(equalToConstant: toastLabel.intrinsicContentSize.width)
         let toastHeightConstrains = toastLabel.heightAnchor.constraint(equalToConstant: height)
         // - note: paddingView 가 지정되어있다면 해당 뷰의 상단과 맞춤, 없다면 뷰 컨트롤러의 하단과 맞춤
         let toastBottomConstrains = toastLabel.bottomAnchor.constraint(equalTo: paddingView?.topAnchor ?? view.bottomAnchor, constant: -DEFAULT_BOTTOM_PADDING)
@@ -51,8 +51,6 @@ extension UIViewController {
         
         let TOAST_MAX_WIDTH_PADDING: CGFloat = 36.0
         let toastMaxWidth = UIScreen.main.bounds.width - 36 - TOAST_MAX_WIDTH_PADDING
-        print("라벨 너비 \(toastLabel.frame.width)")
-        print("최대 라벨 너비 \(toastMaxWidth)")
         
         // 토스트가 기기 너비에 도달하면...
         if toastLabel.frame.width > toastMaxWidth {
@@ -62,9 +60,8 @@ extension UIViewController {
             toastLabel.widthAnchor.constraint(equalToConstant: toastMaxWidth).isActive = true
             // MARK: 너비가 반영되어야 높이가 변경됨!!
             view.layoutIfNeeded()
-            print("최대 라벨 높이 \(toastLabel.intrinsicContentSize.height + 24)")
-            toastLabel.heightAnchor.constraint(equalToConstant: toastLabel.intrinsicContentSize.height + 24).isActive = true
-            toastLabel.inset
+            print("최대 라벨 높이 \(toastLabel.intrinsicContentSize.height)")
+            toastLabel.heightAnchor.constraint(equalToConstant: toastLabel.intrinsicContentSize.height).isActive = true
         }
         
         DispatchQueue.main.async {
