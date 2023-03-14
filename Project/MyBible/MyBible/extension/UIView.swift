@@ -107,7 +107,7 @@ extension UIView {
         if sender.isAnimation {
             self.toggle()
         }
-        sender.action!()
+        sender.action?()
     }
 }
 

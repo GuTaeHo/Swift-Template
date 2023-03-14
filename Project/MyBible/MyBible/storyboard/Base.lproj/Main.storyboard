@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Vij-HU-zJ0">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="192"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZO-Dl-3bX">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="64"/>
@@ -57,7 +57,6 @@
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="text" value="안녕 로봇"/>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="underline" value="YES"/>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="url" value="http://muangs.com"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
@@ -67,6 +66,44 @@
                                                     <constraint firstAttribute="trailing" secondItem="aGw-0I-JrD" secondAttribute="trailing" constant="24" id="Cjc-zr-mGv"/>
                                                     <constraint firstAttribute="bottom" secondItem="aGw-0I-JrD" secondAttribute="bottom" constant="12" id="Kqr-VL-N3J"/>
                                                     <constraint firstItem="aGw-0I-JrD" firstAttribute="top" secondItem="zcM-aa-1dK" secondAttribute="top" constant="12" id="hxL-1E-QmY"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ogL-0F-lES">
+                                                <rect key="frame" x="0.0" y="128" width="393" height="64"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="BnH-CM-udM">
+                                                        <rect key="frame" x="24" y="12" width="345" height="40"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbb-tm-MOa" customClass="CommonButton" customModule="MyBible" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="166.66666666666666" height="40"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="짧은 토스트!"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9F-oq-Y7M" customClass="CommonButton" customModule="MyBible" customModuleProvider="target">
+                                                                <rect key="frame" x="178.66666666666663" y="0.0" width="166.33333333333337" height="40"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="긴 토스트!"/>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                                                        <color key="value" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="kVe-Ld-A0v"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="BnH-CM-udM" secondAttribute="trailing" constant="24" id="54B-RD-1dO"/>
+                                                    <constraint firstAttribute="bottom" secondItem="BnH-CM-udM" secondAttribute="bottom" constant="12" id="ZNh-ci-5zg"/>
+                                                    <constraint firstItem="BnH-CM-udM" firstAttribute="leading" secondItem="ogL-0F-lES" secondAttribute="leading" constant="24" id="iFx-cd-T6E"/>
+                                                    <constraint firstItem="BnH-CM-udM" firstAttribute="top" secondItem="ogL-0F-lES" secondAttribute="top" constant="12" id="zAi-vT-zB6"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -93,6 +130,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="baseTextFieldView" destination="42M-6W-ZYm" id="Hro-zY-YHf"/>
+                        <outlet property="btMassiveMessage" destination="u9F-oq-Y7M" id="VXC-Wv-AEy"/>
+                        <outlet property="btShortMessage" destination="nbb-tm-MOa" id="1wq-WA-Ccc"/>
                         <outlet property="underlineLabelView" destination="aGw-0I-JrD" id="byB-B5-eq4"/>
                     </connections>
                 </viewController>
@@ -101,6 +141,14 @@
             <point key="canvasLocation" x="-33" y="4"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="nbb-tm-MOa">
+            <size key="intrinsicContentSize" width="24" height="14"/>
+        </designable>
+        <designable name="u9F-oq-Y7M">
+            <size key="intrinsicContentSize" width="24" height="14"/>
+        </designable>
+    </designables>
     <resources>
         <image name="trash" catalog="system" width="117" height="128"/>
         <systemColor name="systemGray6Color">

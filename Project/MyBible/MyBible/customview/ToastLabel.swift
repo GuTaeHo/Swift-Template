@@ -10,7 +10,7 @@ import UIKit
 
 /// 토스트 표시를 위한 라벨
 class ToastLabel: UILabel {
-    private var padding = UIEdgeInsets(top: 18.0, left: 12.0, bottom: 18.0, right: 12.0)
+    private var padding = UIEdgeInsets(top: 12.0, left: 12.0, bottom: 12.0, right: 12.0)
     
     /// 패딩 조정 시 사용
     convenience init(padding: UIEdgeInsets) {

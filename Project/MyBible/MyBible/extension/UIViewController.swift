@@ -8,10 +8,10 @@
 import UIKit
 
 extension UIViewController {
+    // TODO: paddingView 및 방향에 따라 토스트 위치 변경하기
     /// 토스트 표시
     /// - parameter message: 메시지 내용
     /// - parameter paddingView: 해당 뷰를 제외한 영역에 토스트 표시
-    // TODO: paddingView 및 방향에 따라 토스트 위치 변경하기
     func showToast(message: String, paddingView: UIView? = nil) {
         let toastLabel = ToastLabel()
         toastLabel.backgroundColor = UIColor(r: 51, g: 51, b: 51, a: 1)
@@ -60,7 +60,6 @@ extension UIViewController {
             toastLabel.widthAnchor.constraint(equalToConstant: toastMaxWidth).isActive = true
             // MARK: 너비가 반영되어야 높이가 변경됨!!
             view.layoutIfNeeded()
-            print("최대 라벨 높이 \(toastLabel.intrinsicContentSize.height)")
             toastLabel.heightAnchor.constraint(equalToConstant: toastLabel.intrinsicContentSize.height).isActive = true
         }
         

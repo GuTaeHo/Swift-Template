@@ -68,8 +68,10 @@ class CommonLabelView: UIView {
         set {
             if let newValue = newValue {
                 _url = newValue
+                lbMessage.textColor = .systemBlue
             } else {
                 _url = newValue
+                lbMessage.textColor = UIColor(r: 51, g: 51, b: 51, a: 1)
             }
         }
     }

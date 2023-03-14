@@ -26,4 +26,32 @@ extension UIButton {
         self.isEnabled = true
         self.configuration?.showsActivityIndicator = false
     }
+    
+    /// 탭 액션 등록
+    /// - parameter isIndicate: 버튼 인디케이터 표시 여부
+    /// - parameter action: 뷰 클릭 시 호출될 클로저
+    func addAction(isIndicate: Bool = false, action: @escaping () -> ()) {
+        let recognizer = ButtonTapGestureRecognizer(target: self, action: #selector(self.buttonTapGesture(_:)))
+        recognizer.indicated = isIndicate
+        recognizer.action = action
+        
+        recognizer.numberOfTapsRequired = 1
+        recognizer.numberOfTouchesRequired = 1
+        
+        self.addGestureRecognizer(recognizer)
+        self.isUserInteractionEnabled = true
+    }
+    
+    @objc func buttonTapGesture(_ sender: ButtonTapGestureRecognizer) {
+        if sender.indicated {
+            self.showIndicator()
+        }
+        sender.action?()
+    }
+}
+
+/// 커스텀 버튼 탭 인식기
+class ButtonTapGestureRecognizer: UITapGestureRecognizer {
+    var indicated: Bool = false
+    var action: (() -> ())? = nil
 }
