@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var underlineLabelView: CommonLabelView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -20,6 +21,11 @@ class ViewController: UIViewController {
          tintButton.leadingAnchor.constraint(equalTo: safeAreaGuide.leadingAnchor, constant: 18).isActive = true
          tintButton.trailingAnchor.constraint(equalTo: safeAreaGuide.trailingAnchor, constant: -18).isActive = true
          */
+        
+        underlineLabelView.labelClickClosure = { [self] _ in
+            underlineLabelView.underline = true
+            showToast(message: "\(underlineLabelView.url ?? "지정된 URL 없음!")")
+        }
     }
 }
 

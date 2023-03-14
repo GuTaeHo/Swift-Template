@@ -19,26 +19,27 @@ class CommonTextFieldView: UIView {
     @IBOutlet var ivClickable: UIImageView!
     
     /// 특정 이벤트 발생 시 추가적으로 동작시키고 싶은 코드를 외부에서 작성해서 클로저에 전달하면 됩니다.
-    // ex) CommonTextFieldInstance.onClickDeleteButtonClosure = { do something }
-    public var onClickClickableButtonClosure: (() -> ())?
-    public var onClickDeleteButtonClosure: (() -> ())?
-    public var onClickKeyboardReturn: (() -> ())?   // 키보드의 Return 키를 누를 경우 발생할 이벤트 정의
+    // ex) CommonTextFieldInstance.deleteButtonClosure = { do something }
+    public var clickableButtonClosure: (() -> ())?
+    /// 삭제 클릭 시 호출될 클로저 작성
+    public var deleteButtonClosure: (() -> ())?
+    /// 키보드 리턴 클릭 시 호출될 클로저 작성
+    public var textFieldShouldReturnClosure: (() -> ())?
+    /// 입력 시작 시 호출될 클로저 작성
+    /// - note: 클로저 파라미터 CommonTextFieldVIew (자기 자신)
     public var textFieldEditingChangedClosure: (() -> ())?
+    /// 입력 중 호출될 클로저 작성
     public var textFieldDidBeginEditingClosure: ((CommonTextFieldView) -> ())?
+    /// 입력 종료 시 호출될 클로저 작성
     public var textFieldDidEndEditingClosure: (() -> ())?
     
     private var _textMaxCount = 0
-    // 버튼 이미지 (사용자 이미지 or 시스템에 있는 이미지)
-    private var _buttonImageString: String?
-    private var _systemButtonImageString: String?
-    // 힌트
+    /// 버튼 이미지
+    private var _clickableButtonImage: UIImage?
+    /// 힌트
     private var _textPlaceholder: String = ""
-    // 뷰 라운드 여부
-    private var _isRound = false
-    // 키보드 입력 숫자패드 여부
-    private var _isKeyPad = false
     
-    /// CocobeanTextField 의 Text 변경 시 해당 프로퍼티 사용
+    /// text 변경 시 해당 프로퍼티 사용
     public var text: String? {
         get {
             return tfMessage.text
@@ -54,7 +55,7 @@ class CommonTextFieldView: UIView {
         }
     }
     
-    /// 키보드 리턴 버튼 타입 지정
+    /// 키보드 리턴 타입 지정
     public var keyboardReturnType: UIReturnKeyType? {
         willSet {
             self.tfMessage.returnKeyType = newValue ?? UIReturnKeyType.default
@@ -69,22 +70,6 @@ class CommonTextFieldView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         self.loadXib()
-    }
-    
-    // MARK: Interface Builder(storyboard) 의 Attribute Inspector 에서
-    // MARK: 값을 수정할 경우, 컴파일 시 아래 설정된 값이 반영됨
-    @IBInspectable
-    var isRound: Bool {
-        get {
-            return _isRound
-        }
-        
-        set {
-            if newValue {
-                messageView.layer.cornerRadius = messageView.frame.height / 2
-                _isRound = newValue
-            }
-        }
     }
     
     @IBInspectable
@@ -104,6 +89,7 @@ class CommonTextFieldView: UIView {
     var textMaxCount: Int {
         get {
             if _textMaxCount <= 0 {
+                _textMaxCount = 0
                 return .max
             }
             
@@ -128,32 +114,16 @@ class CommonTextFieldView: UIView {
     }
     
     @IBInspectable
-    /// 이미지 지정 (사용자 Import)
-    var buttonImage: String {
+    /// 클릭 버튼 이미지
+    /// - note: 지정된 버튼 없을 경우, 기본 시스템 이미지 적용
+    var clickableButtonImage: UIImage {
         get {
-            return self._buttonImageString ?? ""
+            return _clickableButtonImage ?? UIImage(systemName: "arrow.right.circle")!
         }
         
         set {
-            if let image = UIImage(named: newValue) {
-                self._buttonImageString = newValue
-                self.ivClickable.image = image
-            }
-        }
-    }
-    
-    @IBInspectable
-    /// 시스템 이미지 지정
-    var systemButtonImage: String {
-        get {
-            return self._systemButtonImageString ?? ""
-        }
-        
-        set {
-            if let image = UIImage(systemName: newValue) {
-                self._systemButtonImageString = newValue
-                self.ivClickable.image = image
-            }
+            _clickableButtonImage = newValue
+            ivClickable.image = _clickableButtonImage
         }
     }
     
@@ -168,24 +138,6 @@ class CommonTextFieldView: UIView {
             self.clickableButtonView.isHidden = newValue
         }
     }
-    
-    @IBInspectable
-    /// 입력 방식 설정 (디폴트 or 키패드)
-    var isKeyPad: Bool {
-        get {
-            return _isKeyPad
-        }
-        
-        set {
-            if newValue {
-                self.tfMessage.keyboardType = .numberPad
-            } else {
-                self.tfMessage.keyboardType = .default
-            }
-            self._isKeyPad = newValue
-        }
-    }
-    
     
     private func loadXib() {
         let bundle = Bundle(for: CommonTextFieldView.self)
@@ -211,6 +163,7 @@ class CommonTextFieldView: UIView {
         }
     }
     
+    
     /// 텍스트 필드 Responder 해제
     /// - note : @discardableResult 어노테이션 사용 시 메소드 반환 값 미 사용 경고가 표시되지않음
     @discardableResult
@@ -220,9 +173,6 @@ class CommonTextFieldView: UIView {
     
     private func initLayout() {
         tfMessage.delegate = self
-        
-        // 모서리 둥글게 표시
-        messageView.layer.cornerRadius = 6
         
         tfMessage.addAction(for: .editingChanged) { _ in
             guard let count = self.tfMessage.text?.count else { return }
@@ -243,7 +193,7 @@ class CommonTextFieldView: UIView {
         }
         
         clickableButtonView.addAction {
-            self.onClickClickableButtonClosure?()
+            self.clickableButtonClosure?()
         }
         
         deleteButtonView.addAction {
@@ -251,8 +201,25 @@ class CommonTextFieldView: UIView {
             self.lbTextCount.text = "(0/\(self.textMaxCount))"
             self.deleteButtonView.hidden(isAnimate: true)
             self.tfMessage.becomeFirstResponder()
-            self.onClickDeleteButtonClosure?()
+            self.deleteButtonClosure?()
         }
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        if _textMaxCount == 0 {
+            textCountView.hidden()
+        }
+        deleteButtonView.hidden()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        // 모서리 둥글게 표시
+        messageView.layer.cornerRadius = 6
+        
     }
 }
 
@@ -268,7 +235,7 @@ extension CommonTextFieldView: UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        onClickKeyboardReturn?()
+        textFieldShouldReturnClosure?()
         return true
     }
 }

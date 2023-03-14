@@ -9,7 +9,7 @@ import UIKit
 
 
 extension UIView {
-    /// 방향 관련 열거
+    /// 방향 타입 정의
     enum Direction: String {
         case top
         case bottom
@@ -17,12 +17,14 @@ extension UIView {
         case right
     }
     
-    /// 애니메이션 지속시간 설정
-    private var ANIMATION_TARGET_INTERVAL: CGFloat {
-        get {
-            return 0.3
-        }
+    static func loadFromNib<T>() -> T? {
+        let identifier = String(describing: T.self)
+        let view = Bundle.main.loadNibNamed(identifier, owner: self, options: nil)?.first
+        return view as? T
     }
+    
+    /// 애니메이션 지속시간 설정
+    static var animationInterval = 0.3
     
     /// 토글 애니메이션
     func toggle() {
@@ -49,7 +51,7 @@ extension UIView {
         }
         
         if isAnimate {
-            UIView.animate(withDuration: self.ANIMATION_TARGET_INTERVAL, animations: {
+            UIView.animate(withDuration: UIView.animationInterval, animations: {
                 self.isHidden = true
                 self.alpha = 0
             })
@@ -63,7 +65,7 @@ extension UIView {
     /// - parameter isAnimate: 애니메이션 사용 여부 (기본값: false)
     func display(isAnimate: Bool = false) {
         if isAnimate {
-            UIView.animate(withDuration: self.ANIMATION_TARGET_INTERVAL) {
+            UIView.animate(withDuration: UIView.animationInterval) {
                 self.isHidden = false
                 self.alpha = 1
             }

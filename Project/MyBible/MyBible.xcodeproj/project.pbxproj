@@ -24,6 +24,15 @@
 		05BBD6A129BA286300C37D10 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BBD6A029BA286300C37D10 /* UITableView.swift */; };
 		05BBD6A329BA289A00C37D10 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BBD6A229BA289A00C37D10 /* UIWindow.swift */; };
 		05BBD6A529BA28CA00C37D10 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BBD6A429BA28CA00C37D10 /* String.swift */; };
+		05BBD6A829BCC11A00C37D10 /* PageViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BBD6A729BCC11A00C37D10 /* PageViewAdapter.swift */; };
+		05BBD6AA29BCC19800C37D10 /* TableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BBD6A929BCC19800C37D10 /* TableViewAdapter.swift */; };
+		05BBD6AC29BCC3E200C37D10 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BBD6AB29BCC3E200C37D10 /* NSObject.swift */; };
+		05BBD6AE29BCD1FD00C37D10 /* LogUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BBD6AD29BCD1FD00C37D10 /* LogUtil.swift */; };
+		05BBD6B029C0893C00C37D10 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BBD6AF29C0893C00C37D10 /* UILabel.swift */; };
+		05BBD6B229C0947D00C37D10 /* CommonLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BBD6B129C0947D00C37D10 /* CommonLabelView.swift */; };
+		05BBD6B429C0950700C37D10 /* CommonLabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05BBD6B329C0950700C37D10 /* CommonLabelView.xib */; };
+		05BBD6B629C09C7700C37D10 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BBD6B529C09C7700C37D10 /* UIButton.swift */; };
+		05BBD6B829C09CFA00C37D10 /* ToastLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BBD6B729C09CFA00C37D10 /* ToastLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +55,15 @@
 		05BBD6A029BA286300C37D10 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		05BBD6A229BA289A00C37D10 /* UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
 		05BBD6A429BA28CA00C37D10 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		05BBD6A729BCC11A00C37D10 /* PageViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewAdapter.swift; sourceTree = "<group>"; };
+		05BBD6A929BCC19800C37D10 /* TableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdapter.swift; sourceTree = "<group>"; };
+		05BBD6AB29BCC3E200C37D10 /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
+		05BBD6AD29BCD1FD00C37D10 /* LogUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogUtil.swift; sourceTree = "<group>"; };
+		05BBD6AF29C0893C00C37D10 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		05BBD6B129C0947D00C37D10 /* CommonLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonLabelView.swift; sourceTree = "<group>"; };
+		05BBD6B329C0950700C37D10 /* CommonLabelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonLabelView.xib; sourceTree = "<group>"; };
+		05BBD6B529C09C7700C37D10 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		05BBD6B729C09CFA00C37D10 /* ToastLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +96,7 @@
 		05BBD67429BA23B800C37D10 /* MyBible */ = {
 			isa = PBXGroup;
 			children = (
+				05BBD6A629BCC0F600C37D10 /* adapter */,
 				05BBD69D29BA26D200C37D10 /* enum */,
 				05BBD69629BA25A600C37D10 /* customview */,
 				05BBD68C29BA23CC00C37D10 /* extension */,
@@ -128,6 +147,10 @@
 				05BBD6A029BA286300C37D10 /* UITableView.swift */,
 				05BBD6A229BA289A00C37D10 /* UIWindow.swift */,
 				05BBD6A429BA28CA00C37D10 /* String.swift */,
+				05BBD6AB29BCC3E200C37D10 /* NSObject.swift */,
+				05BBD6AD29BCD1FD00C37D10 /* LogUtil.swift */,
+				05BBD6AF29C0893C00C37D10 /* UILabel.swift */,
+				05BBD6B529C09C7700C37D10 /* UIButton.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -137,6 +160,9 @@
 			children = (
 				05BBD69729BA25CB00C37D10 /* CommonTextFieldView.swift */,
 				05BBD69829BA25CC00C37D10 /* CommonTextFieldView.xib */,
+				05BBD6B129C0947D00C37D10 /* CommonLabelView.swift */,
+				05BBD6B329C0950700C37D10 /* CommonLabelView.xib */,
+				05BBD6B729C09CFA00C37D10 /* ToastLabel.swift */,
 			);
 			path = customview;
 			sourceTree = "<group>";
@@ -146,6 +172,15 @@
 			children = (
 			);
 			path = enum;
+			sourceTree = "<group>";
+		};
+		05BBD6A629BCC0F600C37D10 /* adapter */ = {
+			isa = PBXGroup;
+			children = (
+				05BBD6A729BCC11A00C37D10 /* PageViewAdapter.swift */,
+				05BBD6A929BCC19800C37D10 /* TableViewAdapter.swift */,
+			);
+			path = adapter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +243,7 @@
 			files = (
 				05BBD68229BA23BA00C37D10 /* LaunchScreen.storyboard in Resources */,
 				05BBD69A29BA25CC00C37D10 /* CommonTextFieldView.xib in Resources */,
+				05BBD6B429C0950700C37D10 /* CommonLabelView.xib in Resources */,
 				05BBD67F29BA23BA00C37D10 /* Assets.xcassets in Resources */,
 				05BBD67D29BA23B800C37D10 /* Main.storyboard in Resources */,
 			);
@@ -220,16 +256,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05BBD6B829C09CFA00C37D10 /* ToastLabel.swift in Sources */,
 				05BBD69529BA251A00C37D10 /* UIControl.swift in Sources */,
 				05BBD6A529BA28CA00C37D10 /* String.swift in Sources */,
 				05BBD69F29BA27C800C37D10 /* UITextField.swift in Sources */,
 				05BBD69929BA25CC00C37D10 /* CommonTextFieldView.swift in Sources */,
+				05BBD6B029C0893C00C37D10 /* UILabel.swift in Sources */,
 				05BBD6A329BA289A00C37D10 /* UIWindow.swift in Sources */,
+				05BBD6AE29BCD1FD00C37D10 /* LogUtil.swift in Sources */,
 				05BBD69129BA24E300C37D10 /* UIView.swift in Sources */,
 				05BBD69329BA24ED00C37D10 /* UIColor.swift in Sources */,
 				05BBD67A29BA23B800C37D10 /* ViewController.swift in Sources */,
+				05BBD6AA29BCC19800C37D10 /* TableViewAdapter.swift in Sources */,
+				05BBD6B229C0947D00C37D10 /* CommonLabelView.swift in Sources */,
 				05BBD67629BA23B800C37D10 /* AppDelegate.swift in Sources */,
+				05BBD6A829BCC11A00C37D10 /* PageViewAdapter.swift in Sources */,
 				05BBD6A129BA286300C37D10 /* UITableView.swift in Sources */,
+				05BBD6B629C09C7700C37D10 /* UIButton.swift in Sources */,
+				05BBD6AC29BCC3E200C37D10 /* NSObject.swift in Sources */,
 				05BBD69C29BA265D00C37D10 /* UIView+IBInspectable.swift in Sources */,
 				05BBD68F29BA248800C37D10 /* UIViewController.swift in Sources */,
 				05BBD67829BA23B800C37D10 /* SceneDelegate.swift in Sources */,

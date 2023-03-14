@@ -1,24 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyBible" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kxd-ht-tgg">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Vij-HU-zJ0">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="128"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZO-Dl-3bX">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="64"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="42M-6W-ZYm" customClass="CommonTextFieldView" customModule="MyBible" customModuleProvider="target">
+                                                        <rect key="frame" x="24" y="12" width="345" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="OjD-rc-iTX"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="imageHidden" value="NO"/>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="clickableButtonImage" value="trash" catalog="system"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="textMaxCount">
+                                                                <integer key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="42M-6W-ZYm" firstAttribute="leading" secondItem="hZO-Dl-3bX" secondAttribute="leading" constant="24" id="LMK-Ba-oEU"/>
+                                                    <constraint firstAttribute="bottom" secondItem="42M-6W-ZYm" secondAttribute="bottom" constant="12" id="O11-hS-T2u"/>
+                                                    <constraint firstAttribute="trailing" secondItem="42M-6W-ZYm" secondAttribute="trailing" constant="24" id="OZz-Qh-iPM"/>
+                                                    <constraint firstItem="42M-6W-ZYm" firstAttribute="top" secondItem="hZO-Dl-3bX" secondAttribute="top" constant="12" id="r8C-TY-Rmw"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zcM-aa-1dK">
+                                                <rect key="frame" x="0.0" y="64" width="393" height="64"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aGw-0I-JrD" customClass="CommonLabelView" customModule="MyBible" customModuleProvider="target">
+                                                        <rect key="frame" x="24" y="12" width="345" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="YpA-FK-ieh"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="안녕 로봇"/>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="underline" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="url" value="http://muangs.com"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="aGw-0I-JrD" firstAttribute="leading" secondItem="zcM-aa-1dK" secondAttribute="leading" constant="24" id="1Oc-RS-umt"/>
+                                                    <constraint firstAttribute="trailing" secondItem="aGw-0I-JrD" secondAttribute="trailing" constant="24" id="Cjc-zr-mGv"/>
+                                                    <constraint firstAttribute="bottom" secondItem="aGw-0I-JrD" secondAttribute="bottom" constant="12" id="Kqr-VL-N3J"/>
+                                                    <constraint firstItem="aGw-0I-JrD" firstAttribute="top" secondItem="zcM-aa-1dK" secondAttribute="top" constant="12" id="hxL-1E-QmY"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Vij-HU-zJ0" firstAttribute="top" secondItem="w7o-D4-MDh" secondAttribute="top" id="YBv-jT-dIA"/>
+                                    <constraint firstItem="Vij-HU-zJ0" firstAttribute="trailing" secondItem="w7o-D4-MDh" secondAttribute="trailing" id="jMo-B8-Mfn"/>
+                                    <constraint firstItem="Vij-HU-zJ0" firstAttribute="bottom" secondItem="w7o-D4-MDh" secondAttribute="bottom" id="qYe-i6-f2E"/>
+                                    <constraint firstItem="Vij-HU-zJ0" firstAttribute="leading" secondItem="w7o-D4-MDh" secondAttribute="leading" id="tnF-G4-5FF"/>
+                                    <constraint firstItem="Vij-HU-zJ0" firstAttribute="width" secondItem="NMV-KF-Fgf" secondAttribute="width" id="zI8-C7-vd1"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="w7o-D4-MDh"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="NMV-KF-Fgf"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kxd-ht-tgg" secondAttribute="trailing" id="CKy-Qb-glX"/>
+                            <constraint firstAttribute="bottom" secondItem="Kxd-ht-tgg" secondAttribute="bottom" id="S4B-zz-RU9"/>
+                            <constraint firstItem="Kxd-ht-tgg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lg7-k5-BHm"/>
+                            <constraint firstItem="Kxd-ht-tgg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xT6-W9-s3w"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="underlineLabelView" destination="aGw-0I-JrD" id="byB-B5-eq4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-33" y="4"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="trash" catalog="system" width="117" height="128"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
