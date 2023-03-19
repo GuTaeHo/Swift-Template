@@ -7,6 +7,7 @@
 
 import UIKit
 
+@IBDesignable
 extension UIView {
     @IBInspectable
     var borderWidth: CGFloat {

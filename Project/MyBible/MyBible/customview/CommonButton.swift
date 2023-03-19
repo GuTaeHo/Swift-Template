@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import SnapKit
 
 @IBDesignable
 class CommonButton: UIButton {
+    
     @IBInspectable
     var text: String? {
         get {
@@ -64,5 +66,30 @@ class CommonButton: UIButton {
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
+        
+    }
+    
+    /// 노치가 있는 디스플레이(X 시리즈) 하단(다음) 버튼 레이아웃 적용
+    func changeNextButtonLayout(viewController: UIViewController, isKeyboardShow: Bool = false) {
+        if isKeyboardShow {
+            self.snp.remakeConstraints {
+                $0.height.equalTo(56)
+            }
+            self.configuration?.contentInsets.bottom = 0
+            return
+        }
+        
+        if let bottomSafeAreaHeight = viewController.safeAreaSize(direction: .bottom), bottomSafeAreaHeight != 0 {
+            self.snp.remakeConstraints {
+                $0.height.equalTo(56 + bottomSafeAreaHeight)
+            }
+            
+            // 하단 인셋 적용
+            self.configuration?.contentInsets.bottom = bottomSafeAreaHeight
+        } else {
+            self.snp.remakeConstraints {
+                $0.height.equalTo(56)
+            }
+        }
     }
 }

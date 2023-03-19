@@ -16,4 +16,28 @@ extension UIColor {
     convenience init(r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat) {
         self.init(red: r/255, green: g/255, blue: b/255, alpha: a)
     }
+    
+    static var colorBlack: UIColor? {
+        get {
+            return UIColor(named: "SystemBlack")
+        }
+    }
+    
+    static var colorWhite: UIColor? {
+        get {
+            return UIColor(named: "SystemWhite")
+        }
+    }
+    
+    static var colorPink: UIColor? {
+        get {
+            return UIColor(named: "SystemPink")
+        }
+    }
+    
+    static var colorIndigo: UIColor? {
+        get {
+            return UIColor(named: "SystemIndigo")
+        }
+    }
 }

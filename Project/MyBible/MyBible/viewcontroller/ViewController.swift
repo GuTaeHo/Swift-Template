@@ -8,11 +8,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet var baseTextFieldView: CommonTextFieldView!
     @IBOutlet var underlineLabelView: CommonLabelView!
     @IBOutlet var btShortMessage: CommonButton!
     @IBOutlet var btMassiveMessage: CommonButton!
+    @IBOutlet var btNext: CommonButton!
+    
+    private var keyboardHeight: CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,29 +28,51 @@ class ViewController: UIViewController {
          tintButton.leadingAnchor.constraint(equalTo: safeAreaGuide.leadingAnchor, constant: 18).isActive = true
          tintButton.trailingAnchor.constraint(equalTo: safeAreaGuide.trailingAnchor, constant: -18).isActive = true
          */
-        
+        addKeyboardObserver(showKeyboardSelector: #selector(showKeyboard), hideKeyboardSelector: #selector(hideKeyboard))
         initAction()
+        initLayout()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         
-        underlineLabelView.labelClickClosure = { [self] _ in
-            underlineLabelView.underline = true
-            showToast(message: "지정된 URL: \(underlineLabelView.url ?? "지정된 URL 없음!")")
-        }
+        removeKeyboardObserver()
     }
     
     func initAction() {
-        btShortMessage.addAction(isIndicate: true) {
-            self.showToast(message: "NVidia Tegra X1 chop inside Switch")
+        /* 라벨 클릭 */
+        underlineLabelView.labelClickClosure = { [self] _ in
+            underlineLabelView.underline = true
+            showToast(message: "지정된 URL: \(underlineLabelView.url ?? "지정된 URL 없음!")", bottomPadding: keyboardHeight, bottomView: btNext)
+        }
+        
+        btShortMessage.addAction(isIndicate: true) { [self] in
+            showToast(message: "NVidia Tegra X1 chop inside Switch", bottomPadding: keyboardHeight, bottomView: btNext)
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 self.btShortMessage.hideIndicator()
             }
         }
         
-        btMassiveMessage.addAction(isIndicate: true) {
-            self.showToast(message: "When the view is visible onscreen, this guide reflects the portion of the view that is not covered by navigation bars, tab bars, toolbars, and other ancestor views. (In tvOS, the safe area reflects the area not covered the screen's bezel.) If the view is not currently installed in a view hierarchy, or is not yet visible onscreen, the layout guide edges are equal to the edges of the view.")
+        btMassiveMessage.addAction(isIndicate: true) { [self] in
+            showToast(message: "When the view is visible onscreen, this guide reflects the portion of the view that is not covered by navigation bars, tab bars, toolbars, and other ancestor views. (In tvOS, the safe area reflects the area not covered the screen's bezel.) If the view is not currently installed in a view hierarchy, or is not yet visible onscreen, the layout guide edges are equal to the edges of the view.", bottomPadding: keyboardHeight, bottomView: btNext)
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 self.btMassiveMessage.hideIndicator()
             }
         }
+    }
+    
+    func initLayout() {
+        btNext.changeNextButtonLayout(viewController: self)
+    }
+    
+    @objc func showKeyboard(_ notification: Notification) {
+        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            keyboardHeight = keyboardFrame.cgRectValue.height
+        }
+    }
+    
+    @objc func hideKeyboard() {
+        keyboardHeight = 0
     }
 }
 

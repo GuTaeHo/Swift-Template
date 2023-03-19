@@ -225,7 +225,7 @@ class CommonTextFieldView: UIView {
 
 extension CommonTextFieldView: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        messageView.layer.borderColor = UIColor.systemPink.cgColor
+        messageView.layer.borderColor = UIColor.colorPink?.cgColor
         textFieldDidBeginEditingClosure?(self)
     }
     

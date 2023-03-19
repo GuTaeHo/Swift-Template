@@ -12,7 +12,9 @@ extension UIViewController {
     /// 토스트 표시
     /// - parameter message: 메시지 내용
     /// - parameter paddingView: 해당 뷰를 제외한 영역에 토스트 표시
-    func showToast(message: String, paddingView: UIView? = nil) {
+    /// - parameter bottomView: 하단 영역을 차지하고 있는 뷰
+    /// - note:
+    func showToast(message: String, bottomPadding: CGFloat? = nil, bottomView: UIView? = nil) {
         let toastLabel = ToastLabel()
         toastLabel.backgroundColor = UIColor(r: 51, g: 51, b: 51, a: 1)
         toastLabel.lineBreakMode = .byWordWrapping
@@ -26,7 +28,7 @@ extension UIViewController {
         toastLabel.clipsToBounds = true
         toastLabel.isUserInteractionEnabled = false
         
-        let DEFAULT_BOTTOM_PADDING: CGFloat = 64
+        let DEFAULT_BOTTOM_PADDING: CGFloat = 32
         let height = toastLabel.sizeThatFits(CGSize(width: toastLabel.frame.width, height: CGFloat.greatestFiniteMagnitude)).height + 24
         
         self.view.addSubview(toastLabel)
@@ -36,8 +38,18 @@ extension UIViewController {
         
         let toastWidthConstrains = toastLabel.widthAnchor.constraint(equalToConstant: toastLabel.intrinsicContentSize.width)
         let toastHeightConstrains = toastLabel.heightAnchor.constraint(equalToConstant: height)
-        // - note: paddingView 가 지정되어있다면 해당 뷰의 상단과 맞춤, 없다면 뷰 컨트롤러의 하단과 맞춤
-        let toastBottomConstrains = toastLabel.bottomAnchor.constraint(equalTo: paddingView?.topAnchor ?? view.bottomAnchor, constant: -DEFAULT_BOTTOM_PADDING)
+        var toastBottomConstrains: NSLayoutConstraint!
+        /// - note: bottomView 가 지정되어있다면 해당 뷰의 상단과 맞춤, 없다면 뷰 컨트롤러의 하단과 맞춤
+        if let bottomView = bottomView {
+            /// - note: 키보드 높이가 지정되어있지 않다면
+            if bottomPadding == 0 {
+                toastBottomConstrains = toastLabel.bottomAnchor.constraint(equalTo: bottomView.topAnchor, constant: -(bottomPadding ?? 0) - DEFAULT_BOTTOM_PADDING)
+            } else {
+                toastBottomConstrains = toastLabel.bottomAnchor.constraint(equalTo: bottomView.topAnchor, constant: -(bottomPadding ?? 0) - DEFAULT_BOTTOM_PADDING + bottomView.frame.height)
+            }
+        } else {
+            toastBottomConstrains = toastLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -(bottomPadding ?? 0) - DEFAULT_BOTTOM_PADDING)
+        }
         let toastCenterXConstrains = toastLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         
         NSLayoutConstraint.activate([
@@ -71,29 +83,6 @@ extension UIViewController {
                 toastLabel.removeFromSuperview()
             }
         }
-        
-        /*
-        // 애니메이션 중 호출
-        let animateClosure = {
-            toastLabel.alpha = 1.0
-        }
-        
-        // 애니메이션 종료 후 호출
-        let animateCompleteClosure: (Bool) -> () = { isFinished in
-            if isFinished {
-                UIView.animate(withDuration: 0.5, animations: {
-                    toastLabel.alpha = 0.0
-                    toastLabel.transform = CGAffineTransform(scaleX: 0, y: 0)
-                    self.view.layoutIfNeeded()
-                }) { _ in
-                    toastLabel.removeFromSuperview()
-                }
-            }
-        }
-        
-        UIView.animate(withDuration: 2.0,
-                       animations: animateClosure, completion: animateCompleteClosure)
-         */
     }
     
     private func addActionForEndEditing() {
