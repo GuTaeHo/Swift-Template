@@ -8,7 +8,7 @@
 import UIKit
 // 주소록을 읽기 위한 프레임워크
 import Contacts
-// 주소록을 표시 하기 위한 프레임워크
+// 주소록을 표시(외부 컨트롤러) 하기 위한 프레임워크
 import ContactsUI
 
 class ViewController: UIViewController {
@@ -27,9 +27,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onClickPhoneNumber(_ sender: Any) {
-        // getContacts()
         openContacts()
         print(contacts)
+    }
+    
+    @IBAction func onClickMyInfo(_ sender: Any) {
+        getContacts()
     }
     
     /// 주소록의 모든 정보를 리스트로 가져오는 메소드
@@ -46,14 +49,17 @@ class ViewController: UIViewController {
         store.requestAccess(for: .contacts) { granted, error in
             guard granted else { return }
             do {
-                // 연락처 데이터 획득
+                // 연락처 목록 획득
                 try store.enumerateContacts(with: request) { (contact, stop) in
                     guard let phoneNumber = contact.phoneNumbers.first?.value.stringValue else { return }
                     let id = contact.identifier
+                    /* 이름 */
                     let givenName = contact.givenName
+                    /* 성 */
                     let familyName = contact.familyName
                     
                     let contactToAdd = Contact(id: id, firstName: familyName, givenName: givenName, phoneNumber: phoneNumber)
+                    print("@@@ \(contactToAdd)")
                     self.contacts.append(contactToAdd)
                 }
             } catch let error {

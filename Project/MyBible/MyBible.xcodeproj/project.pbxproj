@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		053B00F629C7EBF9001822B5 /* ReachabilityStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053B00F529C7EBF9001822B5 /* ReachabilityStatus.swift */; };
+		053B00FA29C7F66B001822B5 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053B00F929C7F66B001822B5 /* UIDevice.swift */; };
+		053B00FE29C9FA1D001822B5 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053B00FD29C9FA1D001822B5 /* NetworkMonitor.swift */; };
+		053B010029CDFE82001822B5 /* CommonSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053B00FF29CDFE82001822B5 /* CommonSlider.swift */; };
 		05BBD67629BA23B800C37D10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BBD67529BA23B800C37D10 /* AppDelegate.swift */; };
 		05BBD67829BA23B800C37D10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BBD67729BA23B800C37D10 /* SceneDelegate.swift */; };
 		05BBD67A29BA23B800C37D10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BBD67929BA23B800C37D10 /* ViewController.swift */; };
@@ -38,6 +42,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		053B00F529C7EBF9001822B5 /* ReachabilityStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityStatus.swift; sourceTree = "<group>"; };
+		053B00F929C7F66B001822B5 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
+		053B00FD29C9FA1D001822B5 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		053B00FF29CDFE82001822B5 /* CommonSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonSlider.swift; sourceTree = "<group>"; };
 		05BBD67229BA23B800C37D10 /* MyBible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBible.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05BBD67529BA23B800C37D10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05BBD67729BA23B800C37D10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		053B00F429C7EBD5001822B5 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				053B00F529C7EBF9001822B5 /* ReachabilityStatus.swift */,
+				053B00FD29C9FA1D001822B5 /* NetworkMonitor.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
 		05BBD66929BA23B800C37D10 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +122,7 @@
 		05BBD67429BA23B800C37D10 /* MyBible */ = {
 			isa = PBXGroup;
 			children = (
+				053B00F429C7EBD5001822B5 /* util */,
 				05BBD6A629BCC0F600C37D10 /* adapter */,
 				05BBD69D29BA26D200C37D10 /* enum */,
 				05BBD69629BA25A600C37D10 /* customview */,
@@ -160,6 +178,7 @@
 				05BBD6AD29BCD1FD00C37D10 /* LogUtil.swift */,
 				05BBD6AF29C0893C00C37D10 /* UILabel.swift */,
 				05BBD6B529C09C7700C37D10 /* UIButton.swift */,
+				053B00F929C7F66B001822B5 /* UIDevice.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -173,6 +192,7 @@
 				05BBD6B329C0950700C37D10 /* CommonLabelView.xib */,
 				05BBD6B729C09CFA00C37D10 /* ToastLabel.swift */,
 				05BBD6B929C0A0F200C37D10 /* CommonButton.swift */,
+				053B00FF29CDFE82001822B5 /* CommonSlider.swift */,
 			);
 			path = customview;
 			sourceTree = "<group>";
@@ -199,7 +219,6 @@
 				CA7837F464C2E0197F8B8494 /* Pods-MyBible.debug.xcconfig */,
 				E8A9F25172B7609F06523DB5 /* Pods-MyBible.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -335,10 +354,12 @@
 				05BBD69F29BA27C800C37D10 /* UITextField.swift in Sources */,
 				05BBD69929BA25CC00C37D10 /* CommonTextFieldView.swift in Sources */,
 				05BBD6B029C0893C00C37D10 /* UILabel.swift in Sources */,
+				053B00FA29C7F66B001822B5 /* UIDevice.swift in Sources */,
 				05BBD6A329BA289A00C37D10 /* UIWindow.swift in Sources */,
 				05BBD6AE29BCD1FD00C37D10 /* LogUtil.swift in Sources */,
 				05BBD69129BA24E300C37D10 /* UIView.swift in Sources */,
 				05BBD69329BA24ED00C37D10 /* UIColor.swift in Sources */,
+				053B00FE29C9FA1D001822B5 /* NetworkMonitor.swift in Sources */,
 				05BBD67A29BA23B800C37D10 /* ViewController.swift in Sources */,
 				05BBD6AA29BCC19800C37D10 /* TableViewAdapter.swift in Sources */,
 				05BBD6B229C0947D00C37D10 /* CommonLabelView.swift in Sources */,
@@ -347,8 +368,10 @@
 				05BBD6A129BA286300C37D10 /* UITableView.swift in Sources */,
 				05BBD6B629C09C7700C37D10 /* UIButton.swift in Sources */,
 				05BBD6AC29BCC3E200C37D10 /* NSObject.swift in Sources */,
+				053B010029CDFE82001822B5 /* CommonSlider.swift in Sources */,
 				05BBD69C29BA265D00C37D10 /* UIView+IBInspectable.swift in Sources */,
 				05BBD68F29BA248800C37D10 /* UIViewController.swift in Sources */,
+				053B00F629C7EBF9001822B5 /* ReachabilityStatus.swift in Sources */,
 				05BBD67829BA23B800C37D10 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

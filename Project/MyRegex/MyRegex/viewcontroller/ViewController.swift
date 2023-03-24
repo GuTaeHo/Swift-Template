@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet var btPhoneNumber: UIButton!
     @IBOutlet var btEmail: UIButton!
     @IBOutlet var btPassword: UIButton!
+    @IBOutlet var btBusinessNumber: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +57,14 @@ class ViewController: UIViewController {
             } else {
                 btPassword.configuration?.showsActivityIndicator = true
                 btPassword.isEnabled = false
+            }
+            
+            if RegExUtil.isBusinessNumber(number: testMessage) {
+                btBusinessNumber.configuration?.showsActivityIndicator = false
+                btBusinessNumber.isEnabled = true
+            } else {
+                btBusinessNumber.configuration?.showsActivityIndicator = true
+                btBusinessNumber.isEnabled = false
             }
         }
         

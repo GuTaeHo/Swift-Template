@@ -17,6 +17,11 @@ class RegExUtil {
     /// (8~30자리) 영문 + 숫자 + 특수 문자
     private static let passwordEx = "^(?=.*[A-Za-z])(?=.*[0-9])(?=.*[!@#$%^&*()_+=-]).{8,30}"
     
+    /// 사업자 번호 여부 ex. 0112233333
+    private static let businessNumberEx = "^([0-9]{10})$"
+    /// 하이픈이 포함된 사업자 번호 여부 ex. 011-22-33333
+    private static var businessNumberExWithHyphen = "^([0-9]{3})-?([0-9]{2})-?([0-9]{5})$"
+    
     /// 이메일 체크
     static func isEmail(email: String?) -> Bool {
         guard let email = email, email != "" else { return false }
@@ -48,6 +53,23 @@ class RegExUtil {
         guard let password = password, password != "" else { return false }
         if password.range(of: passwordEx, options: .regularExpression) != nil {
             return true
+        }
+        return false
+    }
+    
+    // 사업자 번호 여부 반환
+    /// - note: 하이픈이 포함된 문자일 경우 하이픈 제거하여 정규식 체크
+    static func isBusinessNumber(number: String?) -> Bool {
+        guard let number = number, number != "" else { return false }
+        
+        if number.contains("-") {
+            if number.range(of: businessNumberExWithHyphen, options: .regularExpression) != nil {
+                return true
+            }
+        } else {
+            if number.range(of: businessNumberEx, options: .regularExpression) != nil {
+                return true
+            }
         }
         return false
     }

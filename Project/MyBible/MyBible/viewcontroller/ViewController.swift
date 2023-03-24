@@ -13,6 +13,10 @@ class ViewController: UIViewController {
     @IBOutlet var underlineLabelView: CommonLabelView!
     @IBOutlet var btShortMessage: CommonButton!
     @IBOutlet var btMassiveMessage: CommonButton!
+    @IBOutlet var lbDeviceIPAddress: UILabel!
+    @IBOutlet var lbCellularIPAddress: UILabel!
+    @IBOutlet var lbWifiIPAddress: UILabel!
+    @IBOutlet var lbNetworkStatus: UILabel!
     @IBOutlet var btNext: CommonButton!
     
     private var keyboardHeight: CGFloat = 0
@@ -31,6 +35,30 @@ class ViewController: UIViewController {
         addKeyboardObserver(showKeyboardSelector: #selector(showKeyboard), hideKeyboardSelector: #selector(hideKeyboard))
         initAction()
         initLayout()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let status = ReachabilityStatus()
+
+        switch status.currentReachabilityStatus {
+        case .reachableViaWiFi:
+            lbWifiIPAddress.text = status.getAddress(for: .wifi)
+            lbCellularIPAddress.text = "연결 X"
+        case .reachableViaWWAN:
+            lbCellularIPAddress.text = status.getAddress(for: .cellular)
+            lbWifiIPAddress.text = "연결 X"
+        default:
+            break
+        }
+        
+        lbDeviceIPAddress.text = UIDevice().ipAddress()
+        /*
+        NetworkMonitor().startMonitoring { networkStatus in
+            self.lbNetworkStatus.text = networkStatus.rawValue
+        }
+         */
     }
     
     override func viewDidDisappear(_ animated: Bool) {

@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="YXK-IZ-eWr">
-                                <rect key="frame" x="80" y="376.66666666666669" width="233" height="99"/>
+                                <rect key="frame" x="80" y="353.33333333333331" width="233" height="145.33333333333331"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxe-JM-iDe">
                                         <rect key="frame" x="0.0" y="0.0" width="233" height="20.333333333333332"/>
@@ -27,17 +27,25 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전화번호" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEq-zM-dSP">
-                                        <rect key="frame" x="0.0" y="32.333333333333314" width="233" height="20.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="32.333333333333371" width="233" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLU-O1-A0J">
-                                        <rect key="frame" x="0.0" y="64.666666666666629" width="233" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="64.666666666666686" width="233" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="전화번호 가져오기"/>
                                         <connections>
                                             <action selector="onClickPhoneNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GrN-N8-rNN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEp-ch-VLo">
+                                        <rect key="frame" x="0.0" y="110.99999999999999" width="233" height="34.333333333333329"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="내 정보 즉시 가져오기"/>
+                                        <connections>
+                                            <action selector="onClickMyInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XKF-Nm-w4a"/>
                                         </connections>
                                     </button>
                                 </subviews>

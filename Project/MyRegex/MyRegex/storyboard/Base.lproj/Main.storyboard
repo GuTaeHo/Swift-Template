@@ -67,8 +67,45 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="500" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="97R-L4-LS2">
+                                        <rect key="frame" x="0.0" y="167.33333333333334" width="345" height="69.333333333333343"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cqz-cH-3ng">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="69.333333333333329"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GE2-GM-jdm">
+                                                        <rect key="frame" x="0.0" y="0.0" width="108.33333333333333" height="69.333333333333329"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" image="checkmark.diamond.fill" catalog="system" imagePlacement="top" title="사업자번호" subtitle="012-12-12345" imagePadding="6" cornerStyle="capsule" showsActivityIndicator="YES">
+                                                            <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                            <fontDescription key="subtitleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                                                            <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vD8-A1-DcS">
+                                                        <rect key="frame" x="118.33333333333334" y="0.0" width="108.33333333333334" height="69.333333333333329"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" image="checkmark.diamond.fill" catalog="system" imagePlacement="top" title="준비중" subtitle="(test@exam.com)" imagePadding="6" cornerStyle="capsule" showsActivityIndicator="YES">
+                                                            <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                            <fontDescription key="subtitleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                                                            <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvy-JR-OQN">
+                                                        <rect key="frame" x="236.66666666666671" y="0.0" width="108.33333333333334" height="69.333333333333329"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" image="checkmark.diamond.fill" catalog="system" imagePlacement="top" title="준비중" subtitle="(영문, 숫자, 특수문자 8자리 이상)" imagePadding="6" cornerStyle="capsule" showsActivityIndicator="YES">
+                                                            <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                            <fontDescription key="subtitleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="6"/>
+                                                            <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zpo-dt-gem" userLabel="Dummy View">
-                                        <rect key="frame" x="0.0" y="167.33333333333331" width="345" height="543.66666666666674"/>
+                                        <rect key="frame" x="0.0" y="260.66666666666674" width="345" height="450.33333333333326"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
@@ -84,6 +121,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btBusinessNumber" destination="GE2-GM-jdm" id="ggc-Cy-pLi"/>
                         <outlet property="btEmail" destination="Y0Z-YO-gZE" id="g7f-R5-5B3"/>
                         <outlet property="btPassword" destination="cvc-dY-Lep" id="Y2q-oD-s1x"/>
                         <outlet property="btPhoneNumber" destination="0aL-E0-LnF" id="tjw-eb-tRm"/>
