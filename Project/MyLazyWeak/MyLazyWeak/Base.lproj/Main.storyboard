@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyLazyWeak" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AME-eW-kQc">
+                                <rect key="frame" x="113.66666666666669" y="408.66666666666669" width="166" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="강한참조 테스트 이동"/>
+                                <connections>
+                                    <action selector="escapeClicked:" destination="End-Hg-d2U" eventType="touchUpInside" id="Mim-eO-ca7"/>
+                                    <action selector="strongReferenceClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vig-V4-NOf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EscapingClosure Deinit 시 변경됨" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGw-WQ-dIM">
+                                <rect key="frame" x="24" y="734" width="345" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AME-eW-kQc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AbR-Uf-ZGe"/>
+                            <constraint firstItem="AME-eW-kQc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BZD-nn-jSO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LGw-WQ-dIM" secondAttribute="trailing" constant="24" id="HXa-Uj-e7c"/>
+                            <constraint firstItem="LGw-WQ-dIM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="fGV-Eo-mmL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LGw-WQ-dIM" secondAttribute="bottom" constant="24" id="fGo-Ee-dYK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lbNotifyingEscapingClosureTestViewController" destination="LGw-WQ-dIM" id="1lZ-zS-eek"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="5"/>
+        </scene>
+        <!--Escaping Closure Test View Controller-->
+        <scene sceneID="Bd1-Eg-Pgn">
+            <objects>
+                <viewController storyboardIdentifier="EscapingClosureTestViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="End-Hg-d2U" customClass="EscapingClosureTestViewController" customModule="MyLazyWeak" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EPu-Wr-UL8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trT-aZ-pB8">
+                                <rect key="frame" x="150.66666666666666" y="408.66666666666669" width="92" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="ESCAPE!"/>
+                                <connections>
+                                    <action selector="escapeClicked:" destination="End-Hg-d2U" eventType="touchUpInside" id="B8Y-xP-447"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="F2o-fd-FTL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="trT-aZ-pB8" firstAttribute="centerX" secondItem="EPu-Wr-UL8" secondAttribute="centerX" id="Pk2-IA-Ea7"/>
+                            <constraint firstItem="trT-aZ-pB8" firstAttribute="centerY" secondItem="EPu-Wr-UL8" secondAttribute="centerY" id="psz-DW-exc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="NIx-99-A9V"/>
+                    <connections>
+                        <outlet property="btEscape" destination="trT-aZ-pB8" id="9qT-Wo-4H7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rWA-HU-J1n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="912" y="5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
