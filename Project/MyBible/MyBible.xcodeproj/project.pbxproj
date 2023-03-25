@@ -11,6 +11,8 @@
 		053B00FA29C7F66B001822B5 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053B00F929C7F66B001822B5 /* UIDevice.swift */; };
 		053B00FE29C9FA1D001822B5 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053B00FD29C9FA1D001822B5 /* NetworkMonitor.swift */; };
 		053B010029CDFE82001822B5 /* CommonSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053B00FF29CDFE82001822B5 /* CommonSlider.swift */; };
+		054B1ADE29CF2FBF00EE23B7 /* RxSwiftTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054B1ADD29CF2FBF00EE23B7 /* RxSwiftTestViewController.swift */; };
+		054B1AE029CF3F4D00EE23B7 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054B1ADF29CF3F4D00EE23B7 /* UIApplication.swift */; };
 		05BBD67629BA23B800C37D10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BBD67529BA23B800C37D10 /* AppDelegate.swift */; };
 		05BBD67829BA23B800C37D10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BBD67729BA23B800C37D10 /* SceneDelegate.swift */; };
 		05BBD67A29BA23B800C37D10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BBD67929BA23B800C37D10 /* ViewController.swift */; };
@@ -38,7 +40,7 @@
 		05BBD6B629C09C7700C37D10 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BBD6B529C09C7700C37D10 /* UIButton.swift */; };
 		05BBD6B829C09CFA00C37D10 /* ToastLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BBD6B729C09CFA00C37D10 /* ToastLabel.swift */; };
 		05BBD6BA29C0A0F300C37D10 /* CommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BBD6B929C0A0F200C37D10 /* CommonButton.swift */; };
-		6A1488E837226515784ABAF6 /* Pods_MyBible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22AB91BB3EE7A42CE940B780 /* Pods_MyBible.framework */; };
+		098E2D5DF45DDBC91F1154F4 /* Pods_MyBible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1E16C1769B5601451D4075 /* Pods_MyBible.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		053B00F929C7F66B001822B5 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		053B00FD29C9FA1D001822B5 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		053B00FF29CDFE82001822B5 /* CommonSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonSlider.swift; sourceTree = "<group>"; };
+		054B1ADD29CF2FBF00EE23B7 /* RxSwiftTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftTestViewController.swift; sourceTree = "<group>"; };
+		054B1ADF29CF3F4D00EE23B7 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		05BBD67229BA23B800C37D10 /* MyBible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBible.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05BBD67529BA23B800C37D10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05BBD67729BA23B800C37D10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,9 +79,9 @@
 		05BBD6B529C09C7700C37D10 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		05BBD6B729C09CFA00C37D10 /* ToastLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastLabel.swift; sourceTree = "<group>"; };
 		05BBD6B929C0A0F200C37D10 /* CommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButton.swift; sourceTree = "<group>"; };
-		22AB91BB3EE7A42CE940B780 /* Pods_MyBible.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyBible.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA7837F464C2E0197F8B8494 /* Pods-MyBible.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBible.debug.xcconfig"; path = "Target Support Files/Pods-MyBible/Pods-MyBible.debug.xcconfig"; sourceTree = "<group>"; };
-		E8A9F25172B7609F06523DB5 /* Pods-MyBible.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBible.release.xcconfig"; path = "Target Support Files/Pods-MyBible/Pods-MyBible.release.xcconfig"; sourceTree = "<group>"; };
+		6FF51399DE7322C791CEA6D1 /* Pods-MyBible.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBible.release.xcconfig"; path = "Target Support Files/Pods-MyBible/Pods-MyBible.release.xcconfig"; sourceTree = "<group>"; };
+		DF71879605FBF7F07F2B94A7 /* Pods-MyBible.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBible.debug.xcconfig"; path = "Target Support Files/Pods-MyBible/Pods-MyBible.debug.xcconfig"; sourceTree = "<group>"; };
+		EA1E16C1769B5601451D4075 /* Pods_MyBible.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyBible.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A1488E837226515784ABAF6 /* Pods_MyBible.framework in Frameworks */,
+				098E2D5DF45DDBC91F1154F4 /* Pods_MyBible.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +111,7 @@
 				05BBD67429BA23B800C37D10 /* MyBible */,
 				05BBD67329BA23B800C37D10 /* Products */,
 				B37385AC407F28612287D2D0 /* Pods */,
-				E701FCF0E58EEBF2CDA1D6AA /* Frameworks */,
+				51037B00A73D5F38323F80D0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				05BBD67929BA23B800C37D10 /* ViewController.swift */,
+				054B1ADD29CF2FBF00EE23B7 /* RxSwiftTestViewController.swift */,
 			);
 			path = viewcontroller;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 				05BBD6AF29C0893C00C37D10 /* UILabel.swift */,
 				05BBD6B529C09C7700C37D10 /* UIButton.swift */,
 				053B00F929C7F66B001822B5 /* UIDevice.swift */,
+				054B1ADF29CF3F4D00EE23B7 /* UIApplication.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -213,21 +219,21 @@
 			path = adapter;
 			sourceTree = "<group>";
 		};
+		51037B00A73D5F38323F80D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA1E16C1769B5601451D4075 /* Pods_MyBible.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B37385AC407F28612287D2D0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CA7837F464C2E0197F8B8494 /* Pods-MyBible.debug.xcconfig */,
-				E8A9F25172B7609F06523DB5 /* Pods-MyBible.release.xcconfig */,
+				DF71879605FBF7F07F2B94A7 /* Pods-MyBible.debug.xcconfig */,
+				6FF51399DE7322C791CEA6D1 /* Pods-MyBible.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		E701FCF0E58EEBF2CDA1D6AA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				22AB91BB3EE7A42CE940B780 /* Pods_MyBible.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,11 +243,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05BBD68629BA23BA00C37D10 /* Build configuration list for PBXNativeTarget "MyBible" */;
 			buildPhases = (
-				5409EDAA14B6702EDB882BB3 /* [CP] Check Pods Manifest.lock */,
+				0BDB10D235BD59BAFECEFDF9 /* [CP] Check Pods Manifest.lock */,
 				05BBD66E29BA23B800C37D10 /* Sources */,
 				05BBD66F29BA23B800C37D10 /* Frameworks */,
 				05BBD67029BA23B800C37D10 /* Resources */,
-				E7B69482A51215AAE3D9280A /* [CP] Embed Pods Frameworks */,
+				A5A1A31C54C355879A576F8C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -301,7 +307,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5409EDAA14B6702EDB882BB3 /* [CP] Check Pods Manifest.lock */ = {
+		0BDB10D235BD59BAFECEFDF9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -323,7 +329,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E7B69482A51215AAE3D9280A /* [CP] Embed Pods Frameworks */ = {
+		A5A1A31C54C355879A576F8C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -355,10 +361,12 @@
 				05BBD69929BA25CC00C37D10 /* CommonTextFieldView.swift in Sources */,
 				05BBD6B029C0893C00C37D10 /* UILabel.swift in Sources */,
 				053B00FA29C7F66B001822B5 /* UIDevice.swift in Sources */,
+				054B1AE029CF3F4D00EE23B7 /* UIApplication.swift in Sources */,
 				05BBD6A329BA289A00C37D10 /* UIWindow.swift in Sources */,
 				05BBD6AE29BCD1FD00C37D10 /* LogUtil.swift in Sources */,
 				05BBD69129BA24E300C37D10 /* UIView.swift in Sources */,
 				05BBD69329BA24ED00C37D10 /* UIColor.swift in Sources */,
+				054B1ADE29CF2FBF00EE23B7 /* RxSwiftTestViewController.swift in Sources */,
 				053B00FE29C9FA1D001822B5 /* NetworkMonitor.swift in Sources */,
 				05BBD67A29BA23B800C37D10 /* ViewController.swift in Sources */,
 				05BBD6AA29BCC19800C37D10 /* TableViewAdapter.swift in Sources */,
@@ -514,7 +522,7 @@
 		};
 		05BBD68729BA23BA00C37D10 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA7837F464C2E0197F8B8494 /* Pods-MyBible.debug.xcconfig */;
+			baseConfigurationReference = DF71879605FBF7F07F2B94A7 /* Pods-MyBible.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -527,8 +535,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -548,7 +555,7 @@
 		};
 		05BBD68829BA23BA00C37D10 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8A9F25172B7609F06523DB5 /* Pods-MyBible.release.xcconfig */;
+			baseConfigurationReference = 6FF51399DE7322C791CEA6D1 /* Pods-MyBible.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -561,8 +568,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
