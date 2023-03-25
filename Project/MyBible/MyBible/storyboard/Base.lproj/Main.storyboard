@@ -274,7 +274,7 @@
                                                         <rect key="frame" x="24" y="12" width="345" height="40"/>
                                                         <subviews>
                                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zfC-zP-YMf" customClass="CommonSlider" customModule="MyBible" customModuleProvider="target">
-                                                                <rect key="frame" x="-2" y="0.0" width="349" height="41"/>
+                                                                <rect key="frame" x="-2" y="0.99999999999999822" width="349" height="38.666666666666671"/>
                                                             </slider>
                                                         </subviews>
                                                         <constraints>
@@ -366,13 +366,17 @@
         </scene>
     </scenes>
     <designables>
-        <designable name="nbb-tm-MOa"/>
+        <designable name="nbb-tm-MOa">
+            <size key="intrinsicContentSize" width="83" height="20.333333333333332"/>
+        </designable>
         <designable name="spx-uV-2EX">
             <size key="intrinsicContentSize" width="393" height="90"/>
         </designable>
-        <designable name="u9F-oq-Y7M"/>
+        <designable name="u9F-oq-Y7M">
+            <size key="intrinsicContentSize" width="68.333333333333329" height="20.333333333333332"/>
+        </designable>
         <designable name="zfC-zP-YMf">
-            <size key="intrinsicContentSize" width="-1" height="30"/>
+            <size key="intrinsicContentSize" width="-1" height="20.333333333333332"/>
         </designable>
     </designables>
     <resources>

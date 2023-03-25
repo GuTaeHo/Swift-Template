@@ -13,6 +13,10 @@ class CommonSlider: UISlider {
     override func layoutSubviews() {
         super.layoutSubviews()
         
+    }
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
         initValue()
         initLayout()
     }
