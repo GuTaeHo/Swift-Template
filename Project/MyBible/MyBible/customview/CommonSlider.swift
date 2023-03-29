@@ -16,7 +16,6 @@ class CommonSlider: UISlider {
     }
     
     override func draw(_ rect: CGRect) {
-        super.draw(rect)
         initValue()
         initLayout()
     }
@@ -27,13 +26,12 @@ class CommonSlider: UISlider {
     }
     
     func initLayout() {
-        minimumTrackTintColor = .systemPink
+        minimumTrackTintColor = .colorPink
         maximumTrackTintColor = .systemGray
-        thumbTintColor = .white
+        thumbTintColor = .systemGray
         minimumValueImage = UIImage(systemName: "speaker.fill")
         maximumValueImage = UIImage(systemName: "speaker.2.fill")
         
-        setThumbImage(UIImage(systemName: "circle.fill"), for: .normal)
 
         let trackHeight: CGFloat = 4.0
         let trackRect = CGRect(x: 0, y: (bounds.height - trackHeight) / 2.0, width: bounds.width, height: trackHeight)

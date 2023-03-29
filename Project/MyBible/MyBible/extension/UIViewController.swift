@@ -8,12 +8,10 @@
 import UIKit
 
 extension UIViewController {
-    // TODO: paddingView 및 방향에 따라 토스트 위치 변경하기
     /// 토스트 표시
     /// - parameter message: 메시지 내용
-    /// - parameter paddingView: 해당 뷰를 제외한 영역에 토스트 표시
+    /// - parameter bottomPadding: 해당 뷰를 제외한 영역에 토스트 표시
     /// - parameter bottomView: 하단 영역을 차지하고 있는 뷰
-    /// - note:
     func showToast(message: String, bottomPadding: CGFloat? = nil, bottomView: UIView? = nil) {
         let toastLabel = ToastLabel()
         toastLabel.backgroundColor = UIColor(r: 51, g: 51, b: 51, a: 1)
@@ -111,10 +109,12 @@ extension UIViewController {
     }
     
     /// T 에 해당하는 UIViewController 를 UIStoryboard 에서 찾아서 반환 (새 뷰 컨트롤러 생성)
-    /// - parameter storyboardName: 해당 T 가 존재하는 Storyboard 명
+    /// - parameter storyboardName: 해당 T 가 존재하는 Storyboard 타입
     /// - parameter viewController: 생성하고 싶은 뷰 컨트롤러 타입 (ex: MainViewController().self)
     /// - returns: T?
-    func viewController<T: UIViewController>(storyboardName: String, viewController: T) -> T? {
+    func viewController<T: UIViewController>(storyboardType: StoryBoardType, viewController: T) -> T? {
+        guard let storyboardName = StoryBoardType.allCases.filter({ $0 == storyboardType }).first?.rawValue else { return nil }
+        
         let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
         let identifier = String(describing: T.self)
         

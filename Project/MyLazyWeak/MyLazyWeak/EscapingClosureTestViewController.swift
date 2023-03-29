@@ -46,13 +46,11 @@ class EscapingClosureTestViewController: UIViewController {
          4. reference count 가 **0**이 되었으므로, 시스템은 deinit() 을 호출, 타이머 멈춤
          5. 뷰 컨트롤러가 완벽하게 사라졌으며, 타이머도 동작하지 않음
          */
-        /*
         let repeatingClosure: (Timer) -> () = { [weak self] timer in
             self?.repeatCount += 1
             self?.btEscape.setTitle("\(self?.repeatCount ?? 0)", for: .normal)
             print("\(self?.repeatCount ?? 0)")
         }
-         */
         
         
         // MARK: guard let self = self else { return } 구문 테스트...
@@ -62,6 +60,7 @@ class EscapingClosureTestViewController: UIViewController {
          - Reference Count
          1.
          */
+        /*
         let repeatingClosure: (Timer) -> () = { [weak self] timer in
             guard let self = self else { return }
             for index in 1...100000 {
@@ -72,6 +71,7 @@ class EscapingClosureTestViewController: UIViewController {
             self.btEscape.setTitle("\(self.repeatCount)", for: .normal)
             print("\(self.repeatCount)")
         }
+         */
         
         
         timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: repeatingClosure)

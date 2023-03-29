@@ -174,52 +174,47 @@ class CommonTextFieldView: UIView {
     private func initLayout() {
         tfMessage.delegate = self
         
-        tfMessage.addAction(for: .editingChanged) { _ in
-            guard let count = self.tfMessage.text?.count else { return }
+        tfMessage.addAction(for: .editingChanged) {  [weak self] _ in
+            guard let count = self?.tfMessage.text?.count else { return }
             
-            if count > self.textMaxCount {
-                self.tfMessage.deleteBackward()
+            if count > (self?.textMaxCount ?? -1) {
+                self?.tfMessage.deleteBackward()
                 return
             }
             
             if count > 0 {
-                self.deleteButtonView.display(isAnimate: true)
+                self?.deleteButtonView.display(isAnimate: true)
             } else {
-                self.deleteButtonView.hidden(isAnimate: true)
+                self?.deleteButtonView.hidden(isAnimate: true)
             }
             
-            self.lbTextCount.text = "(\(count)/\(self.textMaxCount))"
-            self.textFieldEditingChangedClosure?()
+            self?.lbTextCount.text = "(\(count)/\(self?.textMaxCount ?? -1))"
+            self?.textFieldEditingChangedClosure?()
         }
         
-        clickableButtonView.addAction {
-            self.clickableButtonClosure?()
+        clickableButtonView.addAction { [weak self] in
+            self?.clickableButtonClosure?()
         }
         
-        deleteButtonView.addAction {
-            self.tfMessage.text = ""
-            self.lbTextCount.text = "(0/\(self.textMaxCount))"
-            self.deleteButtonView.hidden(isAnimate: true)
-            self.tfMessage.becomeFirstResponder()
-            self.deleteButtonClosure?()
+        deleteButtonView.addAction { [weak self] in
+            self?.tfMessage.text = ""
+            self?.lbTextCount.text = "(0/\(self?.textMaxCount ?? -1))"
+            self?.deleteButtonView.hidden(isAnimate: true)
+            self?.tfMessage.becomeFirstResponder()
+            self?.deleteButtonClosure?()
         }
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        
+        // 모서리 둥글게 표시
+        messageView.layer.cornerRadius = 6
         
         if _textMaxCount == 0 {
             textCountView.hidden()
         }
         deleteButtonView.hidden()
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        // 모서리 둥글게 표시
-        messageView.layer.cornerRadius = 6
-        
     }
 }
 

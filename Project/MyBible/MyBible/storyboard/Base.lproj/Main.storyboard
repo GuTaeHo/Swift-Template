@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -14,7 +14,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyBible" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="MyBible" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="703"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Vij-HU-zJ0">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="520.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="584.33333333333337"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZO-Dl-3bX">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="64"/>
@@ -70,8 +70,43 @@
                                                     <constraint firstItem="aGw-0I-JrD" firstAttribute="top" secondItem="zcM-aa-1dK" secondAttribute="top" constant="12" id="hxL-1E-QmY"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ogL-0F-lES">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dhx-6R-AwN">
                                                 <rect key="frame" x="0.0" y="128" width="393" height="64"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="EmM-qX-CeG">
+                                                        <rect key="frame" x="24" y="12" width="345" height="40"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTw-JE-Tom" customClass="CommonButton" customModule="MyBible" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="345" height="40"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled">
+                                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                                                </buttonConfiguration>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="RxSwift, RxCocoa 테스트"/>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                                                        <color key="value" name="SystemBlack"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                                        <color key="value" name="SystemWhite"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="XXc-Pb-9fB"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="EmM-qX-CeG" secondAttribute="trailing" constant="24" id="9tH-VX-Wff"/>
+                                                    <constraint firstItem="EmM-qX-CeG" firstAttribute="leading" secondItem="Dhx-6R-AwN" secondAttribute="leading" constant="24" id="GZY-eA-P4X"/>
+                                                    <constraint firstAttribute="bottom" secondItem="EmM-qX-CeG" secondAttribute="bottom" constant="12" id="esi-TY-gjL"/>
+                                                    <constraint firstItem="EmM-qX-CeG" firstAttribute="top" secondItem="Dhx-6R-AwN" secondAttribute="top" constant="12" id="fKt-sl-hJl"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ogL-0F-lES">
+                                                <rect key="frame" x="0.0" y="192" width="393" height="64"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="BnH-CM-udM">
                                                         <rect key="frame" x="24" y="12" width="345" height="40"/>
@@ -122,7 +157,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lnr-eO-g8h">
-                                                <rect key="frame" x="0.0" y="191.99999999999997" width="393" height="264.33333333333326"/>
+                                                <rect key="frame" x="0.0" y="255.99999999999997" width="393" height="264.33333333333326"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ud3-iz-M81">
                                                         <rect key="frame" x="24" y="12" width="345" height="160"/>
@@ -249,7 +284,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXX-XXX-XXX-XXX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIy-Hn-uFH">
-                                                                <rect key="frame" x="0.0" y="34.333333333333314" width="345" height="34"/>
+                                                                <rect key="frame" x="0.0" y="34.333333333333371" width="345" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" name="SystemBlack"/>
                                                                 <nil key="highlightedColor"/>
@@ -268,13 +303,14 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DOS-bZ-azr">
-                                                <rect key="frame" x="0.0" y="456.33333333333337" width="393" height="64"/>
+                                                <rect key="frame" x="0.0" y="520.33333333333337" width="393" height="64"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="3PY-WQ-0UO">
                                                         <rect key="frame" x="24" y="12" width="345" height="40"/>
                                                         <subviews>
-                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zfC-zP-YMf" customClass="CommonSlider" customModule="MyBible" customModuleProvider="target">
-                                                                <rect key="frame" x="-2" y="0.99999999999999822" width="349" height="38.666666666666671"/>
+                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="zfC-zP-YMf" customClass="CommonSlider" customModule="MyBible" customModuleProvider="target">
+                                                                <rect key="frame" x="-2" y="0.0" width="349" height="41"/>
+                                                                <color key="tintColor" systemColor="systemGrayColor"/>
                                                             </slider>
                                                         </subviews>
                                                         <constraints>
@@ -337,6 +373,7 @@
                         <outlet property="baseTextFieldView" destination="42M-6W-ZYm" id="Hro-zY-YHf"/>
                         <outlet property="btMassiveMessage" destination="u9F-oq-Y7M" id="VXC-Wv-AEy"/>
                         <outlet property="btNext" destination="spx-uV-2EX" id="fvC-n8-tww"/>
+                        <outlet property="btRxSwiftRxCocoaTest" destination="vTw-JE-Tom" id="egS-PC-fzf"/>
                         <outlet property="btShortMessage" destination="nbb-tm-MOa" id="1wq-WA-Ccc"/>
                         <outlet property="lbCellularIPAddress" destination="Znx-gZ-pHY" id="GYn-Jf-rFw"/>
                         <outlet property="lbDeviceIPAddress" destination="khD-SV-Oh3" id="DQk-Ti-fva"/>
@@ -349,16 +386,121 @@
             </objects>
             <point key="canvasLocation" x="-33" y="4"/>
         </scene>
-        <!--View Controller-->
+        <!--Rx Swift Test View Controller-->
         <scene sceneID="YXj-vu-yJt">
             <objects>
-                <viewController id="0oB-Q0-WWL" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RxSwiftTestViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0oB-Q0-WWL" customClass="RxSwiftTestViewController" customModule="MyBible" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FPH-vM-Bdv">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lnf-qp-p4o">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1Lo-nz-WU0">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="128"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJo-zn-wdR">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="64"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="TQH-uQ-p8l">
+                                                        <rect key="frame" x="24" y="12" width="345" height="40"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMe-nP-l8a" customClass="CommonButton" customModule="MyBible" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="345" height="40"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled">
+                                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                                                </buttonConfiguration>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="RxSwift, RxCocoa 테스트"/>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                                                        <color key="value" name="SystemBlack"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                                        <color key="value" name="SystemWhite"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="0c1-pa-YIR"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="TQH-uQ-p8l" secondAttribute="bottom" constant="12" id="OQD-iF-IpL"/>
+                                                    <constraint firstItem="TQH-uQ-p8l" firstAttribute="top" secondItem="eJo-zn-wdR" secondAttribute="top" constant="12" id="R6h-6M-tfp"/>
+                                                    <constraint firstItem="TQH-uQ-p8l" firstAttribute="leading" secondItem="eJo-zn-wdR" secondAttribute="leading" constant="24" id="bJD-ou-GlL"/>
+                                                    <constraint firstAttribute="trailing" secondItem="TQH-uQ-p8l" secondAttribute="trailing" constant="24" id="gQJ-nc-XcA"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tgm-PH-35N">
+                                                <rect key="frame" x="0.0" y="64" width="393" height="64"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="by7-mJ-ebc">
+                                                        <rect key="frame" x="24" y="12" width="345" height="40"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="버튼 상태 표시 대기중..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1em-Me-6NT" customClass="CommonLabel" customModule="MyBible" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="345" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="R0l-sY-BHN"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" name="SystemBlack"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                        <color key="value" name="SystemBlack"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                        <real key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="6"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="SaZ-Vp-xNd"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="by7-mJ-ebc" secondAttribute="bottom" constant="12" id="Lby-VT-EXV"/>
+                                                    <constraint firstAttribute="trailing" secondItem="by7-mJ-ebc" secondAttribute="trailing" constant="24" id="Qh3-jj-bt9"/>
+                                                    <constraint firstItem="by7-mJ-ebc" firstAttribute="leading" secondItem="tgm-PH-35N" secondAttribute="leading" constant="24" id="UjU-D2-G6U"/>
+                                                    <constraint firstItem="by7-mJ-ebc" firstAttribute="top" secondItem="tgm-PH-35N" secondAttribute="top" constant="12" id="rin-XZ-Lgq"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="1Lo-nz-WU0" firstAttribute="bottom" secondItem="Ecb-U7-MMR" secondAttribute="bottom" id="SYO-Ql-iD4"/>
+                                    <constraint firstItem="1Lo-nz-WU0" firstAttribute="width" secondItem="56f-UN-NLS" secondAttribute="width" id="XTn-3o-GJK"/>
+                                    <constraint firstItem="1Lo-nz-WU0" firstAttribute="leading" secondItem="Ecb-U7-MMR" secondAttribute="leading" id="njr-4a-Bal"/>
+                                    <constraint firstItem="1Lo-nz-WU0" firstAttribute="top" secondItem="Ecb-U7-MMR" secondAttribute="top" id="qvm-Cc-xXK"/>
+                                    <constraint firstItem="1Lo-nz-WU0" firstAttribute="trailing" secondItem="Ecb-U7-MMR" secondAttribute="trailing" id="r4N-r1-3IF"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Ecb-U7-MMR"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="56f-UN-NLS"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="67a-F4-dPu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Lnf-qp-p4o" secondAttribute="bottom" id="8jP-Ou-JK2"/>
+                            <constraint firstAttribute="trailing" secondItem="Lnf-qp-p4o" secondAttribute="trailing" id="ROG-vx-e7n"/>
+                            <constraint firstItem="Lnf-qp-p4o" firstAttribute="top" secondItem="67a-F4-dPu" secondAttribute="top" id="bTd-LB-g9k"/>
+                            <constraint firstItem="Lnf-qp-p4o" firstAttribute="leading" secondItem="67a-F4-dPu" secondAttribute="leading" id="hSN-if-GSb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btTest" destination="tMe-nP-l8a" id="k6l-MU-VVG"/>
+                        <outlet property="lbTest" destination="1em-Me-6NT" id="o9K-pO-tkG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fz8-kM-xoi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -366,17 +508,26 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="1em-Me-6NT">
+            <size key="intrinsicContentSize" width="159.33333333333334" height="20.333333333333332"/>
+        </designable>
         <designable name="nbb-tm-MOa">
             <size key="intrinsicContentSize" width="83" height="20.333333333333332"/>
         </designable>
         <designable name="spx-uV-2EX">
             <size key="intrinsicContentSize" width="393" height="90"/>
         </designable>
+        <designable name="tMe-nP-l8a">
+            <size key="intrinsicContentSize" width="183" height="20.333333333333332"/>
+        </designable>
         <designable name="u9F-oq-Y7M">
             <size key="intrinsicContentSize" width="68.333333333333329" height="20.333333333333332"/>
         </designable>
+        <designable name="vTw-JE-Tom">
+            <size key="intrinsicContentSize" width="183" height="20.333333333333332"/>
+        </designable>
         <designable name="zfC-zP-YMf">
-            <size key="intrinsicContentSize" width="-1" height="20.333333333333332"/>
+            <size key="intrinsicContentSize" width="-1" height="30"/>
         </designable>
     </designables>
     <resources>
@@ -398,6 +549,9 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
