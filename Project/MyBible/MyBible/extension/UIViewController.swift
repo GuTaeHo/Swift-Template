@@ -40,10 +40,10 @@ extension UIViewController {
         /// - note: bottomView 가 지정되어있다면 해당 뷰의 상단과 맞춤, 없다면 뷰 컨트롤러의 하단과 맞춤
         if let bottomView = bottomView {
             /// - note: 키보드 높이가 지정되어있지 않다면
-            if bottomPadding == 0 {
-                toastBottomConstrains = toastLabel.bottomAnchor.constraint(equalTo: bottomView.topAnchor, constant: -(bottomPadding ?? 0) - DEFAULT_BOTTOM_PADDING)
+            if let bottomPadding = bottomPadding, bottomPadding != 0 {
+                toastBottomConstrains = toastLabel.bottomAnchor.constraint(equalTo: bottomView.topAnchor, constant: -bottomPadding - DEFAULT_BOTTOM_PADDING)
             } else {
-                toastBottomConstrains = toastLabel.bottomAnchor.constraint(equalTo: bottomView.topAnchor, constant: -(bottomPadding ?? 0) - DEFAULT_BOTTOM_PADDING + bottomView.frame.height)
+                toastBottomConstrains = toastLabel.bottomAnchor.constraint(equalTo: bottomView.topAnchor, constant: -DEFAULT_BOTTOM_PADDING)
             }
         } else {
             toastBottomConstrains = toastLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -(bottomPadding ?? 0) - DEFAULT_BOTTOM_PADDING)
