@@ -6,11 +6,13 @@ PODS:
     - RxSwift (= 6.5.0)
   - RxSwift (6.5.0)
   - SnapKit (5.6.0)
+  - TagListView (1.4.1)
 
 DEPENDENCIES:
   - RxCocoa
   - RxSwift
   - SnapKit
+  - TagListView
 
 SPEC REPOS:
   trunk:
@@ -18,13 +20,15 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - SnapKit
+    - TagListView
 
 SPEC CHECKSUMS:
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  TagListView: a1c236d17960a0cf64156725a76ce6d73ebce2be
 
-PODFILE CHECKSUM: 55e36fd3054192154e126402739b644ae57efbfe
+PODFILE CHECKSUM: dc5516398537d9430168cad12bc4e46e7105f18b
 
 COCOAPODS: 1.12.0

@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet var lbCellularIPAddress: UILabel!
     @IBOutlet var lbWifiIPAddress: UILabel!
     @IBOutlet var lbNetworkStatus: UILabel!
+    @IBOutlet var btUITabBarTest: CommonButton!
     @IBOutlet var btNext: CommonButton!
     
     private var keyboardHeight: CGFloat = 0
@@ -92,6 +93,20 @@ class ViewController: UIViewController {
             self?.showToast(message: "When the view is visible onscreen, this guide reflects the portion of the view that is not covered by navigation bars, tab bars, toolbars, and other ancestor views. (In tvOS, the safe area reflects the area not covered the screen's bezel.) If the view is not currently installed in a view hierarchy, or is not yet visible onscreen, the layout guide edges are equal to the edges of the view.", bottomPadding: self?.keyboardHeight, bottomView: self?.btNext)
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 self?.btMassiveMessage.hideIndicator()
+            }
+        }
+        
+        btUITabBarTest.addAction { [weak self] in
+            guard let viewController = self?.viewController(storyboardType: .main, viewController: ToolBarViewController().self) else { return }
+            
+            let navigationController = UINavigationController(rootViewController: viewController)
+            
+            self?.present(navigationController, animated: true)
+        }
+        
+        btNext.addAction { [weak self] in
+            if let viewController = self?.viewController(storyboardType: .main, viewController: TableViewController().self) {
+                self?.navigationController?.pushViewController(viewController, animated: true)
             }
         }
     }

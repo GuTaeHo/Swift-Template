@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TagsCollectionViewCell" id="gTV-IL-0wX" customClass="TagsCollectionViewCell" customModule="MyBible" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="49" height="24"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="49" height="24"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Zz-dd-Vug">
+                        <rect key="frame" x="0.0" y="0.0" width="49" height="24"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="태그" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UgL-ns-UtE">
+                                <rect key="frame" x="7" y="2" width="35" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UgL-ns-UtE" firstAttribute="top" secondItem="2Zz-dd-Vug" secondAttribute="top" constant="2" id="P2W-EC-YTM"/>
+                            <constraint firstAttribute="bottom" secondItem="UgL-ns-UtE" secondAttribute="bottom" constant="2" id="bc0-r1-7gi"/>
+                            <constraint firstItem="UgL-ns-UtE" firstAttribute="leading" secondItem="2Zz-dd-Vug" secondAttribute="leading" constant="7" id="pWB-S9-uTv"/>
+                            <constraint firstAttribute="trailing" secondItem="UgL-ns-UtE" secondAttribute="trailing" constant="7" id="pan-pU-ehj"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="2Zz-dd-Vug" secondAttribute="bottom" id="5rp-Y7-Yga"/>
+                <constraint firstAttribute="trailing" secondItem="2Zz-dd-Vug" secondAttribute="trailing" id="UPG-po-tSw"/>
+                <constraint firstItem="2Zz-dd-Vug" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="gge-qv-Zdp"/>
+                <constraint firstItem="2Zz-dd-Vug" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hkn-KS-pAP"/>
+            </constraints>
+            <connections>
+                <outlet property="containerView" destination="2Zz-dd-Vug" id="8Ld-ik-uJY"/>
+                <outlet property="lbTag" destination="UgL-ns-UtE" id="g6o-kZ-mIe"/>
+            </connections>
+            <point key="canvasLocation" x="19.083969465648853" y="19.718309859154932"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

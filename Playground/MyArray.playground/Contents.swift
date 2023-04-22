@@ -9,3 +9,26 @@ sectionItems[0].count
 var arrayForInsert = [1, 2, 3, 4, 5]
 
 arrayForInsert.insert(3717, at: 5)
+
+
+
+
+struct Customer: Codable {
+    var intValue: Int?
+    var stringValue: String?
+    var boolValue: Bool?
+    
+    
+}
+
+
+var items = [Customer]()
+items.append(Customer())
+items.append(Customer(intValue: 5))
+items.append(Customer(intValue: 3, stringValue: "ㅎㅇ"))
+items.append(Customer(intValue: 1, stringValue: "ㅎㅇ", boolValue: true))
+
+
+items.forEach {
+    print($0)
+}

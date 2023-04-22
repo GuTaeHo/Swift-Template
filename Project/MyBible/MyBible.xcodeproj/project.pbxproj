@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		050EF47229E3F4CD006C060A /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050EF47129E3F4CD006C060A /* TableViewController.swift */; };
+		051E332729E3F55C002DE1E4 /* CommonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051E332529E3F55C002DE1E4 /* CommonTableViewCell.swift */; };
+		051E332829E3F55C002DE1E4 /* CommonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 051E332629E3F55C002DE1E4 /* CommonTableViewCell.xib */; };
+		051E332B29E43DBC002DE1E4 /* TagsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051E332A29E43DBC002DE1E4 /* TagsLayout.swift */; };
+		051E332E29E44030002DE1E4 /* TagsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051E332C29E44030002DE1E4 /* TagsCollectionViewCell.swift */; };
+		051E332F29E44030002DE1E4 /* TagsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 051E332D29E44030002DE1E4 /* TagsCollectionViewCell.xib */; };
+		051E333129E81992002DE1E4 /* ToolBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051E333029E81992002DE1E4 /* ToolBarViewController.swift */; };
 		052C809B29D06B40006ADEFF /* StoryBoardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052C809A29D06B40006ADEFF /* StoryBoardType.swift */; };
 		052C809D29D07698006ADEFF /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052C809C29D07698006ADEFF /* UINavigationController.swift */; };
 		052C809F29D07B15006ADEFF /* CommonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052C809E29D07B15006ADEFF /* CommonLabel.swift */; };
@@ -48,6 +55,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		050EF47129E3F4CD006C060A /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		051E332529E3F55C002DE1E4 /* CommonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTableViewCell.swift; sourceTree = "<group>"; };
+		051E332629E3F55C002DE1E4 /* CommonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonTableViewCell.xib; sourceTree = "<group>"; };
+		051E332A29E43DBC002DE1E4 /* TagsLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsLayout.swift; sourceTree = "<group>"; };
+		051E332C29E44030002DE1E4 /* TagsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsCollectionViewCell.swift; sourceTree = "<group>"; };
+		051E332D29E44030002DE1E4 /* TagsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagsCollectionViewCell.xib; sourceTree = "<group>"; };
+		051E333029E81992002DE1E4 /* ToolBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarViewController.swift; sourceTree = "<group>"; };
 		052C809A29D06B40006ADEFF /* StoryBoardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardType.swift; sourceTree = SOURCE_ROOT; };
 		052C809C29D07698006ADEFF /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 		052C809E29D07B15006ADEFF /* CommonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonLabel.swift; sourceTree = "<group>"; };
@@ -104,6 +118,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		051E332429E3F546002DE1E4 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				051E332529E3F55C002DE1E4 /* CommonTableViewCell.swift */,
+				051E332629E3F55C002DE1E4 /* CommonTableViewCell.xib */,
+				051E332C29E44030002DE1E4 /* TagsCollectionViewCell.swift */,
+				051E332D29E44030002DE1E4 /* TagsCollectionViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		051E332929E43DA8002DE1E4 /* customlayout */ = {
+			isa = PBXGroup;
+			children = (
+				051E332A29E43DBC002DE1E4 /* TagsLayout.swift */,
+			);
+			path = customlayout;
+			sourceTree = "<group>";
+		};
 		053B00F429C7EBD5001822B5 /* util */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +167,8 @@
 		05BBD67429BA23B800C37D10 /* MyBible */ = {
 			isa = PBXGroup;
 			children = (
+				051E332929E43DA8002DE1E4 /* customlayout */,
+				051E332429E3F546002DE1E4 /* cell */,
 				053B00F429C7EBD5001822B5 /* util */,
 				05BBD6A629BCC0F600C37D10 /* adapter */,
 				05BBD69D29BA26D200C37D10 /* enum */,
@@ -162,6 +197,8 @@
 			children = (
 				05BBD67929BA23B800C37D10 /* ViewController.swift */,
 				054B1ADD29CF2FBF00EE23B7 /* RxSwiftTestViewController.swift */,
+				050EF47129E3F4CD006C060A /* TableViewController.swift */,
+				051E333029E81992002DE1E4 /* ToolBarViewController.swift */,
 			);
 			path = viewcontroller;
 			sourceTree = "<group>";
@@ -308,10 +345,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				051E332F29E44030002DE1E4 /* TagsCollectionViewCell.xib in Resources */,
 				05BBD68229BA23BA00C37D10 /* LaunchScreen.storyboard in Resources */,
 				05BBD69A29BA25CC00C37D10 /* CommonTextFieldView.xib in Resources */,
 				05BBD6B429C0950700C37D10 /* CommonLabelView.xib in Resources */,
 				05BBD67F29BA23BA00C37D10 /* Assets.xcassets in Resources */,
+				051E332829E3F55C002DE1E4 /* CommonTableViewCell.xib in Resources */,
 				05BBD67D29BA23B800C37D10 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +407,7 @@
 				05BBD6B829C09CFA00C37D10 /* ToastLabel.swift in Sources */,
 				05BBD69529BA251A00C37D10 /* UIControl.swift in Sources */,
 				05BBD6BA29C0A0F300C37D10 /* CommonButton.swift in Sources */,
+				051E332B29E43DBC002DE1E4 /* TagsLayout.swift in Sources */,
 				05BBD6A529BA28CA00C37D10 /* String.swift in Sources */,
 				05BBD69F29BA27C800C37D10 /* UITextField.swift in Sources */,
 				05BBD69929BA25CC00C37D10 /* CommonTextFieldView.swift in Sources */,
@@ -379,6 +419,7 @@
 				05BBD69129BA24E300C37D10 /* UIView.swift in Sources */,
 				05BBD69329BA24ED00C37D10 /* UIColor.swift in Sources */,
 				054B1ADE29CF2FBF00EE23B7 /* RxSwiftTestViewController.swift in Sources */,
+				051E332729E3F55C002DE1E4 /* CommonTableViewCell.swift in Sources */,
 				053B00FE29C9FA1D001822B5 /* NetworkMonitor.swift in Sources */,
 				052C809B29D06B40006ADEFF /* StoryBoardType.swift in Sources */,
 				05BBD67A29BA23B800C37D10 /* ViewController.swift in Sources */,
@@ -388,14 +429,17 @@
 				05BBD67629BA23B800C37D10 /* AppDelegate.swift in Sources */,
 				052C80A129D16BFB006ADEFF /* UIScrollView.swift in Sources */,
 				05BBD6A829BCC11A00C37D10 /* PageViewAdapter.swift in Sources */,
+				051E332E29E44030002DE1E4 /* TagsCollectionViewCell.swift in Sources */,
 				052C809D29D07698006ADEFF /* UINavigationController.swift in Sources */,
 				05BBD6A129BA286300C37D10 /* UITableView.swift in Sources */,
+				051E333129E81992002DE1E4 /* ToolBarViewController.swift in Sources */,
 				05BBD6B629C09C7700C37D10 /* UIButton.swift in Sources */,
 				05BBD6AC29BCC3E200C37D10 /* NSObject.swift in Sources */,
 				053B010029CDFE82001822B5 /* CommonSlider.swift in Sources */,
 				05BBD69C29BA265D00C37D10 /* UIView+IBInspectable.swift in Sources */,
 				05BBD68F29BA248800C37D10 /* UIViewController.swift in Sources */,
 				053B00F629C7EBF9001822B5 /* ReachabilityStatus.swift in Sources */,
+				050EF47229E3F4CD006C060A /* TableViewController.swift in Sources */,
 				05BBD67829BA23B800C37D10 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

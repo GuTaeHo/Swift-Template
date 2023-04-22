@@ -14,8 +14,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
+        // (window 를 부분적으로 구성하고, scene을 윈도우에 붙이기 위해 이 메소드를 사용.)
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
+        // (만약 스토리보드를 사용하고있다면, window 프로퍼티는 자동적으로 scene 에 초기화 및 붙여질 것.)
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        // (이 델리게이트는 연결된 scene 또는 session 이 새 것임을 암시하지않음.)
         
         // MARK: Info.plist 대신 소스코드로 직접 UIWindow를 생성하고, viewController 를 표시하고 싶다면 아래 코드 활용
         guard

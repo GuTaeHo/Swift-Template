@@ -113,9 +113,9 @@ extension UIViewController {
     /// - parameter viewController: 생성하고 싶은 뷰 컨트롤러 타입 (ex: MainViewController().self)
     /// - returns: T?
     func viewController<T: UIViewController>(storyboardType: StoryBoardType, viewController: T) -> T? {
-        guard let storyboardName = StoryBoardType.allCases.filter({ $0 == storyboardType }).first?.rawValue else { return nil }
+        // guard let storyboardName = StoryBoardType.allCases.filter({ $0 == storyboardType }).first?.rawValue else { return nil }
         
-        let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
+        let storyboard = UIStoryboard(name: storyboardType.rawValue, bundle: nil)
         let identifier = String(describing: T.self)
         
         if let viewController = storyboard.instantiateViewController(withIdentifier: identifier) as? T {
