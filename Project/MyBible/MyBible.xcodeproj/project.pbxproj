@@ -22,7 +22,7 @@
 		053B00FA29C7F66B001822B5 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053B00F929C7F66B001822B5 /* UIDevice.swift */; };
 		053B00FE29C9FA1D001822B5 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053B00FD29C9FA1D001822B5 /* NetworkMonitor.swift */; };
 		053B010029CDFE82001822B5 /* CommonSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053B00FF29CDFE82001822B5 /* CommonSlider.swift */; };
-		054B1ADE29CF2FBF00EE23B7 /* RxSwiftTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054B1ADD29CF2FBF00EE23B7 /* RxSwiftTestViewController.swift */; };
+		054B1ADE29CF2FBF00EE23B7 /* RxSwiftDataSendTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054B1ADD29CF2FBF00EE23B7 /* RxSwiftDataSendTestViewController.swift */; };
 		054B1AE029CF3F4D00EE23B7 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054B1ADF29CF3F4D00EE23B7 /* UIApplication.swift */; };
 		05BBD67629BA23B800C37D10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BBD67529BA23B800C37D10 /* AppDelegate.swift */; };
 		05BBD67829BA23B800C37D10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BBD67729BA23B800C37D10 /* SceneDelegate.swift */; };
@@ -51,6 +51,8 @@
 		05BBD6B629C09C7700C37D10 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BBD6B529C09C7700C37D10 /* UIButton.swift */; };
 		05BBD6B829C09CFA00C37D10 /* ToastLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BBD6B729C09CFA00C37D10 /* ToastLabel.swift */; };
 		05BBD6BA29C0A0F300C37D10 /* CommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BBD6B929C0A0F200C37D10 /* CommonButton.swift */; };
+		05E0FD1429FFA62C00EAC9ED /* RxSwiftDataReceivedTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E0FD1329FFA62C00EAC9ED /* RxSwiftDataReceivedTestViewController.swift */; };
+		05E0FD1729FFA66E00EAC9ED /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E0FD1629FFA66E00EAC9ED /* AccountViewModel.swift */; };
 		098E2D5DF45DDBC91F1154F4 /* Pods_MyBible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1E16C1769B5601451D4075 /* Pods_MyBible.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,7 +72,7 @@
 		053B00F929C7F66B001822B5 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		053B00FD29C9FA1D001822B5 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		053B00FF29CDFE82001822B5 /* CommonSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonSlider.swift; sourceTree = "<group>"; };
-		054B1ADD29CF2FBF00EE23B7 /* RxSwiftTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftTestViewController.swift; sourceTree = "<group>"; };
+		054B1ADD29CF2FBF00EE23B7 /* RxSwiftDataSendTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftDataSendTestViewController.swift; sourceTree = "<group>"; };
 		054B1ADF29CF3F4D00EE23B7 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		05BBD67229BA23B800C37D10 /* MyBible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBible.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05BBD67529BA23B800C37D10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,8 @@
 		05BBD6B529C09C7700C37D10 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		05BBD6B729C09CFA00C37D10 /* ToastLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastLabel.swift; sourceTree = "<group>"; };
 		05BBD6B929C0A0F200C37D10 /* CommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButton.swift; sourceTree = "<group>"; };
+		05E0FD1329FFA62C00EAC9ED /* RxSwiftDataReceivedTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftDataReceivedTestViewController.swift; sourceTree = "<group>"; };
+		05E0FD1629FFA66E00EAC9ED /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		6FF51399DE7322C791CEA6D1 /* Pods-MyBible.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBible.release.xcconfig"; path = "Target Support Files/Pods-MyBible/Pods-MyBible.release.xcconfig"; sourceTree = "<group>"; };
 		DF71879605FBF7F07F2B94A7 /* Pods-MyBible.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBible.debug.xcconfig"; path = "Target Support Files/Pods-MyBible/Pods-MyBible.debug.xcconfig"; sourceTree = "<group>"; };
 		EA1E16C1769B5601451D4075 /* Pods_MyBible.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyBible.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +171,7 @@
 		05BBD67429BA23B800C37D10 /* MyBible */ = {
 			isa = PBXGroup;
 			children = (
+				05E0FD1529FFA65700EAC9ED /* viewmodel */,
 				051E332929E43DA8002DE1E4 /* customlayout */,
 				051E332429E3F546002DE1E4 /* cell */,
 				053B00F429C7EBD5001822B5 /* util */,
@@ -196,9 +201,10 @@
 			isa = PBXGroup;
 			children = (
 				05BBD67929BA23B800C37D10 /* ViewController.swift */,
-				054B1ADD29CF2FBF00EE23B7 /* RxSwiftTestViewController.swift */,
 				050EF47129E3F4CD006C060A /* TableViewController.swift */,
 				051E333029E81992002DE1E4 /* ToolBarViewController.swift */,
+				054B1ADD29CF2FBF00EE23B7 /* RxSwiftDataSendTestViewController.swift */,
+				05E0FD1329FFA62C00EAC9ED /* RxSwiftDataReceivedTestViewController.swift */,
 			);
 			path = viewcontroller;
 			sourceTree = "<group>";
@@ -266,6 +272,14 @@
 				05BBD6A929BCC19800C37D10 /* TableViewAdapter.swift */,
 			);
 			path = adapter;
+			sourceTree = "<group>";
+		};
+		05E0FD1529FFA65700EAC9ED /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				05E0FD1629FFA66E00EAC9ED /* AccountViewModel.swift */,
+			);
+			path = viewmodel;
 			sourceTree = "<group>";
 		};
 		51037B00A73D5F38323F80D0 /* Frameworks */ = {
@@ -418,11 +432,13 @@
 				05BBD6AE29BCD1FD00C37D10 /* LogUtil.swift in Sources */,
 				05BBD69129BA24E300C37D10 /* UIView.swift in Sources */,
 				05BBD69329BA24ED00C37D10 /* UIColor.swift in Sources */,
-				054B1ADE29CF2FBF00EE23B7 /* RxSwiftTestViewController.swift in Sources */,
+				05E0FD1429FFA62C00EAC9ED /* RxSwiftDataReceivedTestViewController.swift in Sources */,
+				054B1ADE29CF2FBF00EE23B7 /* RxSwiftDataSendTestViewController.swift in Sources */,
 				051E332729E3F55C002DE1E4 /* CommonTableViewCell.swift in Sources */,
 				053B00FE29C9FA1D001822B5 /* NetworkMonitor.swift in Sources */,
 				052C809B29D06B40006ADEFF /* StoryBoardType.swift in Sources */,
 				05BBD67A29BA23B800C37D10 /* ViewController.swift in Sources */,
+				05E0FD1729FFA66E00EAC9ED /* AccountViewModel.swift in Sources */,
 				052C809F29D07B15006ADEFF /* CommonLabel.swift in Sources */,
 				05BBD6AA29BCC19800C37D10 /* TableViewAdapter.swift in Sources */,
 				05BBD6B229C0947D00C37D10 /* CommonLabelView.swift in Sources */,

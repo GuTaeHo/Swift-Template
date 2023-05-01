@@ -77,7 +77,7 @@ class ViewController: UIViewController {
         }
         
         btRxSwiftRxCocoaTest.addAction() { [weak self] in
-            if let viewController = self?.viewController(storyboardType: .main, viewController: RxSwiftTestViewController().self) {
+            if let viewController: RxSwiftDataSendTestViewController = self?.viewController(storyboardType: .main) {
                 self?.navigationController?.pushViewController(viewController, animated: true)
             }
         }
@@ -97,7 +97,7 @@ class ViewController: UIViewController {
         }
         
         btUITabBarTest.addAction { [weak self] in
-            guard let viewController = self?.viewController(storyboardType: .main, viewController: ToolBarViewController().self) else { return }
+            guard let viewController: ToolBarViewController = self?.viewController(storyboardType: .main) else { return }
             
             let navigationController = UINavigationController(rootViewController: viewController)
             
@@ -105,7 +105,7 @@ class ViewController: UIViewController {
         }
         
         btNext.addAction { [weak self] in
-            if let viewController = self?.viewController(storyboardType: .main, viewController: TableViewController().self) {
+            if let viewController: TableViewController = self?.viewController(storyboardType: .main) {
                 self?.navigationController?.pushViewController(viewController, animated: true)
             }
         }

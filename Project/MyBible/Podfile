@@ -9,6 +9,7 @@ target 'MyBible' do
   pod 'SnapKit'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'RxGesture'
   pod 'TagListView'
 
   post_install do |installer|

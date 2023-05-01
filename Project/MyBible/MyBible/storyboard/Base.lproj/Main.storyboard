@@ -487,10 +487,10 @@
             </objects>
             <point key="canvasLocation" x="792" y="-685"/>
         </scene>
-        <!--Rx Swift Test View Controller-->
+        <!--Rx Swift Data Send Test View Controller-->
         <scene sceneID="YXj-vu-yJt">
             <objects>
-                <viewController storyboardIdentifier="RxSwiftTestViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0oB-Q0-WWL" customClass="RxSwiftTestViewController" customModule="MyBible" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RxSwiftDataSendTestViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0oB-Q0-WWL" customClass="RxSwiftDataSendTestViewController" customModule="MyBible" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FPH-vM-Bdv">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -499,7 +499,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1Lo-nz-WU0">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="330"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJo-zn-wdR">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="64"/>
@@ -575,6 +575,100 @@
                                                     <constraint firstItem="by7-mJ-ebc" firstAttribute="top" secondItem="tgm-PH-35N" secondAttribute="top" constant="12" id="rin-XZ-Lgq"/>
                                                 </constraints>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gkh-lK-5Il">
+                                                <rect key="frame" x="0.0" y="128" width="393" height="202"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="FYY-9e-98c">
+                                                        <rect key="frame" x="18" y="12" width="357" height="178"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="uW7-A6-giV">
+                                                                <rect key="frame" x="0.0" y="0.0" width="357" height="86"/>
+                                                                <subviews>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jpS-IG-Udw" customClass="CommonTextFieldView" customModule="MyBible" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="357" height="40"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="40" id="wJ2-sO-cTE"/>
+                                                                        </constraints>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="imageHidden" value="NO"/>
+                                                                            <userDefinedRuntimeAttribute type="image" keyPath="clickableButtonImage" value="trash" catalog="system"/>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="textMaxCount">
+                                                                                <integer key="value" value="20"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="textPlaceholder" value="이름을 입력해주세요"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </view>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lpO-kY-99S" customClass="CommonTextFieldView" customModule="MyBible" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="46" width="357" height="40"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="40" id="IdW-YI-hHn"/>
+                                                                        </constraints>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="imageHidden" value="NO"/>
+                                                                            <userDefinedRuntimeAttribute type="image" keyPath="clickableButtonImage" value="trash" catalog="system"/>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="textMaxCount">
+                                                                                <integer key="value" value="20"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="textPlaceholder" value="나이를 입력해주세요"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </view>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" distribution="fillEqually" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Sm8-Iz-yYG">
+                                                                <rect key="frame" x="0.0" y="92" width="357" height="86"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="이름" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02L-L2-pdK" customClass="CommonLabel" customModule="MyBible" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="23" width="175.66666666666666" height="40"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="40" id="80l-kk-NHo"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <color key="textColor" name="SystemBlack"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                <color key="value" name="SystemBlack"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                <real key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="6"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나이" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clf-3v-2fb" customClass="CommonLabel" customModule="MyBible" customModuleProvider="target">
+                                                                        <rect key="frame" x="181.66666666666663" y="23" width="175.33333333333337" height="40"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="40" id="1iJ-fu-3Sc"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <color key="textColor" name="SystemBlack"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                <color key="value" name="SystemBlack"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                <real key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="6"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="FYY-9e-98c" firstAttribute="top" secondItem="gkh-lK-5Il" secondAttribute="top" constant="12" id="44q-7a-zjd"/>
+                                                    <constraint firstAttribute="trailing" secondItem="FYY-9e-98c" secondAttribute="trailing" constant="18" id="J3V-bi-Jt3"/>
+                                                    <constraint firstItem="FYY-9e-98c" firstAttribute="leading" secondItem="gkh-lK-5Il" secondAttribute="leading" constant="18" id="jez-Zj-dMW"/>
+                                                    <constraint firstAttribute="bottom" secondItem="FYY-9e-98c" secondAttribute="bottom" constant="12" id="nWm-qy-4X1"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -600,7 +694,11 @@
                     </view>
                     <connections>
                         <outlet property="btTest" destination="tMe-nP-l8a" id="k6l-MU-VVG"/>
+                        <outlet property="lbAge" destination="clf-3v-2fb" id="vQ8-gj-6cv"/>
+                        <outlet property="lbName" destination="02L-L2-pdK" id="bwk-uf-jYq"/>
                         <outlet property="lbTest" destination="1em-Me-6NT" id="o9K-pO-tkG"/>
+                        <outlet property="tfAge" destination="lpO-kY-99S" id="src-qa-aJ3"/>
+                        <outlet property="tfName" destination="jpS-IG-Udw" id="bLq-EK-4k5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fz8-kM-xoi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -659,13 +757,142 @@
             </objects>
             <point key="canvasLocation" x="792" y="719"/>
         </scene>
+        <!--Rx Swift Data Received Test View Controller-->
+        <scene sceneID="V22-FG-gef">
+            <objects>
+                <viewController storyboardIdentifier="RxSwiftDataReceivedTestViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Gqq-an-bBo" customClass="RxSwiftDataReceivedTestViewController" customModule="MyBible" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BJY-fO-dOO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dol-m4-fjy">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dCh-ZG-VMA">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="128"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DLZ-S6-5ya">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="64"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="f0B-Pl-6eA">
+                                                        <rect key="frame" x="24" y="12" width="345" height="40"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l8E-YU-g3c" customClass="CommonButton" customModule="MyBible" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="345" height="40"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled">
+                                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                                                </buttonConfiguration>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="RxSwift, RxCocoa 테스트"/>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                                                        <color key="value" name="SystemBlack"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                                        <color key="value" name="SystemWhite"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="1nE-ik-mfy"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="f0B-Pl-6eA" firstAttribute="top" secondItem="DLZ-S6-5ya" secondAttribute="top" constant="12" id="5jT-ho-WC8"/>
+                                                    <constraint firstAttribute="trailing" secondItem="f0B-Pl-6eA" secondAttribute="trailing" constant="24" id="Rz0-ka-qHC"/>
+                                                    <constraint firstItem="f0B-Pl-6eA" firstAttribute="leading" secondItem="DLZ-S6-5ya" secondAttribute="leading" constant="24" id="eRo-t6-dZA"/>
+                                                    <constraint firstAttribute="bottom" secondItem="f0B-Pl-6eA" secondAttribute="bottom" constant="12" id="upA-Ij-O5U"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KTQ-3d-hPt">
+                                                <rect key="frame" x="0.0" y="64" width="393" height="64"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="SLE-bG-fJ3">
+                                                        <rect key="frame" x="24" y="12" width="345" height="40"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="버튼 상태 표시 대기중..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeZ-bP-96o" customClass="CommonLabel" customModule="MyBible" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="345" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="KvP-bj-zML"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" name="SystemBlack"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                        <color key="value" name="SystemBlack"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                        <real key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="6"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="icM-St-E0j"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="SLE-bG-fJ3" secondAttribute="trailing" constant="24" id="Fx3-ac-7KJ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="SLE-bG-fJ3" secondAttribute="bottom" constant="12" id="Lao-FF-JKu"/>
+                                                    <constraint firstItem="SLE-bG-fJ3" firstAttribute="leading" secondItem="KTQ-3d-hPt" secondAttribute="leading" constant="24" id="ZCp-Xx-ma8"/>
+                                                    <constraint firstItem="SLE-bG-fJ3" firstAttribute="top" secondItem="KTQ-3d-hPt" secondAttribute="top" constant="12" id="fJx-Uu-jyO"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="dCh-ZG-VMA" firstAttribute="top" secondItem="YLh-yE-QJA" secondAttribute="top" id="9lL-R4-fln"/>
+                                    <constraint firstItem="dCh-ZG-VMA" firstAttribute="width" secondItem="YoF-ZI-Vof" secondAttribute="width" id="GFX-Mf-a2m"/>
+                                    <constraint firstItem="dCh-ZG-VMA" firstAttribute="leading" secondItem="YLh-yE-QJA" secondAttribute="leading" id="kI9-BA-RmU"/>
+                                    <constraint firstItem="dCh-ZG-VMA" firstAttribute="trailing" secondItem="YLh-yE-QJA" secondAttribute="trailing" id="oHB-Pg-bYh"/>
+                                    <constraint firstItem="dCh-ZG-VMA" firstAttribute="bottom" secondItem="YLh-yE-QJA" secondAttribute="bottom" id="xsc-TP-0uC"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="YLh-yE-QJA"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="YoF-ZI-Vof"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9Ii-Xi-NrU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dol-m4-fjy" firstAttribute="leading" secondItem="9Ii-Xi-NrU" secondAttribute="leading" id="1BN-K0-6Bh"/>
+                            <constraint firstAttribute="trailing" secondItem="dol-m4-fjy" secondAttribute="trailing" id="Onj-Mc-DjV"/>
+                            <constraint firstAttribute="bottom" secondItem="dol-m4-fjy" secondAttribute="bottom" id="Q1Y-bt-Uoz"/>
+                            <constraint firstItem="dol-m4-fjy" firstAttribute="top" secondItem="9Ii-Xi-NrU" secondAttribute="top" id="XJ5-wu-esD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btTest" destination="l8E-YU-g3c" id="lQN-fM-jcP"/>
+                        <outlet property="lbTest" destination="yeZ-bP-96o" id="yJN-9V-Yan"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YUs-9A-cGw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1566" y="4"/>
+        </scene>
     </scenes>
     <designables>
+        <designable name="02L-L2-pdK">
+            <size key="intrinsicContentSize" width="29.666666666666668" height="20.333333333333332"/>
+        </designable>
         <designable name="1em-Me-6NT">
             <size key="intrinsicContentSize" width="159.33333333333334" height="20.333333333333332"/>
         </designable>
         <designable name="Ow9-1O-Bmd">
             <size key="intrinsicContentSize" width="118" height="20.333333333333332"/>
+        </designable>
+        <designable name="clf-3v-2fb">
+            <size key="intrinsicContentSize" width="29.666666666666668" height="20.333333333333332"/>
+        </designable>
+        <designable name="l8E-YU-g3c">
+            <size key="intrinsicContentSize" width="183" height="20.333333333333332"/>
         </designable>
         <designable name="nbb-tm-MOa">
             <size key="intrinsicContentSize" width="83" height="20.333333333333332"/>
@@ -681,6 +908,9 @@
         </designable>
         <designable name="vTw-JE-Tom">
             <size key="intrinsicContentSize" width="183" height="20.333333333333332"/>
+        </designable>
+        <designable name="yeZ-bP-96o">
+            <size key="intrinsicContentSize" width="159.33333333333334" height="20.333333333333332"/>
         </designable>
         <designable name="zfC-zP-YMf">
             <size key="intrinsicContentSize" width="-1" height="30"/>

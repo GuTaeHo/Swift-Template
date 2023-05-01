@@ -108,6 +108,9 @@ extension UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
+    /*
+    // MARK: 해당 메소드 사용 시 뷰 컨트롤러가 두 번 생성되는 것으로 보임
+    // MARK: (원인) viewController 인자를 받을 때 뷰 컨트롤러가 생성되자마자 해제되는듯
     /// T 에 해당하는 UIViewController 를 UIStoryboard 에서 찾아서 반환 (새 뷰 컨트롤러 생성)
     /// - parameter storyboardName: 해당 T 가 존재하는 Storyboard 타입
     /// - parameter viewController: 생성하고 싶은 뷰 컨트롤러 타입 (ex: MainViewController().self)
@@ -124,6 +127,26 @@ extension UIViewController {
             return nil
         }
     }
+     */
+    
+    /// T 에 해당하는 UIViewController 를 UIStoryboard 에서 찾아서 반환 (새 뷰 컨트롤러 생성)
+    /// - parameter storyboardName: 해당 T 가 존재하는 Storyboard 타입
+    /**
+     ```
+     let homeViewController: HomeViewController = viewController(storyboardType: .main)
+     ```
+     */
+    func viewController<T: UIViewController>(storyboardType: StoryBoardType) -> T? {
+        let storyboard = UIStoryboard(name: storyboardType.rawValue, bundle: nil)
+        let identifier = String(describing: T.self)
+        
+        if let viewController = storyboard.instantiateViewController(withIdentifier: identifier) as? T {
+            return viewController
+        } else {
+            return nil
+        }
+    }
+    
     /// SafeArea 크기 반환
     /// - parameter direction: 사이즈를 얻고싶은 방향 입력 (top, bottom, leading, trailing)
     func safeAreaSize(direction: UIView.Direction) -> CGFloat? {
