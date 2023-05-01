@@ -52,11 +52,22 @@ class RxSwiftDataSendTestViewController: UIViewController {
         
         tfAge.deleteButtonView.rx
             .tapGesture()
-            // 최초로 바인딩할 때도 한번 호출되기 때문에 when() 메소드를 통해 무시
             .when(.recognized)
             .bind(onNext: { [weak self] tapGestureRecognizer in
                 self?.lbAge.text = ""
             }).disposed(by: disposeBag)
+        
+        // MARK: return 클릭 시 호출
+        tfAge.tfMessage.rx
+            .controlEvent(.editingDidEndOnExit)
+            .subscribe(onNext: { [weak self] in
+                if let viewController: RxSwiftDataReceivedTestViewController = self?.viewController(storyboardType: .main) {
+                    /* 뷰 모델 전달 */
+                    viewController.accountViewModel = self?.accountViewModel
+                    self?.navigationController?.pushViewController(viewController, animated: true)
+                }
+            })
+            .disposed(by: disposeBag)
         
         // MARK: 뷰 모델 변경 사항 > 라벨에 반영
         accountViewModel.name.asDriver()

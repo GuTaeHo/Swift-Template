@@ -769,53 +769,38 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dCh-ZG-VMA">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="64"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DLZ-S6-5ya">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FdU-Bu-nGA">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="64"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="f0B-Pl-6eA">
-                                                        <rect key="frame" x="24" y="12" width="345" height="40"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" distribution="fillEqually" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="J0t-qK-8y9">
+                                                        <rect key="frame" x="18" y="12" width="357" height="40"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l8E-YU-g3c" customClass="CommonButton" customModule="MyBible" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="345" height="40"/>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="filled">
-                                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
-                                                                </buttonConfiguration>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="이름" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWi-vk-LhG" customClass="CommonLabel" customModule="MyBible" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="175.66666666666666" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="vmL-dj-Mv9"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" name="SystemBlack"/>
+                                                                <nil key="highlightedColor"/>
                                                                 <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="RxSwift, RxCocoa 테스트"/>
-                                                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                                         <color key="value" name="SystemBlack"/>
                                                                     </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                                                        <color key="value" name="SystemWhite"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                        <real key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="6"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
-                                                            </button>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="40" id="1nE-ik-mfy"/>
-                                                        </constraints>
-                                                    </stackView>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="f0B-Pl-6eA" firstAttribute="top" secondItem="DLZ-S6-5ya" secondAttribute="top" constant="12" id="5jT-ho-WC8"/>
-                                                    <constraint firstAttribute="trailing" secondItem="f0B-Pl-6eA" secondAttribute="trailing" constant="24" id="Rz0-ka-qHC"/>
-                                                    <constraint firstItem="f0B-Pl-6eA" firstAttribute="leading" secondItem="DLZ-S6-5ya" secondAttribute="leading" constant="24" id="eRo-t6-dZA"/>
-                                                    <constraint firstAttribute="bottom" secondItem="f0B-Pl-6eA" secondAttribute="bottom" constant="12" id="upA-Ij-O5U"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KTQ-3d-hPt">
-                                                <rect key="frame" x="0.0" y="64" width="393" height="64"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="SLE-bG-fJ3">
-                                                        <rect key="frame" x="24" y="12" width="345" height="40"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="버튼 상태 표시 대기중..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeZ-bP-96o" customClass="CommonLabel" customModule="MyBible" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="345" height="40"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나이" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMn-6z-QCJ" customClass="CommonLabel" customModule="MyBible" customModuleProvider="target">
+                                                                <rect key="frame" x="181.66666666666663" y="0.0" width="175.33333333333337" height="40"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="40" id="KvP-bj-zML"/>
+                                                                    <constraint firstAttribute="height" constant="40" id="JRd-Lc-66H"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" name="SystemBlack"/>
@@ -834,15 +819,16 @@
                                                             </label>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="40" id="icM-St-E0j"/>
+                                                            <constraint firstItem="OWi-vk-LhG" firstAttribute="top" secondItem="J0t-qK-8y9" secondAttribute="top" id="Eda-0Z-OlH"/>
+                                                            <constraint firstAttribute="bottom" secondItem="OWi-vk-LhG" secondAttribute="bottom" id="g5l-zQ-SZM"/>
                                                         </constraints>
                                                     </stackView>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="SLE-bG-fJ3" secondAttribute="trailing" constant="24" id="Fx3-ac-7KJ"/>
-                                                    <constraint firstAttribute="bottom" secondItem="SLE-bG-fJ3" secondAttribute="bottom" constant="12" id="Lao-FF-JKu"/>
-                                                    <constraint firstItem="SLE-bG-fJ3" firstAttribute="leading" secondItem="KTQ-3d-hPt" secondAttribute="leading" constant="24" id="ZCp-Xx-ma8"/>
-                                                    <constraint firstItem="SLE-bG-fJ3" firstAttribute="top" secondItem="KTQ-3d-hPt" secondAttribute="top" constant="12" id="fJx-Uu-jyO"/>
+                                                    <constraint firstItem="J0t-qK-8y9" firstAttribute="leading" secondItem="FdU-Bu-nGA" secondAttribute="leading" constant="18" id="O8S-Zn-5s9"/>
+                                                    <constraint firstAttribute="trailing" secondItem="J0t-qK-8y9" secondAttribute="trailing" constant="18" id="TIv-TH-yz1"/>
+                                                    <constraint firstItem="J0t-qK-8y9" firstAttribute="top" secondItem="FdU-Bu-nGA" secondAttribute="top" constant="12" id="gZr-pL-Zee"/>
+                                                    <constraint firstAttribute="bottom" secondItem="J0t-qK-8y9" secondAttribute="bottom" constant="12" id="sCh-NP-TA8"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -869,8 +855,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btTest" destination="l8E-YU-g3c" id="lQN-fM-jcP"/>
-                        <outlet property="lbTest" destination="yeZ-bP-96o" id="yJN-9V-Yan"/>
+                        <outlet property="lbAge" destination="DMn-6z-QCJ" id="WnI-qS-LOf"/>
+                        <outlet property="lbName" destination="OWi-vk-LhG" id="G8A-b5-8mS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YUs-9A-cGw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -885,14 +871,17 @@
         <designable name="1em-Me-6NT">
             <size key="intrinsicContentSize" width="159.33333333333334" height="20.333333333333332"/>
         </designable>
+        <designable name="DMn-6z-QCJ">
+            <size key="intrinsicContentSize" width="29.666666666666668" height="20.333333333333332"/>
+        </designable>
+        <designable name="OWi-vk-LhG">
+            <size key="intrinsicContentSize" width="29.666666666666668" height="20.333333333333332"/>
+        </designable>
         <designable name="Ow9-1O-Bmd">
             <size key="intrinsicContentSize" width="118" height="20.333333333333332"/>
         </designable>
         <designable name="clf-3v-2fb">
             <size key="intrinsicContentSize" width="29.666666666666668" height="20.333333333333332"/>
-        </designable>
-        <designable name="l8E-YU-g3c">
-            <size key="intrinsicContentSize" width="183" height="20.333333333333332"/>
         </designable>
         <designable name="nbb-tm-MOa">
             <size key="intrinsicContentSize" width="83" height="20.333333333333332"/>
@@ -908,9 +897,6 @@
         </designable>
         <designable name="vTw-JE-Tom">
             <size key="intrinsicContentSize" width="183" height="20.333333333333332"/>
-        </designable>
-        <designable name="yeZ-bP-96o">
-            <size key="intrinsicContentSize" width="159.33333333333334" height="20.333333333333332"/>
         </designable>
         <designable name="zfC-zP-YMf">
             <size key="intrinsicContentSize" width="-1" height="30"/>
