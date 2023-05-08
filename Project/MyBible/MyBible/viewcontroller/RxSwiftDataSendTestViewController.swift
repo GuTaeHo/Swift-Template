@@ -29,7 +29,7 @@ class RxSwiftDataSendTestViewController: UIViewController {
             self?.lbTest.text = "Observable의 항목(item)이 방출"
         }).disposed(by: disposeBag)
         
-        // MARK: 텍스트 필드 변경 사항 > 뷰 모델에 반영
+        // MARK: 텍스트 필드  > 뷰 모델 바인딩
         tfName.tfMessage.rx
             .text
             .orEmpty

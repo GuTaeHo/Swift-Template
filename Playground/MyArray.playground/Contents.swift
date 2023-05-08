@@ -32,3 +32,9 @@ items.append(Customer(intValue: 1, stringValue: "ㅎㅇ", boolValue: true))
 items.forEach {
     print($0)
 }
+
+let customer = Customer()
+// MARK: 클래스 타입 -> 문자열 추출
+print(String(describing: Customer.self))
+// MARK: 인스턴스 -> 문자열 추출
+print(String(describing: type(of: customer)))

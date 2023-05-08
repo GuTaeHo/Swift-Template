@@ -30,11 +30,11 @@ class EscapingClosureTestViewController: UIViewController {
          5. deinit 이 호출(= 해당 뷰 컨트롤러는 사라지지않음)되지 않으며, 타이머도 지속적으로 클로저 호출 (메모리 누수 발생)
          */
         /*
-        let repeatingClosure: (Timer) -> () = { timer in
-            self.repeatCount += 1
-            self.btEscape.setTitle("\(self.repeatCount)", for: .normal)
-            print("\(self.repeatCount)")
-        }
+         let repeatingClosure: (Timer) -> () = { timer in
+         self.repeatCount += 1
+         self.btEscape.setTitle("\(self.repeatCount)", for: .normal)
+         print("\(self.repeatCount)")
+         }
          */
         
         // MARK: escaping 된 클로저에서 현재 뷰 컨트롤러를 약하게 참조한다면...
@@ -61,8 +61,8 @@ class EscapingClosureTestViewController: UIViewController {
          1.
          */
         /*
-        let repeatingClosure: (Timer) -> () = { [weak self] timer in
-            guard let self = self else { return }
+         let repeatingClosure: (Timer) -> () = { [weak self] timer in
+         guard let self = self else { return }
             for index in 1...100000 {
                 self.dummyValue += index
                 print("\(self.dummyValue)")
