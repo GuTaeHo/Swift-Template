@@ -9,9 +9,9 @@ import UIKit
 
 extension UINavigationController {
     /// 이전 뷰 컨트롤러 반환
-    /// - parameter context: 이전 뷰 컨트롤러 타입
+    /// - parameter context: 이전 뷰 컨트롤러 메타타입
     /// - returns T
-    func previousViewController<T>(context: T) -> T? {
+    func previousViewController<T>(context: T.Type) -> T? {
         let viewController = viewControllers.count > 1 ? viewControllers[viewControllers.count - 2] : nil
         
         guard let viewController = viewController as? T else {

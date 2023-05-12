@@ -38,3 +38,20 @@ if insertBoardDate == currentDate {
 } else {
     print(false)
 }
+
+
+class Account {
+    
+}
+
+func foo<T>(metaType: T.Type) -> String {
+    var string = String(describing: metaType)
+    string += ", \(String(describing: T.self))"
+    let account = Account()
+    string += ", \(type(of: account))"
+    string += ", \(type(of: Account.self))"
+    
+    return string
+}
+
+foo(metaType: Account.self)
