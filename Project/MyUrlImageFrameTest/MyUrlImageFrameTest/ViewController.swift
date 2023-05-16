@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class ViewController: UIViewController {
     
@@ -15,33 +16,39 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        let view = UIView()
-        view.backgroundColor = .green
-        view.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 150)
-        let view2 = UIView()
-        view2.backgroundColor = .black
-        view2.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 150)
-        
-        stackView.addSubview(view)
-        stackView.addSubview(view2)
-        
+        addNewImageViewInStackView(url: "https://blog.wijman.net/content/images/size/w760h400/2021/12/debian-11-bullseye.png")
+        addNewImageViewInStackView(url: "https://i.ebayimg.com/images/g/L5UAAOSwyHdhhBL6/s-l1600.jpg")
+        addNewImageViewInStackView(url: "https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/Raspberry_Pi_4_Model_B.jpg")
+        addNewImageViewInStackView(url: "https://blog.wijman.net/content/images/size/w760h400/2021/12/debian-11-bullseye.png")
+        addNewImageViewInStackView(url: "https://i.ebayimg.com/images/g/L5UAAOSwyHdhhBL6/s-l1600.jpg")
+        addNewImageViewInStackView(url: "https://cdn.mos.cms.futurecdn.net/b75Q68Gb65uDNS6EpSnNN9.jpg")
+    }
+    
+    /// 스택 뷰에 이미지 뷰 추가
+    func addNewImageViewInStackView(url: String) {
         let imageView = ResizableImageView(frame: .zero)
-        imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
         
-        imageView.urlImage(url: "https://blog.wijman.net/content/images/size/w760h400/2021/12/debian-11-bullseye.png") { [weak self] image in
-            self?.stackView.addArrangedSubview(imageView)
-            imageView.image = image
-        }
-        
-        let imageView2 = ResizableImageView(frame: .zero)
-        imageView2.translatesAutoresizingMaskIntoConstraints = false
-        imageView2.contentMode = .scaleAspectFill
-        
-        imageView2.urlImage(url: "https://i.ebayimg.com/images/g/L5UAAOSwyHdhhBL6/s-l1600.jpg") { [weak self] image in
-            self?.stackView.addArrangedSubview(imageView2)
+        imageView.urlImage(url: url) { [weak self] image in
+            guard let stackView = self?.stackView else { return }
+            stackView.addArrangedSubview(imageView)
+            // 1. 이미지 원본 너비, 높이 획득
+            let imageOriginWidth = image?.size.width ?? 0
+            let imageOriginHeight = image?.size.height ?? 0
             
-            imageView2.image = image
+            // 2. 너비에 대한 높이 비율 획득
+            let heightRatio = imageOriginHeight/imageOriginWidth
+            
+            // 3. 상위 뷰 너비에 맞게 높이 조정
+            let imageViewWidth = stackView.bounds.width
+            let scaledHeight = imageViewWidth * heightRatio
+            
+            // 4. 이미지 너비 및 높이 제약조건 조정
+            imageView.snp.remakeConstraints {
+                $0.width.equalTo(imageViewWidth)
+                $0.height.equalTo(scaledHeight)
+            }
+            imageView.image = image
         }
     }
 }

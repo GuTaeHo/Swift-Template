@@ -27,8 +27,10 @@
                                     <constraint firstItem="tZd-gY-EdZ" firstAttribute="bottom" secondItem="NYn-HX-xfL" secondAttribute="bottom" id="DbS-XC-Lrf"/>
                                     <constraint firstItem="tZd-gY-EdZ" firstAttribute="width" secondItem="iSc-LH-Or8" secondAttribute="width" id="KV9-7j-1BX"/>
                                     <constraint firstItem="NYn-HX-xfL" firstAttribute="top" secondItem="tZd-gY-EdZ" secondAttribute="top" id="Lor-rF-yxH"/>
-                                    <constraint firstItem="tZd-gY-EdZ" firstAttribute="leading" secondItem="NYn-HX-xfL" secondAttribute="leading" id="Y1a-TQ-hbt"/>
-                                    <constraint firstItem="tZd-gY-EdZ" firstAttribute="trailing" secondItem="NYn-HX-xfL" secondAttribute="trailing" id="jp3-yI-VW3"/>
+                                    <constraint firstItem="tZd-gY-EdZ" firstAttribute="trailing" secondItem="NYn-HX-xfL" secondAttribute="trailing" id="Mfn-Qq-lma"/>
+                                    <constraint firstItem="tZd-gY-EdZ" firstAttribute="leading" secondItem="iSc-LH-Or8" secondAttribute="leading" id="UQG-bQ-17f"/>
+                                    <constraint firstItem="tZd-gY-EdZ" firstAttribute="leading" secondItem="NYn-HX-xfL" secondAttribute="leading" id="bkv-Ct-rng"/>
+                                    <constraint firstItem="tZd-gY-EdZ" firstAttribute="trailing" secondItem="iSc-LH-Or8" secondAttribute="trailing" id="sfD-QS-3DN"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="NYn-HX-xfL"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="iSc-LH-Or8"/>

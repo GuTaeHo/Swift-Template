@@ -10,19 +10,20 @@ import UIKit
 
 class ResizableImageView: UIImageView {
     
-    /// 해당 프로퍼티가 초기화 되는 순간 사이즈를 이미지 본래 사이즈에 맞게 변경
-    override var image: UIImage? {
-        didSet {
-            guard let image = image else { return }
+    /// 이미지 고유 사이즈를 너비에 맞게 높이를 조정하여 반환
+    override var intrinsicContentSize: CGSize {
+        
+        if let myImage = self.image {
+            let myImageWidth = myImage.size.width
+            let myImageHeight = myImage.size.height
+            let myViewWidth = self.frame.size.width
             
-            let resizeConstraints = [
-                self.heightAnchor.constraint(equalToConstant: image.size.height),
-                self.widthAnchor.constraint(equalToConstant: image.size.width)
-            ]
+            let ratio = myViewWidth/myImageWidth
+            let scaledHeight = myImageHeight * ratio
             
-            if superview != nil {
-                addConstraints(resizeConstraints)
-            }
+            return CGSize(width: myViewWidth, height: scaledHeight)
         }
+        
+        return CGSize(width: -1.0, height: -1.0)
     }
 }
