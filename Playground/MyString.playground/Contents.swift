@@ -41,17 +41,24 @@ if insertBoardDate == currentDate {
 
 
 class Account {
-    
+    var name: String?
 }
 
-func foo<T>(metaType: T.Type) -> String {
-    var string = String(describing: metaType)
-    string += ", \(String(describing: T.self))"
+func foo<T>(metaType: T.Type) {
     let account = Account()
-    string += ", \(type(of: account))"
-    string += ", \(type(of: Account.self))"
+    account.name = "cocobean"
     
-    return string
+    // type(of: object) - 오브젝트의 타입 반환
+    // 인스턴스 -> 클래스 반환
+    // 클래스 -> 클래스 메타타입 반환
+    
+    print(type(of: account))                    // "Account"
+    print(String(describing: T.self))           // "Account"
+    print(String(describing: metaType))         // "Account"
+    print(String(describing: account))         // "Account"
+    print(type(of: Account.self))               // "Account.Type"
+    print(type(of: T.self))                     // "Account.Type"
+    print(type(of: metaType))                   // "Account.Type"
 }
 
 foo(metaType: Account.self)
