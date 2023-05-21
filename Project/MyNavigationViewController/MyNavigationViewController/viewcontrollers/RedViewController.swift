@@ -44,5 +44,9 @@ class RedViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBAction func currentViewController(_ sender: Any) {
         lbCurrentViewController.text = String(describing: type(of: self))
     }
+    
+    @IBAction func pushBySegue(_ sender: UIButton) {
+        
+    }
 }
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6E2-9c-tfq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6E2-9c-tfq">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -45,6 +45,15 @@
                                 <color key="textColor" systemColor="systemGray6Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JhL-eN-qpJ">
+                                <rect key="frame" x="18" y="757" width="354" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="다음"/>
+                                <connections>
+                                    <action selector="pushBySegue:" destination="nIr-D8-H8x" eventType="touchUpInside" id="hcT-h5-98p"/>
+                                    <segue destination="kzK-TQ-gkG" kind="presentation" id="Bxu-vJ-cp9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gEz-o3-WlB"/>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
@@ -53,11 +62,14 @@
                             <constraint firstItem="Vwp-HD-eDt" firstAttribute="centerY" secondItem="HxS-Oe-HyH" secondAttribute="centerY" id="Hpy-lu-8nb"/>
                             <constraint firstItem="cu3-bV-zPE" firstAttribute="leading" secondItem="gEz-o3-WlB" secondAttribute="leading" constant="18" id="Qn1-Rh-7bf"/>
                             <constraint firstItem="gEz-o3-WlB" firstAttribute="trailing" secondItem="cu3-bV-zPE" secondAttribute="trailing" constant="18" id="XTM-L8-sgu"/>
+                            <constraint firstItem="gEz-o3-WlB" firstAttribute="trailing" secondItem="JhL-eN-qpJ" secondAttribute="trailing" constant="18" id="Yvd-wT-UTh"/>
                             <constraint firstItem="Vwp-HD-eDt" firstAttribute="top" secondItem="cu3-bV-zPE" secondAttribute="bottom" constant="18" id="Zbc-xv-Qwg"/>
                             <constraint firstItem="Vwp-HD-eDt" firstAttribute="centerX" secondItem="HxS-Oe-HyH" secondAttribute="centerX" id="cwW-rb-rQn"/>
                             <constraint firstItem="24G-aI-iXC" firstAttribute="top" secondItem="N14-Tf-0Am" secondAttribute="bottom" constant="64" id="gtt-mx-aUS"/>
                             <constraint firstItem="24G-aI-iXC" firstAttribute="centerX" secondItem="HxS-Oe-HyH" secondAttribute="centerX" id="jHO-ac-UDn"/>
                             <constraint firstItem="gEz-o3-WlB" firstAttribute="trailing" secondItem="N14-Tf-0Am" secondAttribute="trailing" constant="18" id="nfc-bd-arm"/>
+                            <constraint firstItem="gEz-o3-WlB" firstAttribute="bottom" secondItem="JhL-eN-qpJ" secondAttribute="bottom" constant="18" id="pFu-Ww-zXL"/>
+                            <constraint firstItem="JhL-eN-qpJ" firstAttribute="leading" secondItem="gEz-o3-WlB" secondAttribute="leading" constant="18" id="sPe-vK-2ho"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="스플래시" id="3PF-jX-Sia">
@@ -80,7 +92,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUn-KT-lyd">
-                                <rect key="frame" x="318" y="65" width="54" height="35"/>
+                                <rect key="frame" x="318" y="18" width="54" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="다음"/>
                                 <connections>
@@ -103,13 +115,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OrangeViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3b-FK-jIZ">
-                                <rect key="frame" x="52.666666666666657" y="164" width="285" height="36"/>
+                                <rect key="frame" x="52.666666666666657" y="117" width="285" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4I-80-dso">
-                                <rect key="frame" x="62.666666666666657" y="627" width="265" height="55"/>
+                                <rect key="frame" x="62.666666666666657" y="661" width="265" height="55"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="이전 뷰 컨트롤러 데이터(안녕!) 전달 (제스처 동일)"/>
                                 <connections>
