@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Escaping Closure Test View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="EscapingClosureTestViewController" customModule="MyEscapingClosureTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0k-0h-dTG">
+                                <rect key="frame" x="99.666666666666686" y="408.66666666666669" width="194" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Strong Reference Test"/>
+                                <connections>
+                                    <segue destination="myQ-c0-5e7" kind="show" id="mQM-d1-rRy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgz-Ms-Kp1">
+                                <rect key="frame" x="104" y="479.66666666666669" width="185" height="35.000000000000057"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Weak Reference Test"/>
+                                <connections>
+                                    <segue destination="BIh-Iw-XLB" kind="show" id="vlw-Rw-0QP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qgz-Ms-Kp1" firstAttribute="top" secondItem="F0k-0h-dTG" secondAttribute="bottom" constant="36" id="4Q8-uj-pzG"/>
+                            <constraint firstItem="F0k-0h-dTG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Gb-qt-C2M"/>
+                            <constraint firstItem="qgz-Ms-Kp1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hxk-qN-KQK"/>
+                            <constraint firstItem="F0k-0h-dTG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Se0-ya-az3"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-265" y="-20"/>
+        </scene>
+        <!--Escaping Closure Test Strong View Controller-->
+        <scene sceneID="3Bb-im-GdZ">
+            <objects>
+                <viewController id="myQ-c0-5e7" customClass="EscapingClosureTestStrongViewController" customModule="MyEscapingClosureTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xNX-dK-8F5">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TaD-BE-CvQ">
+                                <rect key="frame" x="159" y="403.66666666666669" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="dismissViewController:" destination="myQ-c0-5e7" eventType="touchUpInside" id="NOd-HV-VRP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VQt-qb-4DX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TaD-BE-CvQ" firstAttribute="centerX" secondItem="xNX-dK-8F5" secondAttribute="centerX" id="QIb-YG-4zB"/>
+                            <constraint firstItem="TaD-BE-CvQ" firstAttribute="centerY" secondItem="xNX-dK-8F5" secondAttribute="centerY" id="ar2-CE-ROw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="t2z-HK-HAU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g1X-Vi-Ykb" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-266" y="750"/>
+        </scene>
+        <!--Escaping Closure Test Weak View Controller-->
+        <scene sceneID="bZr-za-QLL">
+            <objects>
+                <viewController id="BIh-Iw-XLB" customClass="EscapingClosureTestWeakViewController" customModule="MyEscapingClosureTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SZF-jd-ieR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJ8-5I-LUb">
+                                <rect key="frame" x="159" y="403.66666666666669" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="dismissViewController:" destination="BIh-Iw-XLB" eventType="touchUpInside" id="QfW-J5-nNO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="V3R-SE-93y"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FJ8-5I-LUb" firstAttribute="centerY" secondItem="SZF-jd-ieR" secondAttribute="centerY" id="SA4-fk-uBP"/>
+                            <constraint firstItem="FJ8-5I-LUb" firstAttribute="centerX" secondItem="SZF-jd-ieR" secondAttribute="centerX" id="aji-CB-Ryb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ppq-FR-Eip"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eXt-aG-1tm" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="532" y="750"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

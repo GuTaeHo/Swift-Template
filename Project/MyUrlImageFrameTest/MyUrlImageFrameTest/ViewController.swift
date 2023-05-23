@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     
     /// 스택 뷰에 이미지 뷰 추가
     func addNewImageViewInStackView(url: String) {
-        let imageView = ResizableImageView(frame: .zero)
+        let imageView = UIImageView(frame: .zero)
         imageView.contentMode = .scaleAspectFill
         
         imageView.urlImage(url: url) { [weak self] image in
