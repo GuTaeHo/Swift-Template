@@ -1,6 +1,6 @@
 import UIKit
 
-
+/* 필요한 문자열 추출 */
 extension String {
     func substring(from: Int, to: Int) -> String {
         guard from < count, to >= 0, to - from >= 0 else {
@@ -27,9 +27,9 @@ let spacingEmail = " coco bean 37  17 @test.com"
 spacingEmail.components(separatedBy: characterSet).joined()
 
 let beforeProcessingInsertBoardDate = "202209141122"
+
+
 let currentDate = "20220914"
-
-
 // 스트링 시작부터 지정된 자리까지 끊기
 let insertBoardDate = beforeProcessingInsertBoardDate.substring(from: 0, to: 8)
 
@@ -40,6 +40,7 @@ if insertBoardDate == currentDate {
 }
 
 
+/* 메타 타입 테스트 */
 class Account {
     var name: String?
 }
@@ -63,3 +64,29 @@ func foo<T>(metaType: T.Type) {
 }
 
 foo(metaType: Account.self)
+
+/* String to Int, Int to String */
+String(1)
+String(01)
+Int("01")
+Int("HI")
+
+
+/* nil 인스턴스에 append 테스트 */
+struct Minute {
+    var minutes: [String]?
+}
+
+class Test {
+    var nilMinute: Minute?
+    
+    func testNilAppend() {
+        nilMinute?.minutes?.append("안녕")
+
+        print(nilMinute?.minutes)
+    }
+}
+
+let test = Test()
+test.testNilAppend()
+
