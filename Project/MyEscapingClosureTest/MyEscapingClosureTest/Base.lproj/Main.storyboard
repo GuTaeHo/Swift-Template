@@ -16,30 +16,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0k-0h-dTG">
-                                <rect key="frame" x="99.666666666666686" y="408.66666666666669" width="194" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Strong Reference Test"/>
-                                <connections>
-                                    <segue destination="myQ-c0-5e7" kind="show" id="mQM-d1-rRy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgz-Ms-Kp1">
-                                <rect key="frame" x="104" y="479.66666666666669" width="185" height="35.000000000000057"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Weak Reference Test"/>
-                                <connections>
-                                    <segue destination="BIh-Iw-XLB" kind="show" id="vlw-Rw-0QP"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="ddU-rv-F5A">
+                                <rect key="frame" x="66.666666666666657" y="339.66666666666669" width="259.66666666666674" height="173.00000000000006"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0k-0h-dTG">
+                                        <rect key="frame" x="0.0" y="0.0" width="259.66666666666669" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Strong Reference Test"/>
+                                        <connections>
+                                            <segue destination="myQ-c0-5e7" kind="show" id="mQM-d1-rRy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgz-Ms-Kp1">
+                                        <rect key="frame" x="0.0" y="69.333333333333314" width="259.66666666666669" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Weak Reference Test"/>
+                                        <connections>
+                                            <segue destination="BIh-Iw-XLB" kind="show" id="vlw-Rw-0QP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kq-V0-QvI">
+                                        <rect key="frame" x="0.0" y="138.66666666666663" width="259.66666666666669" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Nested Closure Reference Test"/>
+                                        <connections>
+                                            <segue destination="QNy-m4-WeC" kind="show" id="x5i-2Z-WTh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="qgz-Ms-Kp1" firstAttribute="top" secondItem="F0k-0h-dTG" secondAttribute="bottom" constant="36" id="4Q8-uj-pzG"/>
-                            <constraint firstItem="F0k-0h-dTG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Gb-qt-C2M"/>
-                            <constraint firstItem="qgz-Ms-Kp1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hxk-qN-KQK"/>
-                            <constraint firstItem="F0k-0h-dTG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Se0-ya-az3"/>
+                            <constraint firstItem="ddU-rv-F5A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Amo-9h-OSe"/>
+                            <constraint firstItem="ddU-rv-F5A" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="X1V-Jn-DpA"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -75,7 +86,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g1X-Vi-Ykb" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-266" y="750"/>
+            <point key="canvasLocation" x="-1089" y="750"/>
         </scene>
         <!--Escaping Closure Test Weak View Controller-->
         <scene sceneID="bZr-za-QLL">
@@ -105,7 +116,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eXt-aG-1tm" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="532" y="750"/>
+            <point key="canvasLocation" x="-266" y="750"/>
+        </scene>
+        <!--Escaping Closure Test Nested View Controller-->
+        <scene sceneID="i24-0f-N7V">
+            <objects>
+                <viewController id="QNy-m4-WeC" customClass="EscapingClosureTestNestedViewController" customModule="MyEscapingClosureTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sWF-9e-97j">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bf2-I9-2Y1">
+                                <rect key="frame" x="159" y="403.66666666666669" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="dismissViewController:" destination="QNy-m4-WeC" eventType="touchUpInside" id="kZQ-g4-YZS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iuA-YS-dgG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bf2-I9-2Y1" firstAttribute="centerX" secondItem="sWF-9e-97j" secondAttribute="centerX" id="HVt-6g-TJe"/>
+                            <constraint firstItem="bf2-I9-2Y1" firstAttribute="centerY" secondItem="sWF-9e-97j" secondAttribute="centerY" id="PX5-YO-wJU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nss-pq-Pec"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ai0-yK-saA" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="517" y="750"/>
         </scene>
     </scenes>
     <resources>

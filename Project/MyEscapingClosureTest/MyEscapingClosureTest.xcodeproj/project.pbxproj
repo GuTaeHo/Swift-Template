@@ -15,6 +15,7 @@
 		05D4AE0D2A1D0DD600555D6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05D4AE0B2A1D0DD600555D6C /* LaunchScreen.storyboard */; };
 		05D4AE152A1D0FF500555D6C /* EscapingClosureTestWeakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4AE142A1D0FF500555D6C /* EscapingClosureTestWeakViewController.swift */; };
 		05D4AE172A1D114B00555D6C /* EscapingClosureTestStrongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4AE162A1D114B00555D6C /* EscapingClosureTestStrongViewController.swift */; };
+		05D4AE192A1FA54A00555D6C /* EscapingClosureTestNestedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4AE182A1FA54900555D6C /* EscapingClosureTestNestedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		05D4AE0E2A1D0DD600555D6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05D4AE142A1D0FF500555D6C /* EscapingClosureTestWeakViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscapingClosureTestWeakViewController.swift; sourceTree = "<group>"; };
 		05D4AE162A1D114B00555D6C /* EscapingClosureTestStrongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscapingClosureTestStrongViewController.swift; sourceTree = "<group>"; };
+		05D4AE182A1FA54900555D6C /* EscapingClosureTestNestedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscapingClosureTestNestedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				05D4AE0E2A1D0DD600555D6C /* Info.plist */,
 				05D4AE142A1D0FF500555D6C /* EscapingClosureTestWeakViewController.swift */,
 				05D4AE162A1D114B00555D6C /* EscapingClosureTestStrongViewController.swift */,
+				05D4AE182A1FA54900555D6C /* EscapingClosureTestNestedViewController.swift */,
 			);
 			path = MyEscapingClosureTest;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05D4AE052A1D0DD400555D6C /* EscapingClosureTestViewController.swift in Sources */,
+				05D4AE192A1FA54A00555D6C /* EscapingClosureTestNestedViewController.swift in Sources */,
 				05D4AE172A1D114B00555D6C /* EscapingClosureTestStrongViewController.swift in Sources */,
 				05D4AE012A1D0DD400555D6C /* AppDelegate.swift in Sources */,
 				05D4AE152A1D0FF500555D6C /* EscapingClosureTestWeakViewController.swift in Sources */,
