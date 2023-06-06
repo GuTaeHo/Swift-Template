@@ -43,11 +43,13 @@ if insertBoardDate == currentDate {
 /* 메타 타입 테스트 */
 class Account {
     var name: String?
+    var age: Int?
 }
 
 func foo<T>(metaType: T.Type) {
     let account = Account()
     account.name = "cocobean"
+    account.age = 27
     
     // type(of: object) - 오브젝트의 타입 반환
     // 인스턴스 -> 클래스 반환
@@ -61,6 +63,7 @@ func foo<T>(metaType: T.Type) {
     print(type(of: Account.self))               // "Account.Type"
     print(type(of: T.self))                     // "Account.Type"
     print(type(of: metaType))                   // "Account.Type"
+    print(account.self)
 }
 
 foo(metaType: Account.self)

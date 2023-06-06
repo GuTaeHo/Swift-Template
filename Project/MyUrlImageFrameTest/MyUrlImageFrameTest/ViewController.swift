@@ -28,10 +28,11 @@ class ViewController: UIViewController {
     func addNewImageViewInStackView(url: String) {
         let imageView = UIImageView(frame: .zero)
         imageView.contentMode = .scaleAspectFill
+        /* urlImage 내부에서 추가 시 비동기적으로 추가되기 때문에 밖으로 빼서 처리*/
+        stackView.addArrangedSubview(imageView)
         
         imageView.urlImage(url: url) { [weak self] image in
             guard let stackView = self?.stackView else { return }
-            stackView.addArrangedSubview(imageView)
             // 1. 이미지 원본 너비, 높이 획득
             let imageOriginWidth = image?.size.width ?? 0
             let imageOriginHeight = image?.size.height ?? 0
