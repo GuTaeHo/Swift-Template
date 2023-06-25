@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ABO-8f-gD9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ABO-8f-gD9">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -140,11 +140,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOd-EO-e5j">
-                                <rect key="frame" x="18" y="254.99999999999997" width="354" height="334.33333333333326"/>
+                                <rect key="frame" x="18" y="195.33333333333334" width="354" height="453.66666666666663"/>
                                 <mutableString key="text">1. 현재 뷰 컨트롤러에 옵저버 등록 2. 뷰 컨트롤러가 사라질 때, 옵저버 해제를 하지 않음 3. 해당 뷰 컨트롤러는 deinit() 이 호출 될까? 
 4. 이전 뷰 컨트롤러에서 post() 날림 5. 해당 뷰 컨트롤러의 addObserver() 에 등록된 메소드가 호출 될까?
 
-3의 결과: 호출됨 5의 결과: 호출되지 않음, deinit이 호출되었으므로 해당 메소드가 삭제됨 단, 뷰 컨트롤러의 deinit이 호출되지 않아, 뷰 컨트롤러가 완전히 제거 되지않았다면 호출될 가능성 있음</mutableString>
+3의 결과: 호출됨 5의 결과: 호출되지 않음, deinit이 호출되었으므로 해당 메소드가 삭제됨 단, 뷰 컨트롤러의 deinit이 호출되지 않아, 뷰 컨트롤러가 완전히 제거 되지않았다면 호출될 가능성 있음 
+
+결론: 옵저버를 제거하지 않더라도 deinit이 정확하게 호출된(메모리에서 제거된) 경우라면 시스템에서 자동으로 옵저버를 제거한다.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
