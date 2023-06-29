@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ywn-PO-TyU">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Z0L-TP-UjK">
+            <objects>
+                <navigationController id="ywn-PO-TyU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rhb-gY-bPs">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gNe-kx-aRq" kind="relationship" relationship="rootViewController" id="DH7-Pg-huy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pry-g8-Rnk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="294" y="-11"/>
+        </scene>
+        <!--메인-->
+        <scene sceneID="UQs-NL-4Yr">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gNe-kx-aRq" customClass="ViewController" customModule="MyRotateScreen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dH9-Gf-9hQ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J4m-xy-enb">
+                                <rect key="frame" x="0.0" y="137" width="393" height="681"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Xia-Ch-mhZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="290.33333333333331"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="입력하세요" translatesAutoresizingMaskIntoConstraints="NO" id="c0q-bg-sf9">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="256"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="256" id="6I8-jp-wTp"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8h-52-Bwk">
+                                                <rect key="frame" x="0.0" y="256" width="393" height="34.333333333333314"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Xia-Ch-mhZ" firstAttribute="leading" secondItem="ASa-AH-WbM" secondAttribute="leading" id="Bd9-j0-6cP"/>
+                                    <constraint firstItem="Xia-Ch-mhZ" firstAttribute="trailing" secondItem="ASa-AH-WbM" secondAttribute="trailing" id="PST-dO-FaP"/>
+                                    <constraint firstItem="Xia-Ch-mhZ" firstAttribute="bottom" secondItem="ASa-AH-WbM" secondAttribute="bottom" id="WId-Cm-LCO"/>
+                                    <constraint firstItem="Xia-Ch-mhZ" firstAttribute="width" secondItem="2kI-8L-NYT" secondAttribute="width" id="kgK-mK-Tp0"/>
+                                    <constraint firstItem="ASa-AH-WbM" firstAttribute="top" secondItem="Xia-Ch-mhZ" secondAttribute="top" id="rIH-JD-IbH"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="ASa-AH-WbM"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="2kI-8L-NYT"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XdH-zB-7jS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="J4m-xy-enb" firstAttribute="leading" secondItem="XdH-zB-7jS" secondAttribute="leading" id="1e1-Vx-e0a"/>
+                            <constraint firstItem="XdH-zB-7jS" firstAttribute="trailing" secondItem="J4m-xy-enb" secondAttribute="trailing" id="Af2-Jo-AUP"/>
+                            <constraint firstItem="XdH-zB-7jS" firstAttribute="bottom" secondItem="J4m-xy-enb" secondAttribute="bottom" id="PbN-LP-1cs"/>
+                            <constraint firstItem="J4m-xy-enb" firstAttribute="top" secondItem="XdH-zB-7jS" secondAttribute="top" id="lVz-UF-u6e"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="메인" prompt="안녕" id="aPd-Yi-thQ"/>
+                    <connections>
+                        <outlet property="textField" destination="c0q-bg-sf9" id="Rn2-3u-ng7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yfD-1k-RWY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1100" y="-11"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
