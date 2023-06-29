@@ -24,8 +24,11 @@ class ViewController: UIViewController {
         /// - note: compactMap -> 값이 nil 인 경우 제거, Optional 인 경우 벗겨서 배열 반환
         let window = UIApplication.shared.connectedScenes.filter({ $0.activationState == .foregroundActive }).map({ $0 as? UIWindowScene }).compactMap({$0}).first?.windows.filter({ $0.isKeyWindow }).first
         
+        /// 현재 뷰 컨트롤러의 window 반환
+        let viewWindow = view.window
+        
         /// 현재 화면 회전 방향 확인
-        if window?.windowScene?.interfaceOrientation.isPortrait == true {
+        if viewWindow?.windowScene?.interfaceOrientation.isPortrait == true {
             print("portrait")
         } else {
             print("landscape")

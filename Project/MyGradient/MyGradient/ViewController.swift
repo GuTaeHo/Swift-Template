@@ -8,15 +8,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet var headerView: UIView!
+    @IBOutlet var bottomGradientView: UIView!
+    @IBOutlet var topGradientView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        headerView.gradient()
+        view.layoutIfNeeded()
+        bottomGradientView.transparentGradient(startColor: .systemRed, gradientDirection: .bottom)
+        topGradientView.transparentGradient(startColor: .systemBlue, gradientDirection: .top)
     }
-
-
 }
 
