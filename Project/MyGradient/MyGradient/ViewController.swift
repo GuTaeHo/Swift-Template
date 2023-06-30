@@ -24,9 +24,6 @@ class ViewController: UIViewController {
         view.isBottomDirection = false
         stackView.addArrangedSubview(view)
         view.translatesAutoresizingMaskIntoConstraints = false
-        
-        view.leadingAnchor.constraint(equalTo: stackView.leadingAnchor).isActive = true
-        view.trailingAnchor.constraint(equalTo: stackView.trailingAnchor).isActive = true
         view.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         self.view.layoutIfNeeded()
