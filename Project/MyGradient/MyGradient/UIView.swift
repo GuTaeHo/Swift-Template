@@ -13,12 +13,13 @@ enum CommonDirection {
 }
 
 extension UIView {
-    /// 뷰 그래디언트 (투명)
+    /// 투명 뷰 그래디언트
     /// - parameter startColor: 시작 색상
     /// - parameter gradientDirection: 그래디언트 방향
     func transparentGradient(startColor: UIColor = .black, gradientDirection: CommonDirection = .bottom) {
         let gradient = CAGradientLayer()
         
+        superview?.layoutIfNeeded()
         gradient.frame = self.bounds
         
         switch gradientDirection {

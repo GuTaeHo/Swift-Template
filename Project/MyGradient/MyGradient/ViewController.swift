@@ -15,7 +15,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        view.layoutIfNeeded()
         bottomGradientView.transparentGradient(startColor: .systemRed, gradientDirection: .bottom)
         topGradientView.transparentGradient(startColor: .systemBlue, gradientDirection: .top)
     }
