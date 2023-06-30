@@ -52,8 +52,30 @@
                                             <constraint firstAttribute="height" constant="50" id="ZN0-Kn-7t4"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4lL-53-O21" userLabel="Transparent Gradient View" customClass="TransparentGradientView" customModule="MyGradient" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="200" width="390" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="투명 그래디언트 뷰 (커스텀)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hb7-4h-HqN">
+                                                <rect key="frame" x="101.66666666666669" y="14.999999999999998" width="187" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Hb7-4h-HqN" firstAttribute="centerY" secondItem="4lL-53-O21" secondAttribute="centerY" id="LBa-Ja-6IR"/>
+                                            <constraint firstAttribute="height" constant="50" id="YCU-Y7-1Sq"/>
+                                            <constraint firstItem="Hb7-4h-HqN" firstAttribute="centerX" secondItem="4lL-53-O21" secondAttribute="centerX" id="j5D-QK-wnW"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isBottomDirection" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="gradientColor">
+                                                <color key="value" systemColor="linkColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5qt-aW-ybY">
-                                        <rect key="frame" x="0.0" y="200" width="390" height="563"/>
+                                        <rect key="frame" x="0.0" y="300" width="390" height="463"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
@@ -79,6 +101,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
