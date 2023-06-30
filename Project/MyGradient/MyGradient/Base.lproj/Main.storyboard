@@ -92,6 +92,7 @@
                     </view>
                     <connections>
                         <outlet property="bottomGradientView" destination="63k-m1-pgi" id="TyZ-og-91t"/>
+                        <outlet property="stackView" destination="qyG-Me-VQ2" id="pQQ-vF-xYk"/>
                         <outlet property="topGradientView" destination="VgO-KQ-rfy" id="ehw-21-AmN"/>
                     </connections>
                 </viewController>

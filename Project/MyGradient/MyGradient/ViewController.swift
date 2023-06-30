@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet var stackView: UIStackView!
     @IBOutlet var bottomGradientView: UIView!
     @IBOutlet var topGradientView: UIView!
     
@@ -17,6 +18,18 @@ class ViewController: UIViewController {
         
         bottomGradientView.transparentGradient(startColor: .systemRed, gradientDirection: .bottom)
         topGradientView.transparentGradient(startColor: .systemBlue, gradientDirection: .top)
+        
+        let view = TransparentGradientView(frame: .zero)
+        view.gradientColor = .black
+        view.isBottomDirection = false
+        stackView.addArrangedSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.leadingAnchor.constraint(equalTo: stackView.leadingAnchor).isActive = true
+        view.trailingAnchor.constraint(equalTo: stackView.trailingAnchor).isActive = true
+        view.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        self.view.layoutIfNeeded()
     }
 }
 
