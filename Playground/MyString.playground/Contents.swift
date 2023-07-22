@@ -14,6 +14,16 @@ extension String {
     }
 }
 
+extension NSObject {
+    var className: String {
+        return String(describing: self)
+    }
+    
+    static var className: String {
+        return String(describing: Self.self)
+    }
+}
+
 let appleEmail = "d2fawfg4vs2@privaterelay.appleid.com"
 let normalEmail = "cocobean3717@example.com"
 
@@ -68,11 +78,17 @@ func foo<T>(metaType: T.Type) {
 
 foo(metaType: Account.self)
 
+class TestClassName: UITableViewCell {
+    
+}
+
 /* String to Int, Int to String */
 String(1)
 String(01)
 Int("01")
 Int("HI")
+
+print(TestClassName.className)
 
 
 /* nil 인스턴스에 append 테스트 */
