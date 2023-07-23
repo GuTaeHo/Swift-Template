@@ -12,12 +12,12 @@ extension UIView {
     /**
     ```
     // 해당 메소드 인스턴스화 시
-     if let customView: CustomView = UIView.loadFromNib() {
+     if let customView = UIView.loadFromNib(type: CustomView.self) {
         // do something
      }
     ```
      */
-    static func loadFromNib<T>() -> T? {
+    static func loadFromNib<T>(type: T.Type) -> T? {
         let identifier = String(describing: T.self)
         let view = Bundle.main.loadNibNamed(identifier, owner: self, options: nil)?.first
         return view as? T

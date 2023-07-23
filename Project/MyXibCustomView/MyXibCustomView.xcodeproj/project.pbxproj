@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0517A5E8299F74FE00055F9C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0517A5E7299F74FE00055F9C /* UIView.swift */; };
+		054D44082A6D1CEB0044D6C2 /* CommonPopUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 054D44072A6D1CEB0044D6C2 /* CommonPopUpView.xib */; };
+		054D440A2A6D1CFA0044D6C2 /* CommonPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D44092A6D1CFA0044D6C2 /* CommonPopUpView.swift */; };
+		054D440C2A6D1E7D0044D6C2 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D440B2A6D1E7D0044D6C2 /* NSObject.swift */; };
 		0565F66F291B22F400878B12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565F66E291B22F400878B12 /* AppDelegate.swift */; };
 		0565F671291B22F400878B12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565F670291B22F400878B12 /* SceneDelegate.swift */; };
 		0565F673291B22F400878B12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565F672291B22F400878B12 /* ViewController.swift */; };
@@ -21,6 +24,9 @@
 
 /* Begin PBXFileReference section */
 		0517A5E7299F74FE00055F9C /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		054D44072A6D1CEB0044D6C2 /* CommonPopUpView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonPopUpView.xib; sourceTree = "<group>"; };
+		054D44092A6D1CFA0044D6C2 /* CommonPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonPopUpView.swift; sourceTree = "<group>"; };
+		054D440B2A6D1E7D0044D6C2 /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
 		0565F66B291B22F400878B12 /* MyXibCustomView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyXibCustomView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0565F66E291B22F400878B12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0565F670291B22F400878B12 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +85,9 @@
 				05C23FBB291B2CB700F5F329 /* CocobeanView.xib */,
 				05C23FBD291B2CC500F5F329 /* CocobeanView.swift */,
 				0517A5E7299F74FE00055F9C /* UIView.swift */,
+				054D44072A6D1CEB0044D6C2 /* CommonPopUpView.xib */,
+				054D44092A6D1CFA0044D6C2 /* CommonPopUpView.swift */,
+				054D440B2A6D1E7D0044D6C2 /* NSObject.swift */,
 			);
 			path = MyXibCustomView;
 			sourceTree = "<group>";
@@ -160,6 +169,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				054D44082A6D1CEB0044D6C2 /* CommonPopUpView.xib in Resources */,
 				0565F67B291B22F500878B12 /* LaunchScreen.storyboard in Resources */,
 				0565F678291B22F500878B12 /* Assets.xcassets in Resources */,
 				05C23FBC291B2CB700F5F329 /* CocobeanView.xib in Resources */,
@@ -218,6 +228,8 @@
 			files = (
 				0517A5E8299F74FE00055F9C /* UIView.swift in Sources */,
 				0565F673291B22F400878B12 /* ViewController.swift in Sources */,
+				054D440A2A6D1CFA0044D6C2 /* CommonPopUpView.swift in Sources */,
+				054D440C2A6D1E7D0044D6C2 /* NSObject.swift in Sources */,
 				0565F66F291B22F400878B12 /* AppDelegate.swift in Sources */,
 				05C23FBE291B2CC500F5F329 /* CocobeanView.swift in Sources */,
 				0565F671291B22F400878B12 /* SceneDelegate.swift in Sources */,
