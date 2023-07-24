@@ -24,9 +24,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kP-40-TtU">
-                                <rect key="frame" x="110" y="405" width="170" height="34.333333333333314"/>
+                                <rect key="frame" x="119.66666666666669" y="404.66666666666669" width="151" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="자식 뷰 컨트롤러 호출"/>
+                                <buttonConfiguration key="configuration" style="filled" title="B 뷰 컨트롤러 호출"/>
                                 <connections>
                                     <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DaH-tP-q7B"/>
                                 </connections>
@@ -38,7 +38,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfX-lt-Ta2">
-                                <rect key="frame" x="18" y="503.33333333333331" width="354" height="0.0"/>
+                                <rect key="frame" x="18" y="503.66666666666669" width="354" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -70,7 +70,7 @@
         <!--Child View Controller-->
         <scene sceneID="gax-hP-PGR">
             <objects>
-                <viewController storyboardIdentifier="ChildViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YEZ-jB-6vc" customClass="ChildViewController" customModule="MyViewControllerProtocol" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChildViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YEZ-jB-6vc" customClass="ChildViewController" customModule="MyViewControllerProtocol" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qQW-aS-XYf">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,9 +82,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0g-Dj-YBm">
-                                <rect key="frame" x="95.666666666666686" y="404.66666666666669" width="199" height="35"/>
+                                <rect key="frame" x="61.666666666666657" y="404.66666666666669" width="267" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="이전 뷰 컨트롤러로 보내기"/>
+                                <buttonConfiguration key="configuration" style="filled" title="A 뷰 컨트롤러로 데이터 전달 및 종료"/>
                                 <connections>
                                     <action selector="onClickButton:" destination="YEZ-jB-6vc" eventType="touchUpInside" id="q32-Sx-BCZ"/>
                                 </connections>
@@ -98,9 +98,9 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRG-pk-iK7">
-                                <rect key="frame" x="119.66666666666669" y="739" width="151" height="35"/>
+                                <rect key="frame" x="119" y="739" width="152" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="다음 뷰 컨트롤러로"/>
+                                <buttonConfiguration key="configuration" style="filled" title="C 뷰 컨트롤러 호출"/>
                                 <connections>
                                     <action selector="onClickNextButton:" destination="YEZ-jB-6vc" eventType="touchUpInside" id="SyH-rv-mil"/>
                                 </connections>
@@ -140,7 +140,7 @@
         <!--Lastest View Controller-->
         <scene sceneID="G24-cz-6J9">
             <objects>
-                <viewController storyboardIdentifier="LastestViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8YW-0q-CUD" customClass="LastestViewController" customModule="MyViewControllerProtocol" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LastestViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8YW-0q-CUD" customClass="LastestViewController" customModule="MyViewControllerProtocol" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H9j-fe-qgT">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -152,15 +152,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q86-7m-Uh7">
-                                <rect key="frame" x="88.000000000000014" y="404.66666666666669" width="214.33333333333337" height="35"/>
+                                <rect key="frame" x="85.666666666666686" y="395" width="219" height="54.333333333333314"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="A 뷰 컨트롤러로 데이터 전달"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <string key="title">A 뷰 컨트롤러로 데이터 전달,
+C 뷰 컨트롤러 종료</string>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="onClickButton:" destination="8YW-0q-CUD" eventType="touchUpInside" id="CC5-Bg-Y4T"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uW8-LC-3AL">
-                                <rect key="frame" x="131" y="338.66666666666669" width="128" height="34"/>
+                                <rect key="frame" x="131" y="329" width="128" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="128" id="Bfa-in-cHx"/>
                                 </constraints>
