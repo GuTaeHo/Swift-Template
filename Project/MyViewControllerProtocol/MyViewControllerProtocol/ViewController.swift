@@ -31,3 +31,9 @@ extension ViewController: ChildIsGoneDelegate {
     }
 }
 
+extension ViewController: SendDataFromLastestViewController {
+    func received(data: String) {
+        lbResponse.text = data
+    }
+}
+

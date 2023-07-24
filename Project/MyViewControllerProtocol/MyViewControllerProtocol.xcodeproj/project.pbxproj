@@ -14,6 +14,8 @@
 		0543D4862916730C00DE2D96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0543D4852916730C00DE2D96 /* Assets.xcassets */; };
 		0543D4892916730C00DE2D96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0543D4872916730C00DE2D96 /* LaunchScreen.storyboard */; };
 		0543D4912916732400DE2D96 /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0543D4902916732400DE2D96 /* ChildViewController.swift */; };
+		05E89F2B2A6D26D8006B71B3 /* LastestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E89F2A2A6D26D8006B71B3 /* LastestViewController.swift */; };
+		05E89F2D2A6D2762006B71B3 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E89F2C2A6D2762006B71B3 /* UIViewController+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		0543D4882916730C00DE2D96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0543D48A2916730C00DE2D96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0543D4902916732400DE2D96 /* ChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
+		05E89F2A2A6D26D8006B71B3 /* LastestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastestViewController.swift; sourceTree = "<group>"; };
+		05E89F2C2A6D2762006B71B3 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				0543D48A2916730C00DE2D96 /* Info.plist */,
 				0543D4802916730B00DE2D96 /* ViewController.swift */,
 				0543D4902916732400DE2D96 /* ChildViewController.swift */,
+				05E89F2A2A6D26D8006B71B3 /* LastestViewController.swift */,
+				05E89F2C2A6D2762006B71B3 /* UIViewController+.swift */,
 			);
 			path = MyViewControllerProtocol;
 			sourceTree = "<group>";
@@ -141,7 +147,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05E89F2B2A6D26D8006B71B3 /* LastestViewController.swift in Sources */,
 				0543D4812916730B00DE2D96 /* ViewController.swift in Sources */,
+				05E89F2D2A6D2762006B71B3 /* UIViewController+.swift in Sources */,
 				0543D47D2916730B00DE2D96 /* AppDelegate.swift in Sources */,
 				0543D47F2916730B00DE2D96 /* SceneDelegate.swift in Sources */,
 				0543D4912916732400DE2D96 /* ChildViewController.swift in Sources */,
