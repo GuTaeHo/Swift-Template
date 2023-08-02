@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		056345932A76A5CA00B483E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056345922A76A5CA00B483E9 /* AppDelegate.swift */; };
+		056345952A76A5CA00B483E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056345942A76A5CA00B483E9 /* SceneDelegate.swift */; };
+		056345972A76A5CA00B483E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056345962A76A5CA00B483E9 /* ViewController.swift */; };
+		0563459A2A76A5CA00B483E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 056345982A76A5CA00B483E9 /* Main.storyboard */; };
+		0563459C2A76A5CB00B483E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0563459B2A76A5CB00B483E9 /* Assets.xcassets */; };
+		0563459F2A76A5CB00B483E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0563459D2A76A5CB00B483E9 /* LaunchScreen.storyboard */; };
+		05BB7D812A76A6340077D6CE /* VersionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BB7D802A76A6340077D6CE /* VersionViewModel.swift */; };
+		05BB7D832A76A7AC0077D6CE /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BB7D822A76A7AC0077D6CE /* Version.swift */; };
+		05BB7D852A76AE9E0077D6CE /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BB7D842A76AE9E0077D6CE /* Response.swift */; };
+		05BB7D872A76B1940077D6CE /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BB7D862A76B1940077D6CE /* NetworkError.swift */; };
+		5D52E07369F399CB0726A501 /* Pods_MyAwaitAsync.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8773E139D6B476958EF94E /* Pods_MyAwaitAsync.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0563458F2A76A5CA00B483E9 /* MyAwaitAsync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAwaitAsync.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		056345922A76A5CA00B483E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		056345942A76A5CA00B483E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		056345962A76A5CA00B483E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		056345992A76A5CA00B483E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0563459B2A76A5CB00B483E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0563459E2A76A5CB00B483E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		056345A02A76A5CB00B483E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05BB7D802A76A6340077D6CE /* VersionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionViewModel.swift; sourceTree = "<group>"; };
+		05BB7D822A76A7AC0077D6CE /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		05BB7D842A76AE9E0077D6CE /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		05BB7D862A76B1940077D6CE /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		4196E49BBD3E3C629C479319 /* Pods-MyAwaitAsync.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAwaitAsync.release.xcconfig"; path = "Target Support Files/Pods-MyAwaitAsync/Pods-MyAwaitAsync.release.xcconfig"; sourceTree = "<group>"; };
+		BB8773E139D6B476958EF94E /* Pods_MyAwaitAsync.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyAwaitAsync.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C44DC8D60C01F420CB546B4D /* Pods-MyAwaitAsync.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAwaitAsync.debug.xcconfig"; path = "Target Support Files/Pods-MyAwaitAsync/Pods-MyAwaitAsync.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0563458C2A76A5CA00B483E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D52E07369F399CB0726A501 /* Pods_MyAwaitAsync.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		056345862A76A5CA00B483E9 = {
+			isa = PBXGroup;
+			children = (
+				056345912A76A5CA00B483E9 /* MyAwaitAsync */,
+				056345902A76A5CA00B483E9 /* Products */,
+				1209FF2C720B6B896E828AF4 /* Pods */,
+				E5655CB5488E4842A9C6CE8E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		056345902A76A5CA00B483E9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0563458F2A76A5CA00B483E9 /* MyAwaitAsync.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		056345912A76A5CA00B483E9 /* MyAwaitAsync */ = {
+			isa = PBXGroup;
+			children = (
+				056345922A76A5CA00B483E9 /* AppDelegate.swift */,
+				056345942A76A5CA00B483E9 /* SceneDelegate.swift */,
+				056345962A76A5CA00B483E9 /* ViewController.swift */,
+				056345982A76A5CA00B483E9 /* Main.storyboard */,
+				0563459B2A76A5CB00B483E9 /* Assets.xcassets */,
+				0563459D2A76A5CB00B483E9 /* LaunchScreen.storyboard */,
+				056345A02A76A5CB00B483E9 /* Info.plist */,
+				05BB7D802A76A6340077D6CE /* VersionViewModel.swift */,
+				05BB7D822A76A7AC0077D6CE /* Version.swift */,
+				05BB7D842A76AE9E0077D6CE /* Response.swift */,
+				05BB7D862A76B1940077D6CE /* NetworkError.swift */,
+			);
+			path = MyAwaitAsync;
+			sourceTree = "<group>";
+		};
+		1209FF2C720B6B896E828AF4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C44DC8D60C01F420CB546B4D /* Pods-MyAwaitAsync.debug.xcconfig */,
+				4196E49BBD3E3C629C479319 /* Pods-MyAwaitAsync.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E5655CB5488E4842A9C6CE8E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB8773E139D6B476958EF94E /* Pods_MyAwaitAsync.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0563458E2A76A5CA00B483E9 /* MyAwaitAsync */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 056345A32A76A5CB00B483E9 /* Build configuration list for PBXNativeTarget "MyAwaitAsync" */;
+			buildPhases = (
+				899B209277E475DBE79B3E78 /* [CP] Check Pods Manifest.lock */,
+				0563458B2A76A5CA00B483E9 /* Sources */,
+				0563458C2A76A5CA00B483E9 /* Frameworks */,
+				0563458D2A76A5CA00B483E9 /* Resources */,
+				3902C3002779C770D6A750B6 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyAwaitAsync;
+			productName = MyAwaitAsync;
+			productReference = 0563458F2A76A5CA00B483E9 /* MyAwaitAsync.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		056345872A76A5CA00B483E9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					0563458E2A76A5CA00B483E9 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 0563458A2A76A5CA00B483E9 /* Build configuration list for PBXProject "MyAwaitAsync" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 056345862A76A5CA00B483E9;
+			productRefGroup = 056345902A76A5CA00B483E9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0563458E2A76A5CA00B483E9 /* MyAwaitAsync */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0563458D2A76A5CA00B483E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0563459F2A76A5CB00B483E9 /* LaunchScreen.storyboard in Resources */,
+				0563459C2A76A5CB00B483E9 /* Assets.xcassets in Resources */,
+				0563459A2A76A5CA00B483E9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3902C3002779C770D6A750B6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyAwaitAsync/Pods-MyAwaitAsync-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyAwaitAsync/Pods-MyAwaitAsync-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyAwaitAsync/Pods-MyAwaitAsync-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		899B209277E475DBE79B3E78 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyAwaitAsync-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0563458B2A76A5CA00B483E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				056345972A76A5CA00B483E9 /* ViewController.swift in Sources */,
+				05BB7D872A76B1940077D6CE /* NetworkError.swift in Sources */,
+				05BB7D832A76A7AC0077D6CE /* Version.swift in Sources */,
+				056345932A76A5CA00B483E9 /* AppDelegate.swift in Sources */,
+				056345952A76A5CA00B483E9 /* SceneDelegate.swift in Sources */,
+				05BB7D852A76AE9E0077D6CE /* Response.swift in Sources */,
+				05BB7D812A76A6340077D6CE /* VersionViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		056345982A76A5CA00B483E9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				056345992A76A5CA00B483E9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0563459D2A76A5CB00B483E9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0563459E2A76A5CB00B483E9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		056345A12A76A5CB00B483E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		056345A22A76A5CB00B483E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		056345A42A76A5CB00B483E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C44DC8D60C01F420CB546B4D /* Pods-MyAwaitAsync.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L8WFLHVUYX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyAwaitAsync/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyAwaitAsync;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		056345A52A76A5CB00B483E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4196E49BBD3E3C629C479319 /* Pods-MyAwaitAsync.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L8WFLHVUYX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyAwaitAsync/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyAwaitAsync;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0563458A2A76A5CA00B483E9 /* Build configuration list for PBXProject "MyAwaitAsync" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				056345A12A76A5CB00B483E9 /* Debug */,
+				056345A22A76A5CB00B483E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		056345A32A76A5CB00B483E9 /* Build configuration list for PBXNativeTarget "MyAwaitAsync" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				056345A42A76A5CB00B483E9 /* Debug */,
+				056345A52A76A5CB00B483E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 056345872A76A5CA00B483E9 /* Project object */;
+}

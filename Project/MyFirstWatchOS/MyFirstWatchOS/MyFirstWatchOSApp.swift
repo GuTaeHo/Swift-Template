@@ -1,14 +1,14 @@
 //
-//  MyFirstSwiftUIApp.swift
-//  MyFirstSwiftUI
+//  MyFirstWatchOSApp.swift
+//  MyFirstWatchOS
 //
-//  Created by 구태호 on 2022/06/23.
+//  Created by 구태호 on 2023/07/24.
 //
 
 import SwiftUI
 
 @main
-struct MyFirstSwiftUIApp: App {
+struct MyFirstWatchOSApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
