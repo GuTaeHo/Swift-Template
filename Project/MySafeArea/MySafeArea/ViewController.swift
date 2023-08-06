@@ -37,6 +37,26 @@ class ViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
+    
+    
+    private lazy var stackViewPaddingTest: UIStackView = {
+        let stackView = UIStackView()
+        stackView.layoutMargins = UIEdgeInsets(top: 10, left: 10, bottom: .zero, right: 10)
+        // MARK: 스택뷰에 layoutMargins 를 적용하기 위해선 아래 값을 true 로 변경해줘야함
+        stackView.isLayoutMarginsRelativeArrangement = true
+        stackView.backgroundColor = .orange
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        return stackView
+    }()
+    
+    private lazy var viewForStackView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .purple
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,6 +91,21 @@ class ViewController: UIViewController {
             loginButton.heightAnchor.constraint(equalToConstant: 50),
             loginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             loginButton.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor, constant: -50)
+        ])
+        
+        stackViewPaddingTest.addArrangedSubview(viewForStackView)
+        viewForStackView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        stackViewPaddingTest.addArrangedSubview(viewForStackView)
+        viewForStackView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        stackViewPaddingTest.addArrangedSubview(viewForStackView)
+        viewForStackView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        view.addSubview(stackViewPaddingTest)
+        
+        NSLayoutConstraint.activate([
+            stackViewPaddingTest.widthAnchor.constraint(equalToConstant: 300),
+            stackViewPaddingTest.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            stackViewPaddingTest.centerYAnchor.constraint(equalTo: view.centerYAnchor),
         ])
     }
     

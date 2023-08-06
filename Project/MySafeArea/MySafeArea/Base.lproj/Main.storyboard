@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,43 +23,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LeadingSafeArea" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ApH-wr-lAc">
-                                <rect key="frame" x="0.0" y="411.66666666666669" width="129" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TrailingSafeArea" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfy-Gm-SoU">
-                                <rect key="frame" x="266" y="411.66666666666669" width="124" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BottomSafeArea" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNh-er-cnx">
-                                <rect key="frame" x="132.66666666666666" y="789" width="124.99999999999997" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Sq6-na-vCn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3n9-k5-EJy"/>
-                            <constraint firstItem="LNh-er-cnx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EtN-Zt-cH2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wfy-Gm-SoU" secondAttribute="trailing" id="K8Y-2H-iWZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LNh-er-cnx" secondAttribute="bottom" id="KjK-ve-aiT"/>
-                            <constraint firstItem="wfy-Gm-SoU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bD9-ak-jNX"/>
                             <constraint firstItem="Sq6-na-vCn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wiE-fF-G0A"/>
-                            <constraint firstItem="ApH-wr-lAc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zBh-vx-2Ma"/>
-                            <constraint firstItem="ApH-wr-lAc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zvB-WL-T3B"/>
                         </constraints>
                     </view>
                     <connections>
                         <outletCollection property="lbSafeAreas" destination="Sq6-na-vCn" collectionClass="NSMutableArray" id="D66-fy-FZG"/>
-                        <outletCollection property="lbSafeAreas" destination="wfy-Gm-SoU" collectionClass="NSMutableArray" id="ufb-tJ-ui8"/>
-                        <outletCollection property="lbSafeAreas" destination="ApH-wr-lAc" collectionClass="NSMutableArray" id="s7H-lB-WDw"/>
-                        <outletCollection property="lbSafeAreas" destination="LNh-er-cnx" collectionClass="NSMutableArray" id="rQn-0c-JKd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
