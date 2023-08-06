@@ -11,6 +11,7 @@ class ViewController: UIViewController {
     @IBOutlet var lbDefaultSpacing: UILabel!
     @IBOutlet var lbSpacingZero: UILabel!
     @IBOutlet var lbSpacingFivePointZero: UILabel!
+    @IBOutlet var lbIntrinsicContentSize: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,8 +19,8 @@ class ViewController: UIViewController {
         
         lbSpacingZero.characterSpacing(0)
         lbSpacingFivePointZero.characterSpacing(5)
+        
+        print(lbIntrinsicContentSize.size())
     }
-
-
 }
 

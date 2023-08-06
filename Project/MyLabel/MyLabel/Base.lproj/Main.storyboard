@@ -50,6 +50,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="라벨 고유 사이즈 반환 테스트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzP-J1-8nh">
+                                <rect key="frame" x="107" y="244" width="194" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -64,6 +71,7 @@
                     </view>
                     <connections>
                         <outlet property="lbDefaultSpacing" destination="S7M-dZ-3wm" id="Wtz-bL-Zqt"/>
+                        <outlet property="lbIntrinsicContentSize" destination="fzP-J1-8nh" id="2gk-T0-jC7"/>
                         <outlet property="lbSpacingFivePointZero" destination="09m-Xo-ihe" id="DHy-s6-gsn"/>
                         <outlet property="lbSpacingZero" destination="iVV-9p-aMz" id="Jzt-6D-lDA"/>
                     </connections>
