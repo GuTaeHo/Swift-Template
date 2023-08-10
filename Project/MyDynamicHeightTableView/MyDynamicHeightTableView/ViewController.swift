@@ -26,7 +26,8 @@ struct MenuOption {
 }
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet var scrollview: UIScrollView!
     @IBOutlet var ivThumbnail: UIImageView!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var tableViewHeightConstraint: NSLayoutConstraint!
@@ -68,6 +69,9 @@ class ViewController: UIViewController {
         
         ivThumbnail.imageDownload(url: menu.thumbNailUrl)
         
+        scrollview.refreshControl = UIRefreshControl()
+        scrollview.refreshControl?.addTarget(self, action: #selector(pullDownRefresh), for: .valueChanged)
+        
         tableView.sectionHeaderTopPadding = 0
         tableView.delegate = self
         tableView.dataSource = self
@@ -82,6 +86,13 @@ class ViewController: UIViewController {
         super.viewDidLayoutSubviews()
         
         tableViewHeightConstraint.constant = tableView.contentSize.height
+    }
+    
+    @objc func pullDownRefresh() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.tableView.reloadData()
+            self.scrollview.refreshControl?.endRefreshing()
+        }
     }
 }
 

@@ -103,6 +103,7 @@
                     </view>
                     <connections>
                         <outlet property="ivThumbnail" destination="a6G-dq-h6t" id="ksA-xf-qDn"/>
+                        <outlet property="scrollview" destination="Ali-5v-gob" id="eIR-kw-HsR"/>
                         <outlet property="tableView" destination="3ux-wE-wAV" id="Ujk-2v-41Q"/>
                         <outlet property="tableViewHeightConstraint" destination="Yjy-1p-Sje" id="1HF-kc-MY8"/>
                     </connections>
