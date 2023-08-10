@@ -73,6 +73,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        tableView.refreshControl = UIRefreshControl()
+        tableView.refreshControl?.addTarget(self, action: #selector(pullDownRefresh), for: .valueChanged)
         tableView.sectionHeaderTopPadding = 0
         tableView.delegate = self
         tableView.dataSource = self
@@ -88,11 +90,56 @@ class ViewController: UIViewController {
         
         // tableViewHeightConstraint.constant = tableView.contentSize.height
     }
+    
+    @objc func pullDownRefresh() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.tableView.refreshControl?.endRefreshing()
+        }
+    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return menu.menuGroup?[section].name
+    /// 섹션 커스텀 뷰 적용
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        // 1. 섹션 헤더 명은 메뉴 그룹 명
+        let menuGroupName = menu.menuGroup?[section].name
+        
+        let headerView = UITableViewHeaderFooterView()
+        headerView.backgroundView = {
+            let view = UIView()
+            view.backgroundColor = .lightGray
+            return view
+        }()
+        
+        let label: UILabel = {
+            let label = UILabel()
+            label.font = .systemFont(ofSize: 20)
+            label.text = menuGroupName
+            label.textColor = .gray
+            label.numberOfLines = 0
+            // 2. 사용자 오토레이아웃 지정을 위한 mask false
+            label.translatesAutoresizingMaskIntoConstraints = false
+            return label
+        }()
+        
+        headerView.contentView.addSubview(label)
+        
+        // 3. 레이아웃 지정, iOS 8 부터 추가된 동적 셀 높이는 정확하게 오토레이아웃 지정되어있어야 동작함
+        NSLayoutConstraint.activate([
+            label.leadingAnchor.constraint(equalTo: headerView.contentView.leadingAnchor, constant: 18),
+            label.trailingAnchor.constraint(equalTo: headerView.contentView.trailingAnchor, constant: -18),
+            label.topAnchor.constraint(equalTo: headerView.contentView.topAnchor, constant: 12),
+            label.bottomAnchor.constraint(equalTo: headerView.contentView.bottomAnchor, constant: -12)
+        ])
+        
+        return headerView
+        /*
+         // 커스텀 섹션 셀 구현 할 경우 주석 참고
+         let headerView = UIView()
+         let headerCell = tableView.dequeueReusableCell(withIdentifier: "customTableCell") as! CustomTableCell
+         headerView.addSubview(headerCell)
+         return headerView
+         */
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -106,7 +153,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 && indexPath.row == 0 {
             performSegue(withIdentifier: "TagsViewSegue", sender: nil)
+            return
         }
+        
+        tableView.reloadSections(.init(integer: indexPath.section), with: .automatic)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
