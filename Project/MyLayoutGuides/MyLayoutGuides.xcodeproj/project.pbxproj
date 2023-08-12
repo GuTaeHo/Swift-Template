@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05E05CCC2A8767A500182DA2 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E05CCB2A8767A500182DA2 /* UIStackView+.swift */; };
 		05EB029A2A7FE6F600337352 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB02992A7FE6F600337352 /* AppDelegate.swift */; };
 		05EB029C2A7FE6F600337352 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB029B2A7FE6F600337352 /* SceneDelegate.swift */; };
 		05EB029E2A7FE6F600337352 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB029D2A7FE6F600337352 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05E05CCB2A8767A500182DA2 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 		05EB02962A7FE6F600337352 /* MyLayoutGuides.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLayoutGuides.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05EB02992A7FE6F600337352 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05EB029B2A7FE6F600337352 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				05EB02A22A7FE6F800337352 /* Assets.xcassets */,
 				05EB02A42A7FE6F800337352 /* LaunchScreen.storyboard */,
 				05EB02A72A7FE6F800337352 /* Info.plist */,
+				05E05CCB2A8767A500182DA2 /* UIStackView+.swift */,
 			);
 			path = MyLayoutGuides;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				05EB029E2A7FE6F600337352 /* ViewController.swift in Sources */,
 				05EB029A2A7FE6F600337352 /* AppDelegate.swift in Sources */,
 				05EB029C2A7FE6F600337352 /* SceneDelegate.swift in Sources */,
+				05E05CCC2A8767A500182DA2 /* UIStackView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
