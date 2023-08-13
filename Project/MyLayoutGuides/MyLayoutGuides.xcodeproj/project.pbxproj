@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		05E05CCC2A8767A500182DA2 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E05CCB2A8767A500182DA2 /* UIStackView+.swift */; };
+		05E05CCE2A8934DC00182DA2 /* AutoResizingTestViewInStackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05E05CCD2A8934DC00182DA2 /* AutoResizingTestViewInStackView.xib */; };
+		05E05CD02A8934F600182DA2 /* AutoResizingTestViewInStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E05CCF2A8934F600182DA2 /* AutoResizingTestViewInStackView.swift */; };
+		05E05CD22A89434500182DA2 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E05CD12A89434400182DA2 /* String+.swift */; };
 		05EB029A2A7FE6F600337352 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB02992A7FE6F600337352 /* AppDelegate.swift */; };
 		05EB029C2A7FE6F600337352 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB029B2A7FE6F600337352 /* SceneDelegate.swift */; };
 		05EB029E2A7FE6F600337352 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB029D2A7FE6F600337352 /* ViewController.swift */; };
@@ -18,6 +21,9 @@
 
 /* Begin PBXFileReference section */
 		05E05CCB2A8767A500182DA2 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
+		05E05CCD2A8934DC00182DA2 /* AutoResizingTestViewInStackView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoResizingTestViewInStackView.xib; sourceTree = "<group>"; };
+		05E05CCF2A8934F600182DA2 /* AutoResizingTestViewInStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoResizingTestViewInStackView.swift; sourceTree = "<group>"; };
+		05E05CD12A89434400182DA2 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		05EB02962A7FE6F600337352 /* MyLayoutGuides.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLayoutGuides.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05EB02992A7FE6F600337352 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05EB029B2A7FE6F600337352 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +72,9 @@
 				05EB02A42A7FE6F800337352 /* LaunchScreen.storyboard */,
 				05EB02A72A7FE6F800337352 /* Info.plist */,
 				05E05CCB2A8767A500182DA2 /* UIStackView+.swift */,
+				05E05CCD2A8934DC00182DA2 /* AutoResizingTestViewInStackView.xib */,
+				05E05CCF2A8934F600182DA2 /* AutoResizingTestViewInStackView.swift */,
+				05E05CD12A89434400182DA2 /* String+.swift */,
 			);
 			path = MyLayoutGuides;
 			sourceTree = "<group>";
@@ -131,6 +140,7 @@
 				05EB02A62A7FE6F800337352 /* LaunchScreen.storyboard in Resources */,
 				05EB02A32A7FE6F800337352 /* Assets.xcassets in Resources */,
 				05EB02A12A7FE6F600337352 /* Main.storyboard in Resources */,
+				05E05CCE2A8934DC00182DA2 /* AutoResizingTestViewInStackView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,9 +151,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05E05CD02A8934F600182DA2 /* AutoResizingTestViewInStackView.swift in Sources */,
 				05EB029E2A7FE6F600337352 /* ViewController.swift in Sources */,
 				05EB029A2A7FE6F600337352 /* AppDelegate.swift in Sources */,
 				05EB029C2A7FE6F600337352 /* SceneDelegate.swift in Sources */,
+				05E05CD22A89434500182DA2 /* String+.swift in Sources */,
 				05E05CCC2A8767A500182DA2 /* UIStackView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

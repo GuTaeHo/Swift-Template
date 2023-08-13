@@ -18,13 +18,47 @@ class ViewController: UIViewController {
         return scrollView
     }()
     
+    lazy var removeAllViewInStackViewButton: UIButton = {
+        let button = UIButton()
+        button.configuration = .filled()
+        var attTitleString = AttributedString("모두 지우기")
+        attTitleString.font = .systemFont(ofSize: 12, weight: .bold)
+        attTitleString.foregroundColor = .white
+        button.configuration?.attributedTitle = attTitleString
+
+        var attSubTitleString = AttributedString("스택 뷰 내부에 뷰 모두 삭제")
+        attSubTitleString.font = .systemFont(ofSize: 8, weight: .light)
+        attSubTitleString.foregroundColor = .white
+        button.configuration?.attributedSubtitle = attSubTitleString
+        button.configuration?.baseBackgroundColor = .darkGray
+        
+        button.configuration?.image = UIImage(systemName: "minus")
+        button.configuration?.cornerStyle = .capsule
+        button.configuration?.titlePadding = 6
+        button.configuration?.imagePadding = 6
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        button.configurationUpdateHandler = { button in
+            self.layoutMarginsTestStackView.removeAllViewsInStackView()
+        }
+        
+        return button
+    }()
+    
     lazy var addViewInStackViewButton: UIButton = {
         let button = UIButton()
         button.configuration = .filled()
+        var attTitleString = AttributedString("추가하기")
+        attTitleString.font = .systemFont(ofSize: 12, weight: .bold)
+        attTitleString.foregroundColor = .white
+        button.configuration?.attributedTitle = attTitleString
+
+        var attSubTitleString = AttributedString("스택 뷰 내부에 뷰 추가")
+        attSubTitleString.font = .systemFont(ofSize: 8, weight: .light)
+        attSubTitleString.foregroundColor = .white
+        button.configuration?.attributedSubtitle = attSubTitleString
         button.configuration?.baseBackgroundColor = .darkGray
-        button.configuration?.baseForegroundColor = .white
-        button.configuration?.title = "추가하기"
-        button.configuration?.subtitle = "스택 뷰 내부에 뷰 추가"
+        
         button.configuration?.image = UIImage(systemName: "plus")
         button.configuration?.cornerStyle = .capsule
         button.configuration?.titlePadding = 6
@@ -38,12 +72,19 @@ class ViewController: UIViewController {
                 button.configuration?.showsActivityIndicator = true
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                     button.configuration?.showsActivityIndicator = false
-                    let view = self.makeView()
+                    
+                    let subViewModel = SubViewModel(minusClosure: { subViewModel in
+                        
+                    }, plusClosure: { subViewModel in
+                        
+                    }, deleteClosure: { [weak self] subViewModel in
+                        
+                    }, content: String.randomString(length: 100), count: Int.random(in: 0..<15))
+                    
+                    let view = AutoResizingTestViewInStackView()
+                    view.item = subViewModel
                     
                     self.layoutMarginsTestStackView.addArrangedSubview(view)
-                    view.heightAnchor.constraint(equalToConstant: 80).isActive = true
-                    // 뷰에 제스쳐 등록
-                    view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.clickedViewInStackview(_:))))
                 }
                 break
                 
@@ -78,7 +119,7 @@ class ViewController: UIViewController {
         stackView.backgroundColor = .lightGray
         stackView.axis = .vertical
         stackView.layer.cornerRadius = 12
-        stackView.layoutMargins = UIEdgeInsets(top: 6, left: 12, bottom: 6, right: 12)
+        stackView.layoutMargins = UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 12)
         // MARK: 스택뷰의 레이아웃 마진 활성화
         stackView.isLayoutMarginsRelativeArrangement = true
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -133,39 +174,25 @@ class ViewController: UIViewController {
         
         // 세로 방향의 스크롤을 위한 너비 맞춤
         layoutMarginsTestStackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
-        
-        for _ in 0...5 {
-            let view = makeView()
-            
-            layoutMarginsTestStackView.addArrangedSubview(view)
-            view.heightAnchor.constraint(equalToConstant: 80).isActive = true
-            // 뷰에 제스쳐 등록
-            view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(clickedViewInStackview(_:))))
-        }
     }
     
     func addButton() {
-        view.addSubview(addViewInStackViewButton)
-        addViewInStackViewButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -18).isActive = true
-        addViewInStackViewButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -12).isActive = true
+        let buttonStackView = UIStackView()
+        buttonStackView.axis = .horizontal
+        buttonStackView.spacing = 12
+        buttonStackView.translatesAutoresizingMaskIntoConstraints = false
+        buttonStackView.addArrangedSubview(removeAllViewInStackViewButton)
+        buttonStackView.addArrangedSubview(addViewInStackViewButton)
+        
+        view.addSubview(buttonStackView)
+        buttonStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -18).isActive = true
+        buttonStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -12).isActive = true
     }
     
-    /// 뷰 생성
-    func makeView() -> UIView {
-        let view = UIView()
-        view.layer.cornerRadius = 12
-        view.backgroundColor = .white
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.layoutMargins = .init(top: 6, left: 12, bottom: 6, right: 12)
-        view.backgroundColor = UIColor(red: .random(in: 0..<1), green: .random(in: 0..<1), blue: .random(in: 0..<1), alpha: 1.0)
-       
-        return view
-    }
-    
-    /// 스택 뷰에서 제거
+    /// 뷰 클릭 시 호출
     @objc func clickedViewInStackview(_ sender: UITapGestureRecognizer) {
         guard let view = sender.view else { return }
-        layoutMarginsTestStackView.removeFromStackView(view: view)
+         layoutMarginsTestStackView.removeFromStackView(view: view)
         // layoutMarginsTestStackView.removeAllViewsInStackView()
     }
 }
