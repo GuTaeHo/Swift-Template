@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         
         button.configurationUpdateHandler = { button in
-            self.layoutMarginsTestStackView.removeAllViewsInStackView()
+            self.layoutMarginsTestStackView.removeAllSubViews()
         }
         
         return button
@@ -192,8 +192,8 @@ class ViewController: UIViewController {
     /// 뷰 클릭 시 호출
     @objc func clickedViewInStackview(_ sender: UITapGestureRecognizer) {
         guard let view = sender.view else { return }
-         layoutMarginsTestStackView.removeFromStackView(view: view)
-        // layoutMarginsTestStackView.removeAllViewsInStackView()
+         layoutMarginsTestStackView.removeSubView(view: view)
+        // layoutMarginsTestStackView.removeAllSubViews()
     }
 }
 

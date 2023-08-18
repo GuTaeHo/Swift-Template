@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,24 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="390" placeholderIntrinsicHeight="88" translatesAutoresizingMaskIntoConstraints="NO" id="mWQ-Mh-UTa">
-                                <rect key="frame" x="0.0" y="808" width="414" height="88"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="장바구니" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wru-Nk-bJN">
-                                        <rect key="frame" x="161" y="32" width="69.5" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="390" placeholderIntrinsicHeight="756" translatesAutoresizingMaskIntoConstraints="NO" id="i0M-6t-muF">
-                                <rect key="frame" x="0.0" y="52" width="414" height="756"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i0M-6t-muF">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgl-oC-QCI">
-                                        <rect key="frame" x="75" y="314" width="264" height="128"/>
+                                        <rect key="frame" x="75" y="400" width="264" height="214"/>
                                         <color key="backgroundColor" systemColor="systemMintColor"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZi-Wu-aeQ">
@@ -53,16 +40,24 @@
                                             <segue destination="rWh-wm-9Nn" kind="show" id="kFE-Wr-4gV"/>
                                         </connections>
                                     </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sGM-MX-fDt">
+                                        <rect key="frame" x="200" y="569" width="202" height="214"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="bgl-oC-QCI" firstAttribute="top" secondItem="i0M-6t-muF" secondAttribute="top" priority="999" constant="400" id="6ej-gj-BvW"/>
                                     <constraint firstItem="Drr-Pp-w16" firstAttribute="centerX" secondItem="i0M-6t-muF" secondAttribute="centerX" id="CYP-1R-6xv"/>
-                                    <constraint firstItem="bgl-oC-QCI" firstAttribute="leading" secondItem="i0M-6t-muF" secondAttribute="leading" constant="75" id="O8Z-78-azi"/>
+                                    <constraint firstItem="sGM-MX-fDt" firstAttribute="top" secondItem="Drr-Pp-w16" secondAttribute="bottom" constant="393" id="JE5-gn-aP0"/>
+                                    <constraint firstItem="bgl-oC-QCI" firstAttribute="leading" secondItem="i0M-6t-muF" secondAttribute="leading" priority="999" constant="75" id="O8Z-78-azi"/>
                                     <constraint firstItem="rZi-Wu-aeQ" firstAttribute="centerX" secondItem="i0M-6t-muF" secondAttribute="centerX" id="P93-oG-glL"/>
+                                    <constraint firstAttribute="trailing" secondItem="sGM-MX-fDt" secondAttribute="trailing" constant="12" id="Pri-To-SrZ"/>
+                                    <constraint firstItem="sGM-MX-fDt" firstAttribute="leading" secondItem="i0M-6t-muF" secondAttribute="leading" constant="200" id="W55-7s-b7u"/>
+                                    <constraint firstAttribute="bottom" secondItem="sGM-MX-fDt" secondAttribute="bottom" constant="31" id="XBY-VN-KCG"/>
+                                    <constraint firstAttribute="bottom" secondItem="bgl-oC-QCI" secondAttribute="bottom" priority="999" constant="200" id="Y3x-QW-0sP"/>
                                     <constraint firstItem="Drr-Pp-w16" firstAttribute="top" secondItem="rZi-Wu-aeQ" secondAttribute="bottom" constant="12" id="cXE-vR-dYb"/>
-                                    <constraint firstItem="bgl-oC-QCI" firstAttribute="top" secondItem="i0M-6t-muF" secondAttribute="top" constant="314" id="dC0-vC-PMd"/>
-                                    <constraint firstAttribute="bottom" secondItem="bgl-oC-QCI" secondAttribute="bottom" constant="314" id="oT6-SP-bap"/>
-                                    <constraint firstAttribute="trailing" secondItem="bgl-oC-QCI" secondAttribute="trailing" constant="75" id="piA-Gh-3Jt"/>
+                                    <constraint firstAttribute="trailing" secondItem="bgl-oC-QCI" secondAttribute="trailing" priority="999" constant="75" id="piA-Gh-3Jt"/>
                                     <constraint firstItem="rZi-Wu-aeQ" firstAttribute="top" secondItem="i0M-6t-muF" secondAttribute="top" constant="94" id="rdI-IO-Dh2"/>
                                 </constraints>
                             </view>
@@ -71,18 +66,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="i0M-6t-muF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OXz-S9-6SU"/>
-                            <constraint firstItem="mWQ-Mh-UTa" firstAttribute="top" secondItem="i0M-6t-muF" secondAttribute="bottom" id="QEj-Pd-wG2"/>
-                            <constraint firstItem="mWQ-Mh-UTa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yju-f3-vKE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i0M-6t-muF" secondAttribute="trailing" id="bbD-U5-OUs"/>
-                            <constraint firstAttribute="bottom" secondItem="mWQ-Mh-UTa" secondAttribute="bottom" id="p0z-xl-co0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mWQ-Mh-UTa" secondAttribute="trailing" id="pz3-gZ-hQC"/>
+                            <constraint firstItem="i0M-6t-muF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eRc-ru-LqW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="i0M-6t-muF" secondAttribute="bottom" id="r84-nK-JAP"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="blueView" destination="i0M-6t-muF" id="xkp-D5-v9E"/>
-                        <outlet property="cartView" destination="mWQ-Mh-UTa" id="iHb-ao-WLa"/>
                         <outlet property="greenView" destination="bgl-oC-QCI" id="xa0-2O-2GO"/>
-                        <outlet property="lbCart" destination="Wru-Nk-bJN" id="kVG-Nm-Gyy"/>
+                        <outlet property="redView" destination="sGM-MX-fDt" id="afk-cn-aW9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -204,11 +196,11 @@
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

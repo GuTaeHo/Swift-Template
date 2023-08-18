@@ -15,7 +15,7 @@ import UIKit
 */
 extension UIStackView {
     /// view 를 스택 뷰에서 제거
-    func removeFromStackView(view: UIView?) {
+    func removeSubView(view: UIView?) {
         guard let view = view else { return }
         
         removeArrangedSubview(view)
@@ -23,9 +23,9 @@ extension UIStackView {
     }
     
     /// 스택 뷰 하위 모든 뷰 제거
-    func removeAllViewsInStackView() {
+    func removeAllSubViews() {
         arrangedSubviews.forEach { (view) in
-            removeFromStackView(view: view)
+            removeSubView(view: view)
         }
     }
 }
