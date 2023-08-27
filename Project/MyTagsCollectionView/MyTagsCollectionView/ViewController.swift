@@ -32,7 +32,8 @@ class ViewController: UIViewController {
     var menu =
     Menu(name: "감자스프", thumbNailUrl: "https://recipe1.ezmember.co.kr/cache/recipe/2021/01/02/4093c51f12b962c7426ae4c3ec65412d1.jpg", menuGroup: [
         MenuGroup(name: "태그 리스트로 이동", options: [
-            MenuOption(name: "태그 리스트로 이동!")
+            MenuOption(name: "태그 리스트로 이동!"),
+            MenuOption(name: "수평 스크롤 콜렉션 리스트로 이동!")
         ]),
         MenuGroup(name: "맵기 단계", summary: "취향에 맞게 맵기를 선택해주세요! !.!", options: [
             MenuOption(name: "안 매워요 (진라면 순한맛...)"),
@@ -153,6 +154,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 && indexPath.row == 0 {
             performSegue(withIdentifier: "TagsViewSegue", sender: nil)
+            return
+        } else if indexPath.section == 0 && indexPath.row == 1 {
+            performSegue(withIdentifier: "horizontalScrollableCollectionViewSegue", sender: nil)
             return
         }
         

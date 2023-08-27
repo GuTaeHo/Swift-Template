@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		056CDCF62A9B575000723CA3 /* HorizontalScrollableCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056CDCF52A9B575000723CA3 /* HorizontalScrollableCollectionViewController.swift */; };
+		056CDCF82A9B57FB00723CA3 /* HorizontalScrollableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056CDCF72A9B57FB00723CA3 /* HorizontalScrollableCollectionViewCell.swift */; };
 		05BB7D952A7944030077D6CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BB7D942A7944030077D6CE /* AppDelegate.swift */; };
 		05BB7D972A7944030077D6CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BB7D962A7944030077D6CE /* SceneDelegate.swift */; };
 		05BB7D992A7944030077D6CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BB7D982A7944030077D6CE /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		056CDCF52A9B575000723CA3 /* HorizontalScrollableCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollableCollectionViewController.swift; sourceTree = "<group>"; };
+		056CDCF72A9B57FB00723CA3 /* HorizontalScrollableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollableCollectionViewCell.swift; sourceTree = "<group>"; };
 		05BB7D912A7944030077D6CE /* MyTagsCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTagsCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05BB7D942A7944030077D6CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05BB7D962A7944030077D6CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 				05BB7DA22A7944040077D6CE /* Info.plist */,
 				05BB7DA82A79473F0077D6CE /* MenuTableViewCell.swift */,
 				05BB7DAD2A7952860077D6CE /* TagsViewController.swift */,
+				056CDCF52A9B575000723CA3 /* HorizontalScrollableCollectionViewController.swift */,
+				056CDCF72A9B57FB00723CA3 /* HorizontalScrollableCollectionViewCell.swift */,
 			);
 			path = MyTagsCollectionView;
 			sourceTree = "<group>";
@@ -158,7 +164,9 @@
 				05BB7D992A7944030077D6CE /* ViewController.swift in Sources */,
 				05BB7D952A7944030077D6CE /* AppDelegate.swift in Sources */,
 				05BB7DA92A79473F0077D6CE /* MenuTableViewCell.swift in Sources */,
+				056CDCF82A9B57FB00723CA3 /* HorizontalScrollableCollectionViewCell.swift in Sources */,
 				05BB7D972A7944030077D6CE /* SceneDelegate.swift in Sources */,
+				056CDCF62A9B575000723CA3 /* HorizontalScrollableCollectionViewController.swift in Sources */,
 				05BB7DAC2A7949C80077D6CE /* UIImageView+.swift in Sources */,
 				05BB7DAE2A7952860077D6CE /* TagsViewController.swift in Sources */,
 			);
