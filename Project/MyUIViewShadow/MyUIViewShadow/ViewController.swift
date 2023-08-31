@@ -10,6 +10,8 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet var imageOnShadowView: UIImageView!
     
+    @IBOutlet var btStart: RoundedShadowView!
+    
     lazy var shadowView = {
         let shadowView = RoundedShadowView()
         shadowView.innerBackgroundColor = .orange
@@ -33,6 +35,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        btStart.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(start)))
+        
         view.addSubview(shadowView)
         
         NSLayoutConstraint.activate([
@@ -41,9 +45,10 @@ class ViewController: UIViewController {
             shadowView.heightAnchor.constraint(equalToConstant: 128),
             shadowView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
-        
-        
-        
+    }
+    
+    @objc func start() {
+        btStart.isUserInteractionEnabled = false
         let timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true, block: { [weak self] timer in
             guard let self = self else { return }
             self.count += 1
