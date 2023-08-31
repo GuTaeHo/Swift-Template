@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05AE20432AA0BF2A0075BA62 /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AE20422AA0BF2A0075BA62 /* RoundedShadowView.swift */; };
+		05AE20452AA0CC6D0075BA62 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AE20442AA0CC6D0075BA62 /* UIImageView+.swift */; };
 		05FB3E0128F4FC9C00A9FCCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FB3E0028F4FC9C00A9FCCD /* AppDelegate.swift */; };
 		05FB3E0328F4FC9C00A9FCCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FB3E0228F4FC9C00A9FCCD /* SceneDelegate.swift */; };
 		05FB3E0528F4FC9C00A9FCCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FB3E0428F4FC9C00A9FCCD /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05AE20422AA0BF2A0075BA62 /* RoundedShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
+		05AE20442AA0CC6D0075BA62 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		05FB3DFD28F4FC9C00A9FCCD /* MyUIViewShadow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyUIViewShadow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05FB3E0028F4FC9C00A9FCCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05FB3E0228F4FC9C00A9FCCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				05FB3E0B28F4FC9E00A9FCCD /* LaunchScreen.storyboard */,
 				05FB3E0E28F4FC9E00A9FCCD /* Info.plist */,
 				05FB3E1428F4FCA600A9FCCD /* UIView.swift */,
+				05AE20422AA0BF2A0075BA62 /* RoundedShadowView.swift */,
+				05AE20442AA0CC6D0075BA62 /* UIImageView+.swift */,
 			);
 			path = MyUIViewShadow;
 			sourceTree = "<group>";
@@ -141,8 +147,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05AE20452AA0CC6D0075BA62 /* UIImageView+.swift in Sources */,
 				05FB3E1528F4FCA600A9FCCD /* UIView.swift in Sources */,
 				05FB3E0528F4FC9C00A9FCCD /* ViewController.swift in Sources */,
+				05AE20432AA0BF2A0075BA62 /* RoundedShadowView.swift in Sources */,
 				05FB3E0128F4FC9C00A9FCCD /* AppDelegate.swift in Sources */,
 				05FB3E0328F4FC9C00A9FCCD /* SceneDelegate.swift in Sources */,
 			);

@@ -13,8 +13,6 @@ class MainTableViewControllerCell: UITableViewCell {
     @IBOutlet var lbTitle: UILabel!
     @IBOutlet var lbContent: UILabel!
     
-    var item: MainTableViewCellItem?
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -27,7 +25,7 @@ class MainTableViewControllerCell: UITableViewCell {
         
     }
     
-    func configuration() {
+    func configuration(_ item: MainTableViewCellItem?) {
         lbNumber.text = item?.number
         lbTitle.text = item?.title
         lbContent.text = item?.content

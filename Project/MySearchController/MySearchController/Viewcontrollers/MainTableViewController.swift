@@ -11,6 +11,22 @@ import UIKit
 class MainTableViewController: UITableViewController {
     private var items: [MainTableViewCellItem]?
     private var searchedItems: [MainTableViewCellItem]?
+    lazy var navigationRightButton: UIButton = {
+        var configuration = UIButton.Configuration.plain()
+        configuration.baseForegroundColor = .darkGray
+        configuration.baseBackgroundColor = .clear
+        configuration.image = UIImage(systemName: "lasso.and.sparkles")
+        configuration.imagePadding = 6
+        configuration.title = "안녕하세요"
+        
+        let handler: ((UIAction) -> ()) = { action in
+            print("버튼 클릭됨")
+        }
+        
+        let button = UIButton(configuration: configuration, primaryAction: .init(handler: handler))
+        
+        return button
+    }()
     
     // 접두사 일치 시
     private let SORT_AS_PREFIX = 0
@@ -22,9 +38,21 @@ class MainTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: navigationRightButton)
         addItems()
         // addSearchBar()
         addSearchController()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    @objc func headerClicked() {
+        print("@@@")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SecondViewController")
+        navigationController?.present(vc, animated: true)
     }
     
     func addItems() {
@@ -61,7 +89,7 @@ class MainTableViewController: UITableViewController {
         /* 스코프 바 항상 표시 */
         searchController.searchBar.showsScopeBar = true
         /* 검색 시 헤더 타이틀 표시 */
-        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.hidesNavigationBarDuringPresentation = true
         /* 검색 결과 델리게이트 위임 */
         searchController.searchResultsUpdater = self
         /* 스크롤 시 검색바 유지 */
@@ -95,8 +123,7 @@ class MainTableViewController: UITableViewController {
         
         let index = indexPath.row
         
-        cell.item = items?[index]
-        cell.configuration()
+        cell.configuration(items?[index])
         
         return cell
     }
