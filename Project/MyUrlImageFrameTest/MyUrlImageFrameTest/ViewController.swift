@@ -11,6 +11,7 @@ import SnapKit
 class ViewController: UIViewController {
     
     @IBOutlet var stackView: UIStackView!
+    @IBOutlet var gifImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,7 @@ class ViewController: UIViewController {
         addNewImageViewInStackView(url: "https://blog.wijman.net/content/images/size/w760h400/2021/12/debian-11-bullseye.png")
         addNewImageViewInStackView(url: "https://i.ebayimg.com/images/g/L5UAAOSwyHdhhBL6/s-l1600.jpg")
         addNewImageViewInStackView(url: "https://cdn.mos.cms.futurecdn.net/b75Q68Gb65uDNS6EpSnNN9.jpg")
+        gifImageView.urlImage(url: "https://i.pinimg.com/originals/ef/0c/85/ef0c851f501afbdd512f836cef172a39.gif")
     }
     
     /// 스택 뷰에 이미지 뷰 추가

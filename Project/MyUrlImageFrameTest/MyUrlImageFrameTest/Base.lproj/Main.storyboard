@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xah-kY-XNe">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="559"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="393" placeholderIntrinsicHeight="128" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tZd-gY-EdZ">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="128"/>
@@ -35,17 +35,27 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="NYn-HX-xfL"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="iSc-LH-Or8"/>
                             </scrollView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fhz-tc-ttr">
+                                <rect key="frame" x="0.0" y="618" width="393" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="s6T-8s-Z4c"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xah-kY-XNe" secondAttribute="bottom" id="EFN-T8-fuj"/>
+                            <constraint firstItem="fhz-tc-ttr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2Nm-em-7jd"/>
                             <constraint firstItem="xah-kY-XNe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="G0Y-Jz-5Nw"/>
                             <constraint firstItem="xah-kY-XNe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KGX-mB-bCg"/>
+                            <constraint firstItem="fhz-tc-ttr" firstAttribute="top" secondItem="xah-kY-XNe" secondAttribute="bottom" id="TwH-0a-9GX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fhz-tc-ttr" secondAttribute="trailing" id="fzo-Fh-Lgt"/>
                             <constraint firstItem="xah-kY-XNe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ntc-xU-n1Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fhz-tc-ttr" secondAttribute="bottom" id="zqX-rx-S1c"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="gifImageView" destination="fhz-tc-ttr" id="cAq-8h-DQD"/>
                         <outlet property="stackView" destination="tZd-gY-EdZ" id="0tm-e2-HYw"/>
                     </connections>
                 </viewController>
