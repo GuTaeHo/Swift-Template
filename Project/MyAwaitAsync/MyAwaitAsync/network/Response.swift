@@ -51,8 +51,8 @@ struct Response<T: Codable>: Codable {
      */
     init(from decoder: Decoder) throws {
         let container: KeyedDecodingContainer<Response<T>.CodingKeys> = try decoder.container(keyedBy: Response<T>.CodingKeys.self)
-        self._code = try container.decodeIfPresent(Int.self, forKey: ._code)
-        self.message = try container.decodeIfPresent(String.self, forKey: .message)
-        self.result = try container.decodeIfPresent(T.self, forKey: .result)
+        self._code = try? container.decode(Int.self, forKey: ._code)
+        self.message = try? container.decode(String.self, forKey: .message)
+        self.result = try? container.decode(T.self, forKey: .result)
     }
 }

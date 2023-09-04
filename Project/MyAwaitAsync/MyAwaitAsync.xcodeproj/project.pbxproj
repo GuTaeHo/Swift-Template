@@ -19,6 +19,7 @@
 		05BB7D872A76B1940077D6CE /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BB7D862A76B1940077D6CE /* NetworkError.swift */; };
 		05EAA7442AA4D524007C7BD9 /* UIControl+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EAA7432AA4D524007C7BD9 /* UIControl+.swift */; };
 		05EAA7462AA4D67C007C7BD9 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EAA7452AA4D67C007C7BD9 /* UIButton+.swift */; };
+		05EAA7482AA5F6FA007C7BD9 /* Data+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EAA7472AA5F6FA007C7BD9 /* Data+.swift */; };
 		5D52E07369F399CB0726A501 /* Pods_MyAwaitAsync.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8773E139D6B476958EF94E /* Pods_MyAwaitAsync.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		05BB7D862A76B1940077D6CE /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		05EAA7432AA4D524007C7BD9 /* UIControl+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+.swift"; sourceTree = "<group>"; };
 		05EAA7452AA4D67C007C7BD9 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
+		05EAA7472AA5F6FA007C7BD9 /* Data+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+.swift"; sourceTree = "<group>"; };
 		4196E49BBD3E3C629C479319 /* Pods-MyAwaitAsync.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAwaitAsync.release.xcconfig"; path = "Target Support Files/Pods-MyAwaitAsync/Pods-MyAwaitAsync.release.xcconfig"; sourceTree = "<group>"; };
 		BB8773E139D6B476958EF94E /* Pods_MyAwaitAsync.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyAwaitAsync.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C44DC8D60C01F420CB546B4D /* Pods-MyAwaitAsync.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAwaitAsync.debug.xcconfig"; path = "Target Support Files/Pods-MyAwaitAsync/Pods-MyAwaitAsync.debug.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			children = (
 				05EAA7432AA4D524007C7BD9 /* UIControl+.swift */,
 				05EAA7452AA4D67C007C7BD9 /* UIButton+.swift */,
+				05EAA7472AA5F6FA007C7BD9 /* Data+.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				05EAA7462AA4D67C007C7BD9 /* UIButton+.swift in Sources */,
 				056345952A76A5CA00B483E9 /* SceneDelegate.swift in Sources */,
 				05EAA7442AA4D524007C7BD9 /* UIControl+.swift in Sources */,
+				05EAA7482AA5F6FA007C7BD9 /* Data+.swift in Sources */,
 				05BB7D852A76AE9E0077D6CE /* Response.swift in Sources */,
 				05BB7D812A76A6340077D6CE /* VersionViewModel.swift in Sources */,
 			);
