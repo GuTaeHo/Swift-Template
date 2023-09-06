@@ -22,24 +22,25 @@ class ViewController: UIViewController {
         
         
         /// `Async/Await 테스트`
-        /*
         Task {
             let (version, message) = await versionViewModel.confirmWithUrlSession(url: "http://test.check.blossom.bumblebeecrew.com/")
             
             print("\(version), \(message)")
         }
-        */
         
-        // bindingViews()
-        // initAction()
+        bindingViews()
+        initAction()
         // testCode()
-        jsonTypeMismatchTest()
+        // jsonTypeMismatchTest()
     }
     
     func bindingViews() {
         versionViewModel.$response.sink(receiveValue: { [weak self] response in
-            // TODO: 초기화 시 한번 호출됨...
-            DispatchQueue.main.async {
+            // FIXME: 초기화 시 한번 호출됨...
+            /// `MainActor`로 선언된 컨텍스트(UIView 나 UIViewController 같은 UIKit 속성들..) 내에서, Swift Concurrency 를 사용하면 시스템이 적절하게 MainThread 에 디스패치된다
+            /// = 현재 스레드가 백그라운드 스레드인지 메인스레드인지 신경 쓸 필요없이 업데이트
+            print(Thread.isMainThread)
+            Task {
                 self?.labelCollection[0].text = response.result?.iosCurrentVersion
                 self?.labelCollection[1].text = response.result?.iosMinVersion
                 self?.labelCollection[2].text = response.result?.noticeTitle

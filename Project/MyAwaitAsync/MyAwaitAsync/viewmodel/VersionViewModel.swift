@@ -22,6 +22,7 @@ class VersionViewModel: NSObject {
         request.setValue("0.6.0", forHTTPHeaderField: "appVersion")
         request.setValue("ios", forHTTPHeaderField: "OsType")
         
+        
         /// 전달한 URLRequest (또는 URL) 에 대한 (세션 데이터) 작업을 래핑한 publisher 를 리턴
         /// `publisher` 는 작업이 완료되면 데이터를 `발행`하거나, 실패한다면 `에러`와 함께 종료된다.
         URLSession.shared.dataTaskPublisher(for: request)

@@ -120,6 +120,7 @@ class RoundedShadowView: UIView {
     }
     
     func configuration() {
+        // FIXME: 여러번 이너뷰가 들어갈 거 같은데 확인해볼것
         addSubview(innerView)
         // MARK: 새로운 뷰를 얹을 수도 있기 때문에 뒤로 이동
         sendSubviewToBack(innerView)

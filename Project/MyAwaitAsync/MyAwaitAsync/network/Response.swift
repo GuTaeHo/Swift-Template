@@ -35,6 +35,7 @@ struct Response<T: Codable>: Codable {
     enum CodeType: Int {
         case success = 0
         case failure = -1
+        case parseFailure = -999
     }
     
     enum CodingKeys: String, CodingKey {
@@ -50,9 +51,9 @@ struct Response<T: Codable>: Codable {
      init(from:) 처리가 되어있다면 해당 프로퍼티에만 nil 이 할당되게된다.
      */
     init(from decoder: Decoder) throws {
-        let container: KeyedDecodingContainer<Response<T>.CodingKeys> = try decoder.container(keyedBy: Response<T>.CodingKeys.self)
-        self._code = try? container.decode(Int.self, forKey: ._code)
-        self.message = try? container.decode(String.self, forKey: .message)
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self._code = (try? container.decode(Int.self, forKey: ._code)) ?? CodeType.parseFailure.rawValue
+        self.message = (try? container.decode(String.self, forKey: .message)) ?? ""
         self.result = try? container.decode(T.self, forKey: .result)
     }
 }
