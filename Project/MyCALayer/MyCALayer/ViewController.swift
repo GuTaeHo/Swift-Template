@@ -8,12 +8,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-    lazy var testView: UIView = {
-        let testView = UIView()
-        testView.translatesAutoresizingMaskIntoConstraints = false
-        testView.backgroundColor = UIColor.red
+    lazy var imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.image = UIImage(named: "Vision-Pro.jpg")
+        imageView.contentMode = .scaleAspectFit
        
-        return testView
+        return imageView
     }()
     
     lazy var cameraView: UIView = {
@@ -27,14 +28,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubview(testView)
+        view.addSubview(imageView)
         NSLayoutConstraint.activate([
-            testView.topAnchor.constraint(equalTo: view.topAnchor),
-            testView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            testView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            testView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            imageView.topAnchor.constraint(equalTo: view.topAnchor),
+            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
-        
         
         view.addSubview(cameraView)
         NSLayoutConstraint.activate([
@@ -46,27 +45,77 @@ class ViewController: UIViewController {
         
         cameraView.layoutIfNeeded()
         
-        initCameraLayer()
+        // 뷰에 레이어를 씌움
+        cameraView.layer.addSublayer(makeCameraLayer())
         cameraView.mask(rect: CGRect(origin: calcGuideContentRectOrigin(), size: .init(width: view.bounds.width / 2, height: view.bounds.width / 2)), isRectMasking: true)
         
     }
     
-    private func initCameraLayer() {
+    private func makeCameraLayer() -> CAShapeLayer {
         // 카메라 뷰 사이즈에 맞게 레이어 초기화
         let guideLayer = CAShapeLayer()
-        guideLayer.frame = CGRect(origin: calcGuideBorderRectOrigin(), size: .init(width: (view.bounds.width / 2) + 20, height: (view.bounds.width / 2) + 20))
-        guideLayer.fillColor = UIColor.black.cgColor
+        guideLayer.frame = CGRect(origin: calcGuideBorderRectOrigin(), size: .init(width: (view.bounds.width / 2) + 10, height: (view.bounds.width / 2) + 10))
+        guideLayer.strokeColor = UIColor.systemGray3.cgColor
+        guideLayer.lineWidth = 5
         
         // 패스 생성
-        let path = UIBezierPath(rect: guideLayer.bounds)
-        guideLayer.fillRule = .evenOdd
+        let path = UIBezierPath()
         
-        // 오버레이 이미지 등록 `camOverlayImageView.frame`
-        // path.append(UIBezierPath(rect: <#T##CGRect#>))
+        // 브라켓 세 점의 위치
+        var pathA: CGPoint = .zero
+        var pathB: CGPoint = .zero
+        var pathC: CGPoint = .zero
+        
+        /* 좌측 상단 브라켓 */
+        pathA.x = guideLayer.bounds.minX
+        pathA.y = guideLayer.bounds.minY + 20
+        pathB.x = guideLayer.bounds.minX
+        pathB.y = guideLayer.bounds.minY
+        pathC.x = guideLayer.bounds.minX + 20
+        pathC.y = guideLayer.bounds.minY
+        
+        path.move(to: pathA)
+        path.addLine(to: pathB)
+        path.addLine(to: pathC)
+        
+        /* 우측 상단 브라켓 */
+        pathA.x = guideLayer.bounds.maxX - 20
+        pathA.y = guideLayer.bounds.minY
+        pathB.x = guideLayer.bounds.maxX
+        pathB.y = guideLayer.bounds.minY
+        pathC.x = guideLayer.bounds.maxX
+        pathC.y = guideLayer.bounds.minY + 20
+        
+        path.move(to: pathA)
+        path.addLine(to: pathB)
+        path.addLine(to: pathC)
+        
+        /* 우측 하단 브라켓 */
+        pathA.x = guideLayer.bounds.maxX
+        pathA.y = guideLayer.bounds.maxY - 20
+        pathB.x = guideLayer.bounds.maxX
+        pathB.y = guideLayer.bounds.maxY
+        pathC.x = guideLayer.bounds.maxX - 20
+        pathC.y = guideLayer.bounds.maxY
+        
+        path.move(to: pathA)
+        path.addLine(to: pathB)
+        path.addLine(to: pathC)
+        
+        /* 좌측 하단 브라켓 */
+        pathA.x = guideLayer.bounds.minX + 20
+        pathA.y = guideLayer.bounds.maxY
+        pathB.x = guideLayer.bounds.minX
+        pathB.y = guideLayer.bounds.maxY
+        pathC.x = guideLayer.bounds.minX
+        pathC.y = guideLayer.bounds.maxY - 20
+        
+        path.move(to: pathA)
+        path.addLine(to: pathB)
+        path.addLine(to: pathC)
+        
         guideLayer.path = path.cgPath
-        
-        // 뷰에 레이어를 씌움
-        cameraView.layer.addSublayer(guideLayer)
+        return guideLayer
     }
     
     private func calcGuideContentRectOrigin() -> CGPoint {
@@ -77,8 +126,8 @@ class ViewController: UIViewController {
     }
     
     private func calcGuideBorderRectOrigin() -> CGPoint {
-        let startX = (view.center.x - cameraView.bounds.width / 4) - 10
-        let startY = (view.center.y - cameraView.bounds.height / 4) - 10
+        let startX = (view.center.x - cameraView.bounds.width / 4) - 5
+        let startY = (view.center.y - cameraView.bounds.height / 4) - 5
         
         return CGPoint(x: startX, y: startY)
     }
