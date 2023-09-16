@@ -17,9 +17,18 @@ class QRScannerViewController: UIViewController {
         $0.layer.borderWidth = 5
     }
     
+    var blurView: UIVisualEffectView = .init().then {
+        let blurEffect = UIBlurEffect(style: .dark)
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.effect = blurEffect
+        $0.layer.masksToBounds = true
+    }
+    
     var messageLabel: UILabel = .init().then {
-        $0.textColor = .darkGray
+        $0.textColor = .white
+        $0.text = "인식된 QR 이 없습니다."
         $0.font = .boldSystemFont(ofSize: 24)
+        $0.textAlignment = .center
         $0.translatesAutoresizingMaskIntoConstraints = false
     }
     
@@ -59,10 +68,23 @@ class QRScannerViewController: UIViewController {
             videoPreviewLayer?.frame = view.layer.bounds
             view.layer.addSublayer(videoPreviewLayer!)
             view.addSubview(qrCodeFrameView)
+            view.addSubview(blurView)
+            blurView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+            blurView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+            blurView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+            blurView.contentView.addSubview(messageLabel)
+            blurView.layoutIfNeeded()
+            blurView.layer.cornerRadius = blurView.frame.height / 2
+            messageLabel.topAnchor.constraint(equalTo: blurView.topAnchor, constant: 12).isActive = true
+            messageLabel.leadingAnchor.constraint(equalTo: blurView.leadingAnchor, constant: 12).isActive = true
+            messageLabel.trailingAnchor.constraint(equalTo: blurView.trailingAnchor, constant: -12).isActive = true
+            messageLabel.bottomAnchor.constraint(equalTo: blurView.bottomAnchor, constant: -36).isActive = true
             view.bringSubviewToFront(qrCodeFrameView)
             
             // 캡쳐 시작
-            captureSession.startRunning()
+            DispatchQueue.global().async {
+                self.captureSession.startRunning()
+            }
         } catch {
             messageLabel.text = "\(error.localizedDescription)"
             view.addSubview(messageLabel)
@@ -107,10 +129,10 @@ class QRScannerViewController: UIViewController {
 extension QRScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
     /// QR 코드가 인식될 경우 호출
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-        // Check if the metadataObjects array is not nil and it contains at least one object.
+        // 인식된 객체가 없을 경우
         if metadataObjects.count == 0 {
             qrCodeFrameView.frame = CGRect.zero
-            messageLabel.text = "No QR code is detected"
+            messageLabel.text = "인식된 QR 이 없습니다."
             return
         }
         
