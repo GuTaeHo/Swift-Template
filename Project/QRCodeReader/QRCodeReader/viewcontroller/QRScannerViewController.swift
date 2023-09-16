@@ -131,7 +131,9 @@ extension QRScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         // 인식된 객체가 없을 경우
         if metadataObjects.count == 0 {
-            qrCodeFrameView.frame = CGRect.zero
+            qrCodeFrameView.layer.borderColor = UIColor.systemGray5.cgColor
+            qrCodeFrameView.frame = CGRect(origin: .zero, size: .init(width: 200, height: 200))
+            qrCodeFrameView.center = view.center
             messageLabel.text = "인식된 QR 이 없습니다."
             return
         }
@@ -143,6 +145,7 @@ extension QRScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
             // 메타데이터가 QR code 형태와 일치하면, 라벨에 정보 지정 및 프레임을 qr 코드 크기에 맞게 조정
             let barCodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObject)
             qrCodeFrameView.frame = barCodeObject!.bounds
+            qrCodeFrameView.layer.borderColor = UIColor.systemPink.cgColor
             
             if metadataObject.stringValue != nil {
                 messageLabel.text = metadataObject.stringValue
