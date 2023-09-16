@@ -147,6 +147,7 @@ extension QRScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
             qrCodeFrameView.frame = barCodeObject!.bounds
             qrCodeFrameView.layer.borderColor = UIColor.systemPink.cgColor
             
+            // 메타데이터 정보를 텍스트로 표시
             if metadataObject.stringValue != nil {
                 messageLabel.text = metadataObject.stringValue
             }

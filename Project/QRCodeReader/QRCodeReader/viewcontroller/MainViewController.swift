@@ -10,7 +10,6 @@ import AVFoundation
 
 class MainViewController: UIViewController {
     lazy var scrollView: UIScrollView = .init().then {
-        $0.delegate = self
         $0.translatesAutoresizingMaskIntoConstraints = false
     }
     
@@ -20,12 +19,6 @@ class MainViewController: UIViewController {
         $0.spacing = 12
         $0.directionalLayoutMargins = .init(top: 12, leading: 18, bottom: 12, trailing: 18)
         $0.translatesAutoresizingMaskIntoConstraints = false
-    }
-    
-    lazy var textField: UITextField = .init().then {
-        $0.placeholder = "테스트 플레이스 홀더"
-        $0.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        $0.delegate = self
     }
     
     lazy var button: UIButton = .init().then {
@@ -65,19 +58,10 @@ class MainViewController: UIViewController {
         initAction()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        button.configuration?.showsActivityIndicator = false
-        button.configuration?.baseBackgroundColor = .systemIndigo
-        button.configuration?.baseForegroundColor = .white
-    }
-    
     func initLayout() {
         view.addSubview(scrollView)
         view.addSubview(button)
         scrollView.addSubview(stackViewInScrollView)
-        stackViewInScrollView.addArrangedSubview(textField)
         
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -115,7 +99,9 @@ class MainViewController: UIViewController {
                             button.configuration?.baseForegroundColor = .gray
                             
                             let qrScannerVC = QRScannerViewController()
-                            self.present(qrScannerVC, animated: true)
+                            qrScannerVC.isModalInPresentation = true
+                            qrScannerVC.presentationController?.delegate = self
+                            self.navigationController?.present(qrScannerVC, animated: true)
                         }
                     } else {
                         let alert = UIAlertController(title: "카메라 접근 거부됨", message: "카메라 접근 권한을 허용해주세요.", preferredStyle: .alert)
@@ -143,8 +129,18 @@ class MainViewController: UIViewController {
     }
 }
 
-extension MainViewController: UIScrollViewDelegate {
-    
+extension MainViewController: UIAdaptivePresentationControllerDelegate {
+    // pageSheet 형태로 표시된 뷰 컨트롤러가 dismiss 될 경우 호출
+    // MARK: 단, isModelInPresentation 이 true 일 경우에만 동작
+    func presentationControllerDidAttemptToDismiss(_ presentationController: UIPresentationController) {
+        button.configuration?.showsActivityIndicator = false
+        button.configuration?.baseBackgroundColor = .systemIndigo
+        button.configuration?.baseForegroundColor = .white
+        var attributedString = AttributedString("QR 코드 인식")
+        button.configuration?.attributedTitle = attributedString
+        button.configuration?.attributedTitle?.font = .boldSystemFont(ofSize: 24)
+        presentationController.presentedViewController.dismiss(animated: true)
+    }
 }
 
 extension MainViewController: UITextFieldDelegate {
