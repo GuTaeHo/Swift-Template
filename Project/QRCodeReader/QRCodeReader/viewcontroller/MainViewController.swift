@@ -50,7 +50,7 @@ class MainViewController: UIViewController {
             return isAuthorized
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -91,8 +91,8 @@ class MainViewController: UIViewController {
             AVCaptureDevice.requestAccess(for: .video, completionHandler: { [weak self] granted in
                 guard let self = self else { return }
                 DispatchQueue.main.async {
-                    if granted == true {
-                        if button.state == .highlighted {
+                    if button.state == .highlighted {
+                        if granted == true {
                             button.configuration?.showsActivityIndicator = true
                             button.configuration?.title = ""
                             button.configuration?.baseBackgroundColor = .lightGray
@@ -102,26 +102,26 @@ class MainViewController: UIViewController {
                             qrScannerVC.isModalInPresentation = true
                             qrScannerVC.presentationController?.delegate = self
                             self.navigationController?.present(qrScannerVC, animated: true)
-                        }
-                    } else {
-                        let alert = UIAlertController(title: "카메라 접근 거부됨", message: "카메라 접근 권한을 허용해주세요.", preferredStyle: .alert)
-                        
-                        // 메시지 창 컨트롤러에 들어갈 버튼 액션 객체 생성
-                        let cancelAction = UIAlertAction(title: "취소", style: UIAlertAction.Style.cancel, handler: nil)
-                        let submitAction =  UIAlertAction(title: "설정", style: UIAlertAction.Style.destructive) { _ in
-                            guard let url = URL(string: UIApplication.openSettingsURLString) else { return }
+                        } else {
+                            let alert = UIAlertController(title: "카메라 접근 거부됨", message: "카메라 접근 권한을 허용해주세요.", preferredStyle: .alert)
                             
-                            if UIApplication.shared.canOpenURL(url) {
-                                UIApplication.shared.open(url)
+                            // 메시지 창 컨트롤러에 들어갈 버튼 액션 객체 생성
+                            let cancelAction = UIAlertAction(title: "취소", style: UIAlertAction.Style.cancel, handler: nil)
+                            let submitAction =  UIAlertAction(title: "설정", style: UIAlertAction.Style.destructive) { _ in
+                                guard let url = URL(string: UIApplication.openSettingsURLString) else { return }
+                                
+                                if UIApplication.shared.canOpenURL(url) {
+                                    UIApplication.shared.open(url)
+                                }
                             }
+                            
+                            // 메시지 창 컨트롤러에 버튼 액션을 추가
+                            alert.addAction(cancelAction)
+                            alert.addAction(submitAction)
+                            
+                            self.present(alert, animated: false)
+                            return
                         }
-
-                        // 메시지 창 컨트롤러에 버튼 액션을 추가
-                        alert.addAction(cancelAction)
-                        alert.addAction(submitAction)
-
-                        self.present(alert, animated: false)
-                        return
                     }
                 }
             })

@@ -20,7 +20,10 @@ class RegExUtil {
     /// 사업자 번호 여부 ex. 0112233333
     private static let businessNumberEx = "^([0-9]{10})$"
     /// 하이픈이 포함된 사업자 번호 여부 ex. 011-22-33333
-    private static var businessNumberExWithHyphen = "^([0-9]{3})-?([0-9]{2})-?([0-9]{5})$"
+    private static let businessNumberExWithHyphen = "^([0-9]{3})-?([0-9]{2})-?([0-9]{5})$"
+    
+    /// 한글 & 영문 & 숫자 & 공백 허용
+    private static let onlyTextEx = "[ㄱ-ㅎㅏ-ㅣ가-힣a-zA-Z0-9\\s]$"
     
     /// 이메일 체크
     static func isEmail(email: String?) -> Bool {
@@ -70,6 +73,15 @@ class RegExUtil {
             if number.range(of: businessNumberEx, options: .regularExpression) != nil {
                 return true
             }
+        }
+        return false
+    }
+    
+    // 한글 & 영문 & 숫자 & 공백 포함된 경우
+    static func isOnlyText(text: String?) -> Bool {
+        guard let text = text, text != "" else { return false }
+        if text.range(of: onlyTextEx, options: .regularExpression) != nil {
+            return true
         }
         return false
     }

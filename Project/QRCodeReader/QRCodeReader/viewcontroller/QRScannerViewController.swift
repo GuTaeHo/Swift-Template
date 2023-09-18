@@ -10,12 +10,14 @@ import AVFoundation
 
 
 class QRScannerViewController: UIViewController {
+    /// 디바이스 입, 출력 데이터 가공
     var captureSession = AVCaptureSession()
+    /// 카메라 미리보기 레이어
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
-    var qrCodeFrameView: UIView = .init().then {
-        $0.layer.borderColor = UIColor.green.cgColor
-        $0.layer.borderWidth = 5
-    }
+    /// qr코드 가이드
+    var qrCodeFrameView = UIView()
+    /// qr코드 브라켓
+    var qrCodeBraket = CAShapeLayer()
     
     var blurView: UIVisualEffectView = .init().then {
         let blurEffect = UIBlurEffect(style: .dark)
@@ -80,6 +82,7 @@ class QRScannerViewController: UIViewController {
             messageLabel.trailingAnchor.constraint(equalTo: blurView.trailingAnchor, constant: -12).isActive = true
             messageLabel.bottomAnchor.constraint(equalTo: blurView.bottomAnchor, constant: -36).isActive = true
             view.bringSubviewToFront(qrCodeFrameView)
+            qrCodeFrameView.layer.addSublayer(qrCodeBraket)
             
             // 캡쳐 시작
             DispatchQueue.global().async {
@@ -124,6 +127,74 @@ class QRScannerViewController: UIViewController {
         let devices = getListOfCameras()
         return convertDeviceListToString(devices)
     }
+    
+    private func makeCameraLayer(rect: CGRect) -> CAShapeLayer {
+        // 카메라 뷰 사이즈에 맞게 레이어 초기화
+        let guideLayer = CAShapeLayer()
+        guideLayer.frame = rect
+        guideLayer.lineWidth = 10
+        
+        // 패스 생성
+        let path = UIBezierPath()
+        
+        // 브라켓 세 점의 위치
+        var pathA: CGPoint = .zero
+        var pathB: CGPoint = .zero
+        var pathC: CGPoint = .zero
+        
+        /* 좌측 상단 브라켓 */
+        pathA.x = guideLayer.bounds.minX
+        pathA.y = guideLayer.bounds.minY + 30
+        pathB.x = guideLayer.bounds.minX
+        pathB.y = guideLayer.bounds.minY
+        pathC.x = guideLayer.bounds.minX + 30
+        pathC.y = guideLayer.bounds.minY
+        
+        path.move(to: pathA)
+        path.addLine(to: pathB)
+        path.addLine(to: pathC)
+        
+        /* 우측 상단 브라켓 */
+        pathA.x = guideLayer.bounds.maxX - 30
+        pathA.y = guideLayer.bounds.minY
+        pathB.x = guideLayer.bounds.maxX
+        pathB.y = guideLayer.bounds.minY
+        pathC.x = guideLayer.bounds.maxX
+        pathC.y = guideLayer.bounds.minY + 30
+        
+        path.move(to: pathA)
+        path.addLine(to: pathB)
+        path.addLine(to: pathC)
+        
+        /* 우측 하단 브라켓 */
+        pathA.x = guideLayer.bounds.maxX
+        pathA.y = guideLayer.bounds.maxY - 30
+        pathB.x = guideLayer.bounds.maxX
+        pathB.y = guideLayer.bounds.maxY
+        pathC.x = guideLayer.bounds.maxX - 30
+        pathC.y = guideLayer.bounds.maxY
+        
+        path.move(to: pathA)
+        path.addLine(to: pathB)
+        path.addLine(to: pathC)
+        
+        /* 좌측 하단 브라켓 */
+        pathA.x = guideLayer.bounds.minX + 30
+        pathA.y = guideLayer.bounds.maxY
+        pathB.x = guideLayer.bounds.minX
+        pathB.y = guideLayer.bounds.maxY
+        pathC.x = guideLayer.bounds.minX
+        pathC.y = guideLayer.bounds.maxY - 30
+        
+        path.move(to: pathA)
+        path.addLine(to: pathB)
+        path.addLine(to: pathC)
+        
+        guideLayer.path = path.cgPath
+        guideLayer.lineCap = .round
+        guideLayer.lineJoin = .round
+        return guideLayer
+    }
 }
 
 extension QRScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
@@ -134,7 +205,11 @@ extension QRScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
             qrCodeFrameView.layer.borderColor = UIColor.systemGray5.cgColor
             qrCodeFrameView.frame = CGRect(origin: .zero, size: .init(width: 200, height: 200))
             qrCodeFrameView.center = view.center
-            messageLabel.text = "인식된 QR 이 없습니다."
+            qrCodeBraket.frame = qrCodeFrameView.frame
+            qrCodeBraket.strokeColor = UIColor.systemGray4.cgColor
+            qrCodeBraket = makeCameraLayer(rect: qrCodeFrameView.frame)
+            qrCodeFrameView.layer.addSublayer(qrCodeBraket)
+            messageLabel.text = "인식된 QR 코드가 없습니다."
             return
         }
         
@@ -145,7 +220,10 @@ extension QRScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
             // 메타데이터가 QR code 형태와 일치하면, 라벨에 정보 지정 및 프레임을 qr 코드 크기에 맞게 조정
             let barCodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObject)
             qrCodeFrameView.frame = barCodeObject!.bounds
-            qrCodeFrameView.layer.borderColor = UIColor.systemPink.cgColor
+            qrCodeBraket.frame = barCodeObject!.bounds
+            qrCodeBraket.strokeColor = UIColor.systemPink.cgColor
+            qrCodeBraket = makeCameraLayer(rect: barCodeObject!.bounds)
+            qrCodeFrameView.layer.addSublayer(qrCodeBraket)
             
             // 메타데이터 정보를 텍스트로 표시
             if metadataObject.stringValue != nil {

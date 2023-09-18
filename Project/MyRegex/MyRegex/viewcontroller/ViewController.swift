@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet var btEmail: UIButton!
     @IBOutlet var btPassword: UIButton!
     @IBOutlet var btBusinessNumber: UIButton!
+    @IBOutlet var btOnlyText: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +66,14 @@ class ViewController: UIViewController {
             } else {
                 btBusinessNumber.configuration?.showsActivityIndicator = true
                 btBusinessNumber.isEnabled = false
+            }
+            
+            if RegExUtil.isOnlyText(text: testMessage) {
+                btOnlyText.configuration?.showsActivityIndicator = false
+                btOnlyText.isEnabled = true
+            } else {
+                btOnlyText.configuration?.showsActivityIndicator = true
+                btOnlyText.isEnabled = false
             }
         }
         
