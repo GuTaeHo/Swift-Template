@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0535C9DC2ABAAA3100740B16 /* ResponseForAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535C9DB2ABAAA3100740B16 /* ResponseForAd.swift */; };
+		0535C9DE2ABAAA6900740B16 /* Advertisement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535C9DD2ABAAA6900740B16 /* Advertisement.swift */; };
+		0535C9E12ABAAA9A00740B16 /* CommonShowAdInfoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535C9E02ABAAA9A00740B16 /* CommonShowAdInfoRequest.swift */; };
+		0535C9E42ABAAB0F00740B16 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535C9E32ABAAB0F00740B16 /* Encodable.swift */; };
+		0535C9E62ABAAE1B00740B16 /* AdNetworkClientForIgnoreSSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535C9E52ABAAE1B00740B16 /* AdNetworkClientForIgnoreSSL.swift */; };
 		0583C88728617F4D0083277D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0583C88628617F4D0083277D /* AppDelegate.swift */; };
 		0583C88928617F4D0083277D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0583C88828617F4D0083277D /* SceneDelegate.swift */; };
 		0583C88B28617F4D0083277D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0583C88A28617F4D0083277D /* ViewController.swift */; };
@@ -22,6 +27,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0535C9DB2ABAAA3100740B16 /* ResponseForAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseForAd.swift; sourceTree = "<group>"; };
+		0535C9DD2ABAAA6900740B16 /* Advertisement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertisement.swift; sourceTree = "<group>"; };
+		0535C9E02ABAAA9A00740B16 /* CommonShowAdInfoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonShowAdInfoRequest.swift; sourceTree = "<group>"; };
+		0535C9E32ABAAB0F00740B16 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+		0535C9E52ABAAE1B00740B16 /* AdNetworkClientForIgnoreSSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdNetworkClientForIgnoreSSL.swift; sourceTree = "<group>"; };
 		0583C88328617F4C0083277D /* MyAlamoFire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAlamoFire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0583C88628617F4D0083277D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0583C88828617F4D0083277D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +70,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		0535C9DF2ABAAA7F00740B16 /* request */ = {
+			isa = PBXGroup;
+			children = (
+				0535C9E02ABAAA9A00740B16 /* CommonShowAdInfoRequest.swift */,
+			);
+			path = request;
+			sourceTree = "<group>";
+		};
+		0535C9E22ABAAB0000740B16 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				0535C9E32ABAAB0F00740B16 /* Encodable.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
 		0583C87A28617F4C0083277D = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +107,7 @@
 		0583C88528617F4C0083277D /* MyAlamoFire */ = {
 			isa = PBXGroup;
 			children = (
+				0535C9E22ABAAB0000740B16 /* extension */,
 				0583C8A42861B4C70083277D /* model */,
 				0583C89A28619BCA0083277D /* network */,
 				0583C88628617F4D0083277D /* AppDelegate.swift */,
@@ -97,10 +124,12 @@
 		0583C89A28619BCA0083277D /* network */ = {
 			isa = PBXGroup;
 			children = (
+				0535C9DF2ABAAA7F00740B16 /* request */,
 				0583C8A12861AF580083277D /* response */,
 				0583C89B28619BE10083277D /* NetworkClient.swift */,
 				0583C89D2861A3D00083277D /* DataParser.swift */,
 				0583C89F2861AECE0083277D /* NetworkPresenter.swift */,
+				0535C9E52ABAAE1B00740B16 /* AdNetworkClientForIgnoreSSL.swift */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -110,6 +139,7 @@
 			children = (
 				0583C8A22861AF650083277D /* Response.swift */,
 				0583C8A52862A0E00083277D /* ResponsePosts.swift */,
+				0535C9DB2ABAAA3100740B16 /* ResponseForAd.swift */,
 			);
 			path = response;
 			sourceTree = "<group>";
@@ -117,6 +147,7 @@
 		0583C8A42861B4C70083277D /* model */ = {
 			isa = PBXGroup;
 			children = (
+				0535C9DD2ABAAA6900740B16 /* Advertisement.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -245,12 +276,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0535C9E62ABAAE1B00740B16 /* AdNetworkClientForIgnoreSSL.swift in Sources */,
 				0583C88B28617F4D0083277D /* ViewController.swift in Sources */,
 				0583C8A02861AECE0083277D /* NetworkPresenter.swift in Sources */,
 				0583C89E2861A3D00083277D /* DataParser.swift in Sources */,
 				0583C88728617F4D0083277D /* AppDelegate.swift in Sources */,
+				0535C9DC2ABAAA3100740B16 /* ResponseForAd.swift in Sources */,
 				0583C88928617F4D0083277D /* SceneDelegate.swift in Sources */,
 				0583C89C28619BE10083277D /* NetworkClient.swift in Sources */,
+				0535C9E42ABAAB0F00740B16 /* Encodable.swift in Sources */,
+				0535C9E12ABAAA9A00740B16 /* CommonShowAdInfoRequest.swift in Sources */,
+				0535C9DE2ABAAA6900740B16 /* Advertisement.swift in Sources */,
 				0583C8A62862A0E00083277D /* ResponsePosts.swift in Sources */,
 				0583C8A32861AF650083277D /* Response.swift in Sources */,
 			);
@@ -400,7 +436,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 82F458XMQ9;
+				DEVELOPMENT_TEAM = L8WFLHVUYX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyAlamoFire/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -413,7 +449,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.muangs.MyAlamoFire;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyAlamoFire;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -429,7 +465,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 82F458XMQ9;
+				DEVELOPMENT_TEAM = L8WFLHVUYX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyAlamoFire/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -442,7 +478,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.muangs.MyAlamoFire;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyAlamoFire;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

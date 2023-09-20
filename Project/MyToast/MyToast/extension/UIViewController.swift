@@ -97,6 +97,66 @@ extension UIViewController {
          */
     }
     
+    
+    func showToastCenter(message: String) {
+        let toastLabel = ToastLabel()
+        toastLabel.backgroundColor = UIColor(r: 51, g: 51, b: 51, a: 1)
+        toastLabel.lineBreakMode = .byWordWrapping
+        toastLabel.textColor = .white
+        toastLabel.font = UIFont.systemFont(ofSize: 16)
+        toastLabel.numberOfLines = 0
+        toastLabel.textAlignment = .center
+        toastLabel.text = message
+        toastLabel.sizeToFit()
+        toastLabel.layer.cornerRadius = 18
+        toastLabel.clipsToBounds = true
+        toastLabel.isUserInteractionEnabled = false
+        
+        let height = toastLabel.sizeThatFits(CGSize(width: toastLabel.frame.width, height: CGFloat.greatestFiniteMagnitude)).height + 24
+        
+        self.view.addSubview(toastLabel)
+        self.view.bringSubviewToFront(toastLabel)
+        
+        toastLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        let toastWidthConstrains = toastLabel.widthAnchor.constraint(equalToConstant: toastLabel.intrinsicContentSize.width)
+        let toastHeightConstrains = toastLabel.heightAnchor.constraint(equalToConstant: height)
+        let toastCenterXConstrains = toastLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        let toastCenterYConstrains = toastLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        
+        NSLayoutConstraint.activate([
+            toastWidthConstrains,
+            toastHeightConstrains,
+            toastCenterXConstrains,
+            toastCenterYConstrains
+        ])
+        
+        view.layoutIfNeeded()
+        
+        let toastMaxWidth = UIScreen.main.bounds.width - 72
+        
+        // 토스트가 기기 너비에 도달하면...
+        if toastLabel.frame.width > toastMaxWidth {
+            // 너비, 높이 제약 해제
+            toastWidthConstrains.isActive = false
+            toastHeightConstrains.isActive = false
+            toastLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 36).isActive = true
+            toastLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -36).isActive = true
+            // MARK: 너비가 반영되어야 높이가 변경됨!!
+            view.layoutIfNeeded()
+            toastLabel.heightAnchor.constraint(equalToConstant: toastLabel.intrinsicContentSize.height).isActive = true
+        }
+        
+        DispatchQueue.main.async {
+            UIView.animate(withDuration: 0.3,
+                           delay: 2.0,
+                           options: .curveEaseOut,
+                           animations: { toastLabel.alpha = 0.0 }) { _ in
+                toastLabel.removeFromSuperview()
+            }
+        }
+    }
+    
     /// 스낵바 표시
     func showSnackbar(message: String) {
         

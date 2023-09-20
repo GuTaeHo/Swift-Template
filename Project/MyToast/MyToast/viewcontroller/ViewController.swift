@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     /// 토스트 표시
     @IBAction func toastButtonClicked(_ sender: UIButton) {
         let message = (tfMessage.text == "") ? "입력란 공백" : tfMessage.text!
-        showToast(message: message)
+        showToastCenter(message: message)
         
         UIView.animate(withDuration: 0.2, animations: { [weak self] in
             self?.btToast.showIndicator()

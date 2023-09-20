@@ -14,7 +14,6 @@
 		05300E372AA8C78D00ED9870 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05300E362AA8C78D00ED9870 /* Assets.xcassets */; };
 		05300E3A2AA8C78D00ED9870 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05300E382AA8C78D00ED9870 /* LaunchScreen.storyboard */; };
 		05300E422AA8CACE00ED9870 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05300E412AA8CACE00ED9870 /* UIView+.swift */; };
-		05300E482AA949DD00ED9870 /* Vision-Pro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 05300E472AA949DD00ED9870 /* Vision-Pro.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +26,6 @@
 		05300E392AA8C78D00ED9870 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05300E3B2AA8C78D00ED9870 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05300E412AA8CACE00ED9870 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
-		05300E472AA949DD00ED9870 /* Vision-Pro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Vision-Pro.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +66,6 @@
 				05300E382AA8C78D00ED9870 /* LaunchScreen.storyboard */,
 				05300E3B2AA8C78D00ED9870 /* Info.plist */,
 				05300E412AA8CACE00ED9870 /* UIView+.swift */,
-				05300E472AA949DD00ED9870 /* Vision-Pro.jpg */,
 			);
 			path = MyCALayer;
 			sourceTree = "<group>";
@@ -134,7 +131,6 @@
 				05300E3A2AA8C78D00ED9870 /* LaunchScreen.storyboard in Resources */,
 				05300E372AA8C78D00ED9870 /* Assets.xcassets in Resources */,
 				05300E352AA8C78C00ED9870 /* Main.storyboard in Resources */,
-				05300E482AA949DD00ED9870 /* Vision-Pro.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +288,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -320,6 +317,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

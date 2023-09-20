@@ -8,24 +8,28 @@
 import UIKit
 
 extension UIView {
-    /// 해당 영역
-    func mask(rect: CGRect, isRectMasking: Bool) {
-        // 1. path 인스턴스로 경로 정보 획득
-        let path = CGMutablePath()
-        if isRectMasking {
-            let allRect = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height)
-            path.addRect(allRect)
-        }
-        path.addRect(rect)
-        
-        // 2. CAShapeLayer 인스턴스에 위 path 인스턴스 사용
-        let shapeLayer = CAShapeLayer()
-        shapeLayer.path = path
-        if isRectMasking {
-            shapeLayer.fillRule = .evenOdd
+    /// 레이어 마스킹
+    /// - Parameters
+    ///     - rect: 마스킹 영역
+    ///     - cornerRadius: 모서리 반경 (기본값: 0)
+    ///     - isPierce: 레이어 겹침 처리
+    func mask(rect: CGRect, cornerRadius: CGFloat = 0, isPierce: Bool) {
+        // 1. 마스킹 뼈대가 될 패스 생성
+        let path = UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius)
+        if isPierce {
+            let ovalPath = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height), cornerRadius: cornerRadius)
+            path.append(ovalPath)
         }
         
-        // 3. mask에 shapeLayer 인스턴스 사용
-        layer.mask = shapeLayer
+        // 2. 마스킹 처리될 레이어 생성
+        let maskLayer = CAShapeLayer()
+        maskLayer.path = path.cgPath
+        
+        if isPierce {
+            maskLayer.fillRule = .evenOdd
+        }
+        
+        // 3. 뷰 기본 레이어에 마스킹
+        layer.mask = maskLayer
     }
 }
