@@ -46,12 +46,12 @@ class ViewController: UIViewController {
         cameraView.layoutIfNeeded()
         
         // 뷰에 레이어를 씌움
-        cameraView.layer.addSublayer(makeCameraLayer())
-        cameraView.mask(rect: CGRect(origin: calcGuideContentRectOrigin(), size: .init(width: view.bounds.width / 2, height: view.bounds.width / 2)), cornerRadius: 8, isPierce: true)
+        cameraView.layer.addSublayer(makeBraket())
+        cameraView.mask(rect: CGRect(origin: calcGuideContentRectOrigin(), size: .init(width: view.bounds.width / 2, height: view.bounds.width / 2)), cornerRadius: 16, isPierce: true)
         
     }
     
-    private func makeCameraLayer() -> CAShapeLayer {
+    private func makeBraket() -> CAShapeLayer {
         // 카메라 뷰 사이즈에 맞게 레이어 초기화
         let guideLayer = CAShapeLayer()
         guideLayer.frame = CGRect(origin: calcGuideBorderRectOrigin(), size: .init(width: (view.bounds.width / 2) + 30, height: (view.bounds.width / 2) + 30))
