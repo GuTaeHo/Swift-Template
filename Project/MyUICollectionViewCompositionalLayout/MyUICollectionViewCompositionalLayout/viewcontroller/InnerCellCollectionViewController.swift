@@ -33,7 +33,6 @@ class InnerCellCollectionViewController: UIViewController {
         // MARK: 단, Cell Identifier 는 반드시 등록..!! (재사용 시 필수적)
         collectionView.delegate = self
         collectionView.dataSource = self
-        // MARK: CompositionalLayout 을 사용해도 정확하게 지정된 높이(45)가 적용되지 않는듯...
         collectionView.collectionViewLayout = makeCompositionalLayout()
         collectionView.reloadData()
     }
@@ -47,7 +46,13 @@ class InnerCellCollectionViewController: UIViewController {
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
 
         let section = NSCollectionLayoutSection(group: group)
+        // MARK: orthogonalScrollingBehavior 속성은 내부적으로 UICollectionView 를 추가하여 덧대는(?) 방식을 사용함
         section.orthogonalScrollingBehavior = .continuous
+        // continuousGroupLeadingBoundary 속성은 각 그룹의 leading 에서 자연스럽게 멈춤
+        // section.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
+        section.visibleItemsInvalidationHandler = { (visibleItems, offset, env) in
+            print("visibleItems \(visibleItems.first?.bounds)\noffset \(offset)\nenv \(env)")
+        }
         
         return UICollectionViewCompositionalLayout(section: section)
     }
