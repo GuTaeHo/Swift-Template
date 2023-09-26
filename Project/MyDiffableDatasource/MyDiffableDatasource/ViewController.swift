@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         .init(code: 2, thumbnail: "https://img.danawa.com/prod_img/500000/242/814/img/17814242_2.jpg?_v=20230707132057", brand: "Apple", name: "아이폰14 플러스 512GB, LG U+, 아이폰 15 pro 는 언제 출시되냐고오", price: 999),
         .init(code: 3, thumbnail: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP705/SP705-iphone_6-mul.png", brand: "Apple", name: "아이폰6 64GB, LG U+", price: 549),
         .init(code: 4, thumbnail: "https://www.thelec.kr/news/photo/202203/16269_14623_2632.png", brand: "Apple", name: "아이폰SE3 128GB, LG U+", price: 449),
+        .init(code: 0, thumbnail: "https://img.danawa.com/prod_img/500000/148/824/img/17824148_3.jpg?_v=20220929125243", brand: "Apple", name: "아이폰14 프로 512GB, LG U+", price: 999),
     ]
     
     
