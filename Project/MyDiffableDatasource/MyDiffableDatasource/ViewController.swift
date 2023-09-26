@@ -30,15 +30,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // UICollectionView.CellRegistration 을 통해 셀을 등록할 수도 있음
+        // 셀의 모양은 등록 시 지정, dataSource 에서 아이템 전달
 //        let cellRegistration = UICollectionView.CellRegistration<DiffableCollectionViewCell, Product> { (cell, indexPath, item) in
 //            cell.configuration(item)
 //        }
         
-         collectionView.register(UINib(nibName: "DiffableCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "DiffableCollectionViewCell")
+        collectionView.register(UINib(nibName: "DiffableCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "DiffableCollectionViewCell")
         collectionView.collectionViewLayout = makeCompositionalLayout()
         
-        // 섹션 및 아이템 타입, 콜렉션 뷰, 프로바이더 제공
+        // <섹션 및 아이템 타입>, 콜렉션 뷰, 프로바이더 제공
         dataSource = UICollectionViewDiffableDataSource<Section, Product>(collectionView: collectionView) { (collectionView, indexPath, item) -> UICollectionViewCell? in
+//            let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: item)
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DiffableCollectionViewCell", for: indexPath) as? DiffableCollectionViewCell else { preconditionFailure() }
             cell.configuration(item)
             return cell
