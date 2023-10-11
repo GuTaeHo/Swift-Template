@@ -16,14 +16,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadWebPage("http://muangs.com")
+        loadWebPage("http://muangs.kr")
     }
     
     func loadWebPage(_ url: String) {
         let myUrl = URL(string: url)
         let myRequest = URLRequest(url: myUrl!)
-        myWebView.load(myRequest)
+        myWebView.navigationDelegate = self
         myWebView.addObserver(self, forKeyPath: #keyPath(WKWebView.isLoading), options: .new, context: nil)
+        myWebView.load(myRequest)
+        print(myWebView.scrollView.contentSize)
     }
     
     // 로딩 여부 옵저빙
@@ -98,6 +100,54 @@ class ViewController: UIViewController {
     // 다음으로
     @IBAction func btnGoForward(_ sender: UIBarButtonItem) {
         myWebView.goForward()
+    }
+}
+
+/**
+ 참고 - https://sujinnaljin.medium.com/swift-wknavigationdelegate-%EB%A9%94%EC%84%9C%EB%93%9C-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0-4ba7d97063aa
+ */
+extension ViewController: WKNavigationDelegate {
+    // 네비게이션 액션이 다운로드 되었을 경우 호출 (decisionHandler 가 .download 로 설정됨을 의미하는 듯)
+    func webView(_ webView: WKWebView, navigationAction: WKNavigationAction, didBecome download: WKDownload) {
+        print("navigationAction > \(navigationAction), didBecome > \(download)")
+    }
+    
+    // 네비게이션 응답이 다운로드 되었을 경우 호출
+    func webView(_ webView: WKWebView, navigationResponse: WKNavigationResponse, didBecome download: WKDownload) {
+        print("navigationResponse > \(navigationResponse), didBecome > \(download)")
+    }
+    
+    // 네비게이션이 시작되기전, 임시 허가를 받은 상태에 호출
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        print("didStartProvisionalNavigation > \(navigation.description)")
+    }
+    
+    // 컨텐츠를 수신하기 시작했을 때 호출 (콘텐츠 사이즈를 구할 수 있음)
+    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+        print("didCommit > \(navigation.description)")
+        print(myWebView.scrollView.contentSize)
+    }
+    
+    // 웹 페이지 로딩이 완전히 끝났을 경우 호출
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        print("didFinish > \(navigation.description)")
+        print(myWebView.scrollView.contentSize)
+    }
+    
+    // 초기 네비게이션 프로세스 중 오류 발생 시 호출
+    // MARK: 탐색 중 오류가 아닌, URL 이 잘못되었거나, 네트워크 연결이 해제되었을 때 등 웹페이지 자체를 불러오지 못한 경우
+    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+        print("didFailProvisionalNavigation > \(navigation.debugDescription), withError > \(error.localizedDescription)")
+    }
+    
+    // 네비게이션 중 오류가 발생하면 호출 (didCommit 이후)
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        print("didFail > \(navigation.description), error > \(error.localizedDescription)")
+    }
+    
+    // 웹 프로세스가 종료되었을 때 호출
+    func webViewWebContentProcessDidTerminate(_ webView: WKWebView) {
+        print("webViewWebContentProcessDidTerminate")
     }
 }
 
