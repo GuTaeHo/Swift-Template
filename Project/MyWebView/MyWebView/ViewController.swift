@@ -20,12 +20,14 @@ class ViewController: UIViewController {
     }
     
     func loadWebPage(_ url: String) {
-        let myUrl = URL(string: url)
-        let myRequest = URLRequest(url: myUrl!)
-        myWebView.navigationDelegate = self
-        myWebView.addObserver(self, forKeyPath: #keyPath(WKWebView.isLoading), options: .new, context: nil)
-        myWebView.load(myRequest)
-        print(myWebView.scrollView.contentSize)
+        if let url = canOpen(urlString: url) {
+            let myRequest = URLRequest(url: url)
+            myWebView.navigationDelegate = self
+            myWebView.addObserver(self, forKeyPath: #keyPath(WKWebView.isLoading), options: .new, context: nil)
+            myWebView.load(myRequest)
+        } else {
+            print("URL 이 유효하지 않습니다")
+        }
     }
     
     // 로딩 여부 옵저빙
@@ -56,6 +58,15 @@ class ViewController: UIViewController {
             strUrl = "http://" + strUrl
         }
         return strUrl
+    }
+    
+    func canOpen(urlString: String?) -> URL? {
+        if let urlString = urlString {
+            if let url = URL(string: urlString) {
+                return UIApplication.shared.canOpenURL(url) == true ? url : nil
+            }
+        }
+        return nil
     }
     
     // 첫 번째 사이트로 이동
