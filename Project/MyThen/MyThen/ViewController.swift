@@ -16,6 +16,18 @@ class ViewController: UIViewController {
         $0.widthAnchor.constraint(equalToConstant: 300).isActive = true
         $0.heightAnchor.constraint(equalToConstant: 150).isActive = true
     }
+    
+    lazy var stackViewForHiddenTest = UIStackView().then {
+        $0.axis = .vertical
+        $0.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    lazy var hiddenTestView = UIView().then {
+        $0.backgroundColor = .red
+        $0.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        $0.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        // $0.translatesAutoresizingMaskIntoConstraints = false
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +41,17 @@ class ViewController: UIViewController {
             setCGSizeBeforeAddSubViewView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             setCGSizeBeforeAddSubViewView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
+        
+        view.addSubview(stackViewForHiddenTest)
+        stackViewForHiddenTest.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        stackViewForHiddenTest.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+        
+        stackViewForHiddenTest.addArrangedSubview(hiddenTestView)
+        
+        hiddenTestView.isHidden = false
+        hiddenTestView.isHidden = false
+        
+        hiddenTestView.isHidden = true
     }
 }
 
