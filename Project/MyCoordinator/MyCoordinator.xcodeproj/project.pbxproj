@@ -17,6 +17,7 @@
 		054FB4942ADD817700A2FAC3 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FB4932ADD817700A2FAC3 /* AppCoordinator.swift */; };
 		054FB4972ADD82F200A2FAC3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FB4962ADD82F200A2FAC3 /* MainViewController.swift */; };
 		054FB49A2ADD837D00A2FAC3 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FB4992ADD837D00A2FAC3 /* LoginCoordinator.swift */; };
+		054FB49C2ADD885100A2FAC3 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FB49B2ADD885100A2FAC3 /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		054FB4932ADD817700A2FAC3 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		054FB4962ADD82F200A2FAC3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		054FB4992ADD837D00A2FAC3 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		054FB49B2ADD885100A2FAC3 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				054FB4992ADD837D00A2FAC3 /* LoginCoordinator.swift */,
+				054FB49B2ADD885100A2FAC3 /* MainCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				054FB4912ADD80FE00A2FAC3 /* Coordinator.swift in Sources */,
+				054FB49C2ADD885100A2FAC3 /* MainCoordinator.swift in Sources */,
 				054FB4802ADD80E000A2FAC3 /* LoginViewController.swift in Sources */,
 				054FB49A2ADD837D00A2FAC3 /* LoginCoordinator.swift in Sources */,
 				054FB4942ADD817700A2FAC3 /* AppCoordinator.swift in Sources */,

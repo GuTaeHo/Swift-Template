@@ -8,7 +8,7 @@
 import UIKit
 
 /// 코디네이터드를 관리하는
-class AppCoordinator: Coordinator, LoginCoordinatorDelegate {
+class AppCoordinator: Coordinator, LoginCoordinatorDelegate, MainCoordinatorDelegate {
     
     var childCoordinators: [Coordinator] = []
     private var navigationController: UINavigationController!
@@ -28,7 +28,15 @@ class AppCoordinator: Coordinator, LoginCoordinatorDelegate {
     }
     
     private func showMainViewController() {
-        
+        let coordinator = MainCoordinator(navigationController: self.navigationController)
+        coordinator.delegate = self
+        coordinator.start()
+        self.childCoordinators.append(coordinator)
+    }
+    
+    func didLoggedOut(_ coordinator: MainCoordinator) {
+        self.childCoordinators = self.childCoordinators.filter { $0 !== coordinator }
+        self.showLoginViewController()
     }
     
     private func showLoginViewController() {
