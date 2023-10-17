@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadWebPage("http://muangs.kr")
+        etUrlView.text = "naver.com"
     }
     
     func loadWebPage(_ url: String) {
@@ -120,29 +121,59 @@ class ViewController: UIViewController {
 extension ViewController: WKNavigationDelegate {
     // 네비게이션 액션이 다운로드 되었을 경우 호출 (decisionHandler 가 .download 로 설정됨을 의미하는 듯)
     func webView(_ webView: WKWebView, navigationAction: WKNavigationAction, didBecome download: WKDownload) {
-        print("navigationAction > \(navigationAction), didBecome > \(download)")
+        print("navigationAction -> \(navigationAction), didBecome > \(download)")
     }
     
     // 네비게이션 응답이 다운로드 되었을 경우 호출
     func webView(_ webView: WKWebView, navigationResponse: WKNavigationResponse, didBecome download: WKDownload) {
-        print("navigationResponse > \(navigationResponse), didBecome > \(download)")
+        print("navigationResponse -> \(navigationResponse), didBecome > \(download)")
     }
     
     // 네비게이션이 시작되기전, 임시 허가를 받은 상태에 호출
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        print("didStartProvisionalNavigation > \(navigation.description)")
+        print("didStartProvisionalNavigation -> \(navigation.description)")
     }
     
     // 컨텐츠를 수신하기 시작했을 때 호출 (콘텐츠 사이즈를 구할 수 있음)
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
-        print("didCommit > \(navigation.description)")
+        print("didCommit -> \(navigation.description)")
         print(myWebView.scrollView.contentSize)
     }
     
     // 웹 페이지 로딩이 완전히 끝났을 경우 호출
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        print("didFinish > \(navigation.description)")
-        print(myWebView.scrollView.contentSize)
+        print("didFinish 호출 및 콘텐츠 사이즈 -> \(myWebView.scrollView.contentSize)")
+        /// `didFinish 가 호출`되었다고 하더라도 실제 콘텐츠 사이즈가 지정된 것은 아닌듯 함.
+        /// 0.1초... 후 웹 콘텐츠 사이즈를 측정하면 정확한 값이 측정되지만, 완벽한 방법은 아님.
+        /// 자바 스크립트의 DOM 구조 내부를 검색하는 `document` 와 콘텐츠의 전체높이를 가진 `document.documentElement.scrollHeight` 키워드를
+        /// `evaluateJavaScript(_:)`를 이용해 자바스크립트 코드를 평가하고 결과를 받을 수 있음
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            print("didFinish 호출 및 asyncAfter() 호출 콘텐츠 사이즈 -> \(webView.scrollView.contentSize)")
+        }
+        
+        Task {
+            var contentWidth: CGFloat = 0
+            var contentHeight: CGFloat = 0
+            let widthResult = await webContentWidth(webView)
+            switch widthResult {
+            case .success(let width):
+                contentWidth = width
+                break
+            case .failure(_):
+                break
+            }
+            
+            let heightResult = await webContentHeight(webView)
+            switch heightResult {
+            case .success(let height):
+                contentHeight = height
+                break
+            case .failure(_):
+                break
+            }
+            
+            print("실제 웹 콘텐츠 사이즈 -> \(CGSize(width: contentWidth, height: contentHeight))")
+        }
     }
     
     // 초기 네비게이션 프로세스 중 오류 발생 시 호출
@@ -159,6 +190,42 @@ extension ViewController: WKNavigationDelegate {
     // 웹 프로세스가 종료되었을 때 호출
     func webViewWebContentProcessDidTerminate(_ webView: WKWebView) {
         print("webViewWebContentProcessDidTerminate")
+    }
+}
+
+extension ViewController {
+    /// 웹 뷰 콘텐츠 높이를 반환합니다.
+    /// - Important: 사이즈가 0일 경우 nil 을 반환합니다.
+    func webContentHeight(_ webView: WKWebView) async -> Result<CGFloat, Error> {
+        return await withCheckedContinuation { continuation in
+            DispatchQueue.main.async {
+                webView.evaluateJavaScript("document.documentElement.scrollHeight") { (height, error) in
+                    print("평가된 웹 뷰 콘텐츠 높이 -> \(height ?? 0)")
+                    if let height = height as? CGFloat {
+                        continuation.resume(returning: .success(height))
+                    } else {
+                        continuation.resume(returning: .failure(error!))
+                    }
+                }
+            }
+        }
+    }
+    
+    /// 웹 뷰 콘텐츠 너비를 반환합니다.
+    /// - Important: 사이즈가 0일 경우 nil 을 반환합니다.
+    func webContentWidth(_ webView: WKWebView) async -> Result<CGFloat, Error> {
+        return await withCheckedContinuation { continuation in
+            DispatchQueue.main.async {
+                webView.evaluateJavaScript("document.documentElement.scrollWidth") { (width, error) in
+                    print("평가된 웹 뷰 콘텐츠 너비 -> \(width ?? 0)")
+                    if let width = width as? CGFloat {
+                        continuation.resume(returning: .success(width))
+                    } else {
+                        continuation.resume(returning: .failure(error!))
+                    }
+                }
+            }
+        }
     }
 }
 
