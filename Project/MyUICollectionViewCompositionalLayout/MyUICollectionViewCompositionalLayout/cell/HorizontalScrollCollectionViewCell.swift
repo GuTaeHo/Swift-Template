@@ -1,5 +1,5 @@
 //
-//  InnerCollectionViewCell.swift
+//  HorizontalScrollCollectionViewCell.swift
 //  MyUICollectionViewCompositionalLayout
 //
 //  Created by 구태호 on 2023/09/26.
@@ -8,7 +8,7 @@
 import UIKit
 
 
-class InnerCollectionViewCell: UICollectionViewCell {
+class HorizontalScrollCollectionViewCell: UICollectionViewCell {
     @IBOutlet var title: UILabel!
     @IBOutlet var divideView: UIView!
     @IBOutlet var divideHeightConstraint: NSLayoutConstraint!

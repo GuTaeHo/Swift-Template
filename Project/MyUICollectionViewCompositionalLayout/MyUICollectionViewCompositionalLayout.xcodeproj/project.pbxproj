@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		054D05652AE0200B0057C199 /* GridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D05642AE0200B0057C199 /* GridCollectionViewCell.swift */; };
 		05BFC7D42AC3164800F623BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BFC7D32AC3164800F623BA /* AppDelegate.swift */; };
 		05BFC7D62AC3164800F623BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BFC7D52AC3164800F623BA /* SceneDelegate.swift */; };
 		05BFC7D82AC3164800F623BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BFC7D72AC3164800F623BA /* ViewController.swift */; };
@@ -15,11 +16,12 @@
 		05BFC7E02AC3164A00F623BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05BFC7DE2AC3164A00F623BA /* LaunchScreen.storyboard */; };
 		05BFC7E92AC3170500F623BA /* InnerCellCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BFC7E82AC3170500F623BA /* InnerCellCollectionViewController.swift */; };
 		05BFC7EB2AC3172400F623BA /* CustomXibCellCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BFC7EA2AC3172400F623BA /* CustomXibCellCollectionViewController.swift */; };
-		05BFC7EE2AC318CC00F623BA /* InnerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BFC7ED2AC318CC00F623BA /* InnerCollectionViewCell.swift */; };
+		05BFC7EE2AC318CC00F623BA /* HorizontalScrollCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BFC7ED2AC318CC00F623BA /* HorizontalScrollCollectionViewCell.swift */; };
 		05BFC7F12AC3193400F623BA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BFC7F02AC3193400F623BA /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		054D05642AE0200B0057C199 /* GridCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCollectionViewCell.swift; sourceTree = "<group>"; };
 		05BFC7D02AC3164800F623BA /* MyUICollectionViewCompositionalLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyUICollectionViewCompositionalLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05BFC7D32AC3164800F623BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05BFC7D52AC3164800F623BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,7 +32,7 @@
 		05BFC7E12AC3164A00F623BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05BFC7E82AC3170500F623BA /* InnerCellCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerCellCollectionViewController.swift; sourceTree = "<group>"; };
 		05BFC7EA2AC3172400F623BA /* CustomXibCellCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomXibCellCollectionViewController.swift; sourceTree = "<group>"; };
-		05BFC7ED2AC318CC00F623BA /* InnerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerCollectionViewCell.swift; sourceTree = "<group>"; };
+		05BFC7ED2AC318CC00F623BA /* HorizontalScrollCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollCollectionViewCell.swift; sourceTree = "<group>"; };
 		05BFC7F02AC3193400F623BA /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,7 +92,8 @@
 		05BFC7EC2AC318BF00F623BA /* cell */ = {
 			isa = PBXGroup;
 			children = (
-				05BFC7ED2AC318CC00F623BA /* InnerCollectionViewCell.swift */,
+				05BFC7ED2AC318CC00F623BA /* HorizontalScrollCollectionViewCell.swift */,
+				054D05642AE0200B0057C199 /* GridCollectionViewCell.swift */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -178,8 +181,9 @@
 				05BFC7E92AC3170500F623BA /* InnerCellCollectionViewController.swift in Sources */,
 				05BFC7D42AC3164800F623BA /* AppDelegate.swift in Sources */,
 				05BFC7EB2AC3172400F623BA /* CustomXibCellCollectionViewController.swift in Sources */,
+				054D05652AE0200B0057C199 /* GridCollectionViewCell.swift in Sources */,
 				05BFC7D62AC3164800F623BA /* SceneDelegate.swift in Sources */,
-				05BFC7EE2AC318CC00F623BA /* InnerCollectionViewCell.swift in Sources */,
+				05BFC7EE2AC318CC00F623BA /* HorizontalScrollCollectionViewCell.swift in Sources */,
 				05BFC7F12AC3193400F623BA /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
