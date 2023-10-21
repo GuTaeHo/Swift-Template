@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="CodeBaseCollectionReusableView" customModule="MyUICollectionViewCompositionalLayout" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IeK-LJ-mfg">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJe-sx-xb1">
+                            <rect key="frame" x="12" y="0.0" width="296" height="50"/>
+                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="12"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="PJe-sx-xb1" firstAttribute="leading" secondItem="IeK-LJ-mfg" secondAttribute="leading" constant="12" id="4Ej-zn-0Bd"/>
+                        <constraint firstAttribute="bottom" secondItem="PJe-sx-xb1" secondAttribute="bottom" id="gok-wf-FQJ"/>
+                        <constraint firstItem="PJe-sx-xb1" firstAttribute="top" secondItem="IeK-LJ-mfg" secondAttribute="top" id="oEH-UT-q8k"/>
+                        <constraint firstAttribute="trailing" secondItem="PJe-sx-xb1" secondAttribute="trailing" constant="12" id="qqj-nT-f1e"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <constraints>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="IeK-LJ-mfg" secondAttribute="trailing" id="6P7-HJ-gkr"/>
+                <constraint firstItem="IeK-LJ-mfg" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="NQW-kN-jyk"/>
+                <constraint firstAttribute="bottom" secondItem="IeK-LJ-mfg" secondAttribute="bottom" id="hiG-v4-fYL"/>
+                <constraint firstItem="IeK-LJ-mfg" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="mZF-4I-qf0"/>
+            </constraints>
+            <connections>
+                <outlet property="lbTitle" destination="PJe-sx-xb1" id="paM-0Y-xwZ"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="21"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

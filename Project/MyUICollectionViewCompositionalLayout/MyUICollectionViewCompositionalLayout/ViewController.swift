@@ -13,4 +13,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    
+    @IBAction func moveCodeBaseCollectionViewCollectionViewController(_ sender: Any) {
+        let vc = CodeBaseCollectionViewController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
+    }
 }

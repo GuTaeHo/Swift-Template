@@ -18,6 +18,14 @@
 		05BFC7EB2AC3172400F623BA /* CustomXibCellCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BFC7EA2AC3172400F623BA /* CustomXibCellCollectionViewController.swift */; };
 		05BFC7EE2AC318CC00F623BA /* HorizontalScrollCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BFC7ED2AC318CC00F623BA /* HorizontalScrollCollectionViewCell.swift */; };
 		05BFC7F12AC3193400F623BA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BFC7F02AC3193400F623BA /* Category.swift */; };
+		05C873092AE3FCBA00F5C2C7 /* UICollectionViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C873082AE3FCBA00F5C2C7 /* UICollectionViewCell+.swift */; };
+		05C8730B2AE3FCC800F5C2C7 /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C8730A2AE3FCC800F5C2C7 /* UICollectionView+.swift */; };
+		05C8730D2AE3FCF800F5C2C7 /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C8730C2AE3FCF800F5C2C7 /* NSObject+.swift */; };
+		05C8730F2AE4015C00F5C2C7 /* CodeBaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C8730E2AE4015C00F5C2C7 /* CodeBaseCollectionViewController.swift */; };
+		05C873122AE4038C00F5C2C7 /* CodeBaseTestGridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C873102AE4038C00F5C2C7 /* CodeBaseTestGridCollectionViewCell.swift */; };
+		05C873132AE4038C00F5C2C7 /* CodeBaseTestGridCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05C873112AE4038C00F5C2C7 /* CodeBaseTestGridCollectionViewCell.xib */; };
+		05C873162AE405C000F5C2C7 /* CodeBaseCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C873142AE405C000F5C2C7 /* CodeBaseCollectionReusableView.swift */; };
+		05C873172AE405C000F5C2C7 /* CodeBaseCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05C873152AE405C000F5C2C7 /* CodeBaseCollectionReusableView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +42,14 @@
 		05BFC7EA2AC3172400F623BA /* CustomXibCellCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomXibCellCollectionViewController.swift; sourceTree = "<group>"; };
 		05BFC7ED2AC318CC00F623BA /* HorizontalScrollCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollCollectionViewCell.swift; sourceTree = "<group>"; };
 		05BFC7F02AC3193400F623BA /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		05C873082AE3FCBA00F5C2C7 /* UICollectionViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+.swift"; sourceTree = "<group>"; };
+		05C8730A2AE3FCC800F5C2C7 /* UICollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
+		05C8730C2AE3FCF800F5C2C7 /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
+		05C8730E2AE4015C00F5C2C7 /* CodeBaseCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBaseCollectionViewController.swift; sourceTree = "<group>"; };
+		05C873102AE4038C00F5C2C7 /* CodeBaseTestGridCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBaseTestGridCollectionViewCell.swift; sourceTree = "<group>"; };
+		05C873112AE4038C00F5C2C7 /* CodeBaseTestGridCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CodeBaseTestGridCollectionViewCell.xib; sourceTree = "<group>"; };
+		05C873142AE405C000F5C2C7 /* CodeBaseCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBaseCollectionReusableView.swift; sourceTree = "<group>"; };
+		05C873152AE405C000F5C2C7 /* CodeBaseCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CodeBaseCollectionReusableView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +82,7 @@
 		05BFC7D22AC3164800F623BA /* MyUICollectionViewCompositionalLayout */ = {
 			isa = PBXGroup;
 			children = (
+				05C873072AE3FCA900F5C2C7 /* extension */,
 				05BFC7EF2AC3192300F623BA /* model */,
 				05BFC7EC2AC318BF00F623BA /* cell */,
 				05BFC7E72AC316E100F623BA /* viewcontroller */,
@@ -85,6 +102,7 @@
 			children = (
 				05BFC7E82AC3170500F623BA /* InnerCellCollectionViewController.swift */,
 				05BFC7EA2AC3172400F623BA /* CustomXibCellCollectionViewController.swift */,
+				05C8730E2AE4015C00F5C2C7 /* CodeBaseCollectionViewController.swift */,
 			);
 			path = viewcontroller;
 			sourceTree = "<group>";
@@ -94,6 +112,10 @@
 			children = (
 				05BFC7ED2AC318CC00F623BA /* HorizontalScrollCollectionViewCell.swift */,
 				054D05642AE0200B0057C199 /* GridCollectionViewCell.swift */,
+				05C873102AE4038C00F5C2C7 /* CodeBaseTestGridCollectionViewCell.swift */,
+				05C873112AE4038C00F5C2C7 /* CodeBaseTestGridCollectionViewCell.xib */,
+				05C873142AE405C000F5C2C7 /* CodeBaseCollectionReusableView.swift */,
+				05C873152AE405C000F5C2C7 /* CodeBaseCollectionReusableView.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -104,6 +126,16 @@
 				05BFC7F02AC3193400F623BA /* Category.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		05C873072AE3FCA900F5C2C7 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				05C873082AE3FCBA00F5C2C7 /* UICollectionViewCell+.swift */,
+				05C8730A2AE3FCC800F5C2C7 /* UICollectionView+.swift */,
+				05C8730C2AE3FCF800F5C2C7 /* NSObject+.swift */,
+			);
+			path = extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +198,8 @@
 			files = (
 				05BFC7E02AC3164A00F623BA /* LaunchScreen.storyboard in Resources */,
 				05BFC7DD2AC3164A00F623BA /* Assets.xcassets in Resources */,
+				05C873132AE4038C00F5C2C7 /* CodeBaseTestGridCollectionViewCell.xib in Resources */,
+				05C873172AE405C000F5C2C7 /* CodeBaseCollectionReusableView.xib in Resources */,
 				05BFC7DB2AC3164800F623BA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,11 +211,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05C873092AE3FCBA00F5C2C7 /* UICollectionViewCell+.swift in Sources */,
+				05C873162AE405C000F5C2C7 /* CodeBaseCollectionReusableView.swift in Sources */,
 				05BFC7D82AC3164800F623BA /* ViewController.swift in Sources */,
 				05BFC7E92AC3170500F623BA /* InnerCellCollectionViewController.swift in Sources */,
 				05BFC7D42AC3164800F623BA /* AppDelegate.swift in Sources */,
 				05BFC7EB2AC3172400F623BA /* CustomXibCellCollectionViewController.swift in Sources */,
 				054D05652AE0200B0057C199 /* GridCollectionViewCell.swift in Sources */,
+				05C873122AE4038C00F5C2C7 /* CodeBaseTestGridCollectionViewCell.swift in Sources */,
+				05C8730F2AE4015C00F5C2C7 /* CodeBaseCollectionViewController.swift in Sources */,
+				05C8730B2AE3FCC800F5C2C7 /* UICollectionView+.swift in Sources */,
+				05C8730D2AE3FCF800F5C2C7 /* NSObject+.swift in Sources */,
 				05BFC7D62AC3164800F623BA /* SceneDelegate.swift in Sources */,
 				05BFC7EE2AC318CC00F623BA /* HorizontalScrollCollectionViewCell.swift in Sources */,
 				05BFC7F12AC3193400F623BA /* Category.swift in Sources */,
