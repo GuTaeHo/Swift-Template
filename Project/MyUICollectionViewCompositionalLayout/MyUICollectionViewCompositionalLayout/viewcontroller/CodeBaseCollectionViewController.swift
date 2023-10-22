@@ -88,7 +88,18 @@ class CodeBaseCollectionViewController: UIViewController {
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
         let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets(top: itemInset, leading: itemInset, bottom: itemInset, trailing: itemInset)
+        section.contentInsets = NSDirectionalEdgeInsets(top: itemInset, leading: 0, bottom: itemInset, trailing: 0)
+        
+        // 헤더 뷰 사이즈 지정
+        let headerFooterSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                                     heightDimension: .estimated(44))
+        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: headerFooterSize,
+            elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+        // 헤더 뷰 상단고정 여부
+        sectionHeader.pinToVisibleBounds = true
+        section.boundarySupplementaryItems = [sectionHeader]
+        
         return section
     }
     
