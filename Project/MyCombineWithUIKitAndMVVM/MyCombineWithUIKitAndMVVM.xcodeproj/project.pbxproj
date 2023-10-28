@@ -12,6 +12,8 @@
 		056DFE472AED4A2D005D5652 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056DFE462AED4A2D005D5652 /* Menu.swift */; };
 		056DFE492AED5227005D5652 /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056DFE482AED5227005D5652 /* TestViewModel.swift */; };
 		056DFE4C2AED5368005D5652 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056DFE4B2AED5368005D5652 /* TestViewController.swift */; };
+		056DFE4F2AED63DB005D5652 /* UIControl+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056DFE4E2AED63DB005D5652 /* UIControl+.swift */; };
+		056DFE512AED6483005D5652 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056DFE502AED6483005D5652 /* UITextField+.swift */; };
 		05DF87622AEBECFB00C61355 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DF87612AEBECFB00C61355 /* AppDelegate.swift */; };
 		05DF87642AEBECFB00C61355 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DF87632AEBECFB00C61355 /* SceneDelegate.swift */; };
 		05DF87662AEBECFB00C61355 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DF87652AEBECFB00C61355 /* ViewController.swift */; };
@@ -27,6 +29,8 @@
 		056DFE462AED4A2D005D5652 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		056DFE482AED5227005D5652 /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
 		056DFE4B2AED5368005D5652 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		056DFE4E2AED63DB005D5652 /* UIControl+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+.swift"; sourceTree = "<group>"; };
+		056DFE502AED6483005D5652 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		05DF875E2AEBECFB00C61355 /* MyCombineWithUIKitAndMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCombineWithUIKitAndMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05DF87612AEBECFB00C61355 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05DF87632AEBECFB00C61355 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +80,15 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		056DFE4D2AED63CC005D5652 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				056DFE4E2AED63DB005D5652 /* UIControl+.swift */,
+				056DFE502AED6483005D5652 /* UITextField+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		05DF87552AEBECFB00C61355 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +108,7 @@
 		05DF87602AEBECFB00C61355 /* MyCombineWithUIKitAndMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				056DFE4D2AED63CC005D5652 /* Extension */,
 				056DFE4A2AED534D005D5652 /* ViewController */,
 				056DFE432AED4A1E005D5652 /* Model */,
 				056DFE402AED493F005D5652 /* ViewModel */,
@@ -191,12 +205,14 @@
 				056DFE452AED4A27005D5652 /* Order.swift in Sources */,
 				05DF87662AEBECFB00C61355 /* ViewController.swift in Sources */,
 				056DFE492AED5227005D5652 /* TestViewModel.swift in Sources */,
+				056DFE4F2AED63DB005D5652 /* UIControl+.swift in Sources */,
 				056DFE472AED4A2D005D5652 /* Menu.swift in Sources */,
 				05DF87622AEBECFB00C61355 /* AppDelegate.swift in Sources */,
 				056DFE422AED495D005D5652 /* OrderViewModel.swift in Sources */,
 				05DF87642AEBECFB00C61355 /* SceneDelegate.swift in Sources */,
 				056DFE4C2AED5368005D5652 /* TestViewController.swift in Sources */,
 				05DF87772AEBEE6A00C61355 /* ViewModeling.swift in Sources */,
+				056DFE512AED6483005D5652 /* UITextField+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

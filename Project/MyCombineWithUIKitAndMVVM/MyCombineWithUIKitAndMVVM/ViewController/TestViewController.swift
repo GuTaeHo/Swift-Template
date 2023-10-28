@@ -58,9 +58,12 @@ class TestViewController: UIViewController {
         view.backgroundColor = .white
         view.addSubview(wrapperStackView)
         
+        // MARK: target-action 방식
+        /*
         nameTextField.addTarget(self, action: #selector(textFieldEditingChanged(_:)), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(textFieldEditingChanged(_:)), for: .editingChanged)
         passwordAgainTextField.addTarget(self, action: #selector(textFieldEditingChanged(_:)), for: .editingChanged)
+         */
         
         NSLayoutConstraint.activate([
             wrapperStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -68,6 +71,10 @@ class TestViewController: UIViewController {
             wrapperStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
         ])
         
+        bindView()
+        
+        // MARK: target-action 방식
+        /*
         userSubject.sink { text in
             print(text)
         }.store(in: &cancelBag)
@@ -79,10 +86,29 @@ class TestViewController: UIViewController {
         passwordAgainSubject.sink { text in
             print(text)
         }.store(in: &cancelBag)
+         */
+        
+        
     }
     
+    // MARK: target-action 방식 -> closure handler 방식으로 변경
+    /// UIView를 `Publisher` 와 바인딩 합니다.
+    func bindView() {
+        nameTextField.editingChangedPublisher.sink { text in
+            print(text)
+        }.store(in: &cancelBag)
+        
+        passwordTextField.editingChangedPublisher.sink { text in
+            print(text)
+        }.store(in: &cancelBag)
+        
+        passwordAgainTextField.editingChangedPublisher.sink { text in
+            print(text)
+        }.store(in: &cancelBag)
+    }
     
-    
+    // MARK: target-action 방식
+    /*
     @objc func textFieldEditingChanged(_ sender: UITextField) {
         switch sender {
         case nameTextField:
@@ -95,4 +121,5 @@ class TestViewController: UIViewController {
             break
         }
     }
+     */
 }
