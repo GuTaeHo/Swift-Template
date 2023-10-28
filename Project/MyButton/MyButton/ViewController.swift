@@ -51,6 +51,9 @@ class ViewController: UIViewController {
     }()
     
     var enhancedButtonCount: Int = 0
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,8 +68,9 @@ class ViewController: UIViewController {
             enhancedButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -18),
             enhancedButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -18)
         ])
+        
+        print(UIScreen.main.nativeBounds.size)
+        print(UIScreen.main.bounds.size)
     }
-
-
 }
 
