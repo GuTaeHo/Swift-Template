@@ -17,7 +17,13 @@ final class TestViewModel: ViewModeling {
         let passwordAgaing: AnyPublisher<String, Never>
     }
     
+    /// 버튼의 (활성화) 상태를 방출하는 퍼블리셔
     struct Output {
+//        enum RegistButtonState {
+//            case enable
+//            case disable(reason: String)
+//        }
+        
         let buttonIsValid: AnyPublisher<Bool, Never>
     }
     

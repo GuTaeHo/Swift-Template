@@ -51,12 +51,20 @@ class TestViewController: UIViewController {
         return textField
     }()
     
+    lazy var registButton: UIButton = {
+        let button = UIButton(configuration: .filled())
+        button.configuration?.title = "회원가입"
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
         view.addSubview(wrapperStackView)
+        view.addSubview(registButton)
         
         // MARK: target-action 방식
         /*
@@ -69,6 +77,13 @@ class TestViewController: UIViewController {
             wrapperStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             wrapperStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             wrapperStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            registButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 18),
+            registButton.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor, constant: -12),
+            registButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -18),
+            registButton.heightAnchor.constraint(equalToConstant: 40)
         ])
         
         bindView()
@@ -94,6 +109,20 @@ class TestViewController: UIViewController {
     // MARK: target-action 방식 -> closure handler 방식으로 변경
     /// UIView를 `Publisher` 와 바인딩 합니다.
     func bindView() {
+        let input = TestViewModel.Input(
+            userName: userSubject.eraseToAnyPublisher(),
+            password: passwordSubject.eraseToAnyPublisher(),
+            passwordAgaing: passwordAgainSubject.eraseToAnyPublisher()
+        )
+        
+        let output = viewModel.transform(input: input)
+        output
+            .buttonIsValid
+            .sink { [weak self] state in
+                self?.registButton.isEnabled = state
+                self?.registButton.configuration?.baseForegroundColor = state ? .lightGray : .systemIndigo
+            }.store(in: &cancelBag)
+        
         nameTextField.editingChangedPublisher.sink { text in
             print(text)
         }.store(in: &cancelBag)
