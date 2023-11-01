@@ -14,8 +14,8 @@ enum FontType {
 }
 
 extension UILabel {
-    /// 자간 지정 (기본값 = 0.5)
-    func characterSpacing(_ kernValue: Double = 0.5) {
+    /// 자간 지정 (기본값 = 0.0)
+    func characterSpacing(_ kernValue: CGFloat = 0.0) {
         guard let text = text, !text.isEmpty else { return }
         let string = NSMutableAttributedString(string: text)
         string.addAttribute(NSAttributedString.Key.kern, value: kernValue, range: NSRange(location: 0, length: string.length - 1))

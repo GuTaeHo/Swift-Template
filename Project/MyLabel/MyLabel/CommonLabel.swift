@@ -9,10 +9,10 @@ import UIKit
 
 @IBDesignable
 class CommonLabel: UILabel {
-    private var _characterSpacing = 0.5
+    private var _characterSpacing = 0.0
     
     @IBInspectable
-    var characterSpacing: Double {
+    var characterSpacing: CGFloat {
         get {
             return _characterSpacing
         }

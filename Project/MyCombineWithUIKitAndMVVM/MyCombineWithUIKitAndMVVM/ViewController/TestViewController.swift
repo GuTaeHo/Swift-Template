@@ -123,7 +123,7 @@ class TestViewController: UIViewController {
                 self?.registButton.configuration?.baseForegroundColor = state ? .lightGray : .systemIndigo
             }.store(in: &cancelBag)
         
-        nameTextField.editingChangedPublisher.sink { text in
+        nameTextField.editingChangedPublisher.sink { [weak self] text in
             print(text)
         }.store(in: &cancelBag)
         
