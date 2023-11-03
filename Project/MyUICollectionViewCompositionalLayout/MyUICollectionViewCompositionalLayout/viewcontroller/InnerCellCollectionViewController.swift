@@ -42,6 +42,8 @@ class InnerCellCollectionViewController: UIViewController {
         collectionView.reloadData()
     }
     
+    // TODO: 1. 그룹에 포함된 아이템 개수 파라미터로 전달
+    // TODO: 2. 그룹 추정 너비 == (아이템 개수 x (아이템 추정 너비 + 아이템 간 여백))
     func makeHorizontalScrollLayoutSection() -> NSCollectionLayoutSection {
         // 셀(아이템) 사이즈 정의
         let itemSize = NSCollectionLayoutSize(widthDimension: .estimated(50), heightDimension: .estimated(45))
@@ -49,6 +51,10 @@ class InnerCellCollectionViewController: UIViewController {
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .estimated(50), heightDimension: .estimated(45))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        // 그룹 간 여백 지정
+        // group.interItemSpacing = .fixed(10)
+        // 그룹 내부 여백 지정 (다른 컨테이너와의 간격을 지정합니다)
+        group.edgeSpacing = .init(leading: .fixed(2), top: .fixed(0), trailing: .fixed(2), bottom: .fixed(0))
         
         let section = NSCollectionLayoutSection(group: group)
         // MARK: orthogonalScrollingBehavior 속성은 내부적으로 UICollectionView 를 추가하여 덧대는(?) 방식을 사용함
