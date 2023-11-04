@@ -1,14 +1,14 @@
 //
-//  CustomLabel.swift
+//  CustomTextField.swift
 //  MyIntrinsicContentSize
 //
-//  Created by 구태호 on 2023/05/23.
+//  Created by 구태호 on 11/4/23.
 //
 
 import UIKit
 
 
-class CustomLabel: UILabel {
+class CustomTextField: UILabel {
     private let TOP_PADDING: CGFloat = 12.0
     private let LEFT_PADDING: CGFloat = 18.0
     private let BOTTOM_PADDING: CGFloat = 12.0
@@ -28,11 +28,11 @@ class CustomLabel: UILabel {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
-        print("intrinsicContentSize 변경 전 CustomLabel.frame - \(rect)")
+        print("intrinsicContentSize 변경 전 CustomTextField.frame - \(rect)")
         let size = intrinsicContentSize
         let origin = rect.origin
         
         let updatedRect = CGRect(origin: origin, size: size)
-        print("intrinsicContentSize 변경 후 CustomLabel.frame - \(updatedRect)")
+        print("intrinsicContentSize 변경 후 CustomTextField.frame - \(updatedRect)")
     }
 }

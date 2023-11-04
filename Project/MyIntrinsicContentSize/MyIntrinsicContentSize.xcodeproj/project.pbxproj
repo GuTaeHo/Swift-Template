@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0527E7E62AF6812700FB24CD /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0527E7E52AF6812700FB24CD /* CustomTextField.swift */; };
 		05D4ADDF2A1D015400555D6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4ADDE2A1D015400555D6C /* AppDelegate.swift */; };
 		05D4ADE12A1D015400555D6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4ADE02A1D015400555D6C /* SceneDelegate.swift */; };
 		05D4ADE32A1D015400555D6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4ADE22A1D015400555D6C /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0527E7E52AF6812700FB24CD /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		05D4ADDB2A1D015400555D6C /* MyIntrinsicContentSize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyIntrinsicContentSize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05D4ADDE2A1D015400555D6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05D4ADE02A1D015400555D6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				05D4ADE92A1D015600555D6C /* LaunchScreen.storyboard */,
 				05D4ADEC2A1D015600555D6C /* Info.plist */,
 				05D4ADF22A1D017300555D6C /* CustomLabel.swift */,
+				0527E7E52AF6812700FB24CD /* CustomTextField.swift */,
 			);
 			path = MyIntrinsicContentSize;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 				05D4ADDF2A1D015400555D6C /* AppDelegate.swift in Sources */,
 				05D4ADE12A1D015400555D6C /* SceneDelegate.swift in Sources */,
 				05D4ADF32A1D017300555D6C /* CustomLabel.swift in Sources */,
+				0527E7E62AF6812700FB24CD /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
