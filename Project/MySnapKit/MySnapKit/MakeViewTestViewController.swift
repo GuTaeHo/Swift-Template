@@ -16,10 +16,24 @@ class MakeViewTestViewController: UIViewController {
     private var popUpSecondLabel: UILabel!
     private var popUpThirdLabel: UILabel!
     
+    private var buttonXPosition: Int = 0
+    private var buttonYPosition: Int = 0
+    
+    lazy var button: UIButton = {
+        let button = UIButton(configuration: .filled())
+        button.configuration?.title = "x, y 5pt 증가"
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        makeView()
+        // makeView()
+        initButtonLayout()
+        snapKitTest()
+        initAction()
+        
+        print(view.safeAreaLayoutGuide.layoutFrame)
     }
     
     private func makeView() {
@@ -93,5 +107,33 @@ class MakeViewTestViewController: UIViewController {
         print("\(popUpStackView.frame)")
         print("\(popUpView.frame)")
         print("\(popUpShadowView.frame)")
+    }
+    
+    private func initButtonLayout() {
+        view.addSubview(button)
+        button.snp.makeConstraints({
+            $0.top.equalTo(view.safeAreaLayoutGuide)
+            $0.leading.equalToSuperview()
+        })
+    }
+    
+    private func initAction() {
+        button.addAction(.init(handler: { [weak self] action in
+            guard let self = self else { return }
+            
+            self.buttonXPosition += 5
+            self.buttonYPosition += 5
+            
+            /// updateConstraints() 메소드는 makeConstraints 로 제약조건을 초기화 해줬음에도 런타임에러가 나는것을 확인.
+            /// remakeConstraints() 를 사용하는게 나아보임.
+            button.snp.remakeConstraints({
+                $0.top.equalTo(self.view.safeAreaLayoutGuide).inset(self.buttonXPosition)
+                $0.leading.equalTo(self.view.safeAreaLayoutGuide).inset(self.buttonYPosition)
+            })
+        }), for: .touchUpInside)
+    }
+    
+    private func snapKitTest() {
+        
     }
 }

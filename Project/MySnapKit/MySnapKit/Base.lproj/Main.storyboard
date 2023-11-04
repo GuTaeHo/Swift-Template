@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -34,22 +34,25 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drr-Pp-w16">
                                         <rect key="frame" x="74" y="141" width="266" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="7xK-qw-d8j"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Make UIView from Source Code"/>
                                         <connections>
                                             <segue destination="rWh-wm-9Nn" kind="show" id="kFE-Wr-4gV"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sGM-MX-fDt">
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sGM-MX-fDt">
                                         <rect key="frame" x="200" y="569" width="202" height="214"/>
                                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="rZi-Wu-aeQ" firstAttribute="top" secondItem="i0M-6t-muF" secondAttribute="top" constant="94" id="5iq-Tj-RvK"/>
                                     <constraint firstItem="bgl-oC-QCI" firstAttribute="top" secondItem="i0M-6t-muF" secondAttribute="top" priority="999" constant="400" id="6ej-gj-BvW"/>
                                     <constraint firstItem="Drr-Pp-w16" firstAttribute="centerX" secondItem="i0M-6t-muF" secondAttribute="centerX" id="CYP-1R-6xv"/>
-                                    <constraint firstItem="sGM-MX-fDt" firstAttribute="top" secondItem="Drr-Pp-w16" secondAttribute="bottom" constant="393" id="JE5-gn-aP0"/>
                                     <constraint firstItem="bgl-oC-QCI" firstAttribute="leading" secondItem="i0M-6t-muF" secondAttribute="leading" priority="999" constant="75" id="O8Z-78-azi"/>
                                     <constraint firstItem="rZi-Wu-aeQ" firstAttribute="centerX" secondItem="i0M-6t-muF" secondAttribute="centerX" id="P93-oG-glL"/>
                                     <constraint firstAttribute="trailing" secondItem="sGM-MX-fDt" secondAttribute="trailing" constant="12" id="Pri-To-SrZ"/>
@@ -57,8 +60,8 @@
                                     <constraint firstAttribute="bottom" secondItem="sGM-MX-fDt" secondAttribute="bottom" constant="31" id="XBY-VN-KCG"/>
                                     <constraint firstAttribute="bottom" secondItem="bgl-oC-QCI" secondAttribute="bottom" priority="999" constant="200" id="Y3x-QW-0sP"/>
                                     <constraint firstItem="Drr-Pp-w16" firstAttribute="top" secondItem="rZi-Wu-aeQ" secondAttribute="bottom" constant="12" id="cXE-vR-dYb"/>
+                                    <constraint firstItem="sGM-MX-fDt" firstAttribute="top" secondItem="i0M-6t-muF" secondAttribute="top" constant="569" id="cdb-X1-RB3"/>
                                     <constraint firstAttribute="trailing" secondItem="bgl-oC-QCI" secondAttribute="trailing" priority="999" constant="75" id="piA-Gh-3Jt"/>
-                                    <constraint firstItem="rZi-Wu-aeQ" firstAttribute="top" secondItem="i0M-6t-muF" secondAttribute="top" constant="94" id="rdI-IO-Dh2"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -188,19 +191,19 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemMintColor">
-            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -23,8 +23,8 @@ class ViewController: UIViewController {
     lazy var constraintsTestView: UIView = {
         let constraintsTestView = UIView()
         /// 자체적인 제약조건인 width, height 는 뷰가 슈퍼뷰에 `추가되기 전에 지정`해도 문제가 없다.
-        constraintsTestView.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        constraintsTestView.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        constraintsTestView.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        constraintsTestView.heightAnchor.constraint(equalToConstant: 50).isActive = true
         constraintsTestView.backgroundColor = .brown
         constraintsTestView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -42,19 +42,18 @@ class ViewController: UIViewController {
         })
         
         // MARK: redView 의 모든 제약조건을 제거한다.
-        /// 제약조건을 모두 제거하더라도, 우선순위가 `1000` 으로 할당된 제약조건이 있다면 제거되지않는다.
+        /// 제약조건을 모두 제거하더라도, 우선순위가 `1000` 으로 할당된 제약조건이 있다면 제거되지 않으며, 제약조건이 충돌할 경우, 시스템이 둘 중 하나를 택하여 설정한다.
         NSLayoutConstraint.deactivate(redView.constraints)
         /* 빌트인 예시 */
         NSLayoutConstraint.activate([
             redView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             redView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            redView.widthAnchor.constraint(equalToConstant: 400),
-            redView.heightAnchor.constraint(equalToConstant: 400)
+            redView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
         
         view.addSubview(constraintsTestView)
         constraintsTestView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        constraintsTestView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        constraintsTestView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
     }
     
     override func viewWillLayoutSubviews() {
