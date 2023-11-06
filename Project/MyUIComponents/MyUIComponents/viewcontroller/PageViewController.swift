@@ -38,21 +38,3 @@ class PageViewController: UIPageViewController {
         }
     }
 }
-
-extension PageViewController: UIPageViewControllerDelegate, UIPageViewControllerDataSource {
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        
-        guard let _ = viewController as? 
-        
-        if currentPage < pageViewController.viewControllers?.count {
-            
-        }
-        
-        return nil
-    }
-    
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        
-        return nil
-    }
-}

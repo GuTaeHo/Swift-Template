@@ -21,6 +21,8 @@
 		05DF876B2AEBECFC00C61355 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05DF876A2AEBECFC00C61355 /* Assets.xcassets */; };
 		05DF876E2AEBECFC00C61355 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05DF876C2AEBECFC00C61355 /* LaunchScreen.storyboard */; };
 		05DF87772AEBEE6A00C61355 /* ViewModeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DF87762AEBEE6A00C61355 /* ViewModeling.swift */; };
+		05E03F0E2AF8C7FA00DF7B74 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E03F0D2AF8C7FA00DF7B74 /* UIButton+.swift */; };
+		05E03F102AF8E0D000DF7B74 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E03F0F2AF8E0D000DF7B74 /* UIView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		05DF876D2AEBECFC00C61355 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05DF876F2AEBECFC00C61355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05DF87762AEBEE6A00C61355 /* ViewModeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModeling.swift; sourceTree = "<group>"; };
+		05E03F0D2AF8C7FA00DF7B74 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
+		05E03F0F2AF8E0D000DF7B74 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 			children = (
 				056DFE4E2AED63DB005D5652 /* UIControl+.swift */,
 				056DFE502AED6483005D5652 /* UITextField+.swift */,
+				05E03F0D2AF8C7FA00DF7B74 /* UIButton+.swift */,
+				05E03F0F2AF8E0D000DF7B74 /* UIView+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -209,8 +215,10 @@
 				056DFE472AED4A2D005D5652 /* Menu.swift in Sources */,
 				05DF87622AEBECFB00C61355 /* AppDelegate.swift in Sources */,
 				056DFE422AED495D005D5652 /* OrderViewModel.swift in Sources */,
+				05E03F0E2AF8C7FA00DF7B74 /* UIButton+.swift in Sources */,
 				05DF87642AEBECFB00C61355 /* SceneDelegate.swift in Sources */,
 				056DFE4C2AED5368005D5652 /* TestViewController.swift in Sources */,
+				05E03F102AF8E0D000DF7B74 /* UIView+.swift in Sources */,
 				05DF87772AEBEE6A00C61355 /* ViewModeling.swift in Sources */,
 				056DFE512AED6483005D5652 /* UITextField+.swift in Sources */,
 			);

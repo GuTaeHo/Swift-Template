@@ -19,6 +19,13 @@ class TestViewController: UIViewController {
     private var cancelBag = Set<AnyCancellable>()
     private let viewModel = TestViewModel()
     
+    lazy var button: UIButton = {
+        let button = UIButton(configuration: .filled())
+        button.configuration?.title = "버튼 퍼블리셔 테스트"
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     lazy var wrapperStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [nameTextField, passwordTextField, passwordAgainTextField])
         stackView.axis = .vertical
@@ -63,6 +70,19 @@ class TestViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .white
+    
+        view.addSubview(button)
+        
+        NSLayoutConstraint.activate([
+            button.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
+            button.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor)
+        ])
+        
+        button.touchUpInsidePublisher.sink { [weak self] sender in
+            print(sender.currentTitle)
+        }.store(in: &cancelBag)
+        
+
         view.addSubview(wrapperStackView)
         view.addSubview(registButton)
         

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0522C7AE288E74B900A53D3A /* imgSearch.png in Resources */ = {isa = PBXBuildFile; fileRef = 0522C7AD288E74B900A53D3A /* imgSearch.png */; };
+		053817682AF92DFE00AC7EE3 /* UIWindow+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053817672AF92DFE00AC7EE3 /* UIWindow+.swift */; };
 		05A0B0B828A33B5C00155291 /* UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A0B0B728A33B5C00155291 /* UIControl.swift */; };
 		05A0B0BA28A34A5200155291 /* PageControl.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05A0B0B928A34A5200155291 /* PageControl.storyboard */; };
 		05A0B0BC28A3552200155291 /* MainNavigationRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A0B0BB28A3552200155291 /* MainNavigationRootViewController.swift */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		0522C7AD288E74B900A53D3A /* imgSearch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgSearch.png; sourceTree = "<group>"; };
+		053817672AF92DFE00AC7EE3 /* UIWindow+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+.swift"; sourceTree = "<group>"; };
 		05A0B0B728A33B5C00155291 /* UIControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControl.swift; sourceTree = "<group>"; };
 		05A0B0B928A34A5200155291 /* PageControl.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PageControl.storyboard; sourceTree = "<group>"; };
 		05A0B0BB28A3552200155291 /* MainNavigationRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationRootViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				05D041E9288E30500021AF2C /* UIViewExtension.swift */,
 				05FD56BD289BECA30002CA8C /* UIViewControllerExtension.swift */,
 				05A0B0B728A33B5C00155291 /* UIControl.swift */,
+				053817672AF92DFE00AC7EE3 /* UIWindow+.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				05E73DE828BD5CFB00186633 /* HapticUtil.swift in Sources */,
 				05EE927228C64366006FB3CF /* SecondViewController.swift in Sources */,
 				05FD56BE289BECA30002CA8C /* UIViewControllerExtension.swift in Sources */,
+				053817682AF92DFE00AC7EE3 /* UIWindow+.swift in Sources */,
 				05A0B0BC28A3552200155291 /* MainNavigationRootViewController.swift in Sources */,
 				05EE927628C64383006FB3CF /* FourthViewController.swift in Sources */,
 				05D041EA288E30500021AF2C /* UIViewExtension.swift in Sources */,
