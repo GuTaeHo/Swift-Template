@@ -24,7 +24,7 @@
 		0561428D29B1B213006C711F /* TapGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGestureRecognizer.swift; sourceTree = "<group>"; };
 		0561428F29B1B5E4006C711F /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		0561429129B1B66E006C711F /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
-		05D2FEBA29B1AFFB005A23EB /* MyGesture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyGesture.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05D2FEBA29B1AFFB005A23EB /* MyUIGestureRecognizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyUIGestureRecognizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05D2FEBD29B1AFFB005A23EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05D2FEBF29B1AFFB005A23EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		05D2FEC129B1AFFB005A23EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 		05D2FEB129B1AFFB005A23EB = {
 			isa = PBXGroup;
 			children = (
-				05D2FEBC29B1AFFB005A23EB /* MyGesture */,
+				05D2FEBC29B1AFFB005A23EB /* MyUIGestureRecognizer */,
 				05D2FEBB29B1AFFB005A23EB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,12 +64,12 @@
 		05D2FEBB29B1AFFB005A23EB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				05D2FEBA29B1AFFB005A23EB /* MyGesture.app */,
+				05D2FEBA29B1AFFB005A23EB /* MyUIGestureRecognizer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		05D2FEBC29B1AFFB005A23EB /* MyGesture */ = {
+		05D2FEBC29B1AFFB005A23EB /* MyUIGestureRecognizer */ = {
 			isa = PBXGroup;
 			children = (
 				0561428C29B1B1FB006C711F /* customrecognizer */,
@@ -80,7 +80,7 @@
 				05D2FEBD29B1AFFB005A23EB /* AppDelegate.swift */,
 				05D2FEBF29B1AFFB005A23EB /* SceneDelegate.swift */,
 			);
-			path = MyGesture;
+			path = MyUIGestureRecognizer;
 			sourceTree = "<group>";
 		};
 		05D2FED129B1B026005A23EB /* extension */ = {
@@ -122,9 +122,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		05D2FEB929B1AFFB005A23EB /* MyGesture */ = {
+		05D2FEB929B1AFFB005A23EB /* MyUIGestureRecognizer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 05D2FECE29B1AFFC005A23EB /* Build configuration list for PBXNativeTarget "MyGesture" */;
+			buildConfigurationList = 05D2FECE29B1AFFC005A23EB /* Build configuration list for PBXNativeTarget "MyUIGestureRecognizer" */;
 			buildPhases = (
 				05D2FEB629B1AFFB005A23EB /* Sources */,
 				05D2FEB729B1AFFB005A23EB /* Frameworks */,
@@ -134,9 +134,9 @@
 			);
 			dependencies = (
 			);
-			name = MyGesture;
+			name = MyUIGestureRecognizer;
 			productName = MyGesture;
-			productReference = 05D2FEBA29B1AFFB005A23EB /* MyGesture.app */;
+			productReference = 05D2FEBA29B1AFFB005A23EB /* MyUIGestureRecognizer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -154,7 +154,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 05D2FEB529B1AFFB005A23EB /* Build configuration list for PBXProject "MyGesture" */;
+			buildConfigurationList = 05D2FEB529B1AFFB005A23EB /* Build configuration list for PBXProject "MyUIGestureRecognizer" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -167,7 +167,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				05D2FEB929B1AFFB005A23EB /* MyGesture */,
+				05D2FEB929B1AFFB005A23EB /* MyUIGestureRecognizer */,
 			);
 		};
 /* End PBXProject section */
@@ -345,7 +345,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L8WFLHVUYX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyGesture/resource/Info.plist;
+				INFOPLIST_FILE = MyUIGestureRecognizer/resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -356,7 +356,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyGesture;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyUIGestureRecognizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -376,7 +376,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L8WFLHVUYX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyGesture/resource/Info.plist;
+				INFOPLIST_FILE = MyUIGestureRecognizer/resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -387,7 +387,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyGesture;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyUIGestureRecognizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -401,7 +401,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		05D2FEB529B1AFFB005A23EB /* Build configuration list for PBXProject "MyGesture" */ = {
+		05D2FEB529B1AFFB005A23EB /* Build configuration list for PBXProject "MyUIGestureRecognizer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				05D2FECC29B1AFFC005A23EB /* Debug */,
@@ -410,7 +410,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		05D2FECE29B1AFFC005A23EB /* Build configuration list for PBXNativeTarget "MyGesture" */ = {
+		05D2FECE29B1AFFC005A23EB /* Build configuration list for PBXNativeTarget "MyUIGestureRecognizer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				05D2FECF29B1AFFC005A23EB /* Debug */,
