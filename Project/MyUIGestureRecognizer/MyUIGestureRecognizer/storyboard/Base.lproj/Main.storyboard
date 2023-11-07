@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyGesture" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyUIGestureRecognizer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,18 +96,16 @@
                                     <constraint firstItem="DBT-5V-Wjw" firstAttribute="top" secondItem="lu6-E4-f3i" secondAttribute="bottom" constant="18" id="wd8-5K-iYx"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="D7A-AT-JdX">
-                                <rect key="frame" x="76" y="353" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="D7A-AT-JdX">
+                                <rect key="frame" x="76" y="353" width="241" height="128"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwS-9a-tBS">
-                                <rect key="frame" x="175" y="311" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="타이틀 탭 제스처" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwS-9a-tBS">
+                                <rect key="frame" x="140.66666666666666" y="311" width="112" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -116,9 +114,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="hwS-9a-tBS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Rv-Jf-5Pt"/>
+                            <constraint firstItem="hwS-9a-tBS" firstAttribute="top" secondItem="orp-L0-hDZ" secondAttribute="bottom" constant="60" id="71I-Y4-mLK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="D7A-AT-JdX" secondAttribute="trailing" constant="76" id="Avc-Tk-mL1"/>
                             <constraint firstItem="lu6-E4-f3i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ezz-yf-CGD"/>
+                            <constraint firstItem="D7A-AT-JdX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="PEw-br-haV"/>
                             <constraint firstItem="orp-L0-hDZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TYV-Ys-5jC"/>
+                            <constraint firstItem="D7A-AT-JdX" firstAttribute="top" secondItem="hwS-9a-tBS" secondAttribute="bottom" constant="21" id="UG3-mp-5yv"/>
                             <constraint firstItem="orp-L0-hDZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="YGP-XZ-6nc"/>
+                            <constraint firstItem="lu6-E4-f3i" firstAttribute="top" secondItem="D7A-AT-JdX" secondAttribute="bottom" constant="81" id="ZcA-lV-5Us"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lu6-E4-f3i" secondAttribute="bottom" constant="128" id="sbj-l2-pyt"/>
                         </constraints>
                     </view>
