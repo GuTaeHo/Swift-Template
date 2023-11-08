@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		052300F22A4E6B8E00ABB0D5 /* TransparentGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052300F12A4E6B8E00ABB0D5 /* TransparentGradientView.swift */; };
+		057F83A22AFBD04C0096501F /* CommonVisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057F83A12AFBD04C0096501F /* CommonVisualEffectView.swift */; };
 		05C5819F28F7E1280018A8FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5819E28F7E1280018A8FE /* AppDelegate.swift */; };
 		05C581A128F7E1280018A8FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C581A028F7E1280018A8FE /* SceneDelegate.swift */; };
 		05C581A328F7E1280018A8FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C581A228F7E1280018A8FE /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		052300F12A4E6B8E00ABB0D5 /* TransparentGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentGradientView.swift; sourceTree = "<group>"; };
+		057F83A12AFBD04C0096501F /* CommonVisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonVisualEffectView.swift; sourceTree = "<group>"; };
 		05C5819B28F7E1280018A8FE /* MyGradient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyGradient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05C5819E28F7E1280018A8FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05C581A028F7E1280018A8FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				05C581AC28F7E1290018A8FE /* Info.plist */,
 				05C581B228F7E1370018A8FE /* UIView.swift */,
 				052300F12A4E6B8E00ABB0D5 /* TransparentGradientView.swift */,
+				057F83A12AFBD04C0096501F /* CommonVisualEffectView.swift */,
 			);
 			path = MyGradient;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				057F83A22AFBD04C0096501F /* CommonVisualEffectView.swift in Sources */,
 				05C581B328F7E1370018A8FE /* UIView.swift in Sources */,
 				05C581A328F7E1280018A8FE /* ViewController.swift in Sources */,
 				05C5819F28F7E1280018A8FE /* AppDelegate.swift in Sources */,
