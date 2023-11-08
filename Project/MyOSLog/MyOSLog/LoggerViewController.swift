@@ -15,18 +15,18 @@ class LoggerViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func onlyMessageHandler(_ sender: UIButton) {
-        os_log("UI 로그: %@", log: .ui, sender)
+    @IBAction func buttonHandler(_ sender: UIButton) {
+        os_log("UIButton 정보: %@", log: .ui, sender)
     }
     
-    @IBAction func messageWithErrorHandler(_ sender: UIButton) {
+    @IBAction func rootViewHandler(_ sender: UIButton) {
         // os_log("안녕 MyOsLog!", type: .error)
-        os_log("Network 로그: %@", log: .network, view)
+        os_log("RootView 정보: %@", log: .network, view)
     }
     
-    @IBAction func messageWithFaultHandler(_ sender: UIButton) {
+    @IBAction func viewWindowRootVCHandler(_ sender: UIButton) {
         // os_log("안녕 MyOsLog!", type: .fault)
-        os_log("화면 스케일: %@", log: .deinit, view.window?.rootViewController ?? 0)
+        os_log("현재 뷰 컨트롤러: %@", log: .deinit, view.window?.rootViewController ?? 0)
     }
 }
 

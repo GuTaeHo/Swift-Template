@@ -27,7 +27,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="콘솔 &gt; UI &gt; UIBUtton 전달"/>
                                                 <connections>
-                                                    <action selector="onlyMessageHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3X4-I9-bIH"/>
+                                                    <action selector="buttonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e8G-tP-AfP"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAJ-0o-S6e">
@@ -35,15 +35,15 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="콘솔 &gt; Network &gt; RootView 전달"/>
                                                 <connections>
-                                                    <action selector="messageWithErrorHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lyq-mQ-K89"/>
+                                                    <action selector="rootViewHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Quz-tU-BUw"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTT-OU-9cJ">
                                                 <rect key="frame" x="12" y="110.66666666666666" width="369" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="콘솔 &gt; Deinit &gt; 화면 포인트 전달"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="콘솔 &gt; Deinit &gt; 뷰의 윈도우 루트 뷰 컨트롤러"/>
                                                 <connections>
-                                                    <action selector="messageWithFaultHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9o8-wE-zgX"/>
+                                                    <action selector="viewWindowRootVCHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pk8-65-lzD"/>
                                                 </connections>
                                             </button>
                                         </subviews>
