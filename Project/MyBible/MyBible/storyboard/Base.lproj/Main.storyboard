@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -877,27 +877,17 @@
         <designable name="OWi-vk-LhG">
             <size key="intrinsicContentSize" width="29.666666666666668" height="20.333333333333332"/>
         </designable>
-        <designable name="Ow9-1O-Bmd">
-            <size key="intrinsicContentSize" width="118" height="20.333333333333332"/>
-        </designable>
+        <designable name="Ow9-1O-Bmd"/>
         <designable name="clf-3v-2fb">
             <size key="intrinsicContentSize" width="29.666666666666668" height="20.333333333333332"/>
         </designable>
-        <designable name="nbb-tm-MOa">
-            <size key="intrinsicContentSize" width="83" height="20.333333333333332"/>
-        </designable>
+        <designable name="nbb-tm-MOa"/>
         <designable name="spx-uV-2EX">
             <size key="intrinsicContentSize" width="393" height="90"/>
         </designable>
-        <designable name="tMe-nP-l8a">
-            <size key="intrinsicContentSize" width="183" height="20.333333333333332"/>
-        </designable>
-        <designable name="u9F-oq-Y7M">
-            <size key="intrinsicContentSize" width="68.333333333333329" height="20.333333333333332"/>
-        </designable>
-        <designable name="vTw-JE-Tom">
-            <size key="intrinsicContentSize" width="183" height="20.333333333333332"/>
-        </designable>
+        <designable name="tMe-nP-l8a"/>
+        <designable name="u9F-oq-Y7M"/>
+        <designable name="vTw-JE-Tom"/>
         <designable name="zfC-zP-YMf">
             <size key="intrinsicContentSize" width="-1" height="30"/>
         </designable>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Logger View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoggerViewController" customModule="MyOSLog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="855-5Q-0m7">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="393" placeholderIntrinsicHeight="50" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Ocb-5g-Vgy">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="163"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJF-jP-RWl">
+                                                <rect key="frame" x="12" y="18.000000000000004" width="369" height="34.333333333333343"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="콘솔 &gt; UI &gt; UIBUtton 전달"/>
+                                                <connections>
+                                                    <action selector="onlyMessageHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3X4-I9-bIH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAJ-0o-S6e">
+                                                <rect key="frame" x="12" y="64.333333333333329" width="369" height="34.333333333333329"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="콘솔 &gt; Network &gt; RootView 전달"/>
+                                                <connections>
+                                                    <action selector="messageWithErrorHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lyq-mQ-K89"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTT-OU-9cJ">
+                                                <rect key="frame" x="12" y="110.66666666666666" width="369" height="34.333333333333343"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="콘솔 &gt; Deinit &gt; 화면 포인트 전달"/>
+                                                <connections>
+                                                    <action selector="messageWithFaultHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9o8-wE-zgX"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="18" left="12" bottom="18" right="12"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ocb-5g-Vgy" firstAttribute="bottom" secondItem="eFj-qI-Mir" secondAttribute="bottom" id="91Z-w4-e4L"/>
+                                    <constraint firstItem="eFj-qI-Mir" firstAttribute="top" secondItem="Ocb-5g-Vgy" secondAttribute="top" id="MCZ-1G-XXl"/>
+                                    <constraint firstItem="Ocb-5g-Vgy" firstAttribute="width" secondItem="x51-1Z-I1p" secondAttribute="width" id="cvN-7F-zbI"/>
+                                    <constraint firstItem="Ocb-5g-Vgy" firstAttribute="trailing" secondItem="eFj-qI-Mir" secondAttribute="trailing" id="iTN-n2-4ib"/>
+                                    <constraint firstItem="Ocb-5g-Vgy" firstAttribute="leading" secondItem="eFj-qI-Mir" secondAttribute="leading" id="xFP-3I-boY"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="eFj-qI-Mir"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="x51-1Z-I1p"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="855-5Q-0m7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3N6-zQ-A4v"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="855-5Q-0m7" secondAttribute="bottom" id="S3d-29-HMI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="855-5Q-0m7" secondAttribute="trailing" id="dfl-1Q-3Gg"/>
+                            <constraint firstItem="855-5Q-0m7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tbr-4s-KrX"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="56" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -74,6 +74,13 @@
 		053B00FF29CDFE82001822B5 /* CommonSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonSlider.swift; sourceTree = "<group>"; };
 		054B1ADD29CF2FBF00EE23B7 /* RxSwiftDataSendTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftDataSendTestViewController.swift; sourceTree = "<group>"; };
 		054B1ADF29CF3F4D00EE23B7 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		058706192AFBA72000490774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0587061B2AFBA72000490774 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0587061D2AFBA72000490774 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		058706202AFBA72000490774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		058706222AFBA72200490774 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		058706252AFBA72200490774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		058706272AFBA72200490774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05BBD67229BA23B800C37D10 /* MyBible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBible.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05BBD67529BA23B800C37D10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05BBD67729BA23B800C37D10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,10 +157,25 @@
 			path = util;
 			sourceTree = "<group>";
 		};
+		058706182AFBA72000490774 /* MyTargetTest */ = {
+			isa = PBXGroup;
+			children = (
+				058706192AFBA72000490774 /* AppDelegate.swift */,
+				0587061B2AFBA72000490774 /* SceneDelegate.swift */,
+				0587061D2AFBA72000490774 /* ViewController.swift */,
+				0587061F2AFBA72000490774 /* Main.storyboard */,
+				058706222AFBA72200490774 /* Assets.xcassets */,
+				058706242AFBA72200490774 /* LaunchScreen.storyboard */,
+				058706272AFBA72200490774 /* Info.plist */,
+			);
+			path = MyTargetTest;
+			sourceTree = "<group>";
+		};
 		05BBD66929BA23B800C37D10 = {
 			isa = PBXGroup;
 			children = (
 				05BBD67429BA23B800C37D10 /* MyBible */,
+				058706182AFBA72000490774 /* MyTargetTest */,
 				05BBD67329BA23B800C37D10 /* Products */,
 				B37385AC407F28612287D2D0 /* Pods */,
 				51037B00A73D5F38323F80D0 /* Frameworks */,
@@ -328,7 +350,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1420;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					05BBD67129BA23B800C37D10 = {
@@ -463,6 +485,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		0587061F2AFBA72000490774 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				058706202AFBA72000490774 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		058706242AFBA72200490774 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				058706252AFBA72200490774 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		05BBD67B29BA23B800C37D10 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

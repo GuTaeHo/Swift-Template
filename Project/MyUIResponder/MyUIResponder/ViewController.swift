@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet var disabledButton: UIStackView!
     @IBOutlet var textView: UITextView!
     
     override func viewDidLoad() {
@@ -15,6 +16,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         NotificationCenter.default.addObserver(self, selector: #selector(notifying), name: .post, object: nil)
+        
+        print(disabledButton.next)
     }
 
     @objc func notifying() {
@@ -23,7 +26,7 @@ class ViewController: UIViewController {
         }
     }
 
-    @IBAction func disableButton(_ sender: Any) {
+    @IBAction func disableButton(_ sender: UIButton) {
         textView.text = "클릭됨"
     }
     
