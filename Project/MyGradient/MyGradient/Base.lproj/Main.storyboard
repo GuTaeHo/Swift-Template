@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Gradient View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyGradient" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="GradientViewController" customModule="MyGradient" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,7 +77,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5qt-aW-ybY">
                                         <rect key="frame" x="0.0" y="300" width="390" height="463"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SampleImage" translatesAutoresizingMaskIntoConstraints="NO" id="24Z-4w-yfF">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SampleSimulator" translatesAutoresizingMaskIntoConstraints="NO" id="24Z-4w-yfF">
                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="463"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GgL-Xq-CZ8" customClass="CommonVisualEffectView" customModule="MyGradient" customModuleProvider="target">
@@ -99,11 +99,22 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQq-Oc-fTx">
+                                <rect key="frame" x="18" y="763.66666666666663" width="354" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="블러 뷰 컨트롤러"/>
+                                <connections>
+                                    <segue destination="KjF-gH-L9c" kind="show" id="5D9-TY-gJA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TQq-Oc-fTx" secondAttribute="bottom" constant="12" id="7gc-aJ-pJc"/>
                             <constraint firstItem="qyG-Me-VQ2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="A23-2f-Bdb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TQq-Oc-fTx" secondAttribute="trailing" constant="18" id="QLF-Iz-PE8"/>
+                            <constraint firstItem="TQq-Oc-fTx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="f4m-Ua-Zp0"/>
                             <constraint firstItem="qyG-Me-VQ2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tUS-at-Rtm"/>
                             <constraint firstItem="qyG-Me-VQ2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="v66-yw-kI1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qyG-Me-VQ2" secondAttribute="bottom" id="xyT-ID-Mnn"/>
@@ -117,11 +128,83 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-15" y="4"/>
+            <point key="canvasLocation" x="-15.384615384615383" y="3.5545023696682461"/>
+        </scene>
+        <!--Visual Effect View Controller-->
+        <scene sceneID="NdQ-TJ-cXz">
+            <objects>
+                <viewController storyboardIdentifier="VisualEffectViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KjF-gH-L9c" customClass="VisualEffectViewController" customModule="MyGradient" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jpg-8m-lds">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SampleBackground" translatesAutoresizingMaskIntoConstraints="NO" id="VBy-uR-nTZ">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wfl-bo-xdD">
+                                <rect key="frame" x="75" y="297" width="240" height="240"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ghw-Uz-yCu">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EDI-KM-jVe">
+                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="112"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="LmD-7H-Sif">
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="112"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cocobean" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPM-AI-mDP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="112"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="QPM-AI-mDP" firstAttribute="top" secondItem="LmD-7H-Sif" secondAttribute="top" id="II0-nu-UsM"/>
+                                                    <constraint firstAttribute="trailing" secondItem="QPM-AI-mDP" secondAttribute="trailing" id="NWw-es-rn0"/>
+                                                    <constraint firstAttribute="bottom" secondItem="QPM-AI-mDP" secondAttribute="bottom" id="iuc-rO-DYg"/>
+                                                    <constraint firstItem="QPM-AI-mDP" firstAttribute="leading" secondItem="LmD-7H-Sif" secondAttribute="leading" id="lEa-cK-3H0"/>
+                                                </constraints>
+                                            </view>
+                                            <vibrancyEffect>
+                                                <blurEffect style="regular"/>
+                                            </vibrancyEffect>
+                                        </visualEffectView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="FuH-2j-MvJ"/>
+                                    <constraint firstAttribute="width" constant="240" id="XpQ-RO-Ogy"/>
+                                </constraints>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ylk-ZC-FKo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VBy-uR-nTZ" firstAttribute="leading" secondItem="ylk-ZC-FKo" secondAttribute="leading" id="0AO-F2-sme"/>
+                            <constraint firstItem="VBy-uR-nTZ" firstAttribute="top" secondItem="jpg-8m-lds" secondAttribute="top" id="2Rc-Ln-JIb"/>
+                            <constraint firstItem="wfl-bo-xdD" firstAttribute="centerX" secondItem="jpg-8m-lds" secondAttribute="centerX" id="4MU-Rw-2h8"/>
+                            <constraint firstItem="ylk-ZC-FKo" firstAttribute="trailing" secondItem="VBy-uR-nTZ" secondAttribute="trailing" id="JKH-2D-6hk"/>
+                            <constraint firstItem="wfl-bo-xdD" firstAttribute="centerY" secondItem="jpg-8m-lds" secondAttribute="centerY" id="fbZ-Qt-1SI"/>
+                            <constraint firstAttribute="bottom" secondItem="VBy-uR-nTZ" secondAttribute="bottom" id="mMr-FB-O1z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Esd-I8-tGA"/>
+                    <connections>
+                        <outlet property="blurView" destination="wfl-bo-xdD" id="sqq-YT-QGc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sYw-Gr-dTn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="755" y="4"/>
         </scene>
     </scenes>
     <resources>
-        <image name="SampleImage" width="1024" height="1024"/>
+        <image name="SampleBackground" width="7952" height="4970"/>
+        <image name="SampleSimulator" width="1024" height="1024"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

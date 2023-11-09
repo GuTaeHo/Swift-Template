@@ -11,11 +11,12 @@
 		057F83A22AFBD04C0096501F /* CommonVisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057F83A12AFBD04C0096501F /* CommonVisualEffectView.swift */; };
 		05C5819F28F7E1280018A8FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5819E28F7E1280018A8FE /* AppDelegate.swift */; };
 		05C581A128F7E1280018A8FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C581A028F7E1280018A8FE /* SceneDelegate.swift */; };
-		05C581A328F7E1280018A8FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C581A228F7E1280018A8FE /* ViewController.swift */; };
+		05C581A328F7E1280018A8FE /* GradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C581A228F7E1280018A8FE /* GradientViewController.swift */; };
 		05C581A628F7E1280018A8FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05C581A428F7E1280018A8FE /* Main.storyboard */; };
 		05C581A828F7E1290018A8FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05C581A728F7E1290018A8FE /* Assets.xcassets */; };
 		05C581AB28F7E1290018A8FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05C581A928F7E1290018A8FE /* LaunchScreen.storyboard */; };
-		05C581B328F7E1370018A8FE /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C581B228F7E1370018A8FE /* UIView.swift */; };
+		05C581B328F7E1370018A8FE /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C581B228F7E1370018A8FE /* UIView+.swift */; };
+		05E1883D2AFCEFD3009934DC /* VisualEffectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E1883C2AFCEFD3009934DC /* VisualEffectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,12 +25,13 @@
 		05C5819B28F7E1280018A8FE /* MyGradient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyGradient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05C5819E28F7E1280018A8FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05C581A028F7E1280018A8FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		05C581A228F7E1280018A8FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		05C581A228F7E1280018A8FE /* GradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientViewController.swift; sourceTree = "<group>"; };
 		05C581A528F7E1280018A8FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		05C581A728F7E1290018A8FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05C581AA28F7E1290018A8FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05C581AC28F7E1290018A8FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		05C581B228F7E1370018A8FE /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		05C581B228F7E1370018A8FE /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		05E1883C2AFCEFD3009934DC /* VisualEffectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,18 +64,43 @@
 		05C5819D28F7E1280018A8FE /* MyGradient */ = {
 			isa = PBXGroup;
 			children = (
+				05E1883B2AFCEF53009934DC /* ViewController */,
+				05E1883A2AFCEF38009934DC /* Extension */,
+				05E188392AFCEF2A009934DC /* View */,
 				05C5819E28F7E1280018A8FE /* AppDelegate.swift */,
 				05C581A028F7E1280018A8FE /* SceneDelegate.swift */,
-				05C581A228F7E1280018A8FE /* ViewController.swift */,
 				05C581A428F7E1280018A8FE /* Main.storyboard */,
 				05C581A728F7E1290018A8FE /* Assets.xcassets */,
 				05C581A928F7E1290018A8FE /* LaunchScreen.storyboard */,
 				05C581AC28F7E1290018A8FE /* Info.plist */,
-				05C581B228F7E1370018A8FE /* UIView.swift */,
+			);
+			path = MyGradient;
+			sourceTree = "<group>";
+		};
+		05E188392AFCEF2A009934DC /* View */ = {
+			isa = PBXGroup;
+			children = (
 				052300F12A4E6B8E00ABB0D5 /* TransparentGradientView.swift */,
 				057F83A12AFBD04C0096501F /* CommonVisualEffectView.swift */,
 			);
-			path = MyGradient;
+			path = View;
+			sourceTree = "<group>";
+		};
+		05E1883A2AFCEF38009934DC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				05C581B228F7E1370018A8FE /* UIView+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		05E1883B2AFCEF53009934DC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				05C581A228F7E1280018A8FE /* GradientViewController.swift */,
+				05E1883C2AFCEFD3009934DC /* VisualEffectViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,9 +174,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05E1883D2AFCEFD3009934DC /* VisualEffectViewController.swift in Sources */,
 				057F83A22AFBD04C0096501F /* CommonVisualEffectView.swift in Sources */,
-				05C581B328F7E1370018A8FE /* UIView.swift in Sources */,
-				05C581A328F7E1280018A8FE /* ViewController.swift in Sources */,
+				05C581B328F7E1370018A8FE /* UIView+.swift in Sources */,
+				05C581A328F7E1280018A8FE /* GradientViewController.swift in Sources */,
 				05C5819F28F7E1280018A8FE /* AppDelegate.swift in Sources */,
 				05C581A128F7E1280018A8FE /* SceneDelegate.swift in Sources */,
 				052300F22A4E6B8E00ABB0D5 /* TransparentGradientView.swift in Sources */,
