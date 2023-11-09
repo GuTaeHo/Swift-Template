@@ -153,18 +153,25 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cocobean" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPM-AI-mDP">
-                                                        <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SampleXcode" translatesAutoresizingMaskIntoConstraints="NO" id="R8B-RH-9rG">
+                                                        <rect key="frame" x="56" y="32" width="128" height="128"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="128" id="4nl-vQ-Ykp"/>
+                                                            <constraint firstAttribute="width" constant="128" id="Ipf-Gy-6g2"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Build Succeed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wdi-oI-7Dx">
+                                                        <rect key="frame" x="50" y="184.66666666666669" width="140.33333333333334" height="23.333333333333343"/>
+                                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="QPM-AI-mDP" firstAttribute="top" secondItem="LmD-7H-Sif" secondAttribute="top" id="II0-nu-UsM"/>
-                                                    <constraint firstAttribute="trailing" secondItem="QPM-AI-mDP" secondAttribute="trailing" id="NWw-es-rn0"/>
-                                                    <constraint firstAttribute="bottom" secondItem="QPM-AI-mDP" secondAttribute="bottom" id="iuc-rO-DYg"/>
-                                                    <constraint firstItem="QPM-AI-mDP" firstAttribute="leading" secondItem="LmD-7H-Sif" secondAttribute="leading" id="lEa-cK-3H0"/>
+                                                    <constraint firstItem="R8B-RH-9rG" firstAttribute="top" secondItem="LmD-7H-Sif" secondAttribute="top" constant="32" id="AKy-2l-KVt"/>
+                                                    <constraint firstItem="Wdi-oI-7Dx" firstAttribute="centerX" secondItem="LmD-7H-Sif" secondAttribute="centerX" id="RhO-HK-hh4"/>
+                                                    <constraint firstItem="R8B-RH-9rG" firstAttribute="centerX" secondItem="LmD-7H-Sif" secondAttribute="centerX" id="bPT-2y-Cvw"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Wdi-oI-7Dx" secondAttribute="bottom" constant="32" id="cjO-dk-sD4"/>
                                                 </constraints>
                                             </view>
                                             <vibrancyEffect>
@@ -210,8 +217,9 @@
     <resources>
         <image name="SampleBackground" width="7952" height="4970"/>
         <image name="SampleSimulator" width="1024" height="1024"/>
+        <image name="SampleXcode" width="1024" height="1024"/>
         <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
