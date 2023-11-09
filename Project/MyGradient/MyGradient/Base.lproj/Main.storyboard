@@ -147,15 +147,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EDI-KM-jVe">
-                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="112"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EDI-KM-jVe">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="LmD-7H-Sif">
-                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="112"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cocobean" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPM-AI-mDP">
-                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="112"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cocobean" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPM-AI-mDP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -173,6 +172,12 @@
                                             </vibrancyEffect>
                                         </visualEffectView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="EDI-KM-jVe" secondAttribute="bottom" id="2Am-zo-eU9"/>
+                                        <constraint firstItem="EDI-KM-jVe" firstAttribute="top" secondItem="Ghw-Uz-yCu" secondAttribute="top" id="RAe-bC-NK1"/>
+                                        <constraint firstAttribute="trailing" secondItem="EDI-KM-jVe" secondAttribute="trailing" id="jkK-Vo-dzv"/>
+                                        <constraint firstItem="EDI-KM-jVe" firstAttribute="leading" secondItem="Ghw-Uz-yCu" secondAttribute="leading" id="u8E-jW-UaQ"/>
+                                    </constraints>
                                 </view>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="FuH-2j-MvJ"/>
