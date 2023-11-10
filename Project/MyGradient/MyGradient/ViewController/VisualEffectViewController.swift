@@ -14,6 +14,10 @@ class VisualEffectViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // 뷰 계층 출력
+        let vibrancyView = blurView.contentView.subviews.first as! UIVisualEffectView
+        vibrancyView.contentView.subviews.forEach({ print($0) })
+        
         blurView.layer.cornerRadius = blurView.frame.height / 8
         
     }
