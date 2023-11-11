@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		056618432AFFB7E4006C02FA /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056618422AFFB7E4006C02FA /* UIImage.swift */; };
 		0579E7C72AF7995B00BD2F52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0579E7C62AF7995B00BD2F52 /* AppDelegate.swift */; };
 		0579E7C92AF7995B00BD2F52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0579E7C82AF7995B00BD2F52 /* SceneDelegate.swift */; };
 		0579E7CB2AF7995B00BD2F52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0579E7CA2AF7995B00BD2F52 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		056618422AFFB7E4006C02FA /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		0579E7C32AF7995B00BD2F52 /* MyUIImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyUIImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0579E7C62AF7995B00BD2F52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0579E7C82AF7995B00BD2F52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				0579E7D12AF7995C00BD2F52 /* LaunchScreen.storyboard */,
 				0579E7D42AF7995C00BD2F52 /* Info.plist */,
 				0579E7DA2AF799D900BD2F52 /* ColorChangableImageView.swift */,
+				056618422AFFB7E4006C02FA /* UIImage.swift */,
 			);
 			path = MyUIImage;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0579E7CB2AF7995B00BD2F52 /* ViewController.swift in Sources */,
+				056618432AFFB7E4006C02FA /* UIImage.swift in Sources */,
 				0579E7C72AF7995B00BD2F52 /* AppDelegate.swift in Sources */,
 				0579E7DB2AF799DA00BD2F52 /* ColorChangableImageView.swift in Sources */,
 				0579E7C92AF7995B00BD2F52 /* SceneDelegate.swift in Sources */,

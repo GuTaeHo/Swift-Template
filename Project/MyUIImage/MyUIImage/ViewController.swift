@@ -24,17 +24,72 @@ class ViewController: UIViewController {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
+    
+    lazy var stackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [downSamplingImageView, originalImageView])
+        stackView.axis = .vertical
+        stackView.distribution = .fillEqually
+        stackView.backgroundColor = .clear
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
+    
+    lazy var downSamplingImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(resource: .highResolution).resize(newWidth: UIScreen.main.bounds.width)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
+        return imageView
+    }()
+    
+    lazy var originalImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(resource: .highResolution)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
+        return imageView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.addSubview(imageView)
+        view.addSubview(stackView)
+        
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: view.topAnchor),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+        // view.addSubview(downSamplingImageView)
+        // view.addSubview(originalImageView)
+        
+        
+        
+        
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             imageView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             imageView.widthAnchor.constraint(equalToConstant: 200),
             imageView.heightAnchor.constraint(equalToConstant: 200)
         ])
+        
+//        NSLayoutConstraint.activate([
+//            downSamplingImageView.bottomAnchor.constraint(equalTo: originalImageView.topAnchor),
+//            downSamplingImageView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+//            downSamplingImageView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+//            downSamplingImageView.heightAnchor.constraint(equalToConstant: 300)
+//        ])
+//        
+//        NSLayoutConstraint.activate([
+//            originalImageView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+//            originalImageView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+//            originalImageView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+//            originalImageView.heightAnchor.constraint(equalToConstant: 300)
+//        ])
     }
 }
 
