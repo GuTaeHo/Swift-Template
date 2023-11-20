@@ -46,6 +46,11 @@ class MainViewController: BaseViewController {
         let button1 = UIButton().then {
             $0.configuration = .filled()
             $0.configuration?.title = "테이블 뷰"
+            $0.addAction(.init(handler: { [weak self] action in
+                let vc = TableViewController()
+                vc.modalPresentationStyle = .fullScreen
+                self?.present(vc, animated: true)
+            }), for: .touchUpInside)
         }
         
         let button2 = UIButton().then {

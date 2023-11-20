@@ -19,6 +19,8 @@
 		05C766132B0B82E900FA9483 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C766122B0B82E900FA9483 /* BaseViewController.swift */; };
 		05C766152B0B859700FA9483 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C766142B0B859700FA9483 /* UIStackView+.swift */; };
 		05C766172B0B882600FA9483 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C766162B0B882600FA9483 /* UIView+.swift */; };
+		05C766192B0B954B00FA9483 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C766182B0B954B00FA9483 /* TableViewController.swift */; };
+		05C7661C2B0B95FE00FA9483 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C7661B2B0B95FE00FA9483 /* StoryboardInstantiable.swift */; };
 		EF6F3B026ABE5D1B7D17DA53 /* Pods_MyCodeBaseViews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E74B969FE286DB32B5B532 /* Pods_MyCodeBaseViews.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		05C766122B0B82E900FA9483 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		05C766142B0B859700FA9483 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 		05C766162B0B882600FA9483 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		05C766182B0B954B00FA9483 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		05C7661B2B0B95FE00FA9483 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
 		1FDFA0210CF709C6F9D86419 /* Pods-MyCodeBaseViews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCodeBaseViews.debug.xcconfig"; path = "Target Support Files/Pods-MyCodeBaseViews/Pods-MyCodeBaseViews.debug.xcconfig"; sourceTree = "<group>"; };
 		512BC09C7A7FF8855EDEA263 /* Pods-MyCodeBaseViews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCodeBaseViews.release.xcconfig"; path = "Target Support Files/Pods-MyCodeBaseViews/Pods-MyCodeBaseViews.release.xcconfig"; sourceTree = "<group>"; };
 		A3E74B969FE286DB32B5B532 /* Pods_MyCodeBaseViews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCodeBaseViews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +79,7 @@
 		05C765EE2B0B7E0700FA9483 /* MyCodeBaseViews */ = {
 			isa = PBXGroup;
 			children = (
+				05C7661A2B0B95A900FA9483 /* Protocol */,
 				05C766112B0B82DC00FA9483 /* Base */,
 				05C7660E2B0B816200FA9483 /* ViewController */,
 				05C7660B2B0B7E8D00FA9483 /* Model */,
@@ -112,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				05C765F32B0B7E0700FA9483 /* MainViewController.swift */,
+				05C766182B0B954B00FA9483 /* TableViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -122,6 +128,14 @@
 				05C766122B0B82E900FA9483 /* BaseViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		05C7661A2B0B95A900FA9483 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				05C7661B2B0B95FE00FA9483 /* StoryboardInstantiable.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		0D0FC7789CE13BDE4EE59E96 /* Pods */ = {
@@ -261,6 +275,8 @@
 				05C765F42B0B7E0700FA9483 /* MainViewController.swift in Sources */,
 				05C766172B0B882600FA9483 /* UIView+.swift in Sources */,
 				05C765F02B0B7E0700FA9483 /* AppDelegate.swift in Sources */,
+				05C7661C2B0B95FE00FA9483 /* StoryboardInstantiable.swift in Sources */,
+				05C766192B0B954B00FA9483 /* TableViewController.swift in Sources */,
 				05C766062B0B7E5F00FA9483 /* UICollectionView+.swift in Sources */,
 				05C766132B0B82E900FA9483 /* BaseViewController.swift in Sources */,
 				05C765F22B0B7E0700FA9483 /* SceneDelegate.swift in Sources */,
