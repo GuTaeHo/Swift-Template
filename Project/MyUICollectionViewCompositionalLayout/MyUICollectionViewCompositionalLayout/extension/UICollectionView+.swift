@@ -1,6 +1,6 @@
 //
 //  UICollectionView+.swift
-//  MyUICollectionViewCompositionalLayout
+//  MyCodeBaseViews
 //
 //  Created by 구태호 on 10/21/23.
 //
@@ -37,7 +37,7 @@ extension UICollectionView {
         register(.init(nibName: viewClass.className, bundle: nil), forSupplementaryViewOfKind: elementKind, withReuseIdentifier: viewClass.className)
     }
     
-    /// 해당 셀 타입으로 캐스팅된 재사용 셀을 가져옵니다.
+    /// 해당 셀 타입으로 캐스팅 된 재사용 셀을 가져옵니다.
     /// - Parameters:
     ///   - cellClass: 셀 타입
     ///   - indexPath: 인덱스 (IndexPath)
@@ -47,7 +47,7 @@ extension UICollectionView {
         return (dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as? T) ?? .init()
     }
     
-    /// 해당 뷰 타입의 캐스팅된 재사용 Supplementary 뷰를 가져옵니다.
+    /// 해당 뷰 타입의 캐스팅 된 재사용 Supplementary 뷰를 가져옵니다.
     /// - Parameters:
     ///   - viewClass: UICollectionReusableView를 상속한 뷰 타입
     ///   - elementKind: Supplementary 뷰 종류

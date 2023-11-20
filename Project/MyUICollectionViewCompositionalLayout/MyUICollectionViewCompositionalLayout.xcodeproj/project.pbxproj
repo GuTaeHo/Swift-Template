@@ -18,7 +18,6 @@
 		05BFC7EB2AC3172400F623BA /* CustomXibCellCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BFC7EA2AC3172400F623BA /* CustomXibCellCollectionViewController.swift */; };
 		05BFC7EE2AC318CC00F623BA /* HorizontalScrollCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BFC7ED2AC318CC00F623BA /* HorizontalScrollCollectionViewCell.swift */; };
 		05BFC7F12AC3193400F623BA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BFC7F02AC3193400F623BA /* Category.swift */; };
-		05C873092AE3FCBA00F5C2C7 /* UICollectionViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C873082AE3FCBA00F5C2C7 /* UICollectionViewCell+.swift */; };
 		05C8730B2AE3FCC800F5C2C7 /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C8730A2AE3FCC800F5C2C7 /* UICollectionView+.swift */; };
 		05C8730D2AE3FCF800F5C2C7 /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C8730C2AE3FCF800F5C2C7 /* NSObject+.swift */; };
 		05C8730F2AE4015C00F5C2C7 /* CodeBaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C8730E2AE4015C00F5C2C7 /* CodeBaseCollectionViewController.swift */; };
@@ -42,7 +41,6 @@
 		05BFC7EA2AC3172400F623BA /* CustomXibCellCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomXibCellCollectionViewController.swift; sourceTree = "<group>"; };
 		05BFC7ED2AC318CC00F623BA /* HorizontalScrollCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollCollectionViewCell.swift; sourceTree = "<group>"; };
 		05BFC7F02AC3193400F623BA /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		05C873082AE3FCBA00F5C2C7 /* UICollectionViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+.swift"; sourceTree = "<group>"; };
 		05C8730A2AE3FCC800F5C2C7 /* UICollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
 		05C8730C2AE3FCF800F5C2C7 /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
 		05C8730E2AE4015C00F5C2C7 /* CodeBaseCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBaseCollectionViewController.swift; sourceTree = "<group>"; };
@@ -131,7 +129,6 @@
 		05C873072AE3FCA900F5C2C7 /* extension */ = {
 			isa = PBXGroup;
 			children = (
-				05C873082AE3FCBA00F5C2C7 /* UICollectionViewCell+.swift */,
 				05C8730A2AE3FCC800F5C2C7 /* UICollectionView+.swift */,
 				05C8730C2AE3FCF800F5C2C7 /* NSObject+.swift */,
 			);
@@ -211,7 +208,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05C873092AE3FCBA00F5C2C7 /* UICollectionViewCell+.swift in Sources */,
 				05C873162AE405C000F5C2C7 /* CodeBaseCollectionReusableView.swift in Sources */,
 				05BFC7D82AC3164800F623BA /* ViewController.swift in Sources */,
 				05BFC7E92AC3170500F623BA /* InnerCellCollectionViewController.swift in Sources */,

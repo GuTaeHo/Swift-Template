@@ -1,6 +1,6 @@
 //
 //  NSObject+.swift
-//  MyUICollectionViewCompositionalLayout
+//  MyCodeBaseViews
 //
 //  Created by 구태호 on 10/21/23.
 //
