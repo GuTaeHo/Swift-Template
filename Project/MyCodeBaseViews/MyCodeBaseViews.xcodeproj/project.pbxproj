@@ -11,6 +11,7 @@
 		0587996F2B0CD3E500281666 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0587996E2B0CD3E500281666 /* Menu.swift */; };
 		058799722B0CD47300281666 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058799712B0CD47300281666 /* MenuTableViewCell.swift */; };
 		058799742B0CD75D00281666 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058799732B0CD75D00281666 /* UIImageView+.swift */; };
+		058799762B0CDE3A00281666 /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058799752B0CDE3A00281666 /* UITableViewCell+.swift */; };
 		05C765F02B0B7E0700FA9483 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C765EF2B0B7E0700FA9483 /* AppDelegate.swift */; };
 		05C765F22B0B7E0700FA9483 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C765F12B0B7E0700FA9483 /* SceneDelegate.swift */; };
 		05C765F42B0B7E0700FA9483 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C765F32B0B7E0700FA9483 /* MainViewController.swift */; };
@@ -33,6 +34,7 @@
 		0587996E2B0CD3E500281666 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		058799712B0CD47300281666 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		058799732B0CD75D00281666 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
+		058799752B0CDE3A00281666 /* UITableViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
 		05C765EC2B0B7E0700FA9483 /* MyCodeBaseViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCodeBaseViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05C765EF2B0B7E0700FA9483 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05C765F12B0B7E0700FA9483 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				05C766162B0B882600FA9483 /* UIView+.swift */,
 				0587996C2B0CD2BD00281666 /* UITableView+.swift */,
 				058799732B0CD75D00281666 /* UIImageView+.swift */,
+				058799752B0CDE3A00281666 /* UITableViewCell+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				05C766172B0B882600FA9483 /* UIView+.swift in Sources */,
 				05C765F02B0B7E0700FA9483 /* AppDelegate.swift in Sources */,
 				05C7661C2B0B95FE00FA9483 /* StoryboardInstantiable.swift in Sources */,
+				058799762B0CDE3A00281666 /* UITableViewCell+.swift in Sources */,
 				0587996D2B0CD2BD00281666 /* UITableView+.swift in Sources */,
 				05C766192B0B954B00FA9483 /* TableViewController.swift in Sources */,
 				05C766062B0B7E5F00FA9483 /* UICollectionView+.swift in Sources */,

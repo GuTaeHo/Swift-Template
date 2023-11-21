@@ -56,6 +56,7 @@ class TableViewController: BaseViewController {
     private func initLayout() {
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.sectionHeaderTopPadding = .zero
         view.addSubview(tableView)
         tableView.snp.makeConstraints {
             $0.edges.equalTo(view.safeAreaLayoutGuide)
@@ -69,14 +70,30 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
             $0.backgroundColor = .lightGray
         }
         
+        let imageView = UIImageView().then {
+            $0.imageDownload(url: "https://image.bugsm.co.kr/album/images/500/202657/20265759.jpg")
+            $0.layer.cornerRadius = 6
+            $0.layer.borderWidth = 1
+            $0.layer.borderColor = UIColor.gray.cgColor
+            $0.contentMode = .scaleAspectFill
+            $0.clipsToBounds = true
+        }
+        
         let titleLabel = UILabel().then {
             $0.text = menu.menuGroup?[section].name
         }
         
-        sectionHeaderView.addSubview(titleLabel)
+        sectionHeaderView.addSubviews(imageView, titleLabel)
+        imageView.snp.makeConstraints {
+            $0.width.height.equalTo(40)
+            $0.top.bottom.equalToSuperview().inset(6)
+            $0.leading.equalToSuperview().inset(12)
+        }
+        
         titleLabel.snp.makeConstraints {
             $0.top.bottom.equalToSuperview().inset(6)
-            $0.leading.trailing.equalToSuperview().inset(12)
+            $0.leading.equalTo(imageView.snp.trailing).inset(-12)
+            $0.trailing.equalToSuperview().inset(12)
         }
         
         return sectionHeaderView

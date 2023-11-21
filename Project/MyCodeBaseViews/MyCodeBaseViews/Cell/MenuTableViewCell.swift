@@ -31,6 +31,7 @@ class MenuTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        defaultSelectionStyle()
         contentView.addSubview(stackView)
         stackView.addArrangedSubviews(lbTitle, lbPrice)
         
