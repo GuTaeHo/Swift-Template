@@ -47,6 +47,19 @@ class TableViewController: BaseViewController {
         $0.register(MenuTableViewCell.self, forCellReuseIdentifier: MenuTableViewCell.className)
     }
     
+    let tableViewHeaderView = UIView().then {
+        $0.backgroundColor = .darkGray
+    }
+    
+    let tableViewHeaderViewImageView = UIImageView().then {
+        $0.layer.cornerRadius = 6
+        $0.layer.borderWidth = 1
+        $0.layer.borderColor = UIColor.gray.cgColor
+        $0.contentMode = .scaleAspectFill
+        $0.clipsToBounds = true
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,13 +67,23 @@ class TableViewController: BaseViewController {
     }
     
     private func initLayout() {
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.sectionHeaderTopPadding = .zero
         view.addSubview(tableView)
         tableView.snp.makeConstraints {
             $0.edges.equalTo(view.safeAreaLayoutGuide)
         }
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.sectionHeaderTopPadding = .zero
+        tableViewHeaderView.addSubview(tableViewHeaderViewImageView)
+        tableViewHeaderViewImageView.imageDownload(url: "https://image.bugsm.co.kr/album/images/500/202657/20265759.jpg") { [weak self] image in
+            self?.tableView.layoutIfNeeded()
+        }
+        tableViewHeaderViewImageView.snp.makeConstraints {
+            $0.edges.equalToSuperview().inset(12)
+        }
+        
+        tableView.tableHeaderView = tableViewHeaderViewImageView
     }
 }
 
