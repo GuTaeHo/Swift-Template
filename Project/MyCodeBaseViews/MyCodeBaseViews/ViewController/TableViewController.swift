@@ -56,13 +56,38 @@ class TableViewController: BaseViewController {
     private func initLayout() {
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.reloadData()
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints {
+            $0.edges.equalTo(view.safeAreaLayoutGuide)
+        }
     }
 }
 
 extension TableViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let sectionHeaderView = UIView().then {
+            $0.backgroundColor = .lightGray
+        }
+        
+        let titleLabel = UILabel().then {
+            $0.text = menu.menuGroup?[section].name
+        }
+        
+        sectionHeaderView.addSubview(titleLabel)
+        titleLabel.snp.makeConstraints {
+            $0.top.bottom.equalToSuperview().inset(6)
+            $0.leading.trailing.equalToSuperview().inset(12)
+        }
+        
+        return sectionHeaderView
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menu.menuGroup?[section].options?.count ?? 0
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return menu.menuGroup?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
