@@ -75,14 +75,9 @@ class TableViewController: BaseViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.sectionHeaderTopPadding = .zero
-        tableViewHeaderView.addSubview(tableViewHeaderViewImageView)
-        tableViewHeaderViewImageView.imageDownload(url: "https://image.bugsm.co.kr/album/images/500/202657/20265759.jpg") { [weak self] image in
-            self?.tableView.layoutIfNeeded()
-        }
-        tableViewHeaderViewImageView.snp.makeConstraints {
-            $0.edges.equalToSuperview().inset(12)
-        }
         
+        tableViewHeaderViewImageView.imageDownload(url: "https://image.bugsm.co.kr/album/images/500/202657/20265759.jpg")
+        tableViewHeaderViewImageView.frame = .init(origin: .zero, size: .init(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width))
         tableView.tableHeaderView = tableViewHeaderViewImageView
     }
 }
