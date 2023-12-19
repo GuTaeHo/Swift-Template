@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonHandler(_ sender: UIButton) {
-        guard let url = URL(string: "myurlschemereceiver://") else {
+        guard let url = URL(string: "myurlschemereceiver://login") else {
             return
         }
         

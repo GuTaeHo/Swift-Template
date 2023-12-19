@@ -48,7 +48,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-        print(URLContexts.first?.url ?? "")
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "arrivedUrl"), object: nil, userInfo: ["url": URLContexts.first?.url ?? ""])
     }
 }

@@ -27,7 +27,13 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         NotificationCenter.default.publisher(for: NSNotification.Name(rawValue: "arrivedUrl")).sink { notification in
-            print("\(notification)")
+            if let url = notification.userInfo?["url"] as? URL {
+                print("url absoluteString: " + url.absoluteString)
+                print("url scheme: " + (url.scheme ?? ""))
+                print("url host: " + (url.host() ?? ""))
+                print("url path: " + url.path())
+                print("url pathComponents: \(url.pathComponents)")
+            }
         }.store(in: &cancellable)
     }
 }
