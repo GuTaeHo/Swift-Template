@@ -10,8 +10,6 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     
-    var dataSource: UICollectionViewDiffableDataSource<Section, Product>!
-    
     enum Section: CaseIterable {
         case main
     }
@@ -25,28 +23,30 @@ class ViewController: UIViewController {
         .init(code: 0, thumbnail: "https://img.danawa.com/prod_img/500000/148/824/img/17824148_3.jpg?_v=20220929125243", brand: "Apple", name: "아이폰14 프로 512GB, LG U+", price: 999),
     ]
     
+    var dataSource: UICollectionViewDiffableDataSource<Section, Product>!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // UICollectionView.CellRegistration 을 통해 셀을 등록할 수도 있음
-        // 셀의 모양은 등록 시 지정, dataSource 에서 아이템 전달
-//        let cellRegistration = UICollectionView.CellRegistration<DiffableCollectionViewCell, Product> { (cell, indexPath, item) in
-//            cell.configuration(item)
-//        }
-        
-        collectionView.register(UINib(nibName: "DiffableCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "DiffableCollectionViewCell")
+
         collectionView.collectionViewLayout = makeCompositionalLayout()
         
-        // <섹션 및 아이템 타입>, 콜렉션 뷰, 프로바이더 제공
-        dataSource = UICollectionViewDiffableDataSource<Section, Product>(collectionView: collectionView) { (collectionView, indexPath, item) -> UICollectionViewCell? in
-//            let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: item)
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DiffableCollectionViewCell", for: indexPath) as? DiffableCollectionViewCell else { preconditionFailure() }
-            cell.configuration(item)
-            return cell
+        configureDataSource()
+        initSnapshot()
+    }
+    
+    /// 셀 등록 및 데이터 소스 생성
+    func configureDataSource() {
+        // 1. Cell 등록자 생성
+        let cellRegistration = UICollectionView.CellRegistration<DiffableCollectionViewCell, Product> { (cell, indexPath, product) in
+            cell.configuration(product)
         }
         
-        initSnapshot()
+        // 2. DiffableDataSource 생성
+        dataSource = UICollectionViewDiffableDataSource<Section, Product>(collectionView: collectionView) {
+            (collectionView: UICollectionView, indexPath: IndexPath, identifier: Product) -> UICollectionViewCell? in
+            return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: identifier)
+        }
     }
     
     // 그리드 형태의 컴포지셔널 레이아웃 생성
@@ -93,7 +93,5 @@ class ViewController: UIViewController {
         // 변경된 섹션, UI를 적용
         self.dataSource.apply(snapshot, animatingDifferences: true)
     }
-    
-    
 }
 

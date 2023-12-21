@@ -25,7 +25,7 @@ class CodeBaseCollectionViewController: UIViewController {
     }()
     
     lazy var collectionView: UICollectionView = {
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewCompositionalLayout(section: makeGridLayoutSection(column: 2, row: 3)))
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: .init())
         collectionView.dataSource = self
         collectionView.delegate = self
         // 셀 식별을 위한 Nib 파일 등록
@@ -66,29 +66,32 @@ class CodeBaseCollectionViewController: UIViewController {
         collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         collectionView.backgroundColor = .black
-        
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+         
+        collectionView.collectionViewLayout = UICollectionViewCompositionalLayout(section: makeGridLayoutSection(column: 2, row: 3))
     }
     
     func makeGridLayoutSection(column: Int, row: Int) -> NSCollectionLayoutSection {
-        let itemFractionalWidthFraction = 1.0 / Double(column)
-        let itemInset: CGFloat = 2.5
-        let groupFractionalHeightFraction = 1.0 / Double(row)
-        
         let itemSize = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(itemFractionalWidthFraction),
-            heightDimension: .fractionalHeight(1)
+            widthDimension: .fractionalWidth(1.0 / Double(column)),
+            heightDimension: .fractionalHeight(1.0)
         )
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = NSDirectionalEdgeInsets(top: itemInset, leading: itemInset, bottom: itemInset, trailing: itemInset)
         
         let groupSize = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1),
-            heightDimension: .fractionalHeight(groupFractionalHeightFraction)
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .fractionalHeight(1.0 / 3.0)
         )
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        group.interItemSpacing = .fixed(4)
         
         let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets(top: itemInset, leading: 0, bottom: itemInset, trailing: 0)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 4, leading: 0, bottom: 4, trailing: 0)
+        section.interGroupSpacing = 4
+        section.contentInsets = .init(top: 0, leading: 12, bottom: 0, trailing: 18)
         
         // 헤더 뷰 사이즈 지정
         let headerFooterSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
