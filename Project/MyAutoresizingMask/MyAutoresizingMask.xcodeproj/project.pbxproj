@@ -7,35 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05BFC7A92AC1B01C00F623BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BFC7A82AC1B01C00F623BA /* AppDelegate.swift */; };
-		05BFC7AB2AC1B01C00F623BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BFC7AA2AC1B01C00F623BA /* SceneDelegate.swift */; };
-		05BFC7AD2AC1B01C00F623BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BFC7AC2AC1B01C00F623BA /* ViewController.swift */; };
-		05BFC7B02AC1B01C00F623BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05BFC7AE2AC1B01C00F623BA /* Main.storyboard */; };
-		05BFC7B22AC1B01D00F623BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05BFC7B12AC1B01D00F623BA /* Assets.xcassets */; };
-		05BFC7B52AC1B01D00F623BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05BFC7B32AC1B01D00F623BA /* LaunchScreen.storyboard */; };
-		05BFC7C02AC1B1AD00F623BA /* DiffableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BFC7BE2AC1B1AD00F623BA /* DiffableCollectionViewCell.swift */; };
-		05BFC7C12AC1B1AD00F623BA /* DiffableCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05BFC7BF2AC1B1AD00F623BA /* DiffableCollectionViewCell.xib */; };
-		05BFC7C42AC1B36600F623BA /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BFC7C32AC1B36600F623BA /* Product.swift */; };
-		05BFC7C62AC1B3C900F623BA /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BFC7C52AC1B3C900F623BA /* UIImageView+.swift */; };
+		0597C7FC2B46E4030037947C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0597C7FB2B46E4030037947C /* AppDelegate.swift */; };
+		0597C7FE2B46E4030037947C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0597C7FD2B46E4030037947C /* SceneDelegate.swift */; };
+		0597C8002B46E4030037947C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0597C7FF2B46E4030037947C /* ViewController.swift */; };
+		0597C8032B46E4030037947C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0597C8012B46E4030037947C /* Main.storyboard */; };
+		0597C8052B46E4040037947C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0597C8042B46E4040037947C /* Assets.xcassets */; };
+		0597C8082B46E4040037947C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0597C8062B46E4040037947C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		05BFC7A52AC1B01C00F623BA /* MyDiffableDatasource.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDiffableDatasource.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		05BFC7A82AC1B01C00F623BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		05BFC7AA2AC1B01C00F623BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		05BFC7AC2AC1B01C00F623BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		05BFC7AF2AC1B01C00F623BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		05BFC7B12AC1B01D00F623BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		05BFC7B42AC1B01D00F623BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		05BFC7B62AC1B01D00F623BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		05BFC7BE2AC1B1AD00F623BA /* DiffableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableCollectionViewCell.swift; sourceTree = "<group>"; };
-		05BFC7BF2AC1B1AD00F623BA /* DiffableCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiffableCollectionViewCell.xib; sourceTree = "<group>"; };
-		05BFC7C32AC1B36600F623BA /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		05BFC7C52AC1B3C900F623BA /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
+		0597C7F82B46E4030037947C /* MyAutoresizingMask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAutoresizingMask.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0597C7FB2B46E4030037947C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0597C7FD2B46E4030037947C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0597C7FF2B46E4030037947C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0597C8022B46E4030037947C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0597C8042B46E4040037947C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0597C8072B46E4040037947C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0597C8092B46E4040037947C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		05BFC7A22AC1B01C00F623BA /* Frameworks */ = {
+		0597C7F52B46E4030037947C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,100 +37,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		05BFC79C2AC1B01C00F623BA = {
+		0597C7EF2B46E4030037947C = {
 			isa = PBXGroup;
 			children = (
-				05BFC7A72AC1B01C00F623BA /* MyDiffableDatasource */,
-				05BFC7A62AC1B01C00F623BA /* Products */,
+				0597C7FA2B46E4030037947C /* MyAutoresizingMask */,
+				0597C7F92B46E4030037947C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		05BFC7A62AC1B01C00F623BA /* Products */ = {
+		0597C7F92B46E4030037947C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				05BFC7A52AC1B01C00F623BA /* MyDiffableDatasource.app */,
+				0597C7F82B46E4030037947C /* MyAutoresizingMask.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		05BFC7A72AC1B01C00F623BA /* MyDiffableDatasource */ = {
+		0597C7FA2B46E4030037947C /* MyAutoresizingMask */ = {
 			isa = PBXGroup;
 			children = (
-				05BFC7C22AC1B35A00F623BA /* model */,
-				05BFC7BD2AC1B18A00F623BA /* extension */,
-				05BFC7BC2AC1B18400F623BA /* cell */,
-				05BFC7A82AC1B01C00F623BA /* AppDelegate.swift */,
-				05BFC7AA2AC1B01C00F623BA /* SceneDelegate.swift */,
-				05BFC7AC2AC1B01C00F623BA /* ViewController.swift */,
-				05BFC7AE2AC1B01C00F623BA /* Main.storyboard */,
-				05BFC7B32AC1B01D00F623BA /* LaunchScreen.storyboard */,
-				05BFC7B62AC1B01D00F623BA /* Info.plist */,
-				05BFC7B12AC1B01D00F623BA /* Assets.xcassets */,
+				0597C7FB2B46E4030037947C /* AppDelegate.swift */,
+				0597C7FD2B46E4030037947C /* SceneDelegate.swift */,
+				0597C7FF2B46E4030037947C /* ViewController.swift */,
+				0597C8012B46E4030037947C /* Main.storyboard */,
+				0597C8042B46E4040037947C /* Assets.xcassets */,
+				0597C8062B46E4040037947C /* LaunchScreen.storyboard */,
+				0597C8092B46E4040037947C /* Info.plist */,
 			);
-			path = MyDiffableDatasource;
-			sourceTree = "<group>";
-		};
-		05BFC7BC2AC1B18400F623BA /* cell */ = {
-			isa = PBXGroup;
-			children = (
-				05BFC7BE2AC1B1AD00F623BA /* DiffableCollectionViewCell.swift */,
-				05BFC7BF2AC1B1AD00F623BA /* DiffableCollectionViewCell.xib */,
-			);
-			path = cell;
-			sourceTree = "<group>";
-		};
-		05BFC7BD2AC1B18A00F623BA /* extension */ = {
-			isa = PBXGroup;
-			children = (
-				05BFC7C52AC1B3C900F623BA /* UIImageView+.swift */,
-			);
-			path = extension;
-			sourceTree = "<group>";
-		};
-		05BFC7C22AC1B35A00F623BA /* model */ = {
-			isa = PBXGroup;
-			children = (
-				05BFC7C32AC1B36600F623BA /* Product.swift */,
-			);
-			path = model;
+			path = MyAutoresizingMask;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		05BFC7A42AC1B01C00F623BA /* MyDiffableDatasource */ = {
+		0597C7F72B46E4030037947C /* MyAutoresizingMask */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 05BFC7B92AC1B01D00F623BA /* Build configuration list for PBXNativeTarget "MyDiffableDatasource" */;
+			buildConfigurationList = 0597C80C2B46E4040037947C /* Build configuration list for PBXNativeTarget "MyAutoresizingMask" */;
 			buildPhases = (
-				05BFC7A12AC1B01C00F623BA /* Sources */,
-				05BFC7A22AC1B01C00F623BA /* Frameworks */,
-				05BFC7A32AC1B01C00F623BA /* Resources */,
+				0597C7F42B46E4030037947C /* Sources */,
+				0597C7F52B46E4030037947C /* Frameworks */,
+				0597C7F62B46E4030037947C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MyDiffableDatasource;
-			productName = MyDiffableDatasource;
-			productReference = 05BFC7A52AC1B01C00F623BA /* MyDiffableDatasource.app */;
+			name = MyAutoresizingMask;
+			productName = MyAutoresizingMask;
+			productReference = 0597C7F82B46E4030037947C /* MyAutoresizingMask.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		05BFC79D2AC1B01C00F623BA /* Project object */ = {
+		0597C7F02B46E4030037947C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
-					05BFC7A42AC1B01C00F623BA = {
-						CreatedOnToolsVersion = 15.0;
+					0597C7F72B46E4030037947C = {
+						CreatedOnToolsVersion = 15.1;
 					};
 				};
 			};
-			buildConfigurationList = 05BFC7A02AC1B01C00F623BA /* Build configuration list for PBXProject "MyDiffableDatasource" */;
+			buildConfigurationList = 0597C7F32B46E4030037947C /* Build configuration list for PBXProject "MyAutoresizingMask" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -146,59 +110,55 @@
 				en,
 				Base,
 			);
-			mainGroup = 05BFC79C2AC1B01C00F623BA;
-			productRefGroup = 05BFC7A62AC1B01C00F623BA /* Products */;
+			mainGroup = 0597C7EF2B46E4030037947C;
+			productRefGroup = 0597C7F92B46E4030037947C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				05BFC7A42AC1B01C00F623BA /* MyDiffableDatasource */,
+				0597C7F72B46E4030037947C /* MyAutoresizingMask */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		05BFC7A32AC1B01C00F623BA /* Resources */ = {
+		0597C7F62B46E4030037947C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05BFC7B52AC1B01D00F623BA /* LaunchScreen.storyboard in Resources */,
-				05BFC7B22AC1B01D00F623BA /* Assets.xcassets in Resources */,
-				05BFC7B02AC1B01C00F623BA /* Main.storyboard in Resources */,
-				05BFC7C12AC1B1AD00F623BA /* DiffableCollectionViewCell.xib in Resources */,
+				0597C8082B46E4040037947C /* LaunchScreen.storyboard in Resources */,
+				0597C8052B46E4040037947C /* Assets.xcassets in Resources */,
+				0597C8032B46E4030037947C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		05BFC7A12AC1B01C00F623BA /* Sources */ = {
+		0597C7F42B46E4030037947C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05BFC7C62AC1B3C900F623BA /* UIImageView+.swift in Sources */,
-				05BFC7AD2AC1B01C00F623BA /* ViewController.swift in Sources */,
-				05BFC7A92AC1B01C00F623BA /* AppDelegate.swift in Sources */,
-				05BFC7C42AC1B36600F623BA /* Product.swift in Sources */,
-				05BFC7C02AC1B1AD00F623BA /* DiffableCollectionViewCell.swift in Sources */,
-				05BFC7AB2AC1B01C00F623BA /* SceneDelegate.swift in Sources */,
+				0597C8002B46E4030037947C /* ViewController.swift in Sources */,
+				0597C7FC2B46E4030037947C /* AppDelegate.swift in Sources */,
+				0597C7FE2B46E4030037947C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		05BFC7AE2AC1B01C00F623BA /* Main.storyboard */ = {
+		0597C8012B46E4030037947C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				05BFC7AF2AC1B01C00F623BA /* Base */,
+				0597C8022B46E4030037947C /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		05BFC7B32AC1B01D00F623BA /* LaunchScreen.storyboard */ = {
+		0597C8062B46E4040037947C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				05BFC7B42AC1B01D00F623BA /* Base */,
+				0597C8072B46E4040037947C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -206,7 +166,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		05BFC7B72AC1B01D00F623BA /* Debug */ = {
+		0597C80A2B46E4040037947C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -258,7 +218,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -269,7 +229,7 @@
 			};
 			name = Debug;
 		};
-		05BFC7B82AC1B01D00F623BA /* Release */ = {
+		0597C80B2B46E4040037947C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -315,7 +275,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -325,7 +285,7 @@
 			};
 			name = Release;
 		};
-		05BFC7BA2AC1B01D00F623BA /* Debug */ = {
+		0597C80D2B46E4040037947C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -334,19 +294,19 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L8WFLHVUYX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyDiffableDatasource/Info.plist;
+				INFOPLIST_FILE = MyAutoresizingMask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyDiffableDatasource;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyAutoresizingMask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -354,7 +314,7 @@
 			};
 			name = Debug;
 		};
-		05BFC7BB2AC1B01D00F623BA /* Release */ = {
+		0597C80E2B46E4040037947C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -363,19 +323,19 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L8WFLHVUYX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyDiffableDatasource/Info.plist;
+				INFOPLIST_FILE = MyAutoresizingMask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyDiffableDatasource;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyAutoresizingMask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -386,25 +346,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		05BFC7A02AC1B01C00F623BA /* Build configuration list for PBXProject "MyDiffableDatasource" */ = {
+		0597C7F32B46E4030037947C /* Build configuration list for PBXProject "MyAutoresizingMask" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				05BFC7B72AC1B01D00F623BA /* Debug */,
-				05BFC7B82AC1B01D00F623BA /* Release */,
+				0597C80A2B46E4040037947C /* Debug */,
+				0597C80B2B46E4040037947C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		05BFC7B92AC1B01D00F623BA /* Build configuration list for PBXNativeTarget "MyDiffableDatasource" */ = {
+		0597C80C2B46E4040037947C /* Build configuration list for PBXNativeTarget "MyAutoresizingMask" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				05BFC7BA2AC1B01D00F623BA /* Debug */,
-				05BFC7BB2AC1B01D00F623BA /* Release */,
+				0597C80D2B46E4040037947C /* Debug */,
+				0597C80E2B46E4040037947C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 05BFC79D2AC1B01C00F623BA /* Project object */;
+	rootObject = 0597C7F02B46E4030037947C /* Project object */;
 }

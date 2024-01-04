@@ -13,7 +13,7 @@ class TransparentGradientView: UIView {
     /// 그래디언트 방향 (기본: .bottom)
     private var _isBottomDirection = true
     /// 그래디언트 색상 (기본: 128, 128, 128)
-    private var _gradientColor = UIColor(red: 128, green: 128, blue: 128, alpha: 1.0)
+    private lazy var _gradientColor = UIColor(red: 128, green: 128, blue: 128, alpha: 1.0)
     
     @IBInspectable
     var isBottomDirection: Bool {
@@ -48,3 +48,9 @@ class TransparentGradientView: UIView {
     }
 }
  
+@available(iOS 17, *)
+#Preview {
+    let view = TransparentGradientView(frame: .init(origin: .init(x: 40, y: 40), size: .init(width: 200, height: 50)))
+    view.gradientColor = .black
+    return view
+}

@@ -58,18 +58,13 @@ class ViewController: UIViewController {
     
     // 그리드 형태의 레이아웃 생성
     func gridLayout() -> NSCollectionLayoutSection {
-        // 셀(아이템) 사이즈 정의
-        // (그룹에 2개의 아이템 추가되도록)
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .estimated(200))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 12, bottom: 0, trailing: 12)
 
-        // 그룹 사이즈 정의
-        // 추정 높이 200 지정
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(200))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 2)
 
-        // section 생성
         let section = NSCollectionLayoutSection(group: group)
         section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 14, bottom: 16, trailing: 14)
         return section
