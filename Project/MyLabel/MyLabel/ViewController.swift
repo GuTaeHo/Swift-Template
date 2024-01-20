@@ -14,9 +14,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
-        lbSpacingFivePointZero.letterSpace = 10
+        // lbSpacingFivePointZero.letterSpace = 10
+        lbSpacingZero.concatLetterSpacing(20)?.concatLineSpacing(5)
     }
 }
 
