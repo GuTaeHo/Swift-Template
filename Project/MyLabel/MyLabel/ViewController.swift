@@ -8,19 +8,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet var lbDefaultSpacing: UILabel!
-    @IBOutlet var lbSpacingZero: UILabel!
-    @IBOutlet var lbSpacingFivePointZero: UILabel!
-    @IBOutlet var lbIntrinsicContentSize: UILabel!
+    @IBOutlet var lbDefaultSpacing: CommonLabel!
+    @IBOutlet var lbSpacingZero: CommonLabel!
+    @IBOutlet var lbSpacingFivePointZero: CommonLabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        lbSpacingZero.characterSpacing(0)
-        lbSpacingFivePointZero.characterSpacing(5)
-        
-        print(lbIntrinsicContentSize.size())
+        lbSpacingFivePointZero.letterSpace = 10
     }
 }
 

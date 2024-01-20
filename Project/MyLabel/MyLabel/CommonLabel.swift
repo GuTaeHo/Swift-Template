@@ -9,22 +9,63 @@ import UIKit
 
 @IBDesignable
 class CommonLabel: UILabel {
-    private var _characterSpacing = 0.0
-    
     @IBInspectable
-    var characterSpacing: CGFloat {
-        get {
-            return _characterSpacing
+    var letterSpace: CGFloat {
+        set {
+            let attributedString: NSMutableAttributedString!
+            if let currentAttrString = attributedText {
+                attributedString = NSMutableAttributedString(attributedString: currentAttrString)
+            }
+            else {
+                attributedString = NSMutableAttributedString(string: text ?? "")
+                text = nil
+            }
+            
+            attributedString.addAttribute(.kern,
+                                          value: newValue,
+                                          range: NSRange(location: 0, length: attributedString.length))
+            attributedText = attributedString
         }
         
-        set {
-            _characterSpacing = newValue
+        get {
+            if let currentLetterSpace = attributedText?.attribute(.kern, at: 0, effectiveRange: .none) as? CGFloat {
+                return currentLetterSpace
+            }
+            else {
+                return 0
+            }
         }
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
+    
+    @IBInspectable
+    var lineSpace: CGFloat {
+        set {
+            let attributedString: NSMutableAttributedString!
+            if let currentAttrString = attributedText {
+                attributedString = NSMutableAttributedString(attributedString: currentAttrString)
+            }
+            else {
+                attributedString = NSMutableAttributedString(string: text ?? "")
+                text = nil
+            }
+            
+            let style = NSMutableParagraphStyle()
+            style.lineSpacing = newValue
+            
+            attributedString.addAttribute(.paragraphStyle,
+                                          value: style,
+                                          range: NSRange(location: 0, length: attributedString.length))
+            attributedText = attributedString
+        }
         
-        characterSpacing(_characterSpacing)
+        get {
+            if let currentLetterSpace = attributedText?.attribute(.paragraphStyle, at: 0, effectiveRange: .none) as? CGFloat {
+                return currentLetterSpace
+            }
+            else {
+                return 0
+            }
+        }
     }
 }

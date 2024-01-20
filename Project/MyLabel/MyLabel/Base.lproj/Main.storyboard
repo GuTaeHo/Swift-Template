@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -32,8 +32,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
-                                                <real key="value" value="5"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="letterSpace">
+                                                <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
@@ -43,30 +43,26 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
-                                                <real key="value" value="10"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="letterSpace">
+                                                <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6i7-9I-bwR" customClass="CommonLabel" customModule="MyLabel" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="79.333333333333329" width="393" height="20.333333333333329"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="자간 5.0, 행간 2.0 지정 자간 5.0, 행간 2.0 지정 자간 5.0, 행간 2.0 지정 자간 5.0, 행간 2.0 지정 자간 5.0, 행간 2.0 지정 자간 5.0, 행간 2.0 지정 " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6i7-9I-bwR" customClass="CommonLabel" customModule="MyLabel" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="79.333333333333329" width="393" height="60.999999999999986"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
-                                        <real key="value" value="9"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="letterSpace">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineSpace">
+                                        <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="라벨 고유 사이즈 반환 테스트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzP-J1-8nh">
-                                <rect key="frame" x="107" y="244" width="194" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -82,7 +78,6 @@
                     </view>
                     <connections>
                         <outlet property="lbDefaultSpacing" destination="S7M-dZ-3wm" id="Wtz-bL-Zqt"/>
-                        <outlet property="lbIntrinsicContentSize" destination="fzP-J1-8nh" id="2gk-T0-jC7"/>
                         <outlet property="lbSpacingFivePointZero" destination="09m-Xo-ihe" id="DHy-s6-gsn"/>
                         <outlet property="lbSpacingZero" destination="iVV-9p-aMz" id="Jzt-6D-lDA"/>
                     </connections>
@@ -94,16 +89,16 @@
     </scenes>
     <designables>
         <designable name="09m-Xo-ihe">
-            <size key="intrinsicContentSize" width="142.66666666666666" height="20.333333333333332"/>
+            <size key="intrinsicContentSize" width="84" height="20.333333333333332"/>
         </designable>
         <designable name="6i7-9I-bwR">
-            <size key="intrinsicContentSize" width="204" height="20.333333333333332"/>
+            <size key="intrinsicContentSize" width="986" height="20.333333333333332"/>
         </designable>
         <designable name="S7M-dZ-3wm">
             <size key="intrinsicContentSize" width="73.666666666666671" height="20.333333333333332"/>
         </designable>
         <designable name="iVV-9p-aMz">
-            <size key="intrinsicContentSize" width="112.66666666666667" height="20.333333333333332"/>
+            <size key="intrinsicContentSize" width="84" height="20.333333333333332"/>
         </designable>
     </designables>
     <resources>
