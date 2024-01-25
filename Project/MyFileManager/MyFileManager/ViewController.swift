@@ -22,9 +22,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(LocalFileManager.shared.rootUrl?.absoluteString ?? "")
+        
         let url = LocalFileManager.shared.rootUrl?.appendingPathComponent("FileManagerTest")
         let fileNames = LocalFileManager.shared.entities(at: url)?.compactMap { $0 }
         lbDescriptor.text = "저장된 파일 & 디렉토리: \(String(describing: fileNames))"
+        
+        let fileUrl = url?.appendingPathComponent("코코빈의 파일.txt")
+        lbDescriptor.text = LocalFileManager.shared.readFile(at: fileUrl)
     }
     
     @IBAction func save(_ sender: UIButton) {

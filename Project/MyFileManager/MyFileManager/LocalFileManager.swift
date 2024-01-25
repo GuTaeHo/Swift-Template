@@ -70,6 +70,12 @@ class LocalFileManager {
         return true
     }
     
+    /// 지정된 경로의 파일을 읽음
+    func readFile(at path: URL?) -> String? {
+        guard let path = path else { return nil }
+        return try? String(contentsOf: path, encoding: .utf8)
+    }
+    
     private init() { }
 }
 
