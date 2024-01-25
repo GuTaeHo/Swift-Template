@@ -13,8 +13,8 @@ class CommonLabel: UILabel {
     var letterSpace: CGFloat {
         set {
             let attributedString: NSMutableAttributedString!
-            if let currentAttrString = attributedText {
-                attributedString = NSMutableAttributedString(attributedString: currentAttrString)
+            if let attributedText = attributedText {
+                attributedString = NSMutableAttributedString(attributedString: attributedText)
             }
             else {
                 attributedString = NSMutableAttributedString(string: text ?? "")
@@ -42,8 +42,8 @@ class CommonLabel: UILabel {
     var lineSpace: CGFloat {
         set {
             let attributedString: NSMutableAttributedString!
-            if let currentAttrString = attributedText {
-                attributedString = NSMutableAttributedString(attributedString: currentAttrString)
+            if let attributedText = attributedText {
+                attributedString = NSMutableAttributedString(attributedString: attributedText)
             }
             else {
                 attributedString = NSMutableAttributedString(string: text ?? "")
