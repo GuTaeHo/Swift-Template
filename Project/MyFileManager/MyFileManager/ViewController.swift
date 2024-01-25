@@ -15,26 +15,26 @@ import UIKit
  */
 
 class ViewController: UIViewController {
+    @IBOutlet var textField: UITextField!
+    @IBOutlet var textView: UITextView!
+    @IBOutlet var lbDescriptor: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
-        let fileManager = FileManager.default
-        print("currentDirectoryPath: \(fileManager.currentDirectoryPath)")
-        print("urls: \(fileManager.urls(for: .documentDirectory, in: .userDomainMask))")
-        guard let documentsUrl = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
-        print("lastPathComponent: \(fileManager.urls(for: .documentDirectory, in: .userDomainMask))")
-        let directoryUrl = documentsUrl.appendingPathComponent("FileManager 왜 안보임?")
-        let fileUrl = documentsUrl.appendingPathComponent("Cocobean 의 파일.txt")
+        let url = LocalFileManager.shared.rootUrl?.appendingPathComponent("FileManagerTest")
+        let fileNames = LocalFileManager.shared.entities(at: url)?.compactMap { $0 }
+        lbDescriptor.text = "저장된 파일 & 디렉토리: \(String(describing: fileNames))"
+    }
+    
+    @IBAction func save(_ sender: UIButton) {
+        let url = LocalFileManager.shared.rootUrl?.appendingPathComponent("FileManagerTest")
+        LocalFileManager.shared.makeFile(at: url, title: "\(textField.text ?? "NoTitle")", contents: "\(textView.text ?? "")", type: .txt)
         
-        let str = "Hello, Cocobean!"
-        try? str.write(to: fileUrl, atomically: false, encoding: .utf8)
-//        do {
-//            try fileManager.createDirectory(at: directoryUrl, withIntermediateDirectories: false)
-//        } catch let error {
-//            print("디렉토리 생성 실패: \(error.localizedDescription)")
-//        }
+        let fileNames = LocalFileManager.shared.entities(at: url)?.compactMap {
+            $0
+        }
+        lbDescriptor.text = "저장된 파일 & 디렉토리: \(String(describing: fileNames))"
     }
 }
 

@@ -13,6 +13,7 @@
 		059F05002B62740D00E0A2DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059F04FE2B62740D00E0A2DB /* Main.storyboard */; };
 		059F05022B62740E00E0A2DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 059F05012B62740E00E0A2DB /* Assets.xcassets */; };
 		059F05052B62740E00E0A2DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059F05032B62740E00E0A2DB /* LaunchScreen.storyboard */; };
+		059F050D2B6281A100E0A2DB /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059F050C2B6281A100E0A2DB /* LocalFileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		059F05012B62740E00E0A2DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		059F05042B62740E00E0A2DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		059F05062B62740E00E0A2DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		059F050C2B6281A100E0A2DB /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				059F05012B62740E00E0A2DB /* Assets.xcassets */,
 				059F05032B62740E00E0A2DB /* LaunchScreen.storyboard */,
 				059F05062B62740E00E0A2DB /* Info.plist */,
+				059F050C2B6281A100E0A2DB /* LocalFileManager.swift */,
 			);
 			path = MyFileManager;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				059F04FD2B62740D00E0A2DB /* ViewController.swift in Sources */,
 				059F04F92B62740D00E0A2DB /* AppDelegate.swift in Sources */,
 				059F04FB2B62740D00E0A2DB /* SceneDelegate.swift in Sources */,
+				059F050D2B6281A100E0A2DB /* LocalFileManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
