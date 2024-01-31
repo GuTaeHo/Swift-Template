@@ -23,6 +23,7 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet var parentView: UIView!
     @IBOutlet var childView: UIView!
+    @IBOutlet var childIndigoView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,7 @@ class ViewController: UIViewController {
         print("view frame: \(view.frame)")
         print("parentView frame: \(parentView.frame)")
         print("childView frame:  \(childView.frame)")
+        print("childIndigoView frame:  \(childIndigoView.frame)")
         
         let childToView1 = childView.convert()!
         print("childView1 to view: \(childToView1)")
@@ -47,6 +49,9 @@ class ViewController: UIViewController {
         
         let childFromView2 = view.convert(childView.frame, from: view)
         print("childView2 from view: \(childFromView2)")
+        
+        let childIndigoView = childIndigoView.convert(to: parentView)!
+        print("childIndigoView to parentView: \(childIndigoView)")
     }
     
 }

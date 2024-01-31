@@ -8,8 +8,9 @@
 import UIKit
 
 enum FontType {
-    case light
-    case normal
+    case regular
+    case medium
+    case semiBold
     case bold
 }
 
@@ -52,7 +53,7 @@ extension UILabel {
     }
     
     /// 문자열 사이즈 반환
-    func size(font: FontType = .normal) -> CGSize {
+    func size(font: FontType = .regular) -> CGSize {
         return (text! as NSString).size(withAttributes: [.font : self.font!])
     }
 }

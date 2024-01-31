@@ -58,6 +58,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="childIndigoView" destination="sPG-m3-xik" id="qAg-rY-9n3"/>
                         <outlet property="childView" destination="Jfv-G2-iQj" id="864-yZ-Mnn"/>
                         <outlet property="parentView" destination="UIc-8a-IDr" id="VGo-QK-0bl"/>
                     </connections>
