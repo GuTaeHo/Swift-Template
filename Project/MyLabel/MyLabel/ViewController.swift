@@ -14,10 +14,12 @@ class ViewController: UIViewController {
     @IBOutlet var lbFontSizeValue: UILabel!
     @IBOutlet var lbLetterValue: UILabel!
     @IBOutlet var lbLineValue: UILabel!
+    @IBOutlet var lbFontValue: UILabel!
     
     @IBOutlet var fontSizeSlider: UISlider!
     @IBOutlet var letterSpacingSlider: UISlider!
     @IBOutlet var lineSpacingSlider: UISlider!
+    @IBOutlet var fontSlider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +46,33 @@ class ViewController: UIViewController {
         lbLineValue.text = "\(sender.value)"
         lbSingleline.lineSpace = CGFloat(sender.value)
         lbMultiline.lineSpace = CGFloat(sender.value)
+    }
+    
+    @IBAction func fontValueChanged(_ sender: UISlider) {
+        let step: Float = 1
+        let roundedValue = round(sender.value / step) * step
+        sender.value = roundedValue
+        
+        var fontType: UIFont.FontType = .pretendardRegular
+        switch Int(sender.value) {
+        case 0:
+            fontType = .pretendardRegular
+            lbFontValue.text = "Regular"
+        case 1:
+            fontType = .pretendardMedium
+            lbFontValue.text = "Medium"
+        case 2:
+            fontType = .pretendardSemiBold
+            lbFontValue.text = "Semi-Bold"
+        case 3:
+            fontType = .pretendardBold
+            lbFontValue.text = "Bold"
+        default:
+            lbFontValue.text = "오류"
+        }
+        
+        lbSingleline.fontType = fontType
+        lbMultiline.fontType = fontType
     }
 }
 

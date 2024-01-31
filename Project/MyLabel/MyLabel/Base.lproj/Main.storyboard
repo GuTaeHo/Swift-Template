@@ -35,19 +35,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="jc3-td-BQQ">
-                                <rect key="frame" x="36" y="622" width="321" height="178"/>
+                                <rect key="frame" x="36" y="560" width="321" height="240"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JcD-dZ-0vK">
-                                        <rect key="frame" x="0.0" y="0.0" width="321" height="19.333333333333332"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="321" height="20"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="500" verticalHuggingPriority="251" text="폰트 사이즈 (10 ~ 40)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMH-Nc-EB2" userLabel="폰트 사이즈 (0 ~ 30)">
-                                                <rect key="frame" x="0.0" y="0.0" width="144" height="19.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="144" height="20"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPW-2u-4fT" userLabel="12">
-                                                <rect key="frame" x="144" y="0.0" width="177" height="19.333333333333332"/>
+                                                <rect key="frame" x="144" y="0.0" width="177" height="20"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -55,13 +55,13 @@
                                         </subviews>
                                     </stackView>
                                     <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="500" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="10" maxValue="40" translatesAutoresizingMaskIntoConstraints="NO" id="dtd-L5-AfX">
-                                        <rect key="frame" x="-2" y="25.333333333333371" width="325" height="31"/>
+                                        <rect key="frame" x="-2" y="26" width="325" height="31"/>
                                         <connections>
                                             <action selector="fontSizeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="F2B-X7-22Q"/>
                                         </connections>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UDm-rf-CHa">
-                                        <rect key="frame" x="0.0" y="61.333333333333378" width="321" height="19.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="62.000000000000007" width="321" height="19.333333333333336"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="500" verticalHuggingPriority="251" text="자간 (0 ~ 10)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4z-wA-8im" userLabel="폰트 사이즈 (0 ~ 30)">
                                                 <rect key="frame" x="0.0" y="0.0" width="88.333333333333329" height="19.333333333333332"/>
@@ -78,13 +78,13 @@
                                         </subviews>
                                     </stackView>
                                     <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="500" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="KZ2-UZ-C5G">
-                                        <rect key="frame" x="-2" y="86.666666666666629" width="325" height="31"/>
+                                        <rect key="frame" x="-2" y="87.333333333333371" width="325" height="31"/>
                                         <connections>
                                             <action selector="letterValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="8We-h0-Z3a"/>
                                         </connections>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rU5-t0-2v9">
-                                        <rect key="frame" x="0.0" y="122.66666666666661" width="321" height="19.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="123.33333333333336" width="321" height="19.333333333333329"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="500" verticalHuggingPriority="251" text="행간 (0 ~ 10)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UnV-n2-J35" userLabel="폰트 사이즈 (0 ~ 30)">
                                                 <rect key="frame" x="0.0" y="0.0" width="88.333333333333329" height="19.333333333333332"/>
@@ -101,14 +101,37 @@
                                         </subviews>
                                     </stackView>
                                     <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="500" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="xaT-jb-qrK">
-                                        <rect key="frame" x="-2" y="148" width="325" height="31"/>
+                                        <rect key="frame" x="-2" y="148.66666666666663" width="325" height="31"/>
                                         <connections>
                                             <action selector="lineValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="FTI-Zu-yEx"/>
                                         </connections>
                                     </slider>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BRZ-Bz-kZP">
+                                        <rect key="frame" x="0.0" y="184.66666666666663" width="321" height="19.333333333333343"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="500" verticalHuggingPriority="251" text="폰트 (reg, med, smBd, bd)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5KC-M2-7Qz" userLabel="폰트 사이즈 (0 ~ 30)">
+                                                <rect key="frame" x="0.0" y="0.0" width="185.66666666666666" height="19.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Regular" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJV-No-ASs" userLabel="12">
+                                                <rect key="frame" x="185.66666666666663" y="0.0" width="135.33333333333337" height="19.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="500" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="Zwv-J8-e2Z">
+                                        <rect key="frame" x="-2" y="210" width="325" height="31"/>
+                                        <connections>
+                                            <action selector="fontValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="6tr-6O-9Io"/>
+                                        </connections>
+                                    </slider>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="178" id="lOb-YI-RFM"/>
+                                    <constraint firstAttribute="height" constant="240" id="bRM-Vb-lIm"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -129,7 +152,9 @@
                     </view>
                     <connections>
                         <outlet property="fontSizeSlider" destination="dtd-L5-AfX" id="fNC-Nc-spT"/>
+                        <outlet property="fontSlider" destination="Zwv-J8-e2Z" id="ngk-FV-QPj"/>
                         <outlet property="lbFontSizeValue" destination="CPW-2u-4fT" id="KeM-IB-ZtM"/>
+                        <outlet property="lbFontValue" destination="BJV-No-ASs" id="96f-6C-sxt"/>
                         <outlet property="lbLetterValue" destination="7x7-Wi-3W3" id="pwZ-LK-9rN"/>
                         <outlet property="lbLineValue" destination="V9C-hL-Ytj" id="ALH-XF-Ggi"/>
                         <outlet property="lbMultiline" destination="6i7-9I-bwR" id="EhG-jY-Bnd"/>
