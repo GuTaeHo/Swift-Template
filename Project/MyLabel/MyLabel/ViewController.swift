@@ -37,15 +37,17 @@ class ViewController: UIViewController {
     }
     
     @IBAction func letterValueChanged(_ sender: UISlider) {
-        lbLetterValue.text = "\(sender.value)"
-        lbSingleline.letterSpace = CGFloat(sender.value)
-        lbMultiline.letterSpace = CGFloat(sender.value)
+        guard let value = formatter(num: sender.value) else { return }
+        lbLetterValue.text = value
+        lbSingleline.letterSpace = CGFloat((value as NSString).floatValue)
+        lbMultiline.letterSpace = CGFloat((value as NSString).floatValue)
     }
     
     @IBAction func lineValueChanged(_ sender: UISlider) {
-        lbLineValue.text = "\(sender.value)"
-        lbSingleline.lineSpace = CGFloat(sender.value)
-        lbMultiline.lineSpace = CGFloat(sender.value)
+        guard let value = formatter(num: sender.value) else { return }
+        lbLineValue.text = value
+        lbSingleline.letterSpace = CGFloat((value as NSString).floatValue)
+        lbMultiline.letterSpace = CGFloat((value as NSString).floatValue)
     }
     
     @IBAction func fontValueChanged(_ sender: UISlider) {
@@ -73,6 +75,11 @@ class ViewController: UIViewController {
         
         lbSingleline.fontType = fontType
         lbMultiline.fontType = fontType
+    }
+    
+    
+    func formatter(num: Float) -> String? {
+        return String(format: "%.2f", num)
     }
 }
 
