@@ -46,8 +46,8 @@ class ViewController: UIViewController {
     @IBAction func lineValueChanged(_ sender: UISlider) {
         guard let value = formatter(num: sender.value) else { return }
         lbLineValue.text = value
-        lbSingleline.letterSpace = CGFloat((value as NSString).floatValue)
-        lbMultiline.letterSpace = CGFloat((value as NSString).floatValue)
+        lbSingleline.lineSpace = CGFloat((value as NSString).floatValue)
+        lbMultiline.lineSpace = CGFloat((value as NSString).floatValue)
     }
     
     @IBAction func fontValueChanged(_ sender: UISlider) {
