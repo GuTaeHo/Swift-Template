@@ -1,24 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="meI-4o-wkk">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Camera View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CameraViewController" customModule="MyCALayer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="2lU-6e-kWy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-230" y="-664"/>
+        </scene>
+        <!--Gradient Animation View Controller-->
+        <scene sceneID="ZXP-RN-8pU">
+            <objects>
+                <viewController id="pMr-Bf-Lur" customClass="GradientAnimationViewController" customModule="MyCALayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="65v-kK-Umn">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="yHl-RB-9ZF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xct-VT-c3d"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PDd-Ye-SJg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="546" y="4"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="a68-bO-mi7">
+            <objects>
+                <viewController id="meI-4o-wkk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fis-5H-VXw">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="sY3-IT-vQF">
+                                <rect key="frame" x="18" y="77" width="357" height="139"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ErC-Iv-PzU">
+                                        <rect key="frame" x="0.0" y="0.0" width="357" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="카메라 뷰 컨트롤러"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="Egd-Dg-W7n"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dnx-b6-liG" userLabel="CALayer 플레이 그라운드">
+                                        <rect key="frame" x="0.0" y="52.333333333333343" width="357" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="CALayer 플레이그라운드"/>
+                                        <connections>
+                                            <segue destination="tyh-BC-2nf" kind="show" id="ib6-c4-Inc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNz-Tm-6x0">
+                                        <rect key="frame" x="0.0" y="104.66666666666666" width="357" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="시머 뷰 컨트롤러"/>
+                                        <connections>
+                                            <segue destination="pMr-Bf-Lur" kind="show" id="4z2-N5-UnH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dt4-0d-JL0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dt4-0d-JL0" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="sY3-IT-vQF" secondAttribute="bottom" constant="18" id="5C8-qr-cAI"/>
+                            <constraint firstItem="dt4-0d-JL0" firstAttribute="trailing" secondItem="sY3-IT-vQF" secondAttribute="trailing" constant="18" id="9Uf-L1-7ga"/>
+                            <constraint firstItem="sY3-IT-vQF" firstAttribute="leading" secondItem="dt4-0d-JL0" secondAttribute="leading" constant="18" id="OCT-fq-kCC"/>
+                            <constraint firstItem="sY3-IT-vQF" firstAttribute="top" secondItem="dt4-0d-JL0" secondAttribute="top" constant="18" id="tnQ-Oh-xdc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="66i-lm-cn5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1016" y="4"/>
+        </scene>
+        <!--Layer Playground View Controller-->
+        <scene sceneID="aqr-mP-jPE">
+            <objects>
+                <viewController id="tyh-BC-2nf" customClass="CALayerPlaygroundViewController" customModule="MyCALayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oFk-Sm-qJ1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qI5-Ug-8G3">
+                                <rect key="frame" x="18" y="18" width="357" height="128"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="IpR-NB-o65"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="c7U-ah-EX2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="c7U-ah-EX2" firstAttribute="trailing" secondItem="qI5-Ug-8G3" secondAttribute="trailing" constant="18" id="6cc-C2-Q2n"/>
+                            <constraint firstItem="qI5-Ug-8G3" firstAttribute="top" secondItem="c7U-ah-EX2" secondAttribute="top" constant="18" id="ttJ-gj-J5C"/>
+                            <constraint firstItem="qI5-Ug-8G3" firstAttribute="leading" secondItem="c7U-ah-EX2" secondAttribute="leading" constant="18" id="xdU-e2-dCO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="VQt-5u-8c7"/>
+                    <connections>
+                        <outlet property="subLayersView" destination="qI5-Ug-8G3" id="pVH-2P-H89"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mjQ-WU-7Hn" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="546" y="-664"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

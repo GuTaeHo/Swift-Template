@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0527F04A2B6BC334002E08E9 /* GradientAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0527F0492B6BC334002E08E9 /* GradientAnimationViewController.swift */; };
+		0527F04D2B6BC7B8002E08E9 /* CALayerPlaygroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0527F04C2B6BC7B8002E08E9 /* CALayerPlaygroundViewController.swift */; };
+		0527F04F2B6BC88A002E08E9 /* CALayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0527F04E2B6BC88A002E08E9 /* CALayer+.swift */; };
 		05300E2E2AA8C78C00ED9870 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05300E2D2AA8C78C00ED9870 /* AppDelegate.swift */; };
 		05300E302AA8C78C00ED9870 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05300E2F2AA8C78C00ED9870 /* SceneDelegate.swift */; };
-		05300E322AA8C78C00ED9870 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05300E312AA8C78C00ED9870 /* ViewController.swift */; };
+		05300E322AA8C78C00ED9870 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05300E312AA8C78C00ED9870 /* CameraViewController.swift */; };
 		05300E352AA8C78C00ED9870 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05300E332AA8C78C00ED9870 /* Main.storyboard */; };
 		05300E372AA8C78D00ED9870 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05300E362AA8C78D00ED9870 /* Assets.xcassets */; };
 		05300E3A2AA8C78D00ED9870 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05300E382AA8C78D00ED9870 /* LaunchScreen.storyboard */; };
@@ -17,10 +20,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0527F0492B6BC334002E08E9 /* GradientAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientAnimationViewController.swift; sourceTree = "<group>"; };
+		0527F04C2B6BC7B8002E08E9 /* CALayerPlaygroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerPlaygroundViewController.swift; sourceTree = "<group>"; };
+		0527F04E2B6BC88A002E08E9 /* CALayer+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+.swift"; sourceTree = "<group>"; };
 		05300E2A2AA8C78C00ED9870 /* MyCALayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCALayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05300E2D2AA8C78C00ED9870 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05300E2F2AA8C78C00ED9870 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		05300E312AA8C78C00ED9870 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		05300E312AA8C78C00ED9870 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		05300E342AA8C78C00ED9870 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		05300E362AA8C78D00ED9870 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05300E392AA8C78D00ED9870 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +45,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0527F04B2B6BC799002E08E9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				05300E312AA8C78C00ED9870 /* CameraViewController.swift */,
+				0527F0492B6BC334002E08E9 /* GradientAnimationViewController.swift */,
+				0527F04C2B6BC7B8002E08E9 /* CALayerPlaygroundViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		05300E212AA8C78C00ED9870 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +74,15 @@
 		05300E2C2AA8C78C00ED9870 /* MyCALayer */ = {
 			isa = PBXGroup;
 			children = (
+				0527F04B2B6BC799002E08E9 /* Controllers */,
 				05300E2D2AA8C78C00ED9870 /* AppDelegate.swift */,
 				05300E2F2AA8C78C00ED9870 /* SceneDelegate.swift */,
-				05300E312AA8C78C00ED9870 /* ViewController.swift */,
 				05300E332AA8C78C00ED9870 /* Main.storyboard */,
 				05300E362AA8C78D00ED9870 /* Assets.xcassets */,
 				05300E382AA8C78D00ED9870 /* LaunchScreen.storyboard */,
 				05300E3B2AA8C78D00ED9870 /* Info.plist */,
 				05300E412AA8CACE00ED9870 /* UIView+.swift */,
+				0527F04E2B6BC88A002E08E9 /* CALayer+.swift */,
 			);
 			path = MyCALayer;
 			sourceTree = "<group>";
@@ -142,9 +159,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				05300E422AA8CACE00ED9870 /* UIView+.swift in Sources */,
-				05300E322AA8C78C00ED9870 /* ViewController.swift in Sources */,
+				05300E322AA8C78C00ED9870 /* CameraViewController.swift in Sources */,
 				05300E2E2AA8C78C00ED9870 /* AppDelegate.swift in Sources */,
 				05300E302AA8C78C00ED9870 /* SceneDelegate.swift in Sources */,
+				0527F04F2B6BC88A002E08E9 /* CALayer+.swift in Sources */,
+				0527F04A2B6BC334002E08E9 /* GradientAnimationViewController.swift in Sources */,
+				0527F04D2B6BC7B8002E08E9 /* CALayerPlaygroundViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +240,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -274,7 +294,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

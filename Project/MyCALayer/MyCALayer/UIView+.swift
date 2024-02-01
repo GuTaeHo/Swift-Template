@@ -32,4 +32,23 @@ extension UIView {
         // 3. 뷰 기본 레이어에 마스킹
         layer.mask = maskLayer
     }
+    /// 시머 이펙트 적용
+    /// - Important: 올바르게 레이아웃 된 시점일 때 적용됨
+    func shimmer(duration: CGFloat) {
+        let gradientLayer = CAGradientLayer()
+        let gradationColor = [UIColor.clear, .white.withAlphaComponent(0.5), .clear]
+        gradientLayer.frame = bounds
+        gradientLayer.colors = gradationColor.map { $0.cgColor }
+        gradientLayer.locations = [0.0, 0.5, 1.0]
+        gradientLayer.transform = CATransform3DMakeRotation(CGFloat(45 * Double.pi / 180), 0, 0, 1)
+        self.layer.mask = gradientLayer
+        
+        let animation = CABasicAnimation(keyPath: "transform.translation.x")
+        animation.fromValue = -bounds.size.width
+        animation.toValue = bounds.size.width
+        animation.repeatCount = .infinity
+        animation.duration = duration
+        animation.timingFunction = CAMediaTimingFunction(name: .easeIn)
+        gradientLayer.add(animation, forKey: "animationKey")
+    }
 }
