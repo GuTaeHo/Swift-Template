@@ -54,6 +54,11 @@ class CALayerPlaygroundViewController: UIViewController {
         maskLayer4.frame = triangleLayer3.frame.offsetBy(dx: 10 + triangleLayer3.frame.width, dy: 0)
         coverLayer0.mask(rect: maskLayer4.frame, cornerRadius: 6)
         
-        subLayersView.layer.addSublayers(coverLayer0, roundingLayer1, circleLayer2, triangleLayer3, maskLayer4)
+        // 레이어의 계층에 따라 마스킹 처리를 다르게 진행할 수도 있다.
+        let maskLayer5 = CAShapeLayer()
+        maskLayer5.frame = maskLayer4.frame.offsetBy(dx: 10 + maskLayer4.frame.width, dy: 0)
+        subLayersView.layer.mask(rect: maskLayer5.frame, cornerRadius: 6)
+        
+        subLayersView.layer.addSublayers(coverLayer0, roundingLayer1, circleLayer2, triangleLayer3, maskLayer4, maskLayer5)
     }
 }

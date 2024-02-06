@@ -15,6 +15,9 @@
 		054BB5962A54523800930C33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 054BB5942A54523800930C33 /* LaunchScreen.storyboard */; };
 		054BB59E2A54524900930C33 /* CommonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054BB59D2A54524900930C33 /* CommonLabel.swift */; };
 		054BB5A02A54528300930C33 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054BB59F2A54528300930C33 /* UILabel+.swift */; };
+		0578FEFC2B71D00100FBCFD8 /* NSAttrributedStringTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0578FEFB2B71D00100FBCFD8 /* NSAttrributedStringTestViewController.swift */; };
+		0578FEFE2B71D29100FBCFD8 /* NSAttributedString+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0578FEFD2B71D29100FBCFD8 /* NSAttributedString+.swift */; };
+		0578FF032B71EEC700FBCFD8 /* NSMutableAttributedString+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0578FF022B71EEC700FBCFD8 /* NSMutableAttributedString+.swift */; };
 		05C5C6492B6A836100789603 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 05C5C6452B6A836100789603 /* Pretendard-SemiBold.otf */; };
 		05C5C64A2B6A836100789603 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 05C5C6462B6A836100789603 /* Pretendard-Bold.otf */; };
 		05C5C64B2B6A836100789603 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 05C5C6472B6A836100789603 /* Pretendard-Regular.otf */; };
@@ -33,6 +36,9 @@
 		054BB5972A54523800930C33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		054BB59D2A54524900930C33 /* CommonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonLabel.swift; sourceTree = "<group>"; };
 		054BB59F2A54528300930C33 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
+		0578FEFB2B71D00100FBCFD8 /* NSAttrributedStringTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttrributedStringTestViewController.swift; sourceTree = "<group>"; };
+		0578FEFD2B71D29100FBCFD8 /* NSAttributedString+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+.swift"; sourceTree = "<group>"; };
+		0578FF022B71EEC700FBCFD8 /* NSMutableAttributedString+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+.swift"; sourceTree = "<group>"; };
 		05C5C6452B6A836100789603 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		05C5C6462B6A836100789603 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		05C5C6472B6A836100789603 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
@@ -70,22 +76,49 @@
 		054BB5882A54523700930C33 /* MyLabel */ = {
 			isa = PBXGroup;
 			children = (
-				054BB5892A54523700930C33 /* AppDelegate.swift */,
-				054BB58B2A54523700930C33 /* SceneDelegate.swift */,
+				0578FF012B71D65200FBCFD8 /* Resource */,
+				0578FF002B71D64400FBCFD8 /* App */,
+				0578FEFF2B71D63100FBCFD8 /* Extension */,
 				054BB58D2A54523700930C33 /* ViewController.swift */,
 				054BB58F2A54523700930C33 /* Main.storyboard */,
-				054BB5922A54523800930C33 /* Assets.xcassets */,
 				054BB5942A54523800930C33 /* LaunchScreen.storyboard */,
-				054BB5972A54523800930C33 /* Info.plist */,
 				054BB59D2A54524900930C33 /* CommonLabel.swift */,
+				0578FEFB2B71D00100FBCFD8 /* NSAttrributedStringTestViewController.swift */,
+			);
+			path = MyLabel;
+			sourceTree = "<group>";
+		};
+		0578FEFF2B71D63100FBCFD8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
 				054BB59F2A54528300930C33 /* UILabel+.swift */,
+				05C5C64D2B6A83CA00789603 /* UIFont+.swift */,
+				0578FEFD2B71D29100FBCFD8 /* NSAttributedString+.swift */,
+				0578FF022B71EEC700FBCFD8 /* NSMutableAttributedString+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		0578FF002B71D64400FBCFD8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				054BB5892A54523700930C33 /* AppDelegate.swift */,
+				054BB58B2A54523700930C33 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		0578FF012B71D65200FBCFD8 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				054BB5922A54523800930C33 /* Assets.xcassets */,
+				054BB5972A54523800930C33 /* Info.plist */,
 				05C5C6462B6A836100789603 /* Pretendard-Bold.otf */,
 				05C5C6482B6A836100789603 /* Pretendard-Medium.otf */,
 				05C5C6472B6A836100789603 /* Pretendard-Regular.otf */,
 				05C5C6452B6A836100789603 /* Pretendard-SemiBold.otf */,
-				05C5C64D2B6A83CA00789603 /* UIFont+.swift */,
 			);
-			path = MyLabel;
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,9 +199,12 @@
 				054BB58E2A54523700930C33 /* ViewController.swift in Sources */,
 				054BB59E2A54524900930C33 /* CommonLabel.swift in Sources */,
 				054BB5A02A54528300930C33 /* UILabel+.swift in Sources */,
+				0578FF032B71EEC700FBCFD8 /* NSMutableAttributedString+.swift in Sources */,
 				054BB58A2A54523700930C33 /* AppDelegate.swift in Sources */,
+				0578FEFC2B71D00100FBCFD8 /* NSAttrributedStringTestViewController.swift in Sources */,
 				05C5C64E2B6A83CA00789603 /* UIFont+.swift in Sources */,
 				054BB58C2A54523700930C33 /* SceneDelegate.swift in Sources */,
+				0578FEFE2B71D29100FBCFD8 /* NSAttributedString+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +353,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L8WFLHVUYX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyLabel/Info.plist;
+				INFOPLIST_FILE = MyLabel/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -346,7 +382,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L8WFLHVUYX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyLabel/Info.plist;
+				INFOPLIST_FILE = MyLabel/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
