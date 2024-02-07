@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -94,7 +94,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvy-JR-OQN">
                                                         <rect key="frame" x="236.66666666666671" y="0.0" width="108.33333333333334" height="69.333333333333329"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" image="checkmark.diamond.fill" catalog="system" imagePlacement="top" title="준비중" subtitle="(영문, 숫자, 특수문자 8자리 이상)" imagePadding="6" cornerStyle="capsule" showsActivityIndicator="YES">
+                                                        <buttonConfiguration key="configuration" style="filled" image="checkmark.diamond.fill" catalog="system" imagePlacement="top" title="인증번호" subtitle="(숫자 6자리)" imagePadding="6" cornerStyle="capsule" showsActivityIndicator="YES">
                                                             <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                             <fontDescription key="subtitleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="6"/>
                                                             <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
@@ -123,6 +123,7 @@
                     <connections>
                         <outlet property="btBusinessNumber" destination="GE2-GM-jdm" id="ggc-Cy-pLi"/>
                         <outlet property="btEmail" destination="Y0Z-YO-gZE" id="g7f-R5-5B3"/>
+                        <outlet property="btOnlySixNumber" destination="dvy-JR-OQN" id="0OP-lK-2Eq"/>
                         <outlet property="btOnlyText" destination="vD8-A1-DcS" id="Lbg-b0-aU6"/>
                         <outlet property="btPassword" destination="cvc-dY-Lep" id="Y2q-oD-s1x"/>
                         <outlet property="btPhoneNumber" destination="0aL-E0-LnF" id="tjw-eb-tRm"/>
@@ -140,7 +141,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

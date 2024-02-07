@@ -25,6 +25,9 @@ class RegExUtil {
     /// 한글 & 영문 & 숫자 & 공백 허용
     private static let onlyTextEx = "[ㄱ-ㅎㅏ-ㅣ가-힣a-zA-Z0-9\\s]$"
     
+    /// 숫자 6자리
+    private static let onlySixNumber = "[0-9]{6}$"
+    
     /// 이메일 체크
     static func isEmail(email: String?) -> Bool {
         guard let email = email, email != "" else { return false }
@@ -81,6 +84,15 @@ class RegExUtil {
     static func isOnlyText(text: String?) -> Bool {
         guard let text = text, text != "" else { return false }
         if text.range(of: onlyTextEx, options: .regularExpression) != nil {
+            return true
+        }
+        return false
+    }
+    
+    // 숫자 6자리일 때
+    static func isOnlySixNumber(text: String?) -> Bool {
+        guard let text = text, text.count == 6 else { return false }
+        if text.range(of: onlySixNumber, options: .regularExpression) != nil {
             return true
         }
         return false

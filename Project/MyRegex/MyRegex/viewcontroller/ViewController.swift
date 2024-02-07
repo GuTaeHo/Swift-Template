@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet var btPassword: UIButton!
     @IBOutlet var btBusinessNumber: UIButton!
     @IBOutlet var btOnlyText: UIButton!
+    @IBOutlet var btOnlySixNumber: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,6 +75,14 @@ class ViewController: UIViewController {
             } else {
                 btOnlyText.configuration?.showsActivityIndicator = true
                 btOnlyText.isEnabled = false
+            }
+            
+            if RegExUtil.isOnlySixNumber(text: testMessage) {
+                btOnlySixNumber.configuration?.showsActivityIndicator = false
+                btOnlySixNumber.isEnabled = true
+            } else {
+                btOnlySixNumber.configuration?.showsActivityIndicator = true
+                btOnlySixNumber.isEnabled = false
             }
         }
         
