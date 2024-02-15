@@ -27,10 +27,12 @@ class NSAttrributedStringTestViewController: UIViewController {
     func testCase1() {
         // `text` 와 `attributedText` 는 서로 동기화 된다.
         // `text` 와 `attributedText` 가장 마지막에 누가 저장되었는지에 따라 문자열을 출력한다
+        // 이미 할당된 `attributedText` 가 있을경우 마지막에 할당된 `text` 는 문자열은 `text` 를 따라가되, 스타일은 그대로 적용된다.
         lbType1.text = "안녕 plain"   // "안녕 attributed"
         lbType1.attributedText = .init(string: "안녕 attributed")     // "안녕 attributed"
         lbType1.attributedText = .styledText("홀라 Styled Attributes", type: .pretendardBold, size: 20, color: .green)
         lbType1.attributedText = .styledText("Styled Attributes Styled Attributes Styled Attributes Styled Attributes Styled Attributes Styled Attributes", type: .pretendardRegular, size: 20, color: .green).toMutable.appendParagraphStyle(-5)
+        lbType1.text = "zzzz"
     }
     
     func printAll() {

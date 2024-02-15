@@ -20,6 +20,8 @@ class RedViewController: UIViewController, UIGestureRecognizerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        print("RedViewController 의 부모 뷰 컨트롤러 : \(parent)")
+        print("RedViewController 를 표시한 뷰 컨트롤러: \(presentingViewController)")
     }
     
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
