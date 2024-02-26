@@ -10,5 +10,5 @@ import Foundation
 struct Person {
     var name: String
     var phoneNumber: String
-    var etc: String
+    var address: String
 }
