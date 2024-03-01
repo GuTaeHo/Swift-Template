@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var btCustom: CommonButton!
     // 기존 버튼
     lazy var regacyButton: UIButton = {
         let button = UIButton()
@@ -59,18 +60,27 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        view.addSubview(regacyButton)
-        view.addSubview(enhancedButton)
+//        view.addSubview(regacyButton)
+//        view.addSubview(enhancedButton)
         
-        NSLayoutConstraint.activate([
-            regacyButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 18),
-            regacyButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 18),
-            enhancedButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -18),
-            enhancedButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -18)
-        ])
+//        NSLayoutConstraint.activate([
+//            regacyButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 18),
+//            regacyButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 18),
+//            enhancedButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -18),
+//            enhancedButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -18)
+//        ])
         
-        print(UIScreen.main.nativeBounds.size)
-        print(UIScreen.main.bounds.size)
+//        print(UIScreen.main.nativeBounds.size)
+//        print(UIScreen.main.bounds.size)
+        
+        
+        btCustom.addAction {
+            print("버튼 눌림")
+        }
+        
+//        btCustom.addAction(.init(handler: { button in
+//            
+//        }), for: .touchUpInside)
     }
 }
 
