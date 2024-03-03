@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,25 +17,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Root View" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chm-5B-xrr">
-                                <rect key="frame" x="319.33333333333331" y="59" width="73.666666666666686" height="17"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="14"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9YU-GO-4bz" userLabel="Test View 2">
-                                <rect key="frame" x="0.66666666666665719" y="77" width="391.66666666666674" height="64"/>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9YU-GO-4bz" userLabel="User Interaction Disabled View">
+                                <rect key="frame" x="12.666666666666657" y="77" width="368" height="64"/>
                                 <subviews>
-                                    <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GPC-vj-jsV" userLabel="Test Stack View">
-                                        <rect key="frame" x="18" y="12" width="355.66666666666669" height="40"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GPC-vj-jsV" userLabel="Test Stack View">
+                                        <rect key="frame" x="18" y="12" width="332" height="40"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8A-0h-izN">
-                                                <rect key="frame" x="0.0" y="0.0" width="355.66666666666669" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="332" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="4xe-XD-1aY"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="isUserInteractionEnabledFalseBySuperView"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="슈퍼뷰의 유저인터렉션 여부가 false 로 설정됨"/>
                                                 <connections>
                                                     <action selector="disableButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BIy-Lj-WMr"/>
                                                 </connections>
@@ -50,12 +44,6 @@
                                     <constraint firstItem="GPC-vj-jsV" firstAttribute="leading" secondItem="9YU-GO-4bz" secondAttribute="leading" constant="18" id="lBF-sI-aQp"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyUIResponder ViewController" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91d-Y1-IPE">
-                                <rect key="frame" x="18" y="149" width="363" height="217"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="38"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LBE-sv-isn" userLabel="Test View">
                                 <rect key="frame" x="113.66666666666669" y="366" width="166" height="120"/>
                                 <subviews>
@@ -104,25 +92,20 @@
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Print Debug" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSa-Fn-6Uc">
                                 <rect key="frame" x="18" y="504" width="357" height="296"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
+                                <color key="backgroundColor" systemColor="scrollViewTexturedBackgroundColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="chm-5B-xrr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1T6-as-EOG"/>
                             <constraint firstItem="eSa-Fn-6Uc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="8OW-vD-eh7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eSa-Fn-6Uc" secondAttribute="trailing" constant="18" id="9Yv-tP-AXT"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="91d-Y1-IPE" secondAttribute="trailing" constant="12" id="FAv-Ka-w8L"/>
-                            <constraint firstItem="91d-Y1-IPE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="Pj7-hU-sjf"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="chm-5B-xrr" secondAttribute="trailing" id="Uut-Yq-zvC"/>
-                            <constraint firstItem="91d-Y1-IPE" firstAttribute="bottom" secondItem="LBE-sv-isn" secondAttribute="top" id="XMY-cI-XER"/>
                             <constraint firstItem="eSa-Fn-6Uc" firstAttribute="top" secondItem="LBE-sv-isn" secondAttribute="bottom" constant="18" id="a1G-im-tWG"/>
                             <constraint firstItem="LBE-sv-isn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bh6-La-KKB"/>
-                            <constraint firstItem="91d-Y1-IPE" firstAttribute="top" secondItem="9YU-GO-4bz" secondAttribute="bottom" constant="8" symbolic="YES" id="fdH-1o-TsR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eSa-Fn-6Uc" secondAttribute="bottom" constant="18" id="g0C-U2-J7c"/>
                             <constraint firstItem="LBE-sv-isn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ixp-wf-VsY"/>
                             <constraint firstItem="9YU-GO-4bz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r1l-2j-yq4"/>
@@ -130,8 +113,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="disabledButton" destination="GPC-vj-jsV" id="KTO-PY-sLB"/>
                         <outlet property="textView" destination="eSa-Fn-6Uc" id="5Lt-ao-Y22"/>
+                        <outlet property="userInteractionDisabledView" destination="9YU-GO-4bz" id="eXS-k0-1GS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -140,20 +123,17 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="scrollViewTexturedBackgroundColor">
+            <color red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
-            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemMintColor">
-            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

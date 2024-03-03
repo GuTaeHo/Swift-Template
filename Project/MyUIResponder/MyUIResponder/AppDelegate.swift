@@ -31,6 +31,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-
+    // 리스폰더 체인에서 처리되지 않은 이벤트가 있을 때 UIApplication 이 받도록 처리할 수 있다.
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("UIApplication 이 이벤트를 받음")
+    }
 }
 
