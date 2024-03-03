@@ -43,12 +43,12 @@ class ViewController: UIViewController {
     @IBAction func onClickEnter(_ sender: Any) {
         guard let name = tfName.text?.trimmingCharacters(in: .whitespacesAndNewlines), name.count != 0,
               let phoneNumber = tfPhoneNumber.text?.trimmingCharacters(in: .whitespacesAndNewlines), phoneNumber.count != 0,
-              let etc = tfEtc.text?.trimmingCharacters(in: .whitespacesAndNewlines), etc.count != 0
+              let address = tfEtc.text?.trimmingCharacters(in: .whitespacesAndNewlines), address.count != 0
         else {
             return print("전부 입력해주세요")
         }
         
-        let person = Person(name: name, phoneNumber: phoneNumber, etc: etc)
+        let person = Person(name: name, phoneNumber: phoneNumber, address: address)
         CoreDataManager.shared.insertContact(person)
         // 갱신된 아이템 재조회
         items = CoreDataManager.shared.getContacts()
@@ -76,7 +76,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.lbName.text = items[index].name
         cell.lbPhoneNumber.text = items[index].phoneNumber
-        cell.lbEtc.text = items[index].etc
+        cell.lbEtc.text = items[index].address
         
         return cell
     }

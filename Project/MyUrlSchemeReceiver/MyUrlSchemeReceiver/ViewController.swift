@@ -33,6 +33,9 @@ class ViewController: UIViewController {
                 print("url host: " + (url.host() ?? ""))
                 print("url path: " + url.path())
                 print("url pathComponents: \(url.pathComponents)")
+                print("url query: \(url.query() ?? .init())")
+                let urlQueryItem = URLComponents(url: url, resolvingAgainstBaseURL: true)?.queryItems?.compactMap { (name: $0.name, value: $0.value) }
+                print("url queryItem: \(urlQueryItem ?? .init())")
             }
         }.store(in: &cancellable)
     }

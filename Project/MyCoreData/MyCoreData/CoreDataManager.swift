@@ -30,7 +30,7 @@ import Foundation
 class CoreDataManager {
     static var shared: CoreDataManager = CoreDataManager()
     
-    /// name 에 해당하는 저장소(컨테이너) 생성
+    /// 저장소 생성 및 반환
     lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "MyCoreData")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
@@ -41,7 +41,7 @@ class CoreDataManager {
         return container
     }()
     
-    /// - note: CoreData 프레임워크는  컨테이너(NSPersistentContainer)의 컨텍스트(NSManagedObjectContext)를 통해 CRUD 연산이 가능함
+    /// - note: CoreData 프레임워크는 컨테이너(NSPersistentContainer)의 컨텍스트(NSManagedObjectContext)를 통해 CRUD 연산이 가능함
     var context: NSManagedObjectContext {
         return persistentContainer.viewContext
     }
@@ -55,12 +55,12 @@ class CoreDataManager {
         }
     }
     
-    /// 만들어둔 엔티티(테이블) 에 접근할 때 사용
+    /// 연락처 엔티티(테이블) 반환
     var contactEntity: NSEntityDescription? {
         return NSEntityDescription.entity(forEntityName: "Contact", in: context)
     }
     
-    /// CoreData 내부에 저장된 리스트 반환
+    /// 연락처 목록 반환
     func fetchContacts() -> [Contact] {
         do {
             let request = Contact.fetchRequest()
@@ -77,7 +77,7 @@ class CoreDataManager {
         var persons: [Person] = []
         let fetchResults = fetchContacts()
         for result in fetchResults {
-            let person = Person(name: result.name ?? "", phoneNumber: result.phoneNumber ?? "", etc: result.etc ?? "")
+            let person = Person(name: result.name ?? "", phoneNumber: result.phoneNumber ?? "", address: result.address ?? "")
             persons.append(person)
         }
         return persons
@@ -89,7 +89,7 @@ class CoreDataManager {
             let managedObject = NSManagedObject(entity: entity, insertInto: context)
             managedObject.setValue(person.name, forKey: "name")
             managedObject.setValue(person.phoneNumber, forKey: "phoneNumber")
-            managedObject.setValue(person.etc, forKey: "etc")
+            managedObject.setValue(person.address, forKey: "address")
             saveToContext()
         }
     }
@@ -106,8 +106,8 @@ class CoreDataManager {
                 result.phoneNumber = person.phoneNumber
             }
             
-            if result.etc != person.etc {
-                result.etc = person.etc
+            if result.address != person.address {
+                result.address = person.address
             }
         }
         saveToContext()
