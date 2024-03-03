@@ -98,14 +98,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ou-yG-FbP">
+                                <rect key="frame" x="92.000000000000014" y="165" width="209.33333333333337" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="네비게이션 컨트롤러 테스트"/>
+                                <connections>
+                                    <segue destination="xJY-CI-rK7" kind="show" id="v00-g3-58Y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="eSa-Fn-6Uc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="8OW-vD-eh7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eSa-Fn-6Uc" secondAttribute="trailing" constant="18" id="9Yv-tP-AXT"/>
+                            <constraint firstItem="8Ou-yG-FbP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MlR-KH-dD4"/>
                             <constraint firstItem="eSa-Fn-6Uc" firstAttribute="top" secondItem="LBE-sv-isn" secondAttribute="bottom" constant="18" id="a1G-im-tWG"/>
                             <constraint firstItem="LBE-sv-isn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bh6-La-KKB"/>
+                            <constraint firstItem="8Ou-yG-FbP" firstAttribute="top" secondItem="9YU-GO-4bz" secondAttribute="bottom" constant="24" id="dqX-gs-R2o"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eSa-Fn-6Uc" secondAttribute="bottom" constant="18" id="g0C-U2-J7c"/>
                             <constraint firstItem="LBE-sv-isn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ixp-wf-VsY"/>
                             <constraint firstItem="9YU-GO-4bz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r1l-2j-yq4"/>
@@ -121,19 +131,74 @@
             </objects>
             <point key="canvasLocation" x="58" y="-2"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AzC-qk-XcV">
+            <objects>
+                <navigationController id="xJY-CI-rK7" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ZoD-cs-WzZ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="s91-jX-ubf">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rP0-hL-hXg" kind="relationship" relationship="rootViewController" id="g5h-O3-bVH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nmW-vT-Kwj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57" y="744"/>
+        </scene>
+        <!--First View Controller-->
+        <scene sceneID="nPH-zt-0XT">
+            <objects>
+                <viewController id="rP0-hL-hXg" customClass="FirstViewController" customModule="MyUIResponder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rcm-T7-rxJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4MI-qn-Z7Z"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3H0-GJ-CVl"/>
+                    <connections>
+                        <segue destination="bfe-KW-akF" kind="show" id="cdu-wE-eE3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BIl-cP-bif" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="860" y="744"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="J9l-ES-w29">
+            <objects>
+                <viewController id="bfe-KW-akF" customClass="SecondViewController" customModule="MyUIResponder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fxx-Ec-I0L">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="aNs-aZ-VR5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VqR-6p-a7y"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tLi-vi-3nx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1642" y="744"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="scrollViewTexturedBackgroundColor">
             <color red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemMintColor">
-            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

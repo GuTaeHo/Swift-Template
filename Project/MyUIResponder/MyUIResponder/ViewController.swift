@@ -10,20 +10,24 @@ import UIKit
 /**
  `UIResponder(이하 리스폰더로 칭함)` 는 이벤트에 반응 및 처리할 수 있는 객체를 의미한다.
  일반적으로 UIView 가 리스폰더를 상속받고있으며, UIApplication 도 이를 상속하고 있다.
- + UIApplication 은 앱당 하나만 존재하는 객체[shared 로 접근]로 앱의 주요한 이벤트(앱 상태변화, 사용자 이벤트 등)들을 관리한다.
+    (UIApplication 은 앱당 하나만 존재하는 객체[shared 로 접근]로 앱의 주요한 이벤트(앱 상태변화, 사용자 이벤트 등)들을 관리한다.)
  
  리스폰더는 처리되지 않은 이벤트를 상위 리스폰더로 전달하는 기능도 한다.
- 만약 UIApplication -> UIWindow -> UIViewController -> UIView -> UIButton 계층이 있을 때,
- UIButton 이 이벤트를 처리하지않는다면 UIView 로 이벤트를 전달, UIView 가 처리하지않는다면 UIViewController 로 전달을 반복하며,
- 최종적으로 UIApplication 이 이벤트를 처리하지 않는다면 버린다.
- - 일반적인 터치이벤트의 경우 터치된 뷰에서 시작해, 최종적으로 앱까지 도달함.
+ + 만약 UIApplication -> UIWindow -> UIViewController -> UIView -> UIButton 계층이 있을 때,
+ + UIButton 이 이벤트를 처리하지않는다면 UIView 로 이벤트를 전달, UIView 가 처리하지않는다면 UIViewController 로 전달을 반복하며,
+ + 최종적으로 UIApplication 이 이벤트를 처리하지 않는다면 버린다.
+    (일반적인 터치이벤트의 경우 터치된 뷰에서 시작해, 최종적으로 앱까지 도달함.)
  
  위 이벤트를 처리하는 흐름을 하나의 사슬과 같다고 하여 `리스폰더 체인(Responder Chain)` 으로 부른다.
+ + 리스폰더 체인은 하위에서 상위로 이동하는 반면, 시스템이 리스폰더로 이벤트를 보내는 방향은 상위에서 하위로 전달한다.
+ + UIApplication -> UIWindow -> UIViewController -> UIView -> UIButton 순
  
  이벤트를 가장 처음 받는 리스폰더를 `First Responder` 라고 부르며, 앱이 이벤트를 받을 경우 이 First Responder 에게 보낸다.
+ ex) becomeFirstResponder() 메소드를 통해 UITextField 가 First Responder 임을 알려줌으로서 시스템이 키보드를 화면에 띄운다.
  
  리스폰더의 `next` 프로퍼티는 상위 리스폰더를 반환한다.
  예를들어, UIViewController 의 최상위 UIView 에 next 는 UIViewController 가 되며,
+ TODO: UINavigation 관련 내용 수정할 것
  UINavigationController 의 rootViewController 에 next 는 UINavigationController 가 된다.
  
  
@@ -55,7 +59,6 @@ class ViewController: UIViewController {
         // UIResponder.next 는 이벤트처리가 가능한 다음 리스폰더를 반환한다.
         print(self.view == userInteractionDisabledView.next)
         print(self == self.view.next)
-        
         
         // print(Unmanaged.passUnretained(userInteractionDisabledView).toOpaque())
     }
