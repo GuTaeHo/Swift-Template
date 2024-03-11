@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         Task {
-            print(await getPosts())
+            print(await getPosts().toJson ?? "")
         }
     }
 
