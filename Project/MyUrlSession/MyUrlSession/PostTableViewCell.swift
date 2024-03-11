@@ -9,13 +9,34 @@ import UIKit
 
 
 class PostTableViewCell: UITableViewCell {
-    lazy var title: UILabel = {
+    lazy var name: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .systemFont(ofSize: 14)
+        label.font = .systemFont(ofSize: 24)
+        label.numberOfLines = 0
         label.textColor = .black
         return label
     }()
+    
+    lazy var email: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .systemFont(ofSize: 24)
+        label.numberOfLines = 0
+        label.textColor = .black
+        return label
+    }()
+    
+    lazy var body: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .systemFont(ofSize: 20)
+        label.numberOfLines = 0
+        label.textColor = .darkGray
+        return label
+    }()
+    
+    
     
     static let identifier = "PostTableViewCell"
     
@@ -31,16 +52,30 @@ class PostTableViewCell: UITableViewCell {
     }
     
     func initLayout() {
-        contentView.addSubview(title)
+        contentView.addSubview(name)
+        contentView.addSubview(email)
+        contentView.addSubview(body)
         NSLayoutConstraint.activate([
-            title.topAnchor.constraint(equalTo: contentView.topAnchor),
-            title.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            title.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            title.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+            name.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 12),
+            name.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            name.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
+        ])
+        NSLayoutConstraint.activate([
+            email.topAnchor.constraint(equalTo: name.bottomAnchor, constant: 12),
+            email.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            email.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
+        ])
+        NSLayoutConstraint.activate([
+            body.topAnchor.constraint(equalTo: email.bottomAnchor, constant: 12),
+            body.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            body.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            body.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
     }
     
     func configuration(_ item: Post?) {
-        title.text = item?.name
+        name.text = item?.name
+        email.text = item?.email
+        body.text = item?.body
     }
 }
