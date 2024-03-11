@@ -23,5 +23,16 @@ struct Post: Codable {
     var body: String
     // MARK: 서버에서 해당하는 필드를 주지않을 때, 옵셔널로 선언되지않은 필드가 있다면 무조건 파싱에 실패한다.
     // MARK: 필드를 옵셔널로 선언하면 파싱에 성공하고, 해당 필드의 값은 nil 로 초기화된다.
-    // var _hasIndicator: Bool = false
+    var _hasIndicator: Bool
+    
+    // 디코딩 시 (서버에서 해당필드를 주지 않았을 경우 & 필드의 타입이 다른경우) 필드를 기본값으로 초기화 하고 파싱에 성공시키려면 init(from:) 을 구현해주어야한다.
+    init(from decoder: any Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.postId = (try? container.decode(Int.self, forKey: .postId)) ?? -1
+        self.id = (try? container.decode(Int.self, forKey: .id)) ?? -1
+        self.name = (try? container.decode(String.self, forKey: .name)) ?? "없음"
+        self.email = (try? container.decode(String.self, forKey: .email)) ?? "없음"
+        self.body = (try? container.decode(String.self, forKey: .body)) ?? "없음"
+        self._hasIndicator = (try? container.decode(Bool.self, forKey: ._hasIndicator)) ?? false
+    }
 }

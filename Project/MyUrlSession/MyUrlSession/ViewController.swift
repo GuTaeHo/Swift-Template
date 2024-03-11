@@ -25,15 +25,17 @@ class ViewController: UIViewController {
             return nil
         }
         
-        var posts: [Post]?
-        
         do {
-            posts = try JSONDecoder().decode([Post].self, from: data)
+            print("response url: \(response.url?.absoluteString ?? .init())")
+            print("response mimeType: \(response.mimeType ?? "")")
+            print("response textEncodingName: \(response.textEncodingName ?? "")")
+            print("response suggestedFilename: \(response.suggestedFilename ?? "")")
+            print("response expectedContentLength: \(response.expectedContentLength)")
+            return try JSONDecoder().decode([Post].self, from: data)
         } catch (let error) {
-            print("JSON 파싱 에러")
+            print("JSON 파싱 에러: \(error.localizedDescription)")
+            return nil
         }
-        
-        return posts
     }
 }
 
