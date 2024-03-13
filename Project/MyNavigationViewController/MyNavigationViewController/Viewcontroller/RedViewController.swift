@@ -32,23 +32,8 @@ class RedViewController: UIViewController, UIGestureRecognizerDelegate {
         }
     }
     
-    @IBAction func next(_ sender: Any) {
-        if let viewController = storyboard?.instantiateViewController(withIdentifier: "OrangeViewController") as? OrangeViewController {
-            viewController.dataClosure = { data in
-                print("\(data)")
-            }
-            self.navigationController?.pushViewController(viewController, animated: true)
-        } else {
-            print("뷰 컨트롤러 추가 오류...")
-        }
-    }
-    
     @IBAction func currentViewController(_ sender: Any) {
         lbCurrentViewController.text = String(describing: type(of: self))
-    }
-    
-    @IBAction func pushBySegue(_ sender: UIButton) {
-        
     }
 }
 

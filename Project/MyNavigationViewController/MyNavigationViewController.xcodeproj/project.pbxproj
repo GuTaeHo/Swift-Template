@@ -51,7 +51,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0545E91A29A7A84D0076C334 /* viewcontrollers */ = {
+		0545E91A29A7A84D0076C334 /* Viewcontroller */ = {
 			isa = PBXGroup;
 			children = (
 				05F7A127291244700010F67F /* NavigationController.swift */,
@@ -61,16 +61,16 @@
 				05F7A12B291250B30010F67F /* GreenViewController.swift */,
 				0536827A2938EA4300B64013 /* BlueViewController.swift */,
 			);
-			path = viewcontrollers;
+			path = Viewcontroller;
 			sourceTree = "<group>";
 		};
-		0545E91B29A7A8650076C334 /* extensions */ = {
+		0545E91B29A7A8650076C334 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				05F7A12F2912618E0010F67F /* UIViewController.swift */,
 				05814D31292F6491004A871A /* UINavigationController.swift */,
 			);
-			path = extensions;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		0551FCA22912361E0057C729 = {
@@ -92,8 +92,8 @@
 		0551FCAD2912361E0057C729 /* MyNavigationViewController */ = {
 			isa = PBXGroup;
 			children = (
-				0545E91B29A7A8650076C334 /* extensions */,
-				0545E91A29A7A84D0076C334 /* viewcontrollers */,
+				0545E91B29A7A8650076C334 /* Extension */,
+				0545E91A29A7A84D0076C334 /* Viewcontroller */,
 				0551FCAE2912361E0057C729 /* AppDelegate.swift */,
 				0551FCB02912361E0057C729 /* SceneDelegate.swift */,
 				0551FCB42912361E0057C729 /* Main.storyboard */,

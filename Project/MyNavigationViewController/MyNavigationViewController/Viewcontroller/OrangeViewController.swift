@@ -17,14 +17,6 @@ class OrangeViewController: UIViewController {
         
     }
     
-    @IBAction func next(_ sender: Any) {
-        if let viewController = storyboard?.instantiateViewController(withIdentifier: "YellowViewController") {
-            self.navigationController?.pushViewController(viewController, animated: true)
-        } else {
-            print("뷰 컨트롤러 추가 오류...")
-        }
-    }
-    
     @IBAction func sendDataPreviousViewController(_ sender: UIButton) {
         dataClosure?("안녕!")
     }
