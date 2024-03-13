@@ -11,9 +11,9 @@ class BlueViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.setTitleColor(.white)
         navigationController?.interactivePopGestureRecognizer?.delegate = self
         initLayout()
-        print(navigationItem.titleView)
     }
     
     func initLayout() {
@@ -26,6 +26,11 @@ class BlueViewController: UIViewController {
     
     @objc func moveHome() {
         navigationController?.popToRootViewController(animated: true)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setPopGestureRecognizer()
+        navigationController?.setTitleColor(UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 1.0))
     }
 }
 

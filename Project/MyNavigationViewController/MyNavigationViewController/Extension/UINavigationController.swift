@@ -29,6 +29,14 @@ extension UINavigationController {
     }
 }
 
+extension UINavigationController {
+    /// 네비게이션 타이틀 색상 변경
+    func setTitleColor(_ color: UIColor) {
+        let attributes = [NSAttributedString.Key.foregroundColor:color]
+        navigationBar.titleTextAttributes = attributes
+    }
+}
+
 /// 왼쪽 스와이프 제스처를 통해 이전 컨트롤러로 돌아가는 기능
 extension UINavigationController: UIGestureRecognizerDelegate {
     // open 키워드를 통해 모듈 외부에서 메소드 접근 및 오버라이딩이 가능한 것으로 보인다.
@@ -37,8 +45,9 @@ extension UINavigationController: UIGestureRecognizerDelegate {
         interactivePopGestureRecognizer?.delegate = self
     }
     
-    func removePopGestureReognizer() {
-        interactivePopGestureRecognizer
+    /// 팝 제스쳐 위임자 등록
+    func setPopGestureRecognizer() {
+        interactivePopGestureRecognizer?.delegate = self
     }
     
     public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool { viewControllers.count > 1 }
