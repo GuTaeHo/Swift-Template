@@ -20,6 +20,7 @@
 		05F7A12A291245450010F67F /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F7A129291245450010F67F /* YellowViewController.swift */; };
 		05F7A12C291250B30010F67F /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F7A12B291250B30010F67F /* GreenViewController.swift */; };
 		05F7A1302912618E0010F67F /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F7A12F2912618E0010F67F /* UIViewController.swift */; };
+		608A4C1D2BA1C1D3008A29DB /* PresentTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608A4C1C2BA1C1D3008A29DB /* PresentTestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		05F7A129291245450010F67F /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
 		05F7A12B291250B30010F67F /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
 		05F7A12F2912618E0010F67F /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		608A4C1C2BA1C1D3008A29DB /* PresentTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentTestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				05F7A129291245450010F67F /* YellowViewController.swift */,
 				05F7A12B291250B30010F67F /* GreenViewController.swift */,
 				0536827A2938EA4300B64013 /* BlueViewController.swift */,
+				608A4C1C2BA1C1D3008A29DB /* PresentTestViewController.swift */,
 			);
 			path = Viewcontroller;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				05F7A12C291250B30010F67F /* GreenViewController.swift in Sources */,
 				0551FCB32912361E0057C729 /* RedViewController.swift in Sources */,
 				0551FCAF2912361E0057C729 /* AppDelegate.swift in Sources */,
+				608A4C1D2BA1C1D3008A29DB /* PresentTestViewController.swift in Sources */,
 				0551FCB12912361E0057C729 /* SceneDelegate.swift in Sources */,
 				05F7A128291244700010F67F /* NavigationController.swift in Sources */,
 				0536827B2938EA4300B64013 /* BlueViewController.swift in Sources */,
