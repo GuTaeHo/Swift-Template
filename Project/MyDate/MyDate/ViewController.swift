@@ -27,13 +27,15 @@ class ViewController: UIViewController {
         return label
     }()
     
-    var dispatchQueueLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .black
-        label.numberOfLines = 0
-        label.font = .systemFont(ofSize: 16)
-        return label
+    var timerScheduledButton: UIButton = {
+        let button = UIButton(configuration: .filled())
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.configuration?.baseForegroundColor = .black
+        button.configuration?.baseBackgroundColor = .lightGray
+        button.layer.cornerRadius = 0
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.darkGray.cgColor
+        return button
     }()
     
     private var cancellable = Set<AnyCancellable>()
@@ -43,7 +45,7 @@ class ViewController: UIViewController {
         
         view.addSubview(runLoopPublisherLabel)
         view.addSubview(timerPublisherLabel)
-        view.addSubview(dispatchQueueLabel)
+        view.addSubview(timerScheduledButton)
         
         NSLayoutConstraint.activate([
             runLoopPublisherLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 18),
@@ -56,9 +58,9 @@ class ViewController: UIViewController {
             timerPublisherLabel.trailingAnchor.constraint(equalTo: runLoopPublisherLabel.trailingAnchor)
         ])
         NSLayoutConstraint.activate([
-            dispatchQueueLabel.topAnchor.constraint(equalTo: timerPublisherLabel.bottomAnchor),
-            dispatchQueueLabel.leadingAnchor.constraint(equalTo: timerPublisherLabel.leadingAnchor),
-            dispatchQueueLabel.trailingAnchor.constraint(equalTo: timerPublisherLabel.trailingAnchor)
+            timerScheduledButton.topAnchor.constraint(equalTo: timerPublisherLabel.bottomAnchor),
+            timerScheduledButton.leadingAnchor.constraint(equalTo: timerPublisherLabel.leadingAnchor),
+            timerScheduledButton.trailingAnchor.constraint(equalTo: timerPublisherLabel.trailingAnchor)
         ])
         
         DispatchQueue.main.async {
@@ -74,6 +76,9 @@ class ViewController: UIViewController {
                 .sink { [weak self] in
                     self?.timerPublisherLabel.text = "Timer 퍼블리셔를 이용한 타이머:\n" + $0.formatted(date: .numeric, time: .standard)
                 }.store(in: &self.cancellable)
+            Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] timer in
+                self?.timerScheduledButton.configuration?.title = "Timer 스케쥴러를 이용한 타이머:\n\(Date().formatted(date: .numeric, time: .standard))"
+            }
         }
     }
 }
