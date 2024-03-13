@@ -45,11 +45,18 @@ extension UINavigationController: UIGestureRecognizerDelegate {
         interactivePopGestureRecognizer?.delegate = self
     }
     
-    /// 팝 제스쳐 위임자 등록
-    func setPopGestureRecognizer() {
-        interactivePopGestureRecognizer?.delegate = self
+    /// 팝 제스쳐 활성화
+    func enablePopGesture() {
+        interactivePopGestureRecognizer?.isEnabled = true
     }
     
-    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool { viewControllers.count > 1 }
+    /// 팝 제스쳐 비활성화
+    func disablePopGesture() {
+        interactivePopGestureRecognizer?.isEnabled = false
+    }
+    
+    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        viewControllers.count > 1
+    }
 }
 

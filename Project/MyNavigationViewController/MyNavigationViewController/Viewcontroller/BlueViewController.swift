@@ -12,7 +12,7 @@ class BlueViewController: UIViewController {
         super.viewDidLoad()
         
         navigationController?.setTitleColor(.white)
-        navigationController?.interactivePopGestureRecognizer?.delegate = self
+        navigationController?.disablePopGesture()
         initLayout()
     }
     
@@ -29,12 +29,7 @@ class BlueViewController: UIViewController {
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        navigationController?.setPopGestureRecognizer()
+        navigationController?.enablePopGesture()
         navigationController?.setTitleColor(UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 1.0))
     }
-}
-
-
-extension BlueViewController: UIGestureRecognizerDelegate {
-    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool { false }
 }
