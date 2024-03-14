@@ -30,10 +30,6 @@ class GreenViewController: UIViewController {
         }
     }
     
-    @IBAction func next(_ sender: Any) {
-        self.navigationController?.popToRootViewController(animated: true)
-    }
-    
     @IBAction func popAndPush(_ sender: Any) {
         if let viewController = storyboard?.instantiateViewController(withIdentifier: "BlueViewController") as? BlueViewController {
             self.navigationController?.popToRootAndPushViewController(moveTo: viewController)

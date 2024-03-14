@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6E2-9c-tfq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6E2-9c-tfq">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--스플래시-->
+        <!--레드 뷰 컨트롤러-->
         <scene sceneID="Hjd-Y7-0Ib">
             <objects>
                 <viewController storyboardIdentifier="RedViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nIr-D8-H8x" customClass="RedViewController" customModule="MyNavigationViewController" sceneMemberID="viewController">
@@ -17,18 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N14-Tf-0Am">
-                                <rect key="frame" x="318" y="65" width="54" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="다음"/>
-                                <connections>
-                                    <action selector="next:" destination="nIr-D8-H8x" eventType="touchUpInside" id="5nk-C4-J9p"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwp-HD-eDt">
                                 <rect key="frame" x="128" y="404.66666666666669" width="134" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="현재 뷰 컨 이름?"/>
+                                <buttonConfiguration key="configuration" style="filled" title="현재 뷰 컨 이름?"/>
                                 <connections>
                                     <action selector="currentViewController:" destination="nIr-D8-H8x" eventType="touchUpInside" id="c9h-6j-ZQv"/>
                                 </connections>
@@ -40,41 +32,36 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RedViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24G-aI-iXC">
-                                <rect key="frame" x="74.666666666666686" y="164" width="241" height="36"/>
+                                <rect key="frame" x="74.666666666666686" y="211" width="241" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" systemColor="systemGray6Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JhL-eN-qpJ">
-                                <rect key="frame" x="18" y="757" width="354" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="다음"/>
-                                <connections>
-                                    <action selector="pushBySegue:" destination="nIr-D8-H8x" eventType="touchUpInside" id="hcT-h5-98p"/>
-                                    <segue destination="kzK-TQ-gkG" kind="presentation" id="Bxu-vJ-cp9"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gEz-o3-WlB"/>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                         <constraints>
-                            <constraint firstItem="N14-Tf-0Am" firstAttribute="top" secondItem="gEz-o3-WlB" secondAttribute="top" constant="18" id="D2W-UJ-kvf"/>
                             <constraint firstItem="Vwp-HD-eDt" firstAttribute="centerY" secondItem="HxS-Oe-HyH" secondAttribute="centerY" id="Hpy-lu-8nb"/>
                             <constraint firstItem="cu3-bV-zPE" firstAttribute="leading" secondItem="gEz-o3-WlB" secondAttribute="leading" constant="18" id="Qn1-Rh-7bf"/>
                             <constraint firstItem="gEz-o3-WlB" firstAttribute="trailing" secondItem="cu3-bV-zPE" secondAttribute="trailing" constant="18" id="XTM-L8-sgu"/>
-                            <constraint firstItem="gEz-o3-WlB" firstAttribute="trailing" secondItem="JhL-eN-qpJ" secondAttribute="trailing" constant="18" id="Yvd-wT-UTh"/>
                             <constraint firstItem="Vwp-HD-eDt" firstAttribute="top" secondItem="cu3-bV-zPE" secondAttribute="bottom" constant="18" id="Zbc-xv-Qwg"/>
                             <constraint firstItem="Vwp-HD-eDt" firstAttribute="centerX" secondItem="HxS-Oe-HyH" secondAttribute="centerX" id="cwW-rb-rQn"/>
-                            <constraint firstItem="24G-aI-iXC" firstAttribute="top" secondItem="N14-Tf-0Am" secondAttribute="bottom" constant="64" id="gtt-mx-aUS"/>
                             <constraint firstItem="24G-aI-iXC" firstAttribute="centerX" secondItem="HxS-Oe-HyH" secondAttribute="centerX" id="jHO-ac-UDn"/>
-                            <constraint firstItem="gEz-o3-WlB" firstAttribute="trailing" secondItem="N14-Tf-0Am" secondAttribute="trailing" constant="18" id="nfc-bd-arm"/>
-                            <constraint firstItem="gEz-o3-WlB" firstAttribute="bottom" secondItem="JhL-eN-qpJ" secondAttribute="bottom" constant="18" id="pFu-Ww-zXL"/>
-                            <constraint firstItem="JhL-eN-qpJ" firstAttribute="leading" secondItem="gEz-o3-WlB" secondAttribute="leading" constant="18" id="sPe-vK-2ho"/>
+                            <constraint firstItem="24G-aI-iXC" firstAttribute="top" secondItem="gEz-o3-WlB" secondAttribute="top" constant="120" id="z1k-c1-gQk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="스플래시" id="3PF-jX-Sia">
-                        <barButtonItem key="rightBarButtonItem" title="인트로" id="pF9-go-YUf"/>
+                    <navigationItem key="navigationItem" title="레드 뷰 컨트롤러" id="3PF-jX-Sia">
+                        <barButtonItem key="backBarButtonItem" title="이전" id="q45-f9-LLo">
+                            <color key="tintColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="door.left.hand.open" catalog="system" springLoaded="YES" id="pF9-go-YUf">
+                            <color key="tintColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="kzK-TQ-gkG" kind="show" id="8Vw-NK-9hD"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="lbCurrentViewController" destination="cu3-bV-zPE" id="ZHq-r8-NIa"/>
                     </connections>
@@ -83,7 +70,7 @@
             </objects>
             <point key="canvasLocation" x="687.69230769230762" y="313.50710900473933"/>
         </scene>
-        <!--인트로-->
+        <!--오렌지 뷰 컨트롤러-->
         <scene sceneID="cwk-Gc-SIE">
             <objects>
                 <viewController storyboardIdentifier="OrangeViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kzK-TQ-gkG" customClass="OrangeViewController" customModule="MyNavigationViewController" customModuleProvider="target" sceneMemberID="viewController">
@@ -91,23 +78,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUn-KT-lyd">
-                                <rect key="frame" x="318" y="18" width="54" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="다음"/>
-                                <connections>
-                                    <action selector="next:" destination="kzK-TQ-gkG" eventType="touchUpInside" id="b1S-lP-bwc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qI-cB-sHu">
-                                <rect key="frame" x="128" y="404.66666666666669" width="134" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="이전 뷰 컨 이름?"/>
-                                <connections>
-                                    <action selector="currentViewController:" destination="nIr-D8-H8x" eventType="touchUpInside" id="MNJ-QN-gRg"/>
-                                    <action selector="previousViewController:" destination="kzK-TQ-gkG" eventType="touchUpInside" id="V5f-of-IKv"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvC-KG-nCl">
                                 <rect key="frame" x="18" y="386.66666666666669" width="354" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -115,13 +85,30 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OrangeViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3b-FK-jIZ">
-                                <rect key="frame" x="52.666666666666657" y="117" width="285" height="36"/>
+                                <rect key="frame" x="52.666666666666657" y="211" width="285" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qI-cB-sHu">
+                                <rect key="frame" x="128" y="404.66666666666669" width="134" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="이전 뷰 컨 이름?"/>
+                                <connections>
+                                    <action selector="currentViewController:" destination="nIr-D8-H8x" eventType="touchUpInside" id="MNJ-QN-gRg"/>
+                                    <action selector="previousViewController:" destination="kzK-TQ-gkG" eventType="touchUpInside" id="V5f-of-IKv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTV-Zs-WAX">
+                                <rect key="frame" x="127" y="471.66666666666669" width="136" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Present 테스트!"/>
+                                <connections>
+                                    <segue destination="Azx-x9-XVu" kind="presentation" id="uzw-2P-iPc"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4I-80-dso">
-                                <rect key="frame" x="62.666666666666657" y="661" width="265" height="55"/>
+                                <rect key="frame" x="62.666666666666657" y="538.66666666666663" width="265" height="55"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="이전 뷰 컨트롤러 데이터(안녕!) 전달 (제스처 동일)"/>
                                 <connections>
@@ -133,19 +120,30 @@
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
                             <constraint firstItem="9qI-cB-sHu" firstAttribute="centerX" secondItem="EVB-na-uJm" secondAttribute="centerX" id="0Gb-3J-ABk"/>
-                            <constraint firstItem="P3b-FK-jIZ" firstAttribute="top" secondItem="HUn-KT-lyd" secondAttribute="bottom" constant="64" id="2Za-59-ifN"/>
-                            <constraint firstItem="V88-Ke-ndX" firstAttribute="bottom" secondItem="g4I-80-dso" secondAttribute="bottom" constant="128" id="C8M-MK-ez2"/>
+                            <constraint firstItem="eTV-Zs-WAX" firstAttribute="centerX" secondItem="EVB-na-uJm" secondAttribute="centerX" id="Ffq-1J-H0o"/>
                             <constraint firstItem="9qI-cB-sHu" firstAttribute="centerY" secondItem="EVB-na-uJm" secondAttribute="centerY" id="Iog-qB-xi7"/>
+                            <constraint firstItem="g4I-80-dso" firstAttribute="top" secondItem="eTV-Zs-WAX" secondAttribute="bottom" constant="32" id="UCX-Hm-kAs"/>
                             <constraint firstItem="P3b-FK-jIZ" firstAttribute="centerX" secondItem="EVB-na-uJm" secondAttribute="centerX" id="X35-N8-vN8"/>
                             <constraint firstAttribute="trailing" secondItem="yvC-KG-nCl" secondAttribute="trailing" constant="18" id="XHe-sE-2DB"/>
                             <constraint firstItem="g4I-80-dso" firstAttribute="centerX" secondItem="EVB-na-uJm" secondAttribute="centerX" id="dPu-LK-mk3"/>
+                            <constraint firstItem="P3b-FK-jIZ" firstAttribute="top" secondItem="V88-Ke-ndX" secondAttribute="top" constant="120" id="hRH-fy-UV7"/>
+                            <constraint firstItem="eTV-Zs-WAX" firstAttribute="top" secondItem="9qI-cB-sHu" secondAttribute="bottom" constant="32" id="mmb-Cg-a3m"/>
                             <constraint firstItem="yvC-KG-nCl" firstAttribute="leading" secondItem="EVB-na-uJm" secondAttribute="leading" constant="18" id="oUc-cB-k5M"/>
-                            <constraint firstItem="HUn-KT-lyd" firstAttribute="top" secondItem="V88-Ke-ndX" secondAttribute="top" constant="18" id="run-Aa-aBe"/>
-                            <constraint firstItem="V88-Ke-ndX" firstAttribute="trailing" secondItem="HUn-KT-lyd" secondAttribute="trailing" constant="18" id="ufU-kb-RhB"/>
                             <constraint firstItem="9qI-cB-sHu" firstAttribute="top" secondItem="yvC-KG-nCl" secondAttribute="bottom" constant="18" id="wKT-dS-gQD"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="인트로" id="pW7-b7-ypd"/>
+                    <navigationItem key="navigationItem" title="오렌지 뷰 컨트롤러" id="pW7-b7-ypd">
+                        <barButtonItem key="backBarButtonItem" title="이전" id="STE-Po-jR3">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="door.left.hand.open" catalog="system" springLoaded="YES" id="ICN-pF-t7t">
+                            <color key="tintColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="AIJ-2b-GXG" kind="show" id="Iho-Iz-vRE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="lbCurrentViewController" destination="yvC-KG-nCl" id="EoC-tY-v9r"/>
                     </connections>
@@ -154,7 +152,57 @@
             </objects>
             <point key="canvasLocation" x="1468" y="314"/>
         </scene>
-        <!--로그인-->
+        <!--Present 테스트!-->
+        <scene sceneID="gAU-d3-OnZ">
+            <objects>
+                <viewController id="Azx-x9-XVu" customClass="PresentTestViewController" customModule="MyNavigationViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bt5-g2-PTf">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="JPc-EF-D3S">
+                                <rect key="frame" x="54" y="349.33333333333331" width="282" height="135.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Present 테스트!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXd-dR-59w">
+                                        <rect key="frame" x="0.0" y="0.0" width="282" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parent:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9f-fc-hod">
+                                        <rect key="frame" x="0.0" y="48" width="282" height="25.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PresentingViewController:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2R1-NV-P7C">
+                                        <rect key="frame" x="0.0" y="85.333333333333371" width="282" height="50.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="T7B-uO-nPx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JPc-EF-D3S" firstAttribute="leading" secondItem="T7B-uO-nPx" secondAttribute="leading" constant="54" id="7R4-pw-SJl"/>
+                            <constraint firstItem="T7B-uO-nPx" firstAttribute="trailing" secondItem="JPc-EF-D3S" secondAttribute="trailing" constant="54" id="KpE-4N-JuB"/>
+                            <constraint firstItem="JPc-EF-D3S" firstAttribute="centerY" secondItem="Bt5-g2-PTf" secondAttribute="centerY" id="YmD-9f-8QR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Present 테스트!" id="oaz-h4-Hb2"/>
+                    <connections>
+                        <outlet property="lbParentName" destination="H9f-fc-hod" id="P5t-3I-cTP"/>
+                        <outlet property="lbPresentingViewControllerName" destination="2R1-NV-P7C" id="x7A-K8-tH4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lz5-tT-p93" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1468" y="1073"/>
+        </scene>
+        <!--옐로우 뷰 컨트롤러-->
         <scene sceneID="JR2-by-fwW">
             <objects>
                 <viewController storyboardIdentifier="YellowViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AIJ-2b-GXG" customClass="YellowViewController" customModule="MyNavigationViewController" customModuleProvider="target" sceneMemberID="viewController">
@@ -162,16 +210,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSd-2t-9AE">
-                                <rect key="frame" x="318" y="65" width="54" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="다음"/>
-                                <connections>
-                                    <action selector="next:" destination="AIJ-2b-GXG" eventType="touchUpInside" id="Jsk-vA-4zm"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YellowViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fs-mA-0Dc">
-                                <rect key="frame" x="59" y="164" width="272.33333333333331" height="36"/>
+                                <rect key="frame" x="59" y="211" width="272.33333333333331" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -180,19 +220,30 @@
                         <viewLayoutGuide key="safeArea" id="f9W-3h-zxK"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
-                            <constraint firstItem="3fs-mA-0Dc" firstAttribute="top" secondItem="dSd-2t-9AE" secondAttribute="bottom" constant="64" id="JZL-oc-lfQ"/>
+                            <constraint firstItem="3fs-mA-0Dc" firstAttribute="top" secondItem="f9W-3h-zxK" secondAttribute="top" constant="120" id="JBL-j4-zRw"/>
                             <constraint firstItem="3fs-mA-0Dc" firstAttribute="centerX" secondItem="cpi-NW-p7e" secondAttribute="centerX" id="SfI-tq-V2g"/>
-                            <constraint firstItem="f9W-3h-zxK" firstAttribute="trailing" secondItem="dSd-2t-9AE" secondAttribute="trailing" constant="18" id="XTI-6Y-EsK"/>
-                            <constraint firstItem="dSd-2t-9AE" firstAttribute="top" secondItem="f9W-3h-zxK" secondAttribute="top" constant="18" id="tUb-xe-FdD"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="로그인" id="KCH-TN-aSX"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="옐로우 뷰 컨트롤러" id="KCH-TN-aSX">
+                        <barButtonItem key="backBarButtonItem" title="이전" id="Amj-Ex-tZe">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="door.left.hand.open" catalog="system" springLoaded="YES" id="X9E-4w-10B">
+                            <color key="tintColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="nPb-B4-7mV" kind="show" id="Wxm-9R-HCA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VIU-bN-jFe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2258" y="314"/>
         </scene>
-        <!--기기 인증-->
+        <!--그린 뷰 컨트롤러-->
         <scene sceneID="KUp-e8-zCE">
             <objects>
                 <viewController storyboardIdentifier="GreenViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nPb-B4-7mV" customClass="GreenViewController" customModule="MyNavigationViewController" customModuleProvider="target" sceneMemberID="viewController">
@@ -200,27 +251,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6n-2O-Vfd">
-                                <rect key="frame" x="299" y="65" width="73" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="첫 화면"/>
-                                <connections>
-                                    <action selector="next:" destination="nPb-B4-7mV" eventType="touchUpInside" id="XGQ-9U-dw0"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3x-es-dcN">
                                 <rect key="frame" x="113.66666666666669" y="404.66666666666669" width="163" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="pop 하고 push 하기"/>
                                 <connections>
-                                    <action selector="next:" destination="nPb-B4-7mV" eventType="touchUpInside" id="3uX-8e-tt7"/>
                                     <action selector="popAndPush:" destination="nPb-B4-7mV" eventType="touchUpInside" id="jl4-Rm-4qh"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GreenViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbs-Pt-rkA">
-                                <rect key="frame" x="62" y="164" width="266" height="36"/>
+                                <rect key="frame" x="62" y="211" width="266" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" systemColor="systemGray6Color"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -228,14 +270,23 @@
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
                             <constraint firstItem="zbs-Pt-rkA" firstAttribute="centerX" secondItem="EpZ-At-d2K" secondAttribute="centerX" id="Fsa-qT-f4a"/>
-                            <constraint firstItem="zbs-Pt-rkA" firstAttribute="top" secondItem="E6n-2O-Vfd" secondAttribute="bottom" constant="64" id="HsI-BY-5Cc"/>
-                            <constraint firstItem="E6n-2O-Vfd" firstAttribute="top" secondItem="XlZ-L0-7Pt" secondAttribute="top" constant="18" id="VBm-rs-cZQ"/>
                             <constraint firstItem="E3x-es-dcN" firstAttribute="centerY" secondItem="EpZ-At-d2K" secondAttribute="centerY" id="cDF-tX-mQx"/>
+                            <constraint firstItem="zbs-Pt-rkA" firstAttribute="top" secondItem="XlZ-L0-7Pt" secondAttribute="top" constant="120" id="cMS-iA-DLa"/>
                             <constraint firstItem="E3x-es-dcN" firstAttribute="centerX" secondItem="EpZ-At-d2K" secondAttribute="centerX" id="gte-Cc-Ckw"/>
-                            <constraint firstItem="XlZ-L0-7Pt" firstAttribute="trailing" secondItem="E6n-2O-Vfd" secondAttribute="trailing" constant="18" id="pnR-ko-yNU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="기기 인증" id="7wU-YN-pLu"/>
+                    <navigationItem key="navigationItem" title="그린 뷰 컨트롤러" id="7wU-YN-pLu">
+                        <barButtonItem key="backBarButtonItem" title="이전" id="ndE-W5-SYc">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="door.left.hand.open" catalog="system" springLoaded="YES" id="OuP-cT-0C3">
+                            <color key="tintColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="LUs-VE-btB" kind="show" id="tO6-1E-Z55"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aJo-uL-K53" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -244,18 +295,23 @@
         <!--Navigation Controller-->
         <scene sceneID="CiW-l5-IjM">
             <objects>
-                <navigationController storyboardIdentifier="NavigationViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="6E2-9c-tfq" customClass="NavigationController" customModule="MyNavigationViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6E2-9c-tfq" customClass="NavigationController" customModule="MyNavigationViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="P2b-hS-YUp">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BUD-WJ-tLu">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e92-Z6-spz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="688" y="-447"/>
         </scene>
-        <!--기기 인증-->
+        <!--블루 뷰 컨트롤러-->
         <scene sceneID="yGn-vn-NcI">
             <objects>
                 <viewController storyboardIdentifier="BlueViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LUs-VE-btB" customClass="BlueViewController" customModule="MyNavigationViewController" customModuleProvider="target" sceneMemberID="viewController">
@@ -263,33 +319,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vx-Jy-0Go">
-                                <rect key="frame" x="299" y="65" width="73" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="첫 화면"/>
-                                <connections>
-                                    <action selector="next:" destination="LUs-VE-btB" eventType="touchUpInside" id="vTP-HI-a2T"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BlueViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3GB-vB-xQ4">
-                                <rect key="frame" x="72" y="164" width="246" height="36"/>
+                                <rect key="frame" x="72" y="211" width="246" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" systemColor="systemGray6Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이 화면은 뒤로가기 제스쳐 막음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jw1-iE-lh9">
+                                <rect key="frame" x="90.666666666666686" y="411.66666666666669" width="209" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="O8O-cw-JrJ"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                         <constraints>
-                            <constraint firstItem="O8O-cw-JrJ" firstAttribute="trailing" secondItem="8vx-Jy-0Go" secondAttribute="trailing" constant="18" id="4zN-xj-R23"/>
-                            <constraint firstItem="3GB-vB-xQ4" firstAttribute="top" secondItem="8vx-Jy-0Go" secondAttribute="bottom" constant="64" id="DtX-Gj-fsa"/>
-                            <constraint firstItem="O8O-cw-JrJ" firstAttribute="trailing" secondItem="8vx-Jy-0Go" secondAttribute="trailing" constant="18" id="jFq-Ne-Hsp"/>
-                            <constraint firstItem="8vx-Jy-0Go" firstAttribute="top" secondItem="O8O-cw-JrJ" secondAttribute="top" constant="18" id="lDy-YY-PMC"/>
-                            <constraint firstItem="8vx-Jy-0Go" firstAttribute="top" secondItem="O8O-cw-JrJ" secondAttribute="top" constant="18" id="yWS-IO-PNu"/>
+                            <constraint firstItem="jw1-iE-lh9" firstAttribute="centerY" secondItem="3Gn-jG-F3P" secondAttribute="centerY" id="KJT-1w-nnB"/>
+                            <constraint firstItem="jw1-iE-lh9" firstAttribute="centerX" secondItem="3Gn-jG-F3P" secondAttribute="centerX" id="KqJ-YE-hhe"/>
+                            <constraint firstItem="3GB-vB-xQ4" firstAttribute="top" secondItem="O8O-cw-JrJ" secondAttribute="top" constant="120" id="ecc-bX-z3M"/>
                             <constraint firstItem="3GB-vB-xQ4" firstAttribute="centerX" secondItem="3Gn-jG-F3P" secondAttribute="centerX" id="zZ4-OH-QJG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="기기 인증" id="MBr-Yb-23Q"/>
+                    <navigationItem key="navigationItem" title="블루 뷰 컨트롤러" id="MBr-Yb-23Q">
+                        <barButtonItem key="backBarButtonItem" title="이전" id="csw-27-piE">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="house" catalog="system" springLoaded="YES" id="JwD-8u-RPO">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fKs-Xg-Yka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -297,6 +357,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="door.left.hand.open" catalog="system" width="108" height="128"/>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

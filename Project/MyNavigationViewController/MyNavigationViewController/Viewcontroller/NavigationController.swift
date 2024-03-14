@@ -8,7 +8,7 @@
 import UIKit
 
 class NavigationController: UINavigationController {
-    lazy var button = {
+    lazy var fixedButton = {
         let button = UIButton()
         button.configuration = .filled()
         button.setTitle("네비게이션 컨트롤러\n고정 버튼 테스트", for: .normal)
@@ -18,7 +18,6 @@ class NavigationController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.isNavigationBarHidden = true
         initViewController()
         addButton()
     }
@@ -32,8 +31,8 @@ class NavigationController: UINavigationController {
     }
     
     private func addButton() {
-        view.addSubview(button)
-        button.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -18).isActive = true
-        button.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+        view.addSubview(fixedButton)
+        fixedButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -18).isActive = true
+        fixedButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -48).isActive = true
     }
 }

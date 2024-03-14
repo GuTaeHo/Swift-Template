@@ -17,23 +17,13 @@ class OrangeViewController: UIViewController {
         
     }
     
-    @IBAction func next(_ sender: Any) {
-        if let viewController = storyboard?.instantiateViewController(withIdentifier: "YellowViewController") {
-            self.navigationController?.pushViewController(viewController, animated: true)
-        } else {
-            print("뷰 컨트롤러 추가 오류...")
-        }
-    }
-    
     @IBAction func sendDataPreviousViewController(_ sender: UIButton) {
         dataClosure?("안녕!")
     }
     
     @IBAction func previousViewController(_ sender: Any) {
-        // MARK: 함수에서 제네릭을 사용할 경우, 타입을 명시해주지 않으면, 에러 발생
         if let viewController = self.navigationController?.previousViewController(context: RedViewController.self) {
             lbCurrentViewController.text = String(describing: type(of: viewController))
-            print("\(viewController.dummyDataNextViewController)")
         }
     }
 }

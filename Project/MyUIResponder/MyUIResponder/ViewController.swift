@@ -64,9 +64,9 @@ class ViewController: UIViewController {
     }
     
     // 리스폰더 체인의 다음 리스폰더를 항상 뷰로 제한
-    override var next: UIResponder? {
-        get { self.view }
-    }
+//    override var next: UIResponder? {
+//        get { self.view }
+//    }
 
     @objc func notifying() {
         if let delegate = UIApplication.shared.delegate as? AppDelegate {
