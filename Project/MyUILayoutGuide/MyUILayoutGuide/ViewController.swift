@@ -16,7 +16,15 @@ class ViewController: UIViewController {
         return scrollView
     }()
     
-    let timerPublisher = Timer.publish(every: 2, on: .main, in: .default).autoconnect()
+    let indicatorView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.isUserInteractionEnabled = false
+        view.backgroundColor = .init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
+        return view
+    }()
+    
+    let timerPublisher = Timer.publish(every: 1, on: .main, in: .default).autoconnect()
     var cancellable = Set<AnyCancellable>()
 
     override func viewDidLoad() {
@@ -87,14 +95,6 @@ class ViewController: UIViewController {
     }
     
     func addIndicatorView() {
-        let containerView: UIView = {
-            let view = UIView()
-            view.translatesAutoresizingMaskIntoConstraints = false
-            view.isUserInteractionEnabled = false
-            view.backgroundColor = .init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
-            return view
-        }()
-        
         let activityView: UIActivityIndicatorView = {
             let activityView = UIActivityIndicatorView()
             activityView.hidesWhenStopped = true
@@ -104,26 +104,35 @@ class ViewController: UIViewController {
             return activityView
         }()
         
-        containerView.addSubview(activityView)
+        indicatorView.addSubview(activityView)
         NSLayoutConstraint.activate([
-            activityView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
-            activityView.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
+            activityView.centerXAnchor.constraint(equalTo: indicatorView.centerXAnchor),
+            activityView.centerYAnchor.constraint(equalTo: indicatorView.centerYAnchor),
             activityView.widthAnchor.constraint(equalToConstant: 40),
             activityView.heightAnchor.constraint(equalToConstant: 40)
         ])
         
-        view.addSubview(containerView)
+        view.addSubview(indicatorView)
         NSLayoutConstraint.activate([
-            containerView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-            containerView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            containerView.topAnchor.constraint(equalTo: scrollView.topAnchor),
-            containerView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
+            indicatorView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            indicatorView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            indicatorView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            indicatorView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
         ])
     }
     
     func bind() {
         timerPublisher.sink { timer in
-            print(timer.timeIntervalSinceNow)
+            print(timer.timeIntervalSince1970.truncatingRemainder(dividingBy: 2))
+            if timer.timeIntervalSince1970.truncatingRemainder(dividingBy: 2) > 1 {
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.indicatorView.alpha = 1.0
+                })
+            } else {
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.indicatorView.alpha = 0.0
+                })
+            }
         }.store(in: &cancellable)
     }
 }
