@@ -49,11 +49,19 @@ extension UITableView {
     
     /// 해당 셀 타입으로 캐스팅된 재사용 셀을 가져옵니다.
     /// - Parameters:
-    ///   - cellClass: 셀 타입
+    ///   - metaType: 셀 타입
     ///   - indexPath: 인덱스 (IndexPath)
-    /// - Returns: 캐스팅된 재사용 셀 인스턴스
     func dequeueCell<T: UITableViewCell>(_ metaType: T.Type, for indexPath: IndexPath) -> T {
         return (dequeueReusableCell(withIdentifier: metaType.className, for: indexPath) as? T) ?? .init()
+    }
+    
+    /// 해당 셀 타입으로 캐스팅된 재사용 셀을 가져옵니다.
+    /// - Parameters:
+    ///   - metaType: 셀 타입
+    ///   - indexPath: 인덱스 (IndexPath)
+    /// - Important: 테이블에서 다양한 셀을 사용하는 경우, 이 메소드 사용
+    func dequeueCellForVarious<T: UITableViewCell>(_ metaType: T.Type, for indexPath: IndexPath) -> T? {
+        return dequeueReusableCell(withIdentifier: metaType.className, for: indexPath) as? T
     }
     
     /// 해당 뷰 타입으로 캐스팅된 재사용 헤더/푸터 뷰를 가져옵니다.

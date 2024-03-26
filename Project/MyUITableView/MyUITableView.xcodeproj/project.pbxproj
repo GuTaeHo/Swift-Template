@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0570328D2BB2584C00B99638 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0570328C2BB2584C00B99638 /* ReviewTableViewCell.swift */; };
+		0570328F2BB2589C00B99638 /* ReviewInfomationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0570328E2BB2589C00B99638 /* ReviewInfomationTableViewCell.swift */; };
+		057032912BB2590700B99638 /* ReviewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057032902BB2590700B99638 /* ReviewHeaderFooterView.swift */; };
+		057032932BB2596A00B99638 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057032922BB2596A00B99638 /* Review.swift */; };
+		057032952BB25B8500B99638 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057032942BB25B8500B99638 /* Shop.swift */; };
+		057032972BB2719200B99638 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057032962BB2719200B99638 /* UIView+.swift */; };
 		05834BA72935FEBD00DEE113 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05834BA62935FEBD00DEE113 /* AppDelegate.swift */; };
 		05834BA92935FEBD00DEE113 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05834BA82935FEBD00DEE113 /* SceneDelegate.swift */; };
 		05834BAB2935FEBD00DEE113 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05834BAA2935FEBD00DEE113 /* ViewController.swift */; };
@@ -25,6 +31,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0570328C2BB2584C00B99638 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
+		0570328E2BB2589C00B99638 /* ReviewInfomationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewInfomationTableViewCell.swift; sourceTree = "<group>"; };
+		057032902BB2590700B99638 /* ReviewHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewHeaderFooterView.swift; sourceTree = "<group>"; };
+		057032922BB2596A00B99638 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		057032942BB25B8500B99638 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
+		057032962BB2719200B99638 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		05834BA32935FEBD00DEE113 /* MyUITableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyUITableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05834BA62935FEBD00DEE113 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05834BA82935FEBD00DEE113 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +70,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0570328A2BB2576600B99638 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				05834BBA2935FF7000DEE113 /* TestTableViewAdapter.swift */,
+				05834BBC2935FFAB00DEE113 /* BaseTableViewAdapter.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		0570328B2BB2583C00B99638 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				057032922BB2596A00B99638 /* Review.swift */,
+				057032942BB25B8500B99638 /* Shop.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		05834B9A2935FEBD00DEE113 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +109,8 @@
 		05834BA52935FEBD00DEE113 /* MyUITableView */ = {
 			isa = PBXGroup;
 			children = (
+				0570328B2BB2583C00B99638 /* Model */,
+				0570328A2BB2576600B99638 /* Adapter */,
 				05BD1F5A2BB24F6600CDF763 /* Cell */,
 				05BD1F592BB24F2600CDF763 /* Resource */,
 				05BD1F582BB24F0D00CDF763 /* ViewController */,
@@ -87,8 +119,6 @@
 				05834BA82935FEBD00DEE113 /* SceneDelegate.swift */,
 				05834BAC2935FEBD00DEE113 /* Main.storyboard */,
 				05834BB12935FEBE00DEE113 /* LaunchScreen.storyboard */,
-				05834BBA2935FF7000DEE113 /* TestTableViewAdapter.swift */,
-				05834BBC2935FFAB00DEE113 /* BaseTableViewAdapter.swift */,
 			);
 			path = MyUITableView;
 			sourceTree = "<group>";
@@ -98,6 +128,7 @@
 			children = (
 				05BD1F552BB22ADA00CDF763 /* UITableView+.swift */,
 				05BD1F5B2BB250F400CDF763 /* NSObject+.swift */,
+				057032962BB2719200B99638 /* UIView+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -124,6 +155,9 @@
 		05BD1F5A2BB24F6600CDF763 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				0570328C2BB2584C00B99638 /* ReviewTableViewCell.swift */,
+				0570328E2BB2589C00B99638 /* ReviewInfomationTableViewCell.swift */,
+				057032902BB2590700B99638 /* ReviewHeaderFooterView.swift */,
 				05834BBE2935FFFE00DEE113 /* TestTableViewCell.swift */,
 				05834BBF2935FFFE00DEE113 /* TestTableViewCell.xib */,
 			);
@@ -264,12 +298,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				05834BAB2935FEBD00DEE113 /* ViewController.swift in Sources */,
+				0570328F2BB2589C00B99638 /* ReviewInfomationTableViewCell.swift in Sources */,
 				05BD1F562BB22ADA00CDF763 /* UITableView+.swift in Sources */,
+				057032952BB25B8500B99638 /* Shop.swift in Sources */,
 				05834BBB2935FF7000DEE113 /* TestTableViewAdapter.swift in Sources */,
 				05834BA72935FEBD00DEE113 /* AppDelegate.swift in Sources */,
 				05834BA92935FEBD00DEE113 /* SceneDelegate.swift in Sources */,
+				057032912BB2590700B99638 /* ReviewHeaderFooterView.swift in Sources */,
 				05BD1F5E2BB2535D00CDF763 /* SectionHeaderWithVariousTypeCellsViewController.swift in Sources */,
+				0570328D2BB2584C00B99638 /* ReviewTableViewCell.swift in Sources */,
+				057032932BB2596A00B99638 /* Review.swift in Sources */,
 				05834BC32936DC3200DEE113 /* ScrollViewWithHeaderFooterViewController.swift in Sources */,
+				057032972BB2719200B99638 /* UIView+.swift in Sources */,
 				05834BBD2935FFAB00DEE113 /* BaseTableViewAdapter.swift in Sources */,
 				05BD1F5C2BB250F400CDF763 /* NSObject+.swift in Sources */,
 				05834BC02935FFFE00DEE113 /* TestTableViewCell.swift in Sources */,
