@@ -9,15 +9,6 @@ import UIKit
 import SnapKit
 import Then
 
-/**
- 
- var userName: String
- var menuName: String
- var starScore: Double
- var content: String
- var imageNames: [String]
- var date: Date
- */
 
 class ReviewTableViewCell: UITableViewCell {
     lazy var contentStackView = UIStackView(arrangedSubviews: [lbUserName, lbMenuName, lbContent]).then {
@@ -30,14 +21,14 @@ class ReviewTableViewCell: UITableViewCell {
         $0.font = .systemFont(ofSize: 16, weight: .regular)
     }
     lazy var lbMenuName = UILabel().then {
-        $0.font = .systemFont(ofSize: 16, weight: .regular)
+        $0.font = .systemFont(ofSize: 16, weight: .medium)
     }
     lazy var lbContent = UILabel().then {
         $0.font = .systemFont(ofSize: 14, weight: .regular)
         $0.numberOfLines = 0
     }
     lazy var lbDate = UILabel().then {
-        $0.font = .systemFont(ofSize: 14, weight: .regular)
+        $0.font = .systemFont(ofSize: 12, weight: .regular)
         $0.textColor = .gray
     }
     
@@ -45,10 +36,12 @@ class ReviewTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        contentView.addSubview(contentStackView)
-        contentView.addSubview(lbDate)
+        contentView.addSubviews(contentStackView, lbDate)
         contentStackView.snp.makeConstraints {
             $0.edges.equalToSuperview()
+        }
+        lbUserName.snp.makeConstraints {
+            $0.trailing.equalTo(lbDate.snp.leading)
         }
         lbDate.snp.makeConstraints {
             $0.top.equalTo(contentStackView.layoutMarginsGuide.snp.top)

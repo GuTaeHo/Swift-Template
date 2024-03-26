@@ -16,7 +16,8 @@ class ReviewInfomationTableViewCell: UITableViewCell {
     }
     /* 알림 */
     lazy var noticeStackView = UIStackView(arrangedSubviews: [noticeImagesStackView, lbNoticeContent]).then {
-        $0.axis = .horizontal
+        $0.axis = .vertical
+        $0.spacing = 6
         $0.isLayoutMarginsRelativeArrangement = true
         $0.layoutMargins = .init(top: 12, left: 18, bottom: 12, right: 18)
         $0.isHidden = true
@@ -32,6 +33,7 @@ class ReviewInfomationTableViewCell: UITableViewCell {
     }
     lazy var ivImageFirst = UIImageView().then {
         $0.contentMode = .scaleAspectFill
+        $0.clipsToBounds = true
         $0.isHidden = true
         $0.layer.cornerRadius = 6
         $0.layer.borderColor = UIColor.lightGray.cgColor
@@ -39,6 +41,7 @@ class ReviewInfomationTableViewCell: UITableViewCell {
     }
     lazy var ivImageSecond = UIImageView().then {
         $0.contentMode = .scaleAspectFill
+        $0.clipsToBounds = true
         $0.isHidden = true
         $0.layer.cornerRadius = 6
         $0.layer.borderColor = UIColor.lightGray.cgColor
@@ -52,12 +55,14 @@ class ReviewInfomationTableViewCell: UITableViewCell {
     /* 별점 */
     lazy var starStackView = UIStackView(arrangedSubviews: [scoreView, btRegistReview]).then {
         $0.axis = .vertical
+        $0.spacing = 6
         $0.isLayoutMarginsRelativeArrangement = true
         $0.layoutMargins = .init(top: 12, left: 18, bottom: 12, right: 18)
     }
     lazy var scoreView = UIView().then {
         let starImageView = UIImageView(image: .init(systemName: "star.fill")).then {
-            $0.image = $0.image?.withTintColor(.systemYellow, renderingMode: .alwaysTemplate)
+            $0.image = $0.image?.withRenderingMode(.alwaysTemplate)
+            $0.tintColor = .systemYellow
         }
         $0.addSubviews(starImageView, lbStarScore)
         starImageView.snp.makeConstraints {
@@ -85,6 +90,7 @@ class ReviewInfomationTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        selectionStyle = .none
         
         contentView.addSubview(contentStackView)
         contentStackView.snp.makeConstraints {
@@ -110,10 +116,10 @@ class ReviewInfomationTableViewCell: UITableViewCell {
             item.imageNames.enumerated().forEach { index, item in
                 if index == 0 {
                     ivImageFirst.isHidden = false
-                    ivImageFirst.image = .init(named: item)
+                    ivImageFirst.image = .init(systemName: item)
                 } else {
                     ivImageSecond.isHidden = false
-                    ivImageSecond.image = .init(named: item)
+                    ivImageSecond.image = .init(systemName: item)
                 }
             }
         }
@@ -124,6 +130,8 @@ class ReviewInfomationTableViewCell: UITableViewCell {
             lbNoticeContent.isHidden = false
             lbNoticeContent.text = item.content
         }
+        
+        lbStarScore.text = "\(item.starScore)"
         
         if item.canReview {
             btRegistReview.isHidden = false

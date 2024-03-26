@@ -24,7 +24,7 @@ class SectionHeaderWithVariousTypeCellsViewController: UIViewController {
         case review
     }
     
-    var shop: Shop = Shop(imageNames: ["dummy"], content: "여긴 운영 안합니다.", starScore: 4.5, canReview: true)
+    var shop: Shop = Shop(imageNames: ["wand.and.stars"], content: "여긴 운영 안합니다.", starScore: 4.5, canReview: true)
     var reviews = [
         Review(userName: "구*호", menuName: "아메리카노", starScore: 3.5, content: "아메리카노 한잔 조와요", imageNames: [], date: .now),
         Review(userName: "김*환", menuName: "바닐라라떼", starScore: 4.0, content: "얼크난 바닐라라떼 한잔 주위소", imageNames: [], date: .now),
