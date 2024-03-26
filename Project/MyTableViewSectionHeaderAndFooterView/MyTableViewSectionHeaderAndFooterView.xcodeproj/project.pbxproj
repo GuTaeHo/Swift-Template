@@ -19,6 +19,8 @@
 		05834BC12935FFFE00DEE113 /* TestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05834BBF2935FFFE00DEE113 /* TestTableViewCell.xib */; };
 		05834BC32936DC3200DEE113 /* ScrollViewWithHeaderFooterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05834BC22936DC3200DEE113 /* ScrollViewWithHeaderFooterViewController.swift */; };
 		05BD1F562BB22ADA00CDF763 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BD1F552BB22ADA00CDF763 /* UITableView+.swift */; };
+		05BD1F5C2BB250F400CDF763 /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BD1F5B2BB250F400CDF763 /* NSObject+.swift */; };
+		05BD1F5E2BB2535D00CDF763 /* SectionHeaderWithVariousTypeCellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BD1F5D2BB2535D00CDF763 /* SectionHeaderWithVariousTypeCellsViewController.swift */; };
 		9EBD048FF8FAD4A2A954A5E3 /* Pods_MyTableViewSectionHeaderAndFooterView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 445BBD09D01B8B28B0C5B435 /* Pods_MyTableViewSectionHeaderAndFooterView.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		05834BBF2935FFFE00DEE113 /* TestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestTableViewCell.xib; sourceTree = "<group>"; };
 		05834BC22936DC3200DEE113 /* ScrollViewWithHeaderFooterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewWithHeaderFooterViewController.swift; sourceTree = "<group>"; };
 		05BD1F552BB22ADA00CDF763 /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
+		05BD1F5B2BB250F400CDF763 /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
+		05BD1F5D2BB2535D00CDF763 /* SectionHeaderWithVariousTypeCellsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderWithVariousTypeCellsViewController.swift; sourceTree = "<group>"; };
 		445BBD09D01B8B28B0C5B435 /* Pods_MyTableViewSectionHeaderAndFooterView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTableViewSectionHeaderAndFooterView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79FC3536EEE8710A1FCF3DC6 /* Pods-MyTableViewSectionHeaderAndFooterView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTableViewSectionHeaderAndFooterView.debug.xcconfig"; path = "Target Support Files/Pods-MyTableViewSectionHeaderAndFooterView/Pods-MyTableViewSectionHeaderAndFooterView.debug.xcconfig"; sourceTree = "<group>"; };
 		D9481317A78BF9EF41707C4A /* Pods-MyTableViewSectionHeaderAndFooterView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTableViewSectionHeaderAndFooterView.release.xcconfig"; path = "Target Support Files/Pods-MyTableViewSectionHeaderAndFooterView/Pods-MyTableViewSectionHeaderAndFooterView.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,21 +79,55 @@
 		05834BA52935FEBD00DEE113 /* MyTableViewSectionHeaderAndFooterView */ = {
 			isa = PBXGroup;
 			children = (
+				05BD1F5A2BB24F6600CDF763 /* Cell */,
+				05BD1F592BB24F2600CDF763 /* Resource */,
+				05BD1F582BB24F0D00CDF763 /* ViewController */,
+				05BD1F572BB24EFA00CDF763 /* Extension */,
 				05834BA62935FEBD00DEE113 /* AppDelegate.swift */,
 				05834BA82935FEBD00DEE113 /* SceneDelegate.swift */,
-				05834BAA2935FEBD00DEE113 /* ViewController.swift */,
 				05834BAC2935FEBD00DEE113 /* Main.storyboard */,
-				05834BAF2935FEBE00DEE113 /* Assets.xcassets */,
 				05834BB12935FEBE00DEE113 /* LaunchScreen.storyboard */,
-				05834BB42935FEBE00DEE113 /* Info.plist */,
 				05834BBA2935FF7000DEE113 /* TestTableViewAdapter.swift */,
 				05834BBC2935FFAB00DEE113 /* BaseTableViewAdapter.swift */,
-				05834BBE2935FFFE00DEE113 /* TestTableViewCell.swift */,
-				05834BBF2935FFFE00DEE113 /* TestTableViewCell.xib */,
-				05834BC22936DC3200DEE113 /* ScrollViewWithHeaderFooterViewController.swift */,
-				05BD1F552BB22ADA00CDF763 /* UITableView+.swift */,
 			);
 			path = MyTableViewSectionHeaderAndFooterView;
+			sourceTree = "<group>";
+		};
+		05BD1F572BB24EFA00CDF763 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				05BD1F552BB22ADA00CDF763 /* UITableView+.swift */,
+				05BD1F5B2BB250F400CDF763 /* NSObject+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		05BD1F582BB24F0D00CDF763 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				05834BAA2935FEBD00DEE113 /* ViewController.swift */,
+				05834BC22936DC3200DEE113 /* ScrollViewWithHeaderFooterViewController.swift */,
+				05BD1F5D2BB2535D00CDF763 /* SectionHeaderWithVariousTypeCellsViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		05BD1F592BB24F2600CDF763 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				05834BAF2935FEBE00DEE113 /* Assets.xcassets */,
+				05834BB42935FEBE00DEE113 /* Info.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		05BD1F5A2BB24F6600CDF763 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				05834BBE2935FFFE00DEE113 /* TestTableViewCell.swift */,
+				05834BBF2935FFFE00DEE113 /* TestTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		5E1816CA3D82528679980064 /* Pods */ = {
@@ -230,8 +268,10 @@
 				05834BBB2935FF7000DEE113 /* TestTableViewAdapter.swift in Sources */,
 				05834BA72935FEBD00DEE113 /* AppDelegate.swift in Sources */,
 				05834BA92935FEBD00DEE113 /* SceneDelegate.swift in Sources */,
+				05BD1F5E2BB2535D00CDF763 /* SectionHeaderWithVariousTypeCellsViewController.swift in Sources */,
 				05834BC32936DC3200DEE113 /* ScrollViewWithHeaderFooterViewController.swift in Sources */,
 				05834BBD2935FFAB00DEE113 /* BaseTableViewAdapter.swift in Sources */,
+				05BD1F5C2BB250F400CDF763 /* NSObject+.swift in Sources */,
 				05834BC02935FFFE00DEE113 /* TestTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,7 +422,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L8WFLHVUYX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyTableViewSectionHeaderAndFooterView/Info.plist;
+				INFOPLIST_FILE = MyTableViewSectionHeaderAndFooterView/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -412,7 +452,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L8WFLHVUYX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyTableViewSectionHeaderAndFooterView/Info.plist;
+				INFOPLIST_FILE = MyTableViewSectionHeaderAndFooterView/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

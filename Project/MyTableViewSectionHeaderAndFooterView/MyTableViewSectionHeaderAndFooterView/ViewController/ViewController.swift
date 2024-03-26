@@ -40,19 +40,15 @@ class ViewController: UIViewController {
         
         let headerSecondButton = UIButton(type: .system)
         headerSecondButton.configuration = .filled()
-        headerSecondButton.setTitle("UIStackView 에 뷰를 집어넣을 때\naddArrangedSubview() 사용", for: .normal)
-        headerSecondButton.titleLabel?.numberOfLines = 1
+        headerSecondButton.setTitle("섹션 헤더와 다중 셀을 이용한 테이블 뷰로 이동", for: .normal)
         headerSecondButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        headerSecondButton.titleLabel?.minimumScaleFactor = 0.5
+        headerSecondButton.addTarget(self, action: #selector(onClickSecondButton(_:)), for: .touchUpInside)
         
-        // MARK: UIStackView 의 생성자를 이용해서 뷰를 넣을 수도 있고,
-        // let headerStackView = UIStackView(arrangedSubviews: [headerFirstButton, headerSecondButton])
         let headerStackView = UIStackView()
         headerStackView.axis = .horizontal
         headerStackView.distribution = .fillEqually
         headerStackView.spacing = 15
         
-        // MARK: UIStackView 의 addArrangedSubview() 메소드를 이용해서 뷰를 집어넣을 수도 있음
         headerStackView.addArrangedSubview(headerFirstButton)
         headerStackView.addArrangedSubview(headerSecondButton)
         
@@ -77,6 +73,10 @@ class ViewController: UIViewController {
         if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "ScrollViewWithHeaderFooterViewController") as? ScrollViewWithHeaderFooterViewController {
             present(viewController, animated: true)
         }
+    }
+    
+    @objc func onClickSecondButton(_ sender: UIButton) {
+        
     }
 }
 
