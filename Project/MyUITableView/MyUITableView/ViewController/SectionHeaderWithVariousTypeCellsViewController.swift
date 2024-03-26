@@ -38,6 +38,11 @@ class SectionHeaderWithVariousTypeCellsViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .white
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+        tableView.reloadData()
     }
 }
 
@@ -51,16 +56,16 @@ extension SectionHeaderWithVariousTypeCellsViewController: UITableViewDelegate, 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let infoCell = tableView.dequeueCellForVarious(ReviewInfomationTableViewCell.self, for: indexPath) {
-            infoCell.configuration()
+        switch indexPath.section {
+        case 0:
+            let infoCell = tableView.dequeueCell(ReviewInfomationTableViewCell.self, for: indexPath)
+            infoCell.configuration(shop)
             return infoCell
-        } else if let reviewCell = tableView.dequeueCellForVarious(ReviewTableViewCell.self, for: indexPath) {
-            
+        default:
+            let reviewCell = tableView.dequeueCell(ReviewTableViewCell.self, for: indexPath)
             let item = reviews[indexPath.row]
             reviewCell.configuration(item)
             return reviewCell
-        } else {
-            return .init()
         }
     }
     

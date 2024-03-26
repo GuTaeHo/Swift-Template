@@ -76,7 +76,8 @@ class ViewController: UIViewController {
     }
     
     @objc func onClickSecondButton(_ sender: UIButton) {
-        
+        let vc = SectionHeaderWithVariousTypeCellsViewController()
+        present(vc, animated: true)
     }
 }
 
