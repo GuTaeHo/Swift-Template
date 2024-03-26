@@ -18,6 +18,7 @@
 		05834BC02935FFFE00DEE113 /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05834BBE2935FFFE00DEE113 /* TestTableViewCell.swift */; };
 		05834BC12935FFFE00DEE113 /* TestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05834BBF2935FFFE00DEE113 /* TestTableViewCell.xib */; };
 		05834BC32936DC3200DEE113 /* ScrollViewWithHeaderFooterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05834BC22936DC3200DEE113 /* ScrollViewWithHeaderFooterViewController.swift */; };
+		05BD1F562BB22ADA00CDF763 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BD1F552BB22ADA00CDF763 /* UITableView+.swift */; };
 		9EBD048FF8FAD4A2A954A5E3 /* Pods_MyTableViewSectionHeaderAndFooterView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 445BBD09D01B8B28B0C5B435 /* Pods_MyTableViewSectionHeaderAndFooterView.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		05834BBE2935FFFE00DEE113 /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
 		05834BBF2935FFFE00DEE113 /* TestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestTableViewCell.xib; sourceTree = "<group>"; };
 		05834BC22936DC3200DEE113 /* ScrollViewWithHeaderFooterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewWithHeaderFooterViewController.swift; sourceTree = "<group>"; };
+		05BD1F552BB22ADA00CDF763 /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
 		445BBD09D01B8B28B0C5B435 /* Pods_MyTableViewSectionHeaderAndFooterView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTableViewSectionHeaderAndFooterView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79FC3536EEE8710A1FCF3DC6 /* Pods-MyTableViewSectionHeaderAndFooterView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTableViewSectionHeaderAndFooterView.debug.xcconfig"; path = "Target Support Files/Pods-MyTableViewSectionHeaderAndFooterView/Pods-MyTableViewSectionHeaderAndFooterView.debug.xcconfig"; sourceTree = "<group>"; };
 		D9481317A78BF9EF41707C4A /* Pods-MyTableViewSectionHeaderAndFooterView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTableViewSectionHeaderAndFooterView.release.xcconfig"; path = "Target Support Files/Pods-MyTableViewSectionHeaderAndFooterView/Pods-MyTableViewSectionHeaderAndFooterView.release.xcconfig"; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				05834BBE2935FFFE00DEE113 /* TestTableViewCell.swift */,
 				05834BBF2935FFFE00DEE113 /* TestTableViewCell.xib */,
 				05834BC22936DC3200DEE113 /* ScrollViewWithHeaderFooterViewController.swift */,
+				05BD1F552BB22ADA00CDF763 /* UITableView+.swift */,
 			);
 			path = MyTableViewSectionHeaderAndFooterView;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05834BAB2935FEBD00DEE113 /* ViewController.swift in Sources */,
+				05BD1F562BB22ADA00CDF763 /* UITableView+.swift in Sources */,
 				05834BBB2935FF7000DEE113 /* TestTableViewAdapter.swift in Sources */,
 				05834BA72935FEBD00DEE113 /* AppDelegate.swift in Sources */,
 				05834BA92935FEBD00DEE113 /* SceneDelegate.swift in Sources */,

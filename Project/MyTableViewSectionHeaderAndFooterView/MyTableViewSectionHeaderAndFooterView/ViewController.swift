@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         
         let headerFirstButton = UIButton(type: .system)
         headerFirstButton.configuration = .filled()
-        headerFirstButton.setTitle("스크롤 뷰로 만들어진 헤더뷰로 이동", for: .normal)
+        headerFirstButton.setTitle("헤더 뷰가 추가된 테이블 뷰로 이동", for: .normal)
         headerFirstButton.addTarget(self, action: #selector(onClickButton(_:)), for: .touchUpInside)
         
         let headerSecondButton = UIButton(type: .system)

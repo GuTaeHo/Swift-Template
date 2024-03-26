@@ -6,14 +6,51 @@
 //
 
 import UIKit
+import Combine
 
 class ScrollViewWithHeaderFooterViewController: UIViewController {
+    lazy var headerView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .systemIndigo
+        view.addSubview(stackViewInHeaderView)
+        
+        NSLayoutConstraint.activate([
+            stackViewInHeaderView.topAnchor.constraint(equalTo: view.topAnchor, constant: 12),
+            stackViewInHeaderView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 18),
+            stackViewInHeaderView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -18),
+            stackViewInHeaderView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -12),
+        ])
+        return view
+    }()
     
-    @IBOutlet var headerView: UIView!
+    lazy var stackViewInHeaderView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [label1InHeaderView, label2InHeaderView])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        return stackView
+    }()
+    
+    lazy var label1InHeaderView: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "라벨 1"
+        label.textColor = .white
+        label.setContentHuggingPriority(.defaultHigh, for: .vertical)
+        return label
+    }()
+    
+    lazy var label2InHeaderView: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "라벨 2"
+        label.textColor = .white
+        return label
+    }()
     @IBOutlet var testTableView: UITableView!
-    @IBOutlet var footerView: UIView!
     
     private var testTableViewAdapter: TestTableViewAdapter!
+    private var cancellable = Set<AnyCancellable>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +65,17 @@ class ScrollViewWithHeaderFooterViewController: UIViewController {
         for index in 0..<100 {
             testTableViewAdapter.addItem(item: "\(index). 텍스트")
         }
-        
+        testTableView.setHeaderView(headerView)
         testTableView.reloadData()
+        
+        Timer.publish(every: 2.0, on: .main, in: .common).autoconnect().sink { [weak self] date in
+            if self?.label1InHeaderView.isHidden == true {
+                self?.label1InHeaderView.isHidden = false
+            } else {
+                self?.label1InHeaderView.isHidden = true
+            }
+            self?.testTableView.setHeaderView(self?.headerView)
+        }.store(in: &cancellable)
     }
 }
 
