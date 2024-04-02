@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  MyUIKitComponents
+//  MyUITextView
 //
-//  Created by 구태호 on 2022/12/19.
+//  Created by 구태호 on 4/2/24.
 //
 
 import UIKit
