@@ -10,6 +10,7 @@
 		0527F04A2B6BC334002E08E9 /* GradientAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0527F0492B6BC334002E08E9 /* GradientAnimationViewController.swift */; };
 		0527F04D2B6BC7B8002E08E9 /* CALayerPlaygroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0527F04C2B6BC7B8002E08E9 /* CALayerPlaygroundViewController.swift */; };
 		0527F04F2B6BC88A002E08E9 /* CALayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0527F04E2B6BC88A002E08E9 /* CALayer+.swift */; };
+		052C60192BB68A720017D70F /* CALayerBorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052C60182BB68A720017D70F /* CALayerBorderViewController.swift */; };
 		05300E2E2AA8C78C00ED9870 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05300E2D2AA8C78C00ED9870 /* AppDelegate.swift */; };
 		05300E302AA8C78C00ED9870 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05300E2F2AA8C78C00ED9870 /* SceneDelegate.swift */; };
 		05300E322AA8C78C00ED9870 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05300E312AA8C78C00ED9870 /* CameraViewController.swift */; };
@@ -23,6 +24,7 @@
 		0527F0492B6BC334002E08E9 /* GradientAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientAnimationViewController.swift; sourceTree = "<group>"; };
 		0527F04C2B6BC7B8002E08E9 /* CALayerPlaygroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerPlaygroundViewController.swift; sourceTree = "<group>"; };
 		0527F04E2B6BC88A002E08E9 /* CALayer+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+.swift"; sourceTree = "<group>"; };
+		052C60182BB68A720017D70F /* CALayerBorderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerBorderViewController.swift; sourceTree = "<group>"; };
 		05300E2A2AA8C78C00ED9870 /* MyCALayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCALayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05300E2D2AA8C78C00ED9870 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05300E2F2AA8C78C00ED9870 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 				05300E312AA8C78C00ED9870 /* CameraViewController.swift */,
 				0527F0492B6BC334002E08E9 /* GradientAnimationViewController.swift */,
 				0527F04C2B6BC7B8002E08E9 /* CALayerPlaygroundViewController.swift */,
+				052C60182BB68A720017D70F /* CALayerBorderViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 				05300E302AA8C78C00ED9870 /* SceneDelegate.swift in Sources */,
 				0527F04F2B6BC88A002E08E9 /* CALayer+.swift in Sources */,
 				0527F04A2B6BC334002E08E9 /* GradientAnimationViewController.swift in Sources */,
+				052C60192BB68A720017D70F /* CALayerBorderViewController.swift in Sources */,
 				0527F04D2B6BC7B8002E08E9 /* CALayerPlaygroundViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

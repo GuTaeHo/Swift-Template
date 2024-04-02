@@ -51,4 +51,21 @@ extension UIView {
         animation.timingFunction = CAMediaTimingFunction(name: .easeIn)
         gradientLayer.add(animation, forKey: "animationKey")
     }
+    
+    /// 지정된 모서리에 커브 효과 적용
+    func setCorner(_ value: CGFloat, edges: UIRectEdge...) {
+        clipsToBounds = true
+        edges.forEach {
+            switch $0 {
+            case .top:
+            case .
+            }
+        }
+        layer.cornerRadius = value
+    }
+    /// 지정된 모서리에 테두리 적용
+    func setBorder(_ width: CGFloat, color: UIColor) {
+        layer.borderWidth = width
+        layer.borderColor = color.cgColor
+    }
 }
