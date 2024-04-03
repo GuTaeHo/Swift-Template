@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60653DC72BBAFD9300D957A7 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 60653DC62BBAFD9300D957A7 /* GoogleSignIn */; };
+		60653DC92BBAFD9300D957A7 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 60653DC82BBAFD9300D957A7 /* GoogleSignInSwift */; };
 		60D8B3B42BBAC9AA00EAFA4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D8B3B32BBAC9AA00EAFA4A /* AppDelegate.swift */; };
 		60D8B3B62BBAC9AA00EAFA4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D8B3B52BBAC9AA00EAFA4A /* SceneDelegate.swift */; };
 		60D8B3B82BBAC9AA00EAFA4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D8B3B72BBAC9AA00EAFA4A /* ViewController.swift */; };
@@ -35,8 +37,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60653DC72BBAFD9300D957A7 /* GoogleSignIn in Frameworks */,
 				60D8B3D12BBAD5B700EAFA4A /* SkeletonView in Frameworks */,
 				60D8B3C92BBAD52E00EAFA4A /* SnapKit in Frameworks */,
+				60653DC92BBAFD9300D957A7 /* GoogleSignInSwift in Frameworks */,
 				60D8B3CE2BBAD54300EAFA4A /* Then in Frameworks */,
 				60D8B3CB2BBAD52E00EAFA4A /* SnapKit-Dynamic in Frameworks */,
 			);
@@ -96,6 +100,8 @@
 				60D8B3CA2BBAD52E00EAFA4A /* SnapKit-Dynamic */,
 				60D8B3CD2BBAD54300EAFA4A /* Then */,
 				60D8B3D02BBAD5B700EAFA4A /* SkeletonView */,
+				60653DC62BBAFD9300D957A7 /* GoogleSignIn */,
+				60653DC82BBAFD9300D957A7 /* GoogleSignInSwift */,
 			);
 			productName = MySwiftPackageManager;
 			productReference = 60D8B3B02BBAC9AA00EAFA4A /* MySwiftPackageManager.app */;
@@ -129,6 +135,7 @@
 				60D8B3C72BBAD52E00EAFA4A /* XCRemoteSwiftPackageReference "SnapKit" */,
 				60D8B3CC2BBAD54300EAFA4A /* XCRemoteSwiftPackageReference "Then" */,
 				60D8B3CF2BBAD5B700EAFA4A /* XCRemoteSwiftPackageReference "SkeletonView" */,
+				60653DC52BBAFD9300D957A7 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = 60D8B3B12BBAC9AA00EAFA4A /* Products */;
 			projectDirPath = "";
@@ -386,6 +393,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		60653DC52BBAFD9300D957A7 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.1.0;
+			};
+		};
 		60D8B3C72BBAD52E00EAFA4A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -413,6 +428,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		60653DC62BBAFD9300D957A7 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 60653DC52BBAFD9300D957A7 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		60653DC82BBAFD9300D957A7 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 60653DC52BBAFD9300D957A7 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
 		60D8B3C82BBAD52E00EAFA4A /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 60D8B3C72BBAD52E00EAFA4A /* XCRemoteSwiftPackageReference "SnapKit" */;
