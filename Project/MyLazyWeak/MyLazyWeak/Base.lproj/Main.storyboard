@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -32,6 +32,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4W-zE-ybc">
+                                <rect key="frame" x="97" y="325.66666666666669" width="199" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="강한참조 버튼 테스트 이동"/>
+                                <connections>
+                                    <segue destination="bYK-7W-Y0A" kind="show" id="G3d-kp-i22"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -41,6 +49,8 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LGw-WQ-dIM" secondAttribute="trailing" constant="24" id="HXa-Uj-e7c"/>
                             <constraint firstItem="LGw-WQ-dIM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="fGV-Eo-mmL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LGw-WQ-dIM" secondAttribute="bottom" constant="24" id="fGo-Ee-dYK"/>
+                            <constraint firstItem="e4W-zE-ybc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nmi-ac-gn8"/>
+                            <constraint firstItem="AME-eW-kQc" firstAttribute="top" secondItem="e4W-zE-ybc" secondAttribute="bottom" constant="48" id="udl-Eb-N1Y"/>
                         </constraints>
                     </view>
                     <connections>
@@ -50,6 +60,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="138" y="5"/>
+        </scene>
+        <!--Button Strong View Controller-->
+        <scene sceneID="Fz5-qk-x20">
+            <objects>
+                <viewController storyboardIdentifier="ButtonStrongViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bYK-7W-Y0A" customClass="ButtonStrongViewController" customModule="MyLazyWeak" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T52-oA-HYm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vu-Vf-mt2">
+                                <rect key="frame" x="145.66666666666666" y="403.66666666666669" width="102" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="테스트 버튼"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gF5-ur-Odl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8vu-Vf-mt2" firstAttribute="centerX" secondItem="T52-oA-HYm" secondAttribute="centerX" id="3P2-78-nxx"/>
+                            <constraint firstItem="8vu-Vf-mt2" firstAttribute="centerY" secondItem="T52-oA-HYm" secondAttribute="centerY" id="Fvq-Nv-W1u"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="EDz-xg-QNb"/>
+                    <connections>
+                        <outlet property="testButton" destination="8vu-Vf-mt2" id="7Pp-ll-4P6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O7w-d5-2E4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="911" y="-635"/>
         </scene>
         <!--Escaping Closure Test View Controller-->
         <scene sceneID="Bd1-Eg-Pgn">
