@@ -51,4 +51,34 @@ extension UIView {
         animation.timingFunction = CAMediaTimingFunction(name: .easeIn)
         gradientLayer.add(animation, forKey: "animationKey")
     }
+    
+    /// 지정된 모서리에 커브 효과 및 경계선 표시
+    /// - Parameters:
+    ///     - corners: 적용할 모서리
+    ///     - cornerRadius: 모서리 굴곡
+    ///     - borderSides: 적용할 변
+    ///     - borderColor: 경계선 색상
+    ///     - borderWidth: 경계선 너비
+    func round(corners: UIRectCorner = .allCorners, cornerRadius: CGFloat, borderSides: UIRectEdge = .all,  borderColor: UIColor, borderWidth: CGFloat) {
+        let mask = round(corners: corners, radius: cornerRadius)
+        addBorder(sides: borderSides, mask: mask, borderColor: borderColor, borderWidth: borderWidth)
+    }
+
+    private func round(corners: UIRectCorner, radius: CGFloat) -> CAShapeLayer {
+        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        self.layer.mask = mask
+        return mask
+    }
+
+    private func addBorder(sides: UIRectEdge, mask: CAShapeLayer, borderColor: UIColor, borderWidth: CGFloat) {
+        let borderLayer = CAShapeLayer()
+        borderLayer.path = mask.path
+        borderLayer.fillColor = UIColor.clear.cgColor
+        borderLayer.strokeColor = borderColor.cgColor
+        borderLayer.lineWidth = borderWidth
+        borderLayer.frame = bounds
+        layer.addSublayer(borderLayer)
+    }
 }

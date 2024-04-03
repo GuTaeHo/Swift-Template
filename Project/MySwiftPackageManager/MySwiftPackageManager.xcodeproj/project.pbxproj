@@ -19,9 +19,11 @@
 		60D8B3CB2BBAD52E00EAFA4A /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 60D8B3CA2BBAD52E00EAFA4A /* SnapKit-Dynamic */; };
 		60D8B3CE2BBAD54300EAFA4A /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 60D8B3CD2BBAD54300EAFA4A /* Then */; };
 		60D8B3D12BBAD5B700EAFA4A /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = 60D8B3D02BBAD5B700EAFA4A /* SkeletonView */; };
+		7BA625173B638C84EA1D76EF /* Pods_MySwiftPackageManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B538799C8B25F838A98B5E50 /* Pods_MySwiftPackageManager.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		25F882664D10DE67FD2BE5AC /* Pods-MySwiftPackageManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySwiftPackageManager.release.xcconfig"; path = "Target Support Files/Pods-MySwiftPackageManager/Pods-MySwiftPackageManager.release.xcconfig"; sourceTree = "<group>"; };
 		60D8B3B02BBAC9AA00EAFA4A /* MySwiftPackageManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySwiftPackageManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D8B3B32BBAC9AA00EAFA4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60D8B3B52BBAC9AA00EAFA4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +32,8 @@
 		60D8B3BC2BBAC9AB00EAFA4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60D8B3BF2BBAC9AB00EAFA4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60D8B3C12BBAC9AB00EAFA4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B538799C8B25F838A98B5E50 /* Pods_MySwiftPackageManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySwiftPackageManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA61E29193CB9508597596ED /* Pods-MySwiftPackageManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySwiftPackageManager.debug.xcconfig"; path = "Target Support Files/Pods-MySwiftPackageManager/Pods-MySwiftPackageManager.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 				60653DC92BBAFD9300D957A7 /* GoogleSignInSwift in Frameworks */,
 				60D8B3CE2BBAD54300EAFA4A /* Then in Frameworks */,
 				60D8B3CB2BBAD52E00EAFA4A /* SnapKit-Dynamic in Frameworks */,
+				7BA625173B638C84EA1D76EF /* Pods_MySwiftPackageManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +59,8 @@
 			children = (
 				60D8B3B22BBAC9AA00EAFA4A /* MySwiftPackageManager */,
 				60D8B3B12BBAC9AA00EAFA4A /* Products */,
+				C729F58F7B3580D9D53A2E8B /* Pods */,
+				FF71C61E7E2FAE9362B602ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +86,23 @@
 			path = MySwiftPackageManager;
 			sourceTree = "<group>";
 		};
+		C729F58F7B3580D9D53A2E8B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA61E29193CB9508597596ED /* Pods-MySwiftPackageManager.debug.xcconfig */,
+				25F882664D10DE67FD2BE5AC /* Pods-MySwiftPackageManager.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FF71C61E7E2FAE9362B602ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B538799C8B25F838A98B5E50 /* Pods_MySwiftPackageManager.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 60D8B3C42BBAC9AB00EAFA4A /* Build configuration list for PBXNativeTarget "MySwiftPackageManager" */;
 			buildPhases = (
+				534C6F41C930E241347217A4 /* [CP] Check Pods Manifest.lock */,
 				60D8B3AC2BBAC9AA00EAFA4A /* Sources */,
 				60D8B3AD2BBAC9AA00EAFA4A /* Frameworks */,
 				60D8B3AE2BBAC9AA00EAFA4A /* Resources */,
+				DAFC99D3F191B2CC1AFAA404 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -158,6 +184,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		534C6F41C930E241347217A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MySwiftPackageManager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAFC99D3F191B2CC1AFAA404 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MySwiftPackageManager/Pods-MySwiftPackageManager-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MySwiftPackageManager/Pods-MySwiftPackageManager-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MySwiftPackageManager/Pods-MySwiftPackageManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		60D8B3AC2BBAC9AA00EAFA4A /* Sources */ = {
@@ -244,7 +312,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -301,7 +369,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -313,12 +381,14 @@
 		};
 		60D8B3C52BBAC9AB00EAFA4A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA61E29193CB9508597596ED /* Pods-MySwiftPackageManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L8WFLHVUYX;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MySwiftPackageManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -342,12 +412,14 @@
 		};
 		60D8B3C62BBAC9AB00EAFA4A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25F882664D10DE67FD2BE5AC /* Pods-MySwiftPackageManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L8WFLHVUYX;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MySwiftPackageManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
