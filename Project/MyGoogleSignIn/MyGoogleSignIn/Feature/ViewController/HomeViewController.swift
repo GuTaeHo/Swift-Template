@@ -11,7 +11,7 @@ import Then
 import Combine
 
 class HomeViewController: UIViewController {
-    private let homeViewModel = HomeViewModel()
+    private lazy var homeViewModel = HomeViewModel(presentVC: self)
     private let input = PassthroughSubject<Int, Never>.init()
     private var cancellables = Set<AnyCancellable>()
     
@@ -33,6 +33,10 @@ class HomeViewController: UIViewController {
         googleLoginButton.snp.makeConstraints {
             $0.center.equalToSuperview()
         }
+    
+        googleLoginButton.addAction(UIAction { [weak self] _ in
+            self?.homeViewModel.googleSignIn()
+        }, for: .touchUpInside)
         
         bind()
     }
@@ -43,13 +47,22 @@ class HomeViewController: UIViewController {
         )
         
         output.receive(on: DispatchQueue.main)
-            .sink { [weak self] worryDetail in
+            .sink { response in
+                if let errorReason = response.errorReason {
+                    print(errorReason)
+                    return
+                }
                 
+                guard
+                    let email = response.user?.email,
+                    let token = response.user?.uid
+                else {
+                    print("이메일 또는 토큰 없음")
+                    return
+                }
+                
+                print("email: \(email), token: \(token)")
             }
-            .sink(receiveValue: { [weak self] worryDetail in
-                 // 받은 값을 통한 UI 업데이트
-                self?.updateUI(worryDetail: worryDetail)
-            })
             .store(in: &cancellables)
     }
 }
