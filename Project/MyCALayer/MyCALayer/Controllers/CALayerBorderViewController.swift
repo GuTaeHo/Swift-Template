@@ -15,5 +15,6 @@ class CALayerBorderViewController :UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        borderView.round(corners: [.topLeft, .topRight], cornerRadius: 10, borderColor: .orange, borderWidth: 3)
     }
 }
