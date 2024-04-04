@@ -12,7 +12,9 @@ import Combine
 
 class HomeViewController: UIViewController {
     private lazy var homeViewModel = HomeViewModel(presentVC: self)
-    private let input = PassthroughSubject<Int, Never>.init()
+    private let input = HomeViewModel.Input(
+        googleSignin: PassthroughSubject<Int, Never>.init().eraseToAnyPublisher()
+    )
     private var cancellables = Set<AnyCancellable>()
     
     let googleLoginButton = UIButton(configuration: .filled()).then {
@@ -42,9 +44,7 @@ class HomeViewController: UIViewController {
     }
     
     private func bind() {
-        let output = homeViewModel.transform(
-            input: HomeViewModel.Input(input)
-        )
+        let output = homeViewModel.transform(input: input)
         
         output.receive(on: DispatchQueue.main)
             .sink { response in

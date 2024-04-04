@@ -5,7 +5,6 @@
 //  Created by 구태호 on 4/3/24.
 //
 
-import Foundation
 import Combine
 import FirebaseCore
 import FirebaseAuth
@@ -13,8 +12,11 @@ import GoogleSignIn
 
 
 final class HomeViewModel: ViewModelType {
-    typealias Input = AnyPublisher<Int, Never>
     typealias Output = AnyPublisher<Response, Never>
+    
+    struct Input {
+        var googleSignin: AnyPublisher<Int, Never>
+    }
     
     private var output: PassthroughSubject<Response, Never> = .init()
     private var cancellables = Set<AnyCancellable>()
@@ -29,9 +31,8 @@ final class HomeViewModel: ViewModelType {
         self.presentVC = presentVC
     }
     
-    func transform(input: AnyPublisher<Int, Never>) -> AnyPublisher<Response, Never> {
-        // input 구독
-        input.sink { [weak self] _ in
+    func transform(input: HomeViewModel.Input) -> AnyPublisher<Response, Never> {
+        input.googleSignin.sink { [weak self] _ in
             self?.googleSignIn()
         }
         .store(in: &cancellables)

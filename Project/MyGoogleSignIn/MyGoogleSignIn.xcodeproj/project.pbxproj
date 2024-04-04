@@ -19,6 +19,8 @@
 		0548D41B2BBD460A00376A02 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 0548D41A2BBD460A00376A02 /* Then */; };
 		0548D41F2BBD492500376A02 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0548D41E2BBD492500376A02 /* ViewModelType.swift */; };
 		0548D4232BBD497900376A02 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0548D4222BBD497900376A02 /* HomeViewModel.swift */; };
+		0548D4262BBE832100376A02 /* AppAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0548D4252BBE832100376A02 /* AppAuth */; };
+		0548D4282BBE832100376A02 /* AppAuthCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0548D4272BBE832100376A02 /* AppAuthCore */; };
 		6054AC322BBD90A200859EDE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6054AC312BBD90A200859EDE /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -41,10 +43,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0548D4262BBE832100376A02 /* AppAuth in Frameworks */,
 				0548D4182BBD45E600376A02 /* SnapKit in Frameworks */,
 				0548D40C2BBD3DB500376A02 /* GoogleSignInSwift in Frameworks */,
 				0548D40F2BBD40A100376A02 /* FirebaseAuth in Frameworks */,
 				0548D41B2BBD460A00376A02 /* Then in Frameworks */,
+				0548D4282BBE832100376A02 /* AppAuthCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +165,8 @@
 				0548D40E2BBD40A100376A02 /* FirebaseAuth */,
 				0548D4172BBD45E600376A02 /* SnapKit */,
 				0548D41A2BBD460A00376A02 /* Then */,
+				0548D4252BBE832100376A02 /* AppAuth */,
+				0548D4272BBE832100376A02 /* AppAuthCore */,
 			);
 			productName = MyGoogleSignIn;
 			productReference = 050CE7E72BBD3B130098118F /* MyGoogleSignIn.app */;
@@ -195,6 +201,7 @@
 				0548D40D2BBD40A100376A02 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				0548D4162BBD45E500376A02 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				0548D4192BBD460A00376A02 /* XCRemoteSwiftPackageReference "Then" */,
+				0548D4242BBE832100376A02 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */,
 			);
 			productRefGroup = 050CE7E82BBD3B130098118F /* Products */;
 			projectDirPath = "";
@@ -485,6 +492,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		0548D4242BBE832100376A02 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/openid/AppAuth-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -507,6 +522,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0548D4192BBD460A00376A02 /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
+		};
+		0548D4252BBE832100376A02 /* AppAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0548D4242BBE832100376A02 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */;
+			productName = AppAuth;
+		};
+		0548D4272BBE832100376A02 /* AppAuthCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0548D4242BBE832100376A02 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */;
+			productName = AppAuthCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
