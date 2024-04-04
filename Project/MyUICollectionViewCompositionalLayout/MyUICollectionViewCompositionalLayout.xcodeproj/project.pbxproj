@@ -25,6 +25,7 @@
 		05C873132AE4038C00F5C2C7 /* CodeBaseTestGridCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05C873112AE4038C00F5C2C7 /* CodeBaseTestGridCollectionViewCell.xib */; };
 		05C873162AE405C000F5C2C7 /* CodeBaseCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C873142AE405C000F5C2C7 /* CodeBaseCollectionReusableView.swift */; };
 		05C873172AE405C000F5C2C7 /* CodeBaseCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05C873152AE405C000F5C2C7 /* CodeBaseCollectionReusableView.xib */; };
+		60479ED12BBEFC0600112E4E /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60479ED02BBEFC0600112E4E /* UIView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		05C873112AE4038C00F5C2C7 /* CodeBaseTestGridCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CodeBaseTestGridCollectionViewCell.xib; sourceTree = "<group>"; };
 		05C873142AE405C000F5C2C7 /* CodeBaseCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBaseCollectionReusableView.swift; sourceTree = "<group>"; };
 		05C873152AE405C000F5C2C7 /* CodeBaseCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CodeBaseCollectionReusableView.xib; sourceTree = "<group>"; };
+		60479ED02BBEFC0600112E4E /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			children = (
 				05C8730A2AE3FCC800F5C2C7 /* UICollectionView+.swift */,
 				05C8730C2AE3FCF800F5C2C7 /* NSObject+.swift */,
+				60479ED02BBEFC0600112E4E /* UIView+.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			files = (
 				05C873162AE405C000F5C2C7 /* CodeBaseCollectionReusableView.swift in Sources */,
 				05BFC7D82AC3164800F623BA /* ViewController.swift in Sources */,
+				60479ED12BBEFC0600112E4E /* UIView+.swift in Sources */,
 				05BFC7E92AC3170500F623BA /* InnerCellCollectionViewController.swift in Sources */,
 				05BFC7D42AC3164800F623BA /* AppDelegate.swift in Sources */,
 				05BFC7EB2AC3172400F623BA /* CustomXibCellCollectionViewController.swift in Sources */,

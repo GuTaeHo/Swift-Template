@@ -14,6 +14,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func shakeButton(_ sender: UIButton) {
+        sender.shake()
+    }
     
     @IBAction func moveCodeBaseCollectionViewCollectionViewController(_ sender: Any) {
         let vc = CodeBaseCollectionViewController()

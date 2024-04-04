@@ -57,6 +57,4 @@ extension UICollectionView {
         let identifier = String(describing: viewClass)
         return (dequeueReusableSupplementaryView(ofKind: elementKind, withReuseIdentifier: identifier, for: indexPath) as? T) ?? .init()
     }
-    
-    
 }

@@ -65,13 +65,12 @@ class CodeBaseCollectionViewController: UIViewController {
         collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        collectionView.backgroundColor = .black
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
          
-        collectionView.collectionViewLayout = UICollectionViewCompositionalLayout(section: makeGridLayoutSection(column: 2, row: 3))
+        collectionView.collectionViewLayout = UICollectionViewCompositionalLayout(section: makeGridLayoutSection(column: 3, row: 3))
     }
     
     func makeGridLayoutSection(column: Int, row: Int) -> NSCollectionLayoutSection {
@@ -83,14 +82,14 @@ class CodeBaseCollectionViewController: UIViewController {
         
         let groupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
-            heightDimension: .fractionalHeight(1.0 / 3.0)
+            heightDimension: .fractionalWidth(1.0 / CGFloat(column))
         )
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-        group.interItemSpacing = .fixed(4)
+        group.interItemSpacing = .fixed(10)
         
         let section = NSCollectionLayoutSection(group: group)
         section.contentInsets = NSDirectionalEdgeInsets(top: 4, leading: 0, bottom: 4, trailing: 0)
-        section.interGroupSpacing = 4
+        section.interGroupSpacing = 10
         section.contentInsets = .init(top: 0, leading: 12, bottom: 0, trailing: 18)
         
         // 헤더 뷰 사이즈 지정
@@ -125,6 +124,15 @@ extension CodeBaseCollectionViewController: UICollectionViewDelegate, UICollecti
         cell.configuration(items[indexPath.item])
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.dequeueCell(CodeBaseTestGridCollectionViewCell.self, for: indexPath)
+        print(cell.lbTitle.text ?? "" + "쉐이크!")
+        cell.shake()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            cell.stopShaking()
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
