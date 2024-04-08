@@ -11,9 +11,9 @@ import Then
 import Combine
 
 class HomeViewController: UIViewController {
-    private lazy var homeViewModel = HomeViewModel(presentVC: self)
+    private lazy var homeViewModel = HomeViewModel()
     private let input = HomeViewModel.Input(
-        googleSignin: PassthroughSubject<Int, Never>.init().eraseToAnyPublisher()
+        googleSignin: PassthroughSubject<Void, Never>()
     )
     private var cancellables = Set<AnyCancellable>()
     
@@ -37,7 +37,7 @@ class HomeViewController: UIViewController {
         }
     
         googleLoginButton.addAction(UIAction { [weak self] _ in
-            self?.homeViewModel.googleSignIn()
+            self?.input.googleSignin.send()
         }, for: .touchUpInside)
         
         bind()

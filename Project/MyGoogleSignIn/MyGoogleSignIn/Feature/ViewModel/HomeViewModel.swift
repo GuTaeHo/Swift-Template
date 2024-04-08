@@ -15,20 +15,15 @@ final class HomeViewModel: ViewModelType {
     typealias Output = AnyPublisher<Response, Never>
     
     struct Input {
-        var googleSignin: AnyPublisher<Int, Never>
+        var googleSignin: PassthroughSubject<Void, Never>
     }
     
     private var output: PassthroughSubject<Response, Never> = .init()
     private var cancellables = Set<AnyCancellable>()
-    private weak var presentVC: UIViewController?
     
     struct Response: Error {
         var user: User?
         var errorReason: String?
-    }
-    
-    init(presentVC: UIViewController) {
-        self.presentVC = presentVC
     }
     
     func transform(input: HomeViewModel.Input) -> AnyPublisher<Response, Never> {
@@ -40,8 +35,8 @@ final class HomeViewModel: ViewModelType {
     }
     
     /// 구글 로그인 수행
-    func googleSignIn() {
-        guard let presentVC else {
+    private func googleSignIn() {
+        guard let presentVC = UIApplication.rootViewController else {
             return output.send(.init(errorReason: "표시될 화면을 찾을 수 없습니다."))
         }
         guard let clientID = FirebaseApp.app()?.options.clientID else {
