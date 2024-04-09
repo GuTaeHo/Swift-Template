@@ -22,6 +22,8 @@
 		0548D4232BBD497900376A02 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0548D4222BBD497900376A02 /* HomeViewModel.swift */; };
 		0548D4262BBE832100376A02 /* AppAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0548D4252BBE832100376A02 /* AppAuth */; };
 		0548D4282BBE832100376A02 /* AppAuthCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0548D4272BBE832100376A02 /* AppAuthCore */; };
+		0560886D2BC4FFA4002A9626 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 0560886C2BC4FFA4002A9626 /* Swinject */; };
+		0560886F2BC4FFA4002A9626 /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 0560886E2BC4FFA4002A9626 /* Swinject-Dynamic */; };
 		6054AC322BBD90A200859EDE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6054AC312BBD90A200859EDE /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +48,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0548D4262BBE832100376A02 /* AppAuth in Frameworks */,
+				0560886F2BC4FFA4002A9626 /* Swinject-Dynamic in Frameworks */,
 				0548D4182BBD45E600376A02 /* SnapKit in Frameworks */,
+				0560886D2BC4FFA4002A9626 /* Swinject in Frameworks */,
 				0548D40C2BBD3DB500376A02 /* GoogleSignInSwift in Frameworks */,
 				0548D40F2BBD40A100376A02 /* FirebaseAuth in Frameworks */,
 				0548D41B2BBD460A00376A02 /* Then in Frameworks */,
@@ -170,6 +174,8 @@
 				0548D41A2BBD460A00376A02 /* Then */,
 				0548D4252BBE832100376A02 /* AppAuth */,
 				0548D4272BBE832100376A02 /* AppAuthCore */,
+				0560886C2BC4FFA4002A9626 /* Swinject */,
+				0560886E2BC4FFA4002A9626 /* Swinject-Dynamic */,
 			);
 			productName = MyGoogleSignIn;
 			productReference = 050CE7E72BBD3B130098118F /* MyGoogleSignIn.app */;
@@ -205,6 +211,7 @@
 				0548D4162BBD45E500376A02 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				0548D4192BBD460A00376A02 /* XCRemoteSwiftPackageReference "Then" */,
 				0548D4242BBE832100376A02 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */,
+				0560886B2BC4FFA4002A9626 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = 050CE7E82BBD3B130098118F /* Products */;
 			projectDirPath = "";
@@ -504,6 +511,14 @@
 				minimumVersion = 1.7.3;
 			};
 		};
+		0560886B2BC4FFA4002A9626 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.5;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -536,6 +551,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0548D4242BBE832100376A02 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */;
 			productName = AppAuthCore;
+		};
+		0560886C2BC4FFA4002A9626 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0560886B2BC4FFA4002A9626 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		0560886E2BC4FFA4002A9626 /* Swinject-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0560886B2BC4FFA4002A9626 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = "Swinject-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -8,9 +8,21 @@
 import UIKit
 import FirebaseCore
 import GoogleSignIn
+import Swinject
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    let injectContainer: Container = {
+        let container = Container()
+        container.register((any ViewModelType).self) { r in
+            return HomeViewModel()
+        }
+        container.register(HomeViewController.self) { resolver in
+            HomeViewController(viewModel: resolver.resolve(HomeViewModel.self)!)
+        }
+        return container
+    }()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
