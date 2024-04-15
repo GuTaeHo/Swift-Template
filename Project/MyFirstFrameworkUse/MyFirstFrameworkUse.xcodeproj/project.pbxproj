@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		056635182BCCF9AC000309CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 056635162BCCF8BB000309CD /* UIKit.framework */; };
 		603FB4A32BAB1990002F4E76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603FB4A22BAB1990002F4E76 /* AppDelegate.swift */; };
 		603FB4A52BAB1990002F4E76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603FB4A42BAB1990002F4E76 /* SceneDelegate.swift */; };
 		603FB4A72BAB1990002F4E76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603FB4A62BAB1990002F4E76 /* ViewController.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		056635162BCCF8BB000309CD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		603FB49F2BAB1990002F4E76 /* MyFirstFrameworkUse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFirstFrameworkUse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		603FB4A22BAB1990002F4E76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		603FB4A42BAB1990002F4E76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				603FB4B82BAB19C3002F4E76 /* MyFirstFramework.xcframework in Frameworks */,
+				056635182BCCF9AC000309CD /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +92,7 @@
 		603FB4B62BAB19C3002F4E76 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				056635162BCCF8BB000309CD /* UIKit.framework */,
 				603FB4B72BAB19C3002F4E76 /* MyFirstFramework.xcframework */,
 			);
 			name = Frameworks;

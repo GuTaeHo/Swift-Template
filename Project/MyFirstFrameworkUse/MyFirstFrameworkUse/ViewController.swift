@@ -5,8 +5,7 @@
 //  Created by 구태호 on 3/20/24.
 //
 
-import UIKit
-import MyFirstFramework
+// import MyFirstFramework
 
 class ViewController: UIViewController {
 
@@ -14,7 +13,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        print(plus(a: 1, b: 2))
+        // print(plus(a: 1, b: 2))
+        
+        
     }
 
 
