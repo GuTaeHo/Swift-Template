@@ -21,6 +21,6 @@ class ViewController: UIViewController {
     @IBAction func moveCodeBaseCollectionViewCollectionViewController(_ sender: Any) {
         let vc = CodeBaseCollectionViewController()
         vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -43,8 +43,7 @@ extension UICollectionView {
     ///   - indexPath: 인덱스 (IndexPath)
     /// - Returns: 캐스팅된 재사용 셀 인스턴스
     func dequeueCell<T: UICollectionViewCell>(_ cellClass: T.Type, for indexPath: IndexPath) -> T {
-        let identifier = String(describing: cellClass)
-        return (dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as? T) ?? .init()
+        return (dequeueReusableCell(withReuseIdentifier: cellClass.className, for: indexPath) as? T) ?? .init()
     }
     
     /// 해당 뷰 타입의 캐스팅 된 재사용 Supplementary 뷰를 가져옵니다.

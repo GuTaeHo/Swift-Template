@@ -6,24 +6,10 @@
 //
 
 import UIKit
+import SnapKit
 
 
 class CodeBaseCollectionViewController: UIViewController {
-    lazy var backButton: UIButton = {
-        var configue = UIButton.Configuration.filled()
-        configue.title = "뒤로가기"
-        configue.subtitle = "메인"
-        
-        let button = UIButton(configuration: configue)
-        button.setTitle("뒤로가기", for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        
-        button.configurationUpdateHandler = { [weak self] button in
-            self?.dismiss(animated: true)
-        }
-        return button
-    }()
-    
     lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: .init())
         collectionView.dataSource = self
@@ -56,15 +42,11 @@ class CodeBaseCollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        view.addSubview(backButton)
-        backButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-        backButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 18).isActive = true
         
         view.addSubview(collectionView)
-        collectionView.topAnchor.constraint(equalTo: backButton.bottomAnchor, constant: 18).isActive = true
-        collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        collectionView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
     }
     
     override func viewWillLayoutSubviews() {
