@@ -48,7 +48,7 @@
 
 /* Begin PBXFileReference section */
 		054D05642AE0200B0057C199 /* GridCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCollectionViewCell.swift; sourceTree = "<group>"; };
-		05BFC7D02AC3164800F623BA /* MyUICollectionViewCompositionalLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyUICollectionViewCompositionalLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05BFC7D02AC3164800F623BA /* MyUIScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyUIScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05BFC7D32AC3164800F623BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05BFC7D52AC3164800F623BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		05BFC7D72AC3164800F623BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 		05BFC7C72AC3164800F623BA = {
 			isa = PBXGroup;
 			children = (
-				05BFC7D22AC3164800F623BA /* MyUICollectionViewCompositionalLayout */,
+				05BFC7D22AC3164800F623BA /* MyUIScrollView */,
 				05BFC7D12AC3164800F623BA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,12 +95,12 @@
 		05BFC7D12AC3164800F623BA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				05BFC7D02AC3164800F623BA /* MyUICollectionViewCompositionalLayout.app */,
+				05BFC7D02AC3164800F623BA /* MyUIScrollView.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		05BFC7D22AC3164800F623BA /* MyUICollectionViewCompositionalLayout */ = {
+		05BFC7D22AC3164800F623BA /* MyUIScrollView */ = {
 			isa = PBXGroup;
 			children = (
 				6020499E2BD01A870050074A /* App */,
@@ -114,7 +114,7 @@
 				05BFC7DE2AC3164A00F623BA /* LaunchScreen.storyboard */,
 				05BFC7E12AC3164A00F623BA /* Info.plist */,
 			);
-			path = MyUICollectionViewCompositionalLayout;
+			path = MyUIScrollView;
 			sourceTree = "<group>";
 		};
 		05BFC7E72AC316E100F623BA /* Viewcontroller */ = {
@@ -171,9 +171,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		05BFC7CF2AC3164800F623BA /* MyUICollectionViewCompositionalLayout */ = {
+		05BFC7CF2AC3164800F623BA /* MyUIScrollView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 05BFC7E42AC3164A00F623BA /* Build configuration list for PBXNativeTarget "MyUICollectionViewCompositionalLayout" */;
+			buildConfigurationList = 05BFC7E42AC3164A00F623BA /* Build configuration list for PBXNativeTarget "MyUIScrollView" */;
 			buildPhases = (
 				05BFC7CC2AC3164800F623BA /* Sources */,
 				05BFC7CD2AC3164800F623BA /* Frameworks */,
@@ -184,13 +184,13 @@
 			);
 			dependencies = (
 			);
-			name = MyUICollectionViewCompositionalLayout;
+			name = MyUIScrollView;
 			packageProductDependencies = (
 				60F488B12BD0126300A7035E /* SnapKit-Dynamic */,
 				60F488B42BD0126F00A7035E /* Then */,
 			);
 			productName = MyUICollectionViewCompositionalLayout;
-			productReference = 05BFC7D02AC3164800F623BA /* MyUICollectionViewCompositionalLayout.app */;
+			productReference = 05BFC7D02AC3164800F623BA /* MyUIScrollView.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -208,7 +208,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 05BFC7CB2AC3164800F623BA /* Build configuration list for PBXProject "MyUICollectionViewCompositionalLayout" */;
+			buildConfigurationList = 05BFC7CB2AC3164800F623BA /* Build configuration list for PBXProject "MyUIScrollView" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -225,7 +225,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				05BFC7CF2AC3164800F623BA /* MyUICollectionViewCompositionalLayout */,
+				05BFC7CF2AC3164800F623BA /* MyUIScrollView */,
 			);
 		};
 /* End PBXProject section */
@@ -342,7 +342,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -399,7 +399,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -418,19 +418,19 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L8WFLHVUYX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyUICollectionViewCompositionalLayout/Info.plist;
+				INFOPLIST_FILE = MyUIScrollView/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyUICollectionViewCompositionalLayout;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyUIScrollView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -447,19 +447,19 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L8WFLHVUYX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyUICollectionViewCompositionalLayout/Info.plist;
+				INFOPLIST_FILE = MyUIScrollView/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyUICollectionViewCompositionalLayout;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyUIScrollView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -470,7 +470,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		05BFC7CB2AC3164800F623BA /* Build configuration list for PBXProject "MyUICollectionViewCompositionalLayout" */ = {
+		05BFC7CB2AC3164800F623BA /* Build configuration list for PBXProject "MyUIScrollView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				05BFC7E22AC3164A00F623BA /* Debug */,
@@ -479,7 +479,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		05BFC7E42AC3164A00F623BA /* Build configuration list for PBXNativeTarget "MyUICollectionViewCompositionalLayout" */ = {
+		05BFC7E42AC3164A00F623BA /* Build configuration list for PBXNativeTarget "MyUIScrollView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				05BFC7E52AC3164A00F623BA /* Debug */,

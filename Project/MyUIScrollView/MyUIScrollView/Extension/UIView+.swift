@@ -1,6 +1,6 @@
 //
 //  UIView+.swift
-//  MyUICollectionViewCompositionalLayout
+//  MyUIScrollView
 //
 //  Created by 구태호 on 4/5/24.
 //

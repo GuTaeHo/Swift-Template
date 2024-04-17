@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  MyUICollectionViewCompositionalLayout
+//  MyUIScrollView
 //
 //  Created by 구태호 on 2023/09/26.
 //

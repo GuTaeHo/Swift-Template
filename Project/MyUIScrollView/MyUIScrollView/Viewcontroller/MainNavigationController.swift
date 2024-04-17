@@ -1,6 +1,6 @@
 //
 //  MainNavigationController.swift
-//  MyUICollectionViewCompositionalLayout
+//  MyUIScrollView
 //
 //  Created by 구태호 on 4/17/24.
 //

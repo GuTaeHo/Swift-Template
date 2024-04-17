@@ -1,6 +1,6 @@
 //
 //  GridCollectionViewCell.swift
-//  MyUICollectionViewCompositionalLayout
+//  MyUIScrollView
 //
 //  Created by 구태호 on 10/18/23.
 //
