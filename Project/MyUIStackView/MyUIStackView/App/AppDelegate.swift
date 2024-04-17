@@ -1,32 +1,19 @@
 //
 //  AppDelegate.swift
-//  MyGoogleSignIn
+//  MyUIStackView
 //
-//  Created by 구태호 on 4/3/24.
+//  Created by 구태호 on 4/16/24.
 //
 
 import UIKit
-import FirebaseCore
-import GoogleSignIn
-import Swinject
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    let injectContainer: Container = {
-        let container = Container()
-        container.register((any ViewModelType).self) { r in
-            return HomeViewModel()
-        }
-        container.register(HomeViewController.self) { resolver in
-            HomeViewController(viewModel: resolver.resolve(HomeViewModel.self)!)
-        }
-        return container
-    }()
-    
+
+
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        FirebaseApp.configure()
         return true
     }
 
@@ -45,11 +32,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
-}
-
-extension AppDelegate {
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        return GIDSignIn.sharedInstance.handle(url)
-    }
 }
 

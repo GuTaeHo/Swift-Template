@@ -13,12 +13,17 @@
 		050CE7F22BBD3B130098118F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 050CE7F12BBD3B130098118F /* Base */; };
 		050CE7F42BBD3B140098118F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 050CE7F32BBD3B140098118F /* Assets.xcassets */; };
 		050CE7F72BBD3B140098118F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 050CE7F62BBD3B140098118F /* Base */; };
+		052BA6032BC3862F000DB094 /* AppDelegate+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052BA6022BC3862F000DB094 /* AppDelegate+.swift */; };
 		0548D40C2BBD3DB500376A02 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0548D40B2BBD3DB500376A02 /* GoogleSignInSwift */; };
 		0548D40F2BBD40A100376A02 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0548D40E2BBD40A100376A02 /* FirebaseAuth */; };
 		0548D4182BBD45E600376A02 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0548D4172BBD45E600376A02 /* SnapKit */; };
 		0548D41B2BBD460A00376A02 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 0548D41A2BBD460A00376A02 /* Then */; };
 		0548D41F2BBD492500376A02 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0548D41E2BBD492500376A02 /* ViewModelType.swift */; };
 		0548D4232BBD497900376A02 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0548D4222BBD497900376A02 /* HomeViewModel.swift */; };
+		0548D4262BBE832100376A02 /* AppAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0548D4252BBE832100376A02 /* AppAuth */; };
+		0548D4282BBE832100376A02 /* AppAuthCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0548D4272BBE832100376A02 /* AppAuthCore */; };
+		0560886D2BC4FFA4002A9626 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 0560886C2BC4FFA4002A9626 /* Swinject */; };
+		0560886F2BC4FFA4002A9626 /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 0560886E2BC4FFA4002A9626 /* Swinject-Dynamic */; };
 		6054AC322BBD90A200859EDE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6054AC312BBD90A200859EDE /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +36,7 @@
 		050CE7F32BBD3B140098118F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		050CE7F62BBD3B140098118F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		050CE7F82BBD3B140098118F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		052BA6022BC3862F000DB094 /* AppDelegate+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+.swift"; sourceTree = "<group>"; };
 		0548D41E2BBD492500376A02 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		0548D4222BBD497900376A02 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		6054AC312BBD90A200859EDE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -41,10 +47,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0548D4262BBE832100376A02 /* AppAuth in Frameworks */,
+				0560886F2BC4FFA4002A9626 /* Swinject-Dynamic in Frameworks */,
 				0548D4182BBD45E600376A02 /* SnapKit in Frameworks */,
+				0560886D2BC4FFA4002A9626 /* Swinject in Frameworks */,
 				0548D40C2BBD3DB500376A02 /* GoogleSignInSwift in Frameworks */,
 				0548D40F2BBD40A100376A02 /* FirebaseAuth in Frameworks */,
 				0548D41B2BBD460A00376A02 /* Then in Frameworks */,
+				0548D4282BBE832100376A02 /* AppAuthCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				0548D41E2BBD492500376A02 /* ViewModelType.swift */,
+				052BA6022BC3862F000DB094 /* AppDelegate+.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -161,6 +172,10 @@
 				0548D40E2BBD40A100376A02 /* FirebaseAuth */,
 				0548D4172BBD45E600376A02 /* SnapKit */,
 				0548D41A2BBD460A00376A02 /* Then */,
+				0548D4252BBE832100376A02 /* AppAuth */,
+				0548D4272BBE832100376A02 /* AppAuthCore */,
+				0560886C2BC4FFA4002A9626 /* Swinject */,
+				0560886E2BC4FFA4002A9626 /* Swinject-Dynamic */,
 			);
 			productName = MyGoogleSignIn;
 			productReference = 050CE7E72BBD3B130098118F /* MyGoogleSignIn.app */;
@@ -195,6 +210,8 @@
 				0548D40D2BBD40A100376A02 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				0548D4162BBD45E500376A02 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				0548D4192BBD460A00376A02 /* XCRemoteSwiftPackageReference "Then" */,
+				0548D4242BBE832100376A02 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */,
+				0560886B2BC4FFA4002A9626 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = 050CE7E82BBD3B130098118F /* Products */;
 			projectDirPath = "";
@@ -224,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				052BA6032BC3862F000DB094 /* AppDelegate+.swift in Sources */,
 				0548D41F2BBD492500376A02 /* ViewModelType.swift in Sources */,
 				050CE7EF2BBD3B130098118F /* HomeViewController.swift in Sources */,
 				050CE7EB2BBD3B130098118F /* AppDelegate.swift in Sources */,
@@ -485,6 +503,22 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		0548D4242BBE832100376A02 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/openid/AppAuth-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.3;
+			};
+		};
+		0560886B2BC4FFA4002A9626 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.5;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -507,6 +541,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0548D4192BBD460A00376A02 /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
+		};
+		0548D4252BBE832100376A02 /* AppAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0548D4242BBE832100376A02 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */;
+			productName = AppAuth;
+		};
+		0548D4272BBE832100376A02 /* AppAuthCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0548D4242BBE832100376A02 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */;
+			productName = AppAuthCore;
+		};
+		0560886C2BC4FFA4002A9626 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0560886B2BC4FFA4002A9626 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		0560886E2BC4FFA4002A9626 /* Swinject-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0560886B2BC4FFA4002A9626 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = "Swinject-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

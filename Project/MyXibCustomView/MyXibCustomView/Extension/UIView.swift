@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIView {
-    /// Xib 파일 로딩 시 사용
+    /// Xib 파일을 객체화 시켜 반환
     /**
     ```
     // 해당 메소드 인스턴스화 시

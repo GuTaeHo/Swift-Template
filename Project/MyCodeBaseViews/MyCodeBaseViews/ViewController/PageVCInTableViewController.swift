@@ -91,6 +91,10 @@ class PageVCInTableViewController: BaseViewController {
 }
 
 extension PageVCInTableViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return .init()
+    }
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let sectionHeaderView = UIView()
         let stackView = UIStackView().then {
@@ -115,18 +119,19 @@ extension PageVCInTableViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return menu.menuGroup?[section].options?.count ?? 0
+//        return menu.menuGroup?[section].options?.count ?? 0
+        return 0
     }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return menu.menuGroup?.count ?? 0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(MenuTableViewCell.self, for: indexPath)
-        
-        let menuOption = menu.menuGroup?[indexPath.section].options?[indexPath.row]
-        cell.configuration(item: menuOption)
-        return cell
-    }
+//    
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return menu.menuGroup?.count ?? 0
+//    }
+//    
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(MenuTableViewCell.self, for: indexPath)
+//        
+//        let menuOption = menu.menuGroup?[indexPath.section].options?[indexPath.row]
+//        cell.configuration(item: menuOption)
+//        return cell
+//    }
 }

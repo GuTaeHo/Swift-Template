@@ -11,8 +11,8 @@ import Then
 import Combine
 
 class HomeViewController: UIViewController {
-    private lazy var homeViewModel = HomeViewModel(presentVC: self)
-    private let input = PassthroughSubject<Int, Never>.init()
+    let viewModel: HomeViewModel
+    private let input = PassthroughSubject<HomeViewModel.Input, Never>()
     private var cancellables = Set<AnyCancellable>()
     
     let googleLoginButton = UIButton(configuration: .filled()).then {
@@ -24,7 +24,15 @@ class HomeViewController: UIViewController {
         $0.configuration?.attributedTitle = .init("구글 로그인", attributes: container)
     }
     
-
+    init(viewModel: HomeViewModel) {
+        self.viewModel = viewModel
+        super.init()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -35,33 +43,34 @@ class HomeViewController: UIViewController {
         }
     
         googleLoginButton.addAction(UIAction { [weak self] _ in
-            self?.homeViewModel.googleSignIn()
+            self?.input.send(.googleSignIn)
         }, for: .touchUpInside)
         
         bind()
     }
     
     private func bind() {
-        let output = homeViewModel.transform(
-            input: HomeViewModel.Input(input)
-        )
+        let output = viewModel.transform(input: input.eraseToAnyPublisher())
         
         output.receive(on: DispatchQueue.main)
-            .sink { response in
-                if let errorReason = response.errorReason {
-                    print(errorReason)
-                    return
+            .sink { event in
+                switch event {
+                case .googleSignIn(let response):
+                    if let errorReason = response.errorReason {
+                        print(errorReason)
+                        return
+                    }
+                    
+                    guard
+                        let email = response.user?.email,
+                        let token = response.user?.uid
+                    else {
+                        print("이메일 또는 토큰 없음")
+                        return
+                    }
+                    
+                    print("email: \(email), token: \(token)")
                 }
-                
-                guard
-                    let email = response.user?.email,
-                    let token = response.user?.uid
-                else {
-                    print("이메일 또는 토큰 없음")
-                    return
-                }
-                
-                print("email: \(email), token: \(token)")
             }
             .store(in: &cancellables)
     }

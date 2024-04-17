@@ -48,7 +48,6 @@ class MainViewController: BaseViewController {
             $0.configuration?.title = "테이블 뷰"
             $0.addAction(.init(handler: { [weak self] action in
                 let vc = TableViewController()
-                vc.modalPresentationStyle = .fullScreen
                 self?.present(vc, animated: true)
             }), for: .touchUpInside)
         }
