@@ -9,12 +9,12 @@ import Foundation
 
 
 extension NSObject {
-    /// 클래스 명을 반환합니다.
+    /// 클래스명 반환
     var className: String {
         return Self.className
     }
 
-    /// 클래스 명을 반환합니다.
+    /// 클래스명 반환
     static var className: String {
         return String(describing: self)
     }

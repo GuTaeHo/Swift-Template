@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import SnapKit
 
 class ScrollViewWithHeaderFooterViewController: UIViewController {
     lazy var headerView: UIView = {
@@ -14,13 +15,9 @@ class ScrollViewWithHeaderFooterViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .systemIndigo
         view.addSubview(stackViewInHeaderView)
-        
-        NSLayoutConstraint.activate([
-            stackViewInHeaderView.topAnchor.constraint(equalTo: view.topAnchor, constant: 12),
-            stackViewInHeaderView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 18),
-            stackViewInHeaderView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -18),
-            stackViewInHeaderView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -12),
-        ])
+        stackViewInHeaderView.snp.makeConstraints {
+            $0.edges.equalTo(view.safeAreaLayoutGuide.snp.edges)
+        }
         return view
     }()
     
@@ -47,9 +44,10 @@ class ScrollViewWithHeaderFooterViewController: UIViewController {
         label.textColor = .white
         return label
     }()
+    
     @IBOutlet var testTableView: UITableView!
     
-    private var testTableViewAdapter: TestTableViewAdapter!
+    private var items = [String]()
     private var cancellable = Set<AnyCancellable>()
     
     override func viewDidLoad() {
@@ -59,12 +57,11 @@ class ScrollViewWithHeaderFooterViewController: UIViewController {
     }
     
     private func initLayout() {
-        testTableViewAdapter = TestTableViewAdapter(tableView: testTableView)
+        (0...100).forEach {
+            items.append("\($0). 텍스트")
+        }
         testTableView.delegate = self
         testTableView.dataSource = self
-        for index in 0..<100 {
-            testTableViewAdapter.addItem(item: "\(index). 텍스트")
-        }
         testTableView.setHeaderView(headerView)
         testTableView.reloadData()
         
@@ -81,11 +78,17 @@ class ScrollViewWithHeaderFooterViewController: UIViewController {
 
 extension ScrollViewWithHeaderFooterViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return testTableViewAdapter.getItemCount()
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return testTableViewAdapter.tableView(tableView, cellForRowAt: indexPath)
+        let cell = tableView.dequeueCell(TestTableViewCell.self, for: indexPath)
+        let index = indexPath.row
+        let item = items[index]
+        
+        cell.lbTitle.text = item
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

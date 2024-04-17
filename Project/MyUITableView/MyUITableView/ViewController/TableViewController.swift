@@ -1,17 +1,24 @@
 //
-//  ViewController.swift
+//  TableViewController.swift
 //  MyTableViewSectionHeaderAndFooterView
 //
 //  Created by 구태호 on 2022/11/29.
 //
 
 import UIKit
+import Then
 import SnapKit
 
-class ViewController: UIViewController {
-    @IBOutlet var testTableView: UITableView!
+class TableViewController: BaseViewController {
+    lazy var testTableView = UITableView(frame: .zero, style: .insetGrouped).then {
+        $0.delegate = self
+        $0.dataSource = self
+        (0...100).forEach {
+            items.append("\($0). 텍스트")
+        }
+    }
     
-    private var testTableViewAdapter: TestTableViewAdapter!
+    private var items = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,13 +27,6 @@ class ViewController: UIViewController {
     }
     
     private func initLayout() {
-        testTableViewAdapter = TestTableViewAdapter(tableView: testTableView)
-        testTableView.delegate = self
-        testTableView.dataSource = self
-        for index in 0..<100 {
-            testTableViewAdapter.addItem(item: "\(index). 텍스트")
-        }
-        
         let header = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 80))
         let footer = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 150))
         
@@ -81,13 +81,19 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension TableViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return testTableViewAdapter.getItemCount()
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return testTableViewAdapter.tableView(tableView, cellForRowAt: indexPath)
+        let cell = tableView.dequeueCell(TestTableViewCell.self, for: indexPath)
+        let index = indexPath.row
+        let item = items[index]
+        
+        cell.lbTitle.text = item
+        
+        return cell
     }
 }
 

@@ -31,6 +31,10 @@ extension UIView {
         let layer: CALayer = self.layer
         layer.removeAnimation(forKey: "shaking")
     }
+    
+    func addSubviews(_ views: UIView...) {
+        views.forEach { addSubview($0) }
+    }
 }
 
 
