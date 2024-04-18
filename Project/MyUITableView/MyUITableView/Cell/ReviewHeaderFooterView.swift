@@ -10,12 +10,21 @@ import SnapKit
 import Then
 
 
-class ReviewHeaderFooterView: UITableViewHeaderFooterView {
-    override init(reuseIdentifier: String?) {
-        super.init(reuseIdentifier: reuseIdentifier)
+class ReviewHeaderFooterView: BaseTableViewHeaderFooterView {
+    var titleLabel = UILabel().then {
+        $0.font = .systemFont(ofSize: 20)
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    override func initSubviews() {
+        super.initSubviews()
+        
+        addSubview(titleLabel)
+        titleLabel.snp.makeConstraints {
+            $0.edges.equalToSuperview().inset(12)
+        }
+    }
+    
+    func configuration(_ item: String) {
+        titleLabel.text = item
     }
 }

@@ -12,6 +12,7 @@ import Then
 
 class SectionHeaderWithVariousTypeCellsViewController: UIViewController {
     lazy var tableView = UITableView().then {
+        $0.sectionHeaderTopPadding = .leastNormalMagnitude
         $0.delegate = self
         $0.dataSource = self
         $0.registerCell(fromClass: ReviewInfomationTableViewCell.self)
@@ -67,6 +68,18 @@ extension SectionHeaderWithVariousTypeCellsViewController: UITableViewDelegate, 
             reviewCell.configuration(item)
             return reviewCell
         }
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = tableView.dequeueHeaderFooterView(ReviewHeaderFooterView.self)
+        switch section {
+        case 0:
+            view.configuration("가게 정보")
+        default:
+            view.configuration("사용자 리뷰")
+        }
+        
+        return view
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

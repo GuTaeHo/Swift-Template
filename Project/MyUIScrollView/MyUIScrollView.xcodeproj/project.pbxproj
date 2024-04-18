@@ -28,6 +28,7 @@
 		6020499C2BD012E40050074A /* SnapKit-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 60F488B12BD0126300A7035E /* SnapKit-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		60479ED12BBEFC0600112E4E /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60479ED02BBEFC0600112E4E /* UIView+.swift */; };
 		608B35C12BD1525400BC6F78 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608B35C02BD1525400BC6F78 /* UIButton+.swift */; };
+		608B35C32BD15AF900BC6F78 /* BaseTableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608B35C22BD15AF900BC6F78 /* BaseTableViewHeaderFooterView.swift */; };
 		60D468512BD0224E00081F36 /* ReviewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D4684C2BD0224E00081F36 /* ReviewHeaderFooterView.swift */; };
 		60D468522BD0224E00081F36 /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D4684D2BD0224E00081F36 /* TestTableViewCell.swift */; };
 		60D468532BD0224E00081F36 /* ReviewInfomationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D4684E2BD0224E00081F36 /* ReviewInfomationTableViewCell.swift */; };
@@ -82,6 +83,7 @@
 		05C873152AE405C000F5C2C7 /* CodeBaseCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CodeBaseCollectionReusableView.xib; sourceTree = "<group>"; };
 		60479ED02BBEFC0600112E4E /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		608B35C02BD1525400BC6F78 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
+		608B35C22BD15AF900BC6F78 /* BaseTableViewHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewHeaderFooterView.swift; sourceTree = "<group>"; };
 		60D4684C2BD0224E00081F36 /* ReviewHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReviewHeaderFooterView.swift; path = ../../../../MyUITableView/MyUITableView/Cell/ReviewHeaderFooterView.swift; sourceTree = "<group>"; };
 		60D4684D2BD0224E00081F36 /* TestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestTableViewCell.swift; path = ../../../../MyUITableView/MyUITableView/Cell/TestTableViewCell.swift; sourceTree = "<group>"; };
 		60D4684E2BD0224E00081F36 /* ReviewInfomationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReviewInfomationTableViewCell.swift; path = ../../../../MyUITableView/MyUITableView/Cell/ReviewInfomationTableViewCell.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				60D468652BD026D700081F36 /* BaseViewController.swift */,
+				608B35C22BD15AF900BC6F78 /* BaseTableViewHeaderFooterView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				05BFC7D42AC3164800F623BA /* AppDelegate.swift in Sources */,
 				60D4685C2BD0228C00081F36 /* SectionHeaderWithVariousTypeCellsViewController.swift in Sources */,
 				05BFC7EB2AC3172400F623BA /* CustomXibCellCollectionViewController.swift in Sources */,
+				608B35C32BD15AF900BC6F78 /* BaseTableViewHeaderFooterView.swift in Sources */,
 				054D05652AE0200B0057C199 /* GridCollectionViewCell.swift in Sources */,
 				05C873122AE4038C00F5C2C7 /* CodeBaseTestGridCollectionViewCell.swift in Sources */,
 				05C8730F2AE4015C00F5C2C7 /* CodeBaseCollectionViewController.swift in Sources */,
