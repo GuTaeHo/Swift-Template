@@ -7,20 +7,17 @@
 
 import UIKit
 import SnapKit
-
+import Then
 
 class CodeBaseCollectionViewController: UIViewController {
-    lazy var collectionView: UICollectionView = {
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: .init())
-        collectionView.dataSource = self
-        collectionView.delegate = self
+    lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewCompositionalLayout(section: makeGridLayoutSection(column: 3, row: 3))).then {
+        $0.dataSource = self
+        $0.delegate = self
         // 셀 식별을 위한 Nib 파일 등록
-        collectionView.registerCellByNib(CodeBaseTestGridCollectionViewCell.self)
+        $0.registerCellByNib(CodeBaseTestGridCollectionViewCell.self)
         // 보충 뷰 식별을 위한 Nib 파일 등록
-        collectionView.registerSupplementaryViewByNib(CodeBaseCollectionReusableView.self, ofKind: UICollectionView.elementKindSectionHeader)
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        return collectionView
-    }()
+        $0.registerSupplementaryViewByNib(CodeBaseCollectionReusableView.self, ofKind: UICollectionView.elementKindSectionHeader)
+    }
     
     private var headerItems: [Category] = [
         .init(title: "배고프다")
@@ -47,12 +44,6 @@ class CodeBaseCollectionViewController: UIViewController {
         collectionView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
-    }
-    
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-         
-        collectionView.collectionViewLayout = UICollectionViewCompositionalLayout(section: makeGridLayoutSection(column: 3, row: 3))
     }
     
     func makeGridLayoutSection(column: Int, row: Int) -> NSCollectionLayoutSection {
@@ -85,10 +76,6 @@ class CodeBaseCollectionViewController: UIViewController {
         section.boundarySupplementaryItems = [sectionHeader]
         
         return section
-    }
-    
-    deinit {
-        print("CodeBaseCollectionViewController deinit")
     }
 }
 

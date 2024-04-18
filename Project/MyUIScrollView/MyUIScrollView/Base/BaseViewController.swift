@@ -7,11 +7,19 @@
 
 import UIKit
 
-protocol Binderable {
-    
+protocol UICodeBasable {
+    func initSubviews()
+    func initAttributes()
+    func bindViews()
 }
 
-class BaseViewController: UIViewController, Binderable {
+protocol UIControllable {
+    func initLayout()
+    func initAction()
+    func bindViews()
+}
+
+class BaseViewController: UIViewController {
     override func viewDidLoad() {
         initLayout()
     }
