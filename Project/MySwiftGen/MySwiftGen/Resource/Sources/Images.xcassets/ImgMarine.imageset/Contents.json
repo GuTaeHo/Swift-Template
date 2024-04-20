@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "StarCraft_Carbot_Marine.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

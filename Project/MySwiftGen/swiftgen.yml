@@ -1,0 +1,25 @@
+## Note: all of the config entries below are just examples with placeholders. Be sure to edit and adjust to your needs when uncommenting.
+
+# input_dir - 프로젝트 리소스 경로
+# output_dir - 생성될 SwiftGen 클래스 파일 경로
+input_dir: MySwiftGen/Resource/Sources
+output_dir: MySwiftGen/Resource/Generated
+
+## Generate constants for your Assets Catalogs, including constants for images, colors, ARKit resources, etc.
+# inputs 의 경로는 input_dir의 후속 경로.
+# outputs 는 생성될 클래스 파일의 특성 및 이름을 설정합니다.
+xcassets:
+   inputs:
+     - Images.xcassets
+     - Colors.xcassets
+   outputs:
+     - templateName: swift5
+       params:
+         forceProvidesNamespaces: true
+         forceFileNameEnum: true
+       output: XCAssets+Generated.swift
+       
+
+##
+## For more info, use `swiftgen config doc` to open the full documentation on GitHub.
+## https://github.com/SwiftGen/SwiftGen/tree/6.6.3/Documentation/
