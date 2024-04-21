@@ -1,5 +1,4 @@
-//
-//  CodeBaseGridCollectionReusableView.swift
+//  CodeBaseHorizontalCollectionReuseableView.swift
 //  MyUIScrollView
 //
 //  Created by 구태호 on 10/21/23.
@@ -9,7 +8,7 @@ import UIKit
 import SnapKit
 import Then
 
-class CodeBaseGridCollectionReusableView: UICollectionReusableView, UICodeBasable {
+class CodeBaseHorizontalCollectionReuseableView: UICollectionReusableView, UICodeBasable {
     var lbTitle = UILabel().then {
         $0.font = .systemFont(ofSize: 24)
         $0.textColor = .black
@@ -56,7 +55,7 @@ class CodeBaseGridCollectionReusableView: UICollectionReusableView, UICodeBasabl
     
     func bindViews() { }
     
-    func configuration(_ item: Category) {
-        lbTitle.text = item.title
+    func configuration(_ item: String) {
+        lbTitle.text = item
     }
 }
