@@ -22,9 +22,7 @@
 		05C8730D2AE3FCF800F5C2C7 /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C8730C2AE3FCF800F5C2C7 /* NSObject+.swift */; };
 		05C8730F2AE4015C00F5C2C7 /* CodeBaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C8730E2AE4015C00F5C2C7 /* CodeBaseCollectionViewController.swift */; };
 		05C873122AE4038C00F5C2C7 /* CodeBaseTestGridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C873102AE4038C00F5C2C7 /* CodeBaseTestGridCollectionViewCell.swift */; };
-		05C873132AE4038C00F5C2C7 /* CodeBaseTestGridCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05C873112AE4038C00F5C2C7 /* CodeBaseTestGridCollectionViewCell.xib */; };
 		05C873162AE405C000F5C2C7 /* CodeBaseCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C873142AE405C000F5C2C7 /* CodeBaseCollectionReusableView.swift */; };
-		05C873172AE405C000F5C2C7 /* CodeBaseCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05C873152AE405C000F5C2C7 /* CodeBaseCollectionReusableView.xib */; };
 		6020499C2BD012E40050074A /* SnapKit-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 60F488B12BD0126300A7035E /* SnapKit-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		60479ED12BBEFC0600112E4E /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60479ED02BBEFC0600112E4E /* UIView+.swift */; };
 		608B35C12BD1525400BC6F78 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608B35C02BD1525400BC6F78 /* UIButton+.swift */; };
@@ -78,9 +76,7 @@
 		05C8730C2AE3FCF800F5C2C7 /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
 		05C8730E2AE4015C00F5C2C7 /* CodeBaseCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBaseCollectionViewController.swift; sourceTree = "<group>"; };
 		05C873102AE4038C00F5C2C7 /* CodeBaseTestGridCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBaseTestGridCollectionViewCell.swift; sourceTree = "<group>"; };
-		05C873112AE4038C00F5C2C7 /* CodeBaseTestGridCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CodeBaseTestGridCollectionViewCell.xib; sourceTree = "<group>"; };
 		05C873142AE405C000F5C2C7 /* CodeBaseCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBaseCollectionReusableView.swift; sourceTree = "<group>"; };
-		05C873152AE405C000F5C2C7 /* CodeBaseCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CodeBaseCollectionReusableView.xib; sourceTree = "<group>"; };
 		60479ED02BBEFC0600112E4E /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		608B35C02BD1525400BC6F78 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		608B35C22BD15AF900BC6F78 /* BaseTableViewHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewHeaderFooterView.swift; sourceTree = "<group>"; };
@@ -202,9 +198,7 @@
 				05BFC7ED2AC318CC00F623BA /* HorizontalScrollCollectionViewCell.swift */,
 				054D05642AE0200B0057C199 /* GridCollectionViewCell.swift */,
 				05C873102AE4038C00F5C2C7 /* CodeBaseTestGridCollectionViewCell.swift */,
-				05C873112AE4038C00F5C2C7 /* CodeBaseTestGridCollectionViewCell.xib */,
 				05C873142AE405C000F5C2C7 /* CodeBaseCollectionReusableView.swift */,
-				05C873152AE405C000F5C2C7 /* CodeBaseCollectionReusableView.xib */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -319,9 +313,7 @@
 			files = (
 				05BFC7E02AC3164A00F623BA /* LaunchScreen.storyboard in Resources */,
 				05BFC7DD2AC3164A00F623BA /* Assets.xcassets in Resources */,
-				05C873132AE4038C00F5C2C7 /* CodeBaseTestGridCollectionViewCell.xib in Resources */,
 				60D468542BD0224E00081F36 /* TestTableViewCell.xib in Resources */,
-				05C873172AE405C000F5C2C7 /* CodeBaseCollectionReusableView.xib in Resources */,
 				05BFC7DB2AC3164800F623BA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

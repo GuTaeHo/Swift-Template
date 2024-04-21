@@ -13,10 +13,10 @@ class CodeBaseCollectionViewController: UIViewController {
     lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewCompositionalLayout(section: makeGridLayoutSection(column: 3, row: 3))).then {
         $0.dataSource = self
         $0.delegate = self
-        // 셀 식별을 위한 Nib 파일 등록
-        $0.registerCellByNib(CodeBaseTestGridCollectionViewCell.self)
-        // 보충 뷰 식별을 위한 Nib 파일 등록
-        $0.registerSupplementaryViewByNib(CodeBaseCollectionReusableView.self, ofKind: UICollectionView.elementKindSectionHeader)
+        // 셀 식별을 위한 클래스 파일 등록
+        $0.registerCell(CodeBaseTestGridCollectionViewCell.self)
+        // 보충 뷰 식별을 위한 클래스 파일 등록
+        $0.registerSupplementaryView(CodeBaseCollectionReusableView.self, ofKind: UICollectionView.elementKindSectionHeader)
     }
     
     private var headerItems: [Category] = [
@@ -63,7 +63,7 @@ class CodeBaseCollectionViewController: UIViewController {
         let section = NSCollectionLayoutSection(group: group)
         section.contentInsets = NSDirectionalEdgeInsets(top: 4, leading: 0, bottom: 4, trailing: 0)
         section.interGroupSpacing = 10
-        section.contentInsets = .init(top: 0, leading: 12, bottom: 0, trailing: 18)
+        section.contentInsets = .init(top: 0, leading: 12, bottom: 0, trailing: 12)
         
         // 헤더 뷰 사이즈 지정
         let headerFooterSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
