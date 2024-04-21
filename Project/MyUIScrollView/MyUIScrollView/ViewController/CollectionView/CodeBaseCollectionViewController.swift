@@ -8,15 +8,16 @@
 import UIKit
 import SnapKit
 import Then
+import Combine
 
 class CodeBaseCollectionViewController: UIViewController {
     lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewCompositionalLayout(section: makeGridLayoutSection(column: 3, row: 3))).then {
         $0.dataSource = self
         $0.delegate = self
         // 셀 식별을 위한 클래스 파일 등록
-        $0.registerCell(CodeBaseTestGridCollectionViewCell.self)
+        $0.registerCell(CodeBaseGridCollectionViewCell.self)
         // 보충 뷰 식별을 위한 클래스 파일 등록
-        $0.registerSupplementaryView(CodeBaseCollectionReusableView.self, ofKind: UICollectionView.elementKindSectionHeader)
+        $0.registerSupplementaryView(CodeBaseGridCollectionReusableView.self, ofKind: UICollectionView.elementKindSectionHeader)
     }
     
     private var headerItems: [Category] = [
@@ -35,6 +36,8 @@ class CodeBaseCollectionViewController: UIViewController {
         .init(title: "레쓰비", isShowDivide: false),
         .init(title: "퀘사디아", isShowDivide: false)
     ]
+    
+    var cancellables: Set<AnyCancellable> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,14 +92,14 @@ extension CodeBaseCollectionViewController: UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueCell(CodeBaseTestGridCollectionViewCell.self, for: indexPath)
+        let cell = collectionView.dequeueCell(CodeBaseGridCollectionViewCell.self, for: indexPath)
         cell.configuration(items[indexPath.item])
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.dequeueCell(CodeBaseTestGridCollectionViewCell.self, for: indexPath)
+        let cell = collectionView.dequeueCell(CodeBaseGridCollectionViewCell.self, for: indexPath)
         print(cell.lbTitle.text ?? "" + "쉐이크!")
         cell.shake()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
@@ -105,8 +108,22 @@ extension CodeBaseCollectionViewController: UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let cell = collectionView.dequeueSupplementaryView(CodeBaseCollectionReusableView.self, ofKind: UICollectionView.elementKindSectionHeader, for: indexPath)
+        let cell = collectionView.dequeueSupplementaryView(CodeBaseGridCollectionReusableView.self, ofKind: UICollectionView.elementKindSectionHeader, for: indexPath)
         cell.configuration(headerItems[indexPath.item])
+        cell.btEdit.eventPublisher.sink { [weak self] _ in
+            self?.collectionView.performBatchUpdates {
+                if let items = self?.items {
+                    self?.items.removeAll()
+                    
+                    let indexPaths = items.enumerated().map { index, element in
+                        IndexPath(item: index, section: indexPath.section)
+                    }
+                    self?.collectionView.deleteItems(at: indexPaths)
+                }
+            } completion: { [weak self] _ in
+                self?.collectionView.numberOfItems(inSection: indexPath.item)
+            }
+        }.store(in: &cancellables)
         
         return cell
     }

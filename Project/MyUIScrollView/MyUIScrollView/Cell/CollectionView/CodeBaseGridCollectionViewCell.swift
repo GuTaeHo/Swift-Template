@@ -1,5 +1,5 @@
 //
-//  CodeBaseTestGridCollectionViewCell.swift
+//  CodeBaseGridCollectionViewCell.swift
 //  MyUIScrollView
 //
 //  Created by 구태호 on 10/21/23.
@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import Then
 
-class CodeBaseTestGridCollectionViewCell: UICollectionViewCell {
+class CodeBaseGridCollectionViewCell: UICollectionViewCell {
     var lbTitle = UILabel().then {
         $0.font = .systemFont(ofSize: 20)
         $0.textColor = .black
