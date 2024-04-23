@@ -23,7 +23,7 @@ class CodeBaseCollectionViewController: UIViewController {
     }
     
     enum SectionHeaderKind: Int, CaseIterable {
-        case food, recents
+        case recents, food
         
         var description: String {
             switch self {
@@ -69,6 +69,7 @@ class CodeBaseCollectionViewController: UIViewController {
             
             switch sectionKind {
             case .recents:
+                if self.recentItems.isEmpty { return nil }
                 // 헤더 뷰 사이즈 지정
                 let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                                              heightDimension: .estimated(44))
@@ -149,6 +150,10 @@ extension CodeBaseCollectionViewController: UICollectionViewDelegate, UICollecti
         case .recents:
             let cell = collectionView.dequeueSupplementaryView(CodeBaseHorizontalCollectionReuseableView.self, ofKind: UICollectionView.elementKindSectionHeader, for: indexPath)
             cell.configuration(sectionKind.description)
+            cell.btEdit.eventPublisher.sink { [weak self] _ in
+                self?.recentItems.removeAll()
+                self?.collectionView.reloadData()
+            }.store(in: &cancellables)
             return cell
             
         case .food:
