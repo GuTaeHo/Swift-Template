@@ -69,59 +69,28 @@ class CodeBaseCollectionViewController: UIViewController {
             
             switch sectionKind {
             case .recents:
-                let itemSize = NSCollectionLayoutSize(widthDimension: .estimated(200), heightDimension: .fractionalHeight(1))
-                let item = NSCollectionLayoutItem(layoutSize: itemSize)
-                
-                let groupSize = NSCollectionLayoutSize(widthDimension: .estimated(200), heightDimension: .absolute(44))
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-                
-                let section = NSCollectionLayoutSection(group: group)
-                section.contentInsets = .init(top: 0, leading: 12, bottom: 0, trailing: 12)
-                // 그룹 사이 간격을 지정합니다.
-                section.interGroupSpacing = 10
-                section.orthogonalScrollingBehavior = .continuous
-                
                 // 헤더 뷰 사이즈 지정
-                let headerFooterSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                                              heightDimension: .estimated(44))
                 let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
-                    layoutSize: headerFooterSize,
+                    layoutSize: headerSize,
                     elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
                 // 헤더 뷰 상단고정 여부
                 sectionHeader.pinToVisibleBounds = true
-                section.boundarySupplementaryItems = [sectionHeader]
-                return section
+                
+                return CompositionalLayoutUtil.horizontalLayout(estimatedSize: .init(width: 200, height: 44), spacingBetweenItems: 10, contentInsets: .init(top: 0, leading: 12, bottom: 0, trailing: 12), supplementaryItems: [sectionHeader])
                 
             case .food:
-                let itemSize = NSCollectionLayoutSize(
-                    widthDimension: .fractionalWidth(1.0 / Double(3)),
-                    heightDimension: .fractionalHeight(1.0)
-                )
-                let item = NSCollectionLayoutItem(layoutSize: itemSize)
-                
-                let groupSize = NSCollectionLayoutSize(
-                    widthDimension: .fractionalWidth(1.0),
-                    heightDimension: .fractionalWidth(1.0 / CGFloat(3))
-                )
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-                group.interItemSpacing = .fixed(10)
-                
-                let section = NSCollectionLayoutSection(group: group)
-                section.contentInsets = NSDirectionalEdgeInsets(top: 4, leading: 0, bottom: 4, trailing: 0)
-                section.interGroupSpacing = 10
-                section.contentInsets = .init(top: 0, leading: 12, bottom: 0, trailing: 12)
-                
                 // 헤더 뷰 사이즈 지정
-                let headerFooterSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                                              heightDimension: .estimated(44))
                 let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
-                    layoutSize: headerFooterSize,
+                    layoutSize: headerSize,
                     elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
                 // 헤더 뷰 상단고정 여부
                 sectionHeader.pinToVisibleBounds = true
-                section.boundarySupplementaryItems = [sectionHeader]
                 
-                return section
+                return CompositionalLayoutUtil.gridLayout(column: 3, spacingBetweenItems: 10, contentInsets: .init(top: 0, leading: 12, bottom: 0, trailing: 12), supplementaryItems: [sectionHeader])
             }
         }
         
