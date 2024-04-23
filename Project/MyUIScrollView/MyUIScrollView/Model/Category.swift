@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Category {
+struct Category: Hashable {
+    var _identifier = UUID()
     var title: String
     var isShowDivide: Bool = false
 }

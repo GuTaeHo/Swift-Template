@@ -12,14 +12,14 @@ import Combine
 
 class CodeBaseCollectionViewController: UIViewController {
     lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: makeCollectionViewLayout()).then {
-        $0.dataSource = self
+//        $0.dataSource = self
         $0.delegate = self
         // 셀 식별을 위한 클래스 파일 등록
-        $0.registerCell(CodeBaseHorizontalCollectionViewCell.self)
-        $0.registerCell(CodeBaseGridCollectionViewCell.self)
+//        $0.registerCell(CodeBaseHorizontalCollectionViewCell.self)
+//        $0.registerCell(CodeBaseGridCollectionViewCell.self)
         // 보충 뷰 식별을 위한 클래스 파일 등록
-        $0.registerSupplementaryView(CodeBaseHorizontalCollectionReuseableView.self, ofKind: UICollectionView.elementKindSectionHeader)
-        $0.registerSupplementaryView(CodeBaseGridCollectionReusableView.self, ofKind: UICollectionView.elementKindSectionHeader)
+//        $0.registerSupplementaryView(CodeBaseHorizontalCollectionReuseableView.self, ofKind: UICollectionView.elementKindSectionHeader)
+//        $0.registerSupplementaryView(CodeBaseGridCollectionReusableView.self, ofKind: UICollectionView.elementKindSectionHeader)
     }
     
     enum SectionHeaderKind: Int, CaseIterable {
@@ -35,7 +35,7 @@ class CodeBaseCollectionViewController: UIViewController {
         }
     }
     
-    private var recentItems: [String] = ["감자", "퀘사디아"]
+    private var recentItems: [Category] = [.init(title: "감자", isShowDivide: true), .init(title: "퀘사디아", isShowDivide: false)]
     
     private var foodItems: [Category] = [
         .init(title: "감자", isShowDivide: true),
@@ -52,6 +52,86 @@ class CodeBaseCollectionViewController: UIViewController {
     
     var cancellables: Set<AnyCancellable> = []
     
+    
+    var dataSource: UICollectionViewDiffableDataSource<SectionHeaderKind, Category>!
+    
+    func configureDataSource() {
+        // 수평 셀 등록
+        let horizontalCellRegistration = UICollectionView.CellRegistration
+        <CodeBaseHorizontalCollectionViewCell, Category> { (cell, indexPath, item) in
+            // Populate the cell with our item description.
+            cell.configuration(item)
+        }
+        // 그리드 셀 등록
+        let gridCellRegistration = UICollectionView.CellRegistration
+        <CodeBaseGridCollectionViewCell, Category> { (cell, indexPath, item) in
+            // Populate the cell with our item description.
+            cell.configuration(item)
+        }
+        
+        let horizontalSupplementaryViewRegistration = UICollectionView.SupplementaryRegistration<CodeBaseHorizontalCollectionReuseableView>(elementKind: UICollectionView.elementKindSectionHeader) { supplementaryView, string, indexPath in
+            supplementaryView.configuration(SectionHeaderKind.recents.description)
+            supplementaryView.btEdit.eventPublisher.sink { [weak self] _ in
+                self?.recentItems.removeAll()
+                self?.collectionView.reloadData()
+            }.store(in: &self.cancellables)
+        }
+    
+        let gridSupplementaryViewRegistration = UICollectionView.SupplementaryRegistration<CodeBaseHorizontalCollectionReuseableView>(elementKind: UICollectionView.elementKindSectionHeader) { supplementaryView, string, indexPath in
+            supplementaryView.configuration(SectionHeaderKind.food.description)
+            supplementaryView.btEdit.eventPublisher.sink { [weak self] _ in
+                self?.collectionView.performBatchUpdates {
+                    if let items = self?.foodItems {
+                        self?.foodItems.removeAll()
+
+                        let indexPaths = items.enumerated().map { index, element in
+                            IndexPath(item: index, section: indexPath.section)
+                        }
+                        self?.collectionView.deleteItems(at: indexPaths)
+                    }
+                } completion: { [weak self] _ in
+                    self?.collectionView.numberOfItems(inSection: indexPath.item)
+                }
+            }.store(in: &self.cancellables)
+        }
+        
+        // ✅ DiffableDataSource 생성
+        dataSource = UICollectionViewDiffableDataSource<SectionHeaderKind, Category>(collectionView: collectionView) {
+            (collectionView: UICollectionView, indexPath: IndexPath, identifier: Category) -> UICollectionViewCell? in
+            guard let sectionKind = SectionHeaderKind(rawValue: indexPath.section) else { return nil }
+            
+            switch sectionKind {
+            case .recents:
+                return collectionView.dequeueConfiguredReusableCell(using: horizontalCellRegistration, for: indexPath, item: identifier)
+            case .food:
+                return collectionView.dequeueConfiguredReusableCell(using: gridCellRegistration, for: indexPath, item: identifier)
+            }
+        }
+        
+        dataSource.supplementaryViewProvider = { collectionView, elementKind, indexPath in
+            guard let sectionKind = SectionHeaderKind(rawValue: indexPath.section) else { return .init() }
+            
+            switch sectionKind {
+            case .recents:
+                return collectionView.dequeueConfiguredReusableSupplementary(using: horizontalSupplementaryViewRegistration,
+                                                                             for: indexPath)
+            case .food:
+                return collectionView.dequeueConfiguredReusableSupplementary(using: gridSupplementaryViewRegistration, for: indexPath)
+            }
+        }
+    }
+    
+    func initSnapShot() {
+        // ✅ 새로운 snapshot 생성
+        var snapshot = NSDiffableDataSourceSnapshot<SectionHeaderKind, Category>()
+        snapshot.appendSections([.recents, .food])
+        snapshot.appendItems(recentItems)
+        snapshot.appendItems(foodItems)
+        
+        // ✅ "DiffiableDataSource야, 업데이트한 snapshot을 apply해서 View를 다시 그려줘"
+        dataSource.apply(snapshot, animatingDifferences: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -60,6 +140,10 @@ class CodeBaseCollectionViewController: UIViewController {
         collectionView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+        
+        configureDataSource()
+        initSnapShot()
+        collectionView.dataSource = dataSource
     }
     
     func makeCollectionViewLayout() -> UICollectionViewLayout {
