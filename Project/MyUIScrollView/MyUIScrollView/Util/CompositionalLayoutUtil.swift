@@ -18,7 +18,7 @@ class CompositionalLayoutUtil: NSObject {
         
         let groupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
-            heightDimension: .fractionalWidth(1.0 / CGFloat(3))
+            heightDimension: .fractionalWidth(1.0 / CGFloat(column))
         )
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: column)
         group.interItemSpacing = .fixed(spacingBetweenItems)
@@ -41,7 +41,7 @@ class CompositionalLayoutUtil: NSObject {
         let section = NSCollectionLayoutSection(group: group)
         section.contentInsets = .init(top: 0, leading: 12, bottom: 0, trailing: 12)
         // 그룹 사이 간격을 지정합니다.
-        section.interGroupSpacing = 10
+        section.interGroupSpacing = spacingBetweenItems
         section.orthogonalScrollingBehavior = .continuous
         section.boundarySupplementaryItems = supplementaryItems
         
