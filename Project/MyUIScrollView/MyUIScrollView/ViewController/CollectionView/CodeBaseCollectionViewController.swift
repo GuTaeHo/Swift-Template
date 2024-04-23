@@ -11,16 +11,7 @@ import Then
 import Combine
 
 class CodeBaseCollectionViewController: UIViewController {
-    lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: makeCollectionViewLayout()).then {
-//        $0.dataSource = self
-        $0.delegate = self
-        // 셀 식별을 위한 클래스 파일 등록
-//        $0.registerCell(CodeBaseHorizontalCollectionViewCell.self)
-//        $0.registerCell(CodeBaseGridCollectionViewCell.self)
-        // 보충 뷰 식별을 위한 클래스 파일 등록
-//        $0.registerSupplementaryView(CodeBaseHorizontalCollectionReuseableView.self, ofKind: UICollectionView.elementKindSectionHeader)
-//        $0.registerSupplementaryView(CodeBaseGridCollectionReusableView.self, ofKind: UICollectionView.elementKindSectionHeader)
-    }
+    lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: makeCollectionViewLayout())
     
     enum SectionHeaderKind: Int, CaseIterable {
         case recents, food
@@ -72,8 +63,11 @@ class CodeBaseCollectionViewController: UIViewController {
         let horizontalSupplementaryViewRegistration = UICollectionView.SupplementaryRegistration<CodeBaseHorizontalCollectionReuseableView>(elementKind: UICollectionView.elementKindSectionHeader) { supplementaryView, string, indexPath in
             supplementaryView.configuration(SectionHeaderKind.recents.description)
             supplementaryView.btEdit.eventPublisher.sink { [weak self] _ in
-                self?.recentItems.removeAll()
-                self?.collectionView.reloadData()
+                if var snapshot = self?.dataSource.snapshot() {
+                    self?.recentItems.removeAll()
+                    snapshot.deleteSections([.recents])
+                    self?.dataSource.apply(snapshot)
+                }
             }.store(in: &self.cancellables)
         }
     
@@ -89,7 +83,7 @@ class CodeBaseCollectionViewController: UIViewController {
                         }
                         self?.collectionView.deleteItems(at: indexPaths)
                     }
-                } completion: { [weak self] _ in
+                } completion: { _ in
                     self?.collectionView.numberOfItems(inSection: indexPath.item)
                 }
             }.store(in: &self.cancellables)
@@ -183,82 +177,82 @@ class CodeBaseCollectionViewController: UIViewController {
     }
 }
 
-extension CodeBaseCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return SectionHeaderKind.allCases.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard let sectionKind = SectionHeaderKind(rawValue: section) else { return 0 }
-        switch sectionKind {
-        case .recents:
-            return recentItems.count
-        case .food:
-            return foodItems.count
-        }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let sectionKind = SectionHeaderKind(rawValue: indexPath.section) else { return .init() }
-    
-        switch sectionKind {
-        case .recents:
-            let cell = collectionView.dequeueCell(CodeBaseHorizontalCollectionViewCell.self, for: indexPath)
-            cell.configuration(foodItems[indexPath.item])
-            return cell
-        case .food:
-            let cell = collectionView.dequeueCell(CodeBaseGridCollectionViewCell.self, for: indexPath)
-            cell.configuration(foodItems[indexPath.item])
-            return cell
-        }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let sectionKind = SectionHeaderKind(rawValue: indexPath.section) else { return }
-        switch sectionKind {
-        case .recents:
-            break
-        case .food:
-            let cell = collectionView.dequeueCell(CodeBaseGridCollectionViewCell.self, for: indexPath)
-            print(cell.lbTitle.text ?? "" + "쉐이크!")
-            cell.shake()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                cell.stopShaking()
-            }
-        }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        guard let sectionKind = SectionHeaderKind(rawValue: indexPath.section) else { return .init() }
-        switch sectionKind {
-        case .recents:
-            let cell = collectionView.dequeueSupplementaryView(CodeBaseHorizontalCollectionReuseableView.self, ofKind: UICollectionView.elementKindSectionHeader, for: indexPath)
-            cell.configuration(sectionKind.description)
-            cell.btEdit.eventPublisher.sink { [weak self] _ in
-                self?.recentItems.removeAll()
-                self?.collectionView.reloadData()
-            }.store(in: &cancellables)
-            return cell
-            
-        case .food:
-            let cell = collectionView.dequeueSupplementaryView(CodeBaseGridCollectionReusableView.self, ofKind: UICollectionView.elementKindSectionHeader, for: indexPath)
-            cell.configuration(sectionKind.description)
-            cell.btEdit.eventPublisher.sink { [weak self] _ in
-                self?.collectionView.performBatchUpdates {
-                    if let items = self?.foodItems {
-                        self?.foodItems.removeAll()
-                        
-                        let indexPaths = items.enumerated().map { index, element in
-                            IndexPath(item: index, section: indexPath.section)
-                        }
-                        self?.collectionView.deleteItems(at: indexPaths)
-                    }
-                } completion: { [weak self] _ in
-                    self?.collectionView.numberOfItems(inSection: indexPath.item)
-                }
-            }.store(in: &cancellables)
-            
-            return cell
-        }
-    }
-}
+//extension CodeBaseCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+//    func numberOfSections(in collectionView: UICollectionView) -> Int {
+//        return SectionHeaderKind.allCases.count
+//    }
+//    
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        guard let sectionKind = SectionHeaderKind(rawValue: section) else { return 0 }
+//        switch sectionKind {
+//        case .recents:
+//            return recentItems.count
+//        case .food:
+//            return foodItems.count
+//        }
+//    }
+//    
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        guard let sectionKind = SectionHeaderKind(rawValue: indexPath.section) else { return .init() }
+//    
+//        switch sectionKind {
+//        case .recents:
+//            let cell = collectionView.dequeueCell(CodeBaseHorizontalCollectionViewCell.self, for: indexPath)
+//            cell.configuration(foodItems[indexPath.item])
+//            return cell
+//        case .food:
+//            let cell = collectionView.dequeueCell(CodeBaseGridCollectionViewCell.self, for: indexPath)
+//            cell.configuration(foodItems[indexPath.item])
+//            return cell
+//        }
+//    }
+//    
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        guard let sectionKind = SectionHeaderKind(rawValue: indexPath.section) else { return }
+//        switch sectionKind {
+//        case .recents:
+//            break
+//        case .food:
+//            let cell = collectionView.dequeueCell(CodeBaseGridCollectionViewCell.self, for: indexPath)
+//            print(cell.lbTitle.text ?? "" + "쉐이크!")
+//            cell.shake()
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+//                cell.stopShaking()
+//            }
+//        }
+//    }
+//    
+//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+//        guard let sectionKind = SectionHeaderKind(rawValue: indexPath.section) else { return .init() }
+//        switch sectionKind {
+//        case .recents:
+//            let cell = collectionView.dequeueSupplementaryView(CodeBaseHorizontalCollectionReuseableView.self, ofKind: UICollectionView.elementKindSectionHeader, for: indexPath)
+//            cell.configuration(sectionKind.description)
+//            cell.btEdit.eventPublisher.sink { [weak self] _ in
+//                self?.recentItems.removeAll()
+//                self?.collectionView.reloadData()
+//            }.store(in: &cancellables)
+//            return cell
+//            
+//        case .food:
+//            let cell = collectionView.dequeueSupplementaryView(CodeBaseGridCollectionReusableView.self, ofKind: UICollectionView.elementKindSectionHeader, for: indexPath)
+//            cell.configuration(sectionKind.description)
+//            cell.btEdit.eventPublisher.sink { [weak self] _ in
+//                self?.collectionView.performBatchUpdates {
+//                    if let items = self?.foodItems {
+//                        self?.foodItems.removeAll()
+//                        
+//                        let indexPaths = items.enumerated().map { index, element in
+//                            IndexPath(item: index, section: indexPath.section)
+//                        }
+//                        self?.collectionView.deleteItems(at: indexPaths)
+//                    }
+//                } completion: { [weak self] _ in
+//                    self?.collectionView.numberOfItems(inSection: indexPath.item)
+//                }
+//            }.store(in: &cancellables)
+//            
+//            return cell
+//        }
+//    }
+//}
