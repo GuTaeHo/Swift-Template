@@ -53,7 +53,7 @@ class CodeBaseHorizontalCollectionViewCell: UICollectionViewCell, UICodeBasable 
     
     func bindViews() { }
 
-    func configuration(_ item: Category) {
-        lbTitle.text = item.title
+    func configuration(_ item: String) {
+        lbTitle.text = item
     }
 }
