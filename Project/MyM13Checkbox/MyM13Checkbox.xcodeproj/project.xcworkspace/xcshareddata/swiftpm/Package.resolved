@@ -1,0 +1,33 @@
+{
+  "originHash" : "dfab8541faeda6a46b9363e3a6f788931defd93ea09f48ffc492da6d487fa0d5",
+  "pins" : [
+    {
+      "identity" : "m13checkbox",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Marxon13/M13Checkbox.git",
+      "state" : {
+        "revision" : "96ff6c8862db87095315480a56dcebe51e15dac8",
+        "version" : "3.4.1"
+      }
+    },
+    {
+      "identity" : "snapkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SnapKit/SnapKit",
+      "state" : {
+        "revision" : "2842e6e84e82eb9a8dac0100ca90d9444b0307f4",
+        "version" : "5.7.1"
+      }
+    },
+    {
+      "identity" : "then",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/devxoul/Then",
+      "state" : {
+        "revision" : "d41ef523faef0f911369f79c0b96815d9dbb6d7a",
+        "version" : "3.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}
