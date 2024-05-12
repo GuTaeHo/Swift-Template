@@ -45,12 +45,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0561428C29B1B1FB006C711F /* customrecognizer */ = {
+		0561428C29B1B1FB006C711F /* CustomRecognizer */ = {
 			isa = PBXGroup;
 			children = (
 				0561428D29B1B213006C711F /* TapGestureRecognizer.swift */,
 			);
-			path = customrecognizer;
+			path = CustomRecognizer;
 			sourceTree = "<group>";
 		};
 		05D2FEB129B1AFFB005A23EB = {
@@ -72,51 +72,51 @@
 		05D2FEBC29B1AFFB005A23EB /* MyUIGestureRecognizer */ = {
 			isa = PBXGroup;
 			children = (
-				0561428C29B1B1FB006C711F /* customrecognizer */,
-				05D2FED129B1B026005A23EB /* extension */,
-				05D2FED229B1B02C005A23EB /* viewcontroller */,
-				05D2FED329B1B03B005A23EB /* storyboard */,
-				05D2FED429B1B046005A23EB /* resource */,
+				0561428C29B1B1FB006C711F /* CustomRecognizer */,
+				05D2FED129B1B026005A23EB /* Extension */,
+				05D2FED229B1B02C005A23EB /* ViewController */,
+				05D2FED329B1B03B005A23EB /* Storyboard */,
+				05D2FED429B1B046005A23EB /* Resource */,
 				05D2FEBD29B1AFFB005A23EB /* AppDelegate.swift */,
 				05D2FEBF29B1AFFB005A23EB /* SceneDelegate.swift */,
 			);
 			path = MyUIGestureRecognizer;
 			sourceTree = "<group>";
 		};
-		05D2FED129B1B026005A23EB /* extension */ = {
+		05D2FED129B1B026005A23EB /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				0561428A29B1B149006C711F /* UIView.swift */,
 				0561428F29B1B5E4006C711F /* UIColor.swift */,
 				0561429129B1B66E006C711F /* UIViewController.swift */,
 			);
-			path = extension;
+			path = Extension;
 			sourceTree = "<group>";
 		};
-		05D2FED229B1B02C005A23EB /* viewcontroller */ = {
+		05D2FED229B1B02C005A23EB /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				05D2FEC129B1AFFB005A23EB /* ViewController.swift */,
 			);
-			path = viewcontroller;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
-		05D2FED329B1B03B005A23EB /* storyboard */ = {
+		05D2FED329B1B03B005A23EB /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
 				05D2FEC329B1AFFB005A23EB /* Main.storyboard */,
 				05D2FEC829B1AFFC005A23EB /* LaunchScreen.storyboard */,
 			);
-			path = storyboard;
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		05D2FED429B1B046005A23EB /* resource */ = {
+		05D2FED429B1B046005A23EB /* Resource */ = {
 			isa = PBXGroup;
 			children = (
 				05D2FEC629B1AFFC005A23EB /* Assets.xcassets */,
 				05D2FECB29B1AFFC005A23EB /* Info.plist */,
 			);
-			path = resource;
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,7 +147,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					05D2FEB929B1AFFB005A23EB = {
 						CreatedOnToolsVersion = 14.2;
@@ -226,6 +226,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -258,6 +259,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -272,7 +274,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -286,6 +288,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -318,6 +321,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -326,7 +330,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -345,7 +349,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L8WFLHVUYX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyUIGestureRecognizer/resource/Info.plist;
+				INFOPLIST_FILE = MyUIGestureRecognizer/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -376,7 +380,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L8WFLHVUYX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyUIGestureRecognizer/resource/Info.plist;
+				INFOPLIST_FILE = MyUIGestureRecognizer/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
