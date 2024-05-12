@@ -26,7 +26,12 @@ class CodeBaseCollectionViewController: UIViewController {
         }
     }
     
-    private var recentItems: [Category] = [.init(title: "감자", isShowDivide: true), .init(title: "퀘사디아", isShowDivide: false)]
+    enum Item: Hashable {
+        case firstSection(String)
+        case secondSection(Category)
+    }
+    
+    private var recentItems: [String] = ["감자", "퀘사디아"]
     
     private var foodItems: [Category] = [
         .init(title: "감자", isShowDivide: true),
@@ -44,12 +49,12 @@ class CodeBaseCollectionViewController: UIViewController {
     var cancellables: Set<AnyCancellable> = []
     
     
-    var dataSource: UICollectionViewDiffableDataSource<SectionHeaderKind, Category>!
+    var dataSource: UICollectionViewDiffableDataSource<SectionHeaderKind, Item>!
     
     func configureDataSource() {
         // 수평 셀 등록
         let horizontalCellRegistration = UICollectionView.CellRegistration
-        <CodeBaseHorizontalCollectionViewCell, Category> { (cell, indexPath, item) in
+        <CodeBaseHorizontalCollectionViewCell, String> { (cell, indexPath, item) in
             // Populate the cell with our item description.
             cell.configuration(item)
         }
@@ -90,15 +95,15 @@ class CodeBaseCollectionViewController: UIViewController {
         }
         
         // ✅ DiffableDataSource 생성
-        dataSource = UICollectionViewDiffableDataSource<SectionHeaderKind, Category>(collectionView: collectionView) {
-            (collectionView: UICollectionView, indexPath: IndexPath, identifier: Category) -> UICollectionViewCell? in
+        dataSource = UICollectionViewDiffableDataSource<SectionHeaderKind, Item>(collectionView: collectionView) {
+            (collectionView: UICollectionView, indexPath: IndexPath, item: Item) -> UICollectionViewCell? in
             guard let sectionKind = SectionHeaderKind(rawValue: indexPath.section) else { return nil }
             
             switch sectionKind {
             case .recents:
-                return collectionView.dequeueConfiguredReusableCell(using: horizontalCellRegistration, for: indexPath, item: identifier)
+                return collectionView.dequeueConfiguredReusableCell(using: horizontalCellRegistration, for: indexPath, item: item)
             case .food:
-                return collectionView.dequeueConfiguredReusableCell(using: gridCellRegistration, for: indexPath, item: identifier)
+                return collectionView.dequeueConfiguredReusableCell(using: gridCellRegistration, for: indexPath, item: item)
             }
         }
         
@@ -117,7 +122,7 @@ class CodeBaseCollectionViewController: UIViewController {
     
     func initSnapShot() {
         // ✅ 새로운 snapshot 생성
-        var snapshot = NSDiffableDataSourceSnapshot<SectionHeaderKind, Category>()
+        var snapshot = NSDiffableDataSourceSnapshot<SectionHeaderKind, Item>()
         snapshot.appendSections([.recents, .food])
         snapshot.appendItems(recentItems)
         snapshot.appendItems(foodItems)
