@@ -38,9 +38,14 @@ class PanGestureModalViewController: UIViewController {
             $0.center.equalToSuperview()
         }
         
-        closeButton.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide).inset(32)
-            $0.leading.equalTo(view.snp.leading).inset(12)
+        // MARK: safeAreaInsets 은 viewDidLoad 단계에서 정상적으로 할당 되지않는다. (= .zero)
+        // UIWindow 의 safeAreaInsets 을 가져와서 제약조건에 할당한다.
+        // + UIView의 window 프로퍼티 또한 viewDidLoad 단계에서 정상적으로 할당 되지않는다.
+        // UIScene 의 UIWindow 를 획득함으로써 앱이 초기화될 때 버튼의 위치를 특정할 수 있다.
+        closeButton.snp.remakeConstraints {
+            $0.size.equalTo(50)
+            $0.top.equalTo(window?.safeAreaInsets.top ?? 0)
+            $0.leading.equalTo(view.snp.leading).inset(3)
         }
     }
     

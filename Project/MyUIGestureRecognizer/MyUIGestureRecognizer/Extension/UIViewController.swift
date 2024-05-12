@@ -51,4 +51,9 @@ extension UIViewController {
             }
         }
     }
+
+    /// SceneDelegate 에 할당된 UIWindow 객체 반환
+    var window: UIWindow? {
+        (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first
+    }
 }
