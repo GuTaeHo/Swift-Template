@@ -17,6 +17,10 @@
 		05D2FEC529B1AFFB005A23EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05D2FEC329B1AFFB005A23EB /* Main.storyboard */; };
 		05D2FEC729B1AFFC005A23EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05D2FEC629B1AFFC005A23EB /* Assets.xcassets */; };
 		05D2FECA29B1AFFC005A23EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05D2FEC829B1AFFC005A23EB /* LaunchScreen.storyboard */; };
+		606EF1C92BF110990022DA12 /* PanGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606EF1C82BF110990022DA12 /* PanGestureViewController.swift */; };
+		606EF1CC2BF110B00022DA12 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 606EF1CB2BF110B00022DA12 /* Then */; };
+		606EF1CF2BF110C10022DA12 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 606EF1CE2BF110C10022DA12 /* SnapKit */; };
+		606EF1D22BF111CC0022DA12 /* PanGestureModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606EF1D12BF111CC0022DA12 /* PanGestureModalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,8 @@
 		05D2FEC629B1AFFC005A23EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05D2FEC929B1AFFC005A23EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05D2FECB29B1AFFC005A23EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		606EF1C82BF110990022DA12 /* PanGestureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanGestureViewController.swift; sourceTree = "<group>"; };
+		606EF1D12BF111CC0022DA12 /* PanGestureModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanGestureModalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				606EF1CC2BF110B00022DA12 /* Then in Frameworks */,
+				606EF1CF2BF110C10022DA12 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +104,7 @@
 		05D2FED229B1B02C005A23EB /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				606EF1D02BF111B70022DA12 /* PanGesture */,
 				05D2FEC129B1AFFB005A23EB /* ViewController.swift */,
 			);
 			path = ViewController;
@@ -119,6 +128,15 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		606EF1D02BF111B70022DA12 /* PanGesture */ = {
+			isa = PBXGroup;
+			children = (
+				606EF1C82BF110990022DA12 /* PanGestureViewController.swift */,
+				606EF1D12BF111CC0022DA12 /* PanGestureModalViewController.swift */,
+			);
+			path = PanGesture;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +153,10 @@
 			dependencies = (
 			);
 			name = MyUIGestureRecognizer;
+			packageProductDependencies = (
+				606EF1CB2BF110B00022DA12 /* Then */,
+				606EF1CE2BF110C10022DA12 /* SnapKit */,
+			);
 			productName = MyGesture;
 			productReference = 05D2FEBA29B1AFFB005A23EB /* MyUIGestureRecognizer.app */;
 			productType = "com.apple.product-type.application";
@@ -163,6 +185,10 @@
 				Base,
 			);
 			mainGroup = 05D2FEB129B1AFFB005A23EB;
+			packageReferences = (
+				606EF1CA2BF110B00022DA12 /* XCRemoteSwiftPackageReference "Then" */,
+				606EF1CD2BF110C10022DA12 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 05D2FEBB29B1AFFB005A23EB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -195,7 +221,9 @@
 				0561429029B1B5E4006C711F /* UIColor.swift in Sources */,
 				05D2FEC229B1AFFB005A23EB /* ViewController.swift in Sources */,
 				0561428E29B1B213006C711F /* TapGestureRecognizer.swift in Sources */,
+				606EF1D22BF111CC0022DA12 /* PanGestureModalViewController.swift in Sources */,
 				05D2FEBE29B1AFFB005A23EB /* AppDelegate.swift in Sources */,
+				606EF1C92BF110990022DA12 /* PanGestureViewController.swift in Sources */,
 				05D2FEC029B1AFFB005A23EB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,6 +452,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		606EF1CA2BF110B00022DA12 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		606EF1CD2BF110C10022DA12 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		606EF1CB2BF110B00022DA12 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 606EF1CA2BF110B00022DA12 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		606EF1CE2BF110C10022DA12 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 606EF1CD2BF110C10022DA12 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 05D2FEB229B1AFFB005A23EB /* Project object */;
 }

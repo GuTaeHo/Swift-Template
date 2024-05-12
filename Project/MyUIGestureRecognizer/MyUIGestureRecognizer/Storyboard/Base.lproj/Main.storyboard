@@ -150,7 +150,7 @@
         <!--팬 제스쳐 테스트 뷰 컨트롤러-->
         <scene sceneID="62e-3a-rEf">
             <objects>
-                <viewController id="dPS-tz-zK4" sceneMemberID="viewController">
+                <viewController id="dPS-tz-zK4" customClass="PanGestureViewController" customModule="MyUIGestureRecognizer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ncY-Ze-wvl">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -169,6 +169,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="팬 제스쳐 테스트 뷰 컨트롤러" id="2Ns-xo-zL2"/>
+                    <connections>
+                        <outlet property="showModal" destination="2uF-dS-vQA" id="67p-z8-VQY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kgn-fG-cDa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
