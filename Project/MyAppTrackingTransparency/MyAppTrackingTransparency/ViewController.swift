@@ -28,25 +28,53 @@ import AppTrackingTransparency
 
 
 class ViewController: UIViewController {
+    var trackingAuthorizationStatusLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .systemFont(ofSize: 24)
+        label.text = "앱 추적 허용 여부: 확인불가"
+        return label
+    }()
+    
+    var advertisingIdentifierLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .systemFont(ofSize: 24)
+        label.text = "IDFA: 확인불가"
+        label.numberOfLines = 0
+        return label
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        view.addSubview(trackingAuthorizationStatusLabel)
+        view.addSubview(advertisingIdentifierLabel)
+        
+        NSLayoutConstraint.activate([
+            trackingAuthorizationStatusLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 128),
+            trackingAuthorizationStatusLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 18),
+            trackingAuthorizationStatusLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -18),
+            advertisingIdentifierLabel.topAnchor.constraint(equalTo: trackingAuthorizationStatusLabel.bottomAnchor, constant: 12),
+            advertisingIdentifierLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 18),
+            advertisingIdentifierLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -18),
+        ])
+        
         switch ATTrackingManager.trackingAuthorizationStatus {
         case .authorized:
-            print("추적 허용됨")
+            trackingAuthorizationStatusLabel.text = "앱 추적 허용 여부: 허용됨"
         case .denied:
-            print("추적 거부됨")
+            trackingAuthorizationStatusLabel.text = "앱 추적 허용 여부: 거부됨"
         case .notDetermined:
-            print("추적 허용됨")
+            trackingAuthorizationStatusLabel.text = "앱 추적 허용 여부: 허용됨"
         case .restricted:
-            print("추적 제한됨")
+            trackingAuthorizationStatusLabel.text = "앱 추적 허용 여부: 제한됨"
         @unknown default:
             break
         }
         // IDFA 획득
-        print("IDFA -> \(ASIdentifierManager.shared().advertisingIdentifier.uuidString)")
+        advertisingIdentifierLabel.text = "IDFA: \(ASIdentifierManager.shared().advertisingIdentifier.uuidString)"
     }
 }
 
