@@ -9,20 +9,20 @@ import UIKit
 import WebKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet var etUrlView: UITextField!
+    @IBOutlet var textField: UITextField!
     @IBOutlet var myActivityIndicator: UIActivityIndicatorView!
     @IBOutlet var myWebView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadWebPage("http://muangs.kr")
-        etUrlView.text = "naver.com"
+        
+        loadWebPage("http://naver.com")
     }
     
     func loadWebPage(_ url: String) {
-        if let url = canOpen(urlString: url) {
-            let myRequest = URLRequest(url: url)
+        if canOpen(urlString: url) {
+            textField.text = url
+            let myRequest = URLRequest(url: url.toURL!)
             myWebView.navigationDelegate = self
             myWebView.addObserver(self, forKeyPath: #keyPath(WKWebView.isLoading), options: .new, context: nil)
             myWebView.load(myRequest)
@@ -45,9 +45,9 @@ class ViewController: UIViewController {
     }
 
     // 입력된 URL로 이동
-    @IBAction func btForward(_ sender: UIButton) {
-        let myUrl = checkUrl(etUrlView.text!)
-        etUrlView.text = ""
+    @IBAction func btSearch(_ sender: UIButton) {
+        let myUrl = checkUrl(textField.text!)
+        textField.resignFirstResponder()
         loadWebPage(myUrl)
     }
     
@@ -61,13 +61,13 @@ class ViewController: UIViewController {
         return strUrl
     }
     
-    func canOpen(urlString: String?) -> URL? {
+    func canOpen(urlString: String?) -> Bool {
         if let urlString = urlString {
             if let url = URL(string: urlString) {
-                return UIApplication.shared.canOpenURL(url) == true ? url : nil
+                return UIApplication.shared.canOpenURL(url) == true ? true : false
             }
         }
-        return nil
+        return false
     }
     
     // 첫 번째 사이트로 이동
@@ -80,13 +80,13 @@ class ViewController: UIViewController {
         loadWebPage("http://blog.2sam.net")
     }
     
-    // 웹 뷰에 특정 HTML 코드 전달
+    // 세 번째 사이트로 이동 > 웹 뷰에 HTML 코드 그림
     @IBAction func btnLoadHtmlString(_ sender: UIButton) {
         let htmlString = "<h1> HTML String </h1><p> String 변수를 이용한 웹 페이지 </p><p><a href = \"http://2sam.net\">sam</a>으로 이동</p>"
         myWebView.loadHTMLString(htmlString, baseURL: nil)
     }
     
-    // 웹 뷰에 HTML 파일을 전달
+    // 네 번째 사이트로 이동 > 웹 뷰에 HTML 파일 전달
     @IBAction func btnSendHtmlFile(_ sender: UIButton) {
         let filePath = Bundle.main.path(forResource: "htmlView", ofType: "html")
         let myUrl = URL(fileURLWithPath: filePath!)
@@ -131,12 +131,12 @@ extension ViewController: WKNavigationDelegate {
     
     // 네비게이션이 시작되기전, 임시 허가를 받은 상태에 호출
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        print("didStartProvisionalNavigation -> \(navigation.description)")
+        print("didStartProvisionalNavigation -> \(navigation.debugDescription)")
     }
     
     // 컨텐츠를 수신하기 시작했을 때 호출 (콘텐츠 사이즈를 구할 수 있음)
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
-        print("didCommit -> \(navigation.description)")
+        print("didCommit -> \(navigation.debugDescription)")
         print(myWebView.scrollView.contentSize)
     }
     
