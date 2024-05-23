@@ -9,20 +9,20 @@ import UIKit
 import WebKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet var etUrlView: UITextField!
+    @IBOutlet var textField: UITextField!
     @IBOutlet var myActivityIndicator: UIActivityIndicatorView!
     @IBOutlet var myWebView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadWebPage("http://muangs.kr")
-        etUrlView.text = "naver.com"
+        
+        loadWebPage("http://naver.com")
     }
     
     func loadWebPage(_ url: String) {
-        if let url = canOpen(urlString: url) {
-            let myRequest = URLRequest(url: url)
+        if canOpen(urlString: url) {
+            textField.text = url
+            let myRequest = URLRequest(url: url.toURL!)
             myWebView.navigationDelegate = self
             myWebView.addObserver(self, forKeyPath: #keyPath(WKWebView.isLoading), options: .new, context: nil)
             myWebView.load(myRequest)
@@ -43,11 +43,11 @@ class ViewController: UIViewController {
             }
         }
     }
-
+    
     // 입력된 URL로 이동
-    @IBAction func btForward(_ sender: UIButton) {
-        let myUrl = checkUrl(etUrlView.text!)
-        etUrlView.text = ""
+    @IBAction func btSearch(_ sender: UIButton) {
+        let myUrl = checkUrl(textField.text!)
+        textField.resignFirstResponder()
         loadWebPage(myUrl)
     }
     
@@ -61,13 +61,13 @@ class ViewController: UIViewController {
         return strUrl
     }
     
-    func canOpen(urlString: String?) -> URL? {
+    func canOpen(urlString: String?) -> Bool {
         if let urlString = urlString {
             if let url = URL(string: urlString) {
-                return UIApplication.shared.canOpenURL(url) == true ? url : nil
+                return UIApplication.shared.canOpenURL(url) == true ? true : false
             }
         }
-        return nil
+        return false
     }
     
     // 첫 번째 사이트로 이동
@@ -80,13 +80,13 @@ class ViewController: UIViewController {
         loadWebPage("http://blog.2sam.net")
     }
     
-    // 웹 뷰에 특정 HTML 코드 전달
+    // 세 번째 사이트로 이동 > 웹 뷰에 HTML 코드 그림
     @IBAction func btnLoadHtmlString(_ sender: UIButton) {
         let htmlString = "<h1> HTML String </h1><p> String 변수를 이용한 웹 페이지 </p><p><a href = \"http://2sam.net\">sam</a>으로 이동</p>"
         myWebView.loadHTMLString(htmlString, baseURL: nil)
     }
     
-    // 웹 뷰에 HTML 파일을 전달
+    // 네 번째 사이트로 이동 > 웹 뷰에 HTML 파일 전달
     @IBAction func btnSendHtmlFile(_ sender: UIButton) {
         let filePath = Bundle.main.path(forResource: "htmlView", ofType: "html")
         let myUrl = URL(fileURLWithPath: filePath!)
@@ -115,6 +115,10 @@ class ViewController: UIViewController {
     }
 }
 
+extension ViewController: WKUIDelegate {
+    
+}
+
 /**
  참고 - https://sujinnaljin.medium.com/swift-wknavigationdelegate-%EB%A9%94%EC%84%9C%EB%93%9C-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0-4ba7d97063aa
  */
@@ -129,18 +133,44 @@ extension ViewController: WKNavigationDelegate {
         print("navigationResponse -> \(navigationResponse), didBecome > \(download)")
     }
     
-    // 네비게이션이 시작되기전, 임시 허가를 받은 상태에 호출
-    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        print("didStartProvisionalNavigation -> \(navigation.description)")
+    // 1. 네비게이션 전 원하는 설정 및 허용여부를 결정한다.
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, preferences: WKWebpagePreferences, decisionHandler: @escaping (WKNavigationActionPolicy, WKWebpagePreferences) -> Void) {
+        //        지정된 action 정보를 기반으로, 새 콘텐츠로 이동할 수 있는 권한을 요청합니다.
+        //        이 메서드를 통해 navigation request 를 허용하거나 거부할 수 있습니다.
+        //
+        //        웹뷰는 인터렉션 발생 후 내용을 로드하기 전에 이 메서드 먼저 호출하며,
+        //        구현부에서는 항상 아래와 같은 decisionHandler 블록을 실행합니다.
+        
+        //        decisionHandler(.allow)
+        //        decisionHandler(.cancel)
+        //        decisionHandler(.download)
+        let preferences = WKWebpagePreferences()
+        preferences.preferredContentMode = .mobile
+        preferences.allowsContentJavaScript = true
+        decisionHandler(.allow, preferences)
     }
     
-    // 컨텐츠를 수신하기 시작했을 때 호출 (콘텐츠 사이즈를 구할 수 있음)
+    // 2. 네비게이션이 시작되기전 호출된다.
+    // ex) 인디케이터를 표시한다.
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        print("didStartProvisionalNavigation -> \(navigation.debugDescription)")
+    }
+    
+    // 3. 네비게이션이 끝난 후, 콘텐츠 로딩을 허용할지 결정한다.
+    func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
+        //        navigation request 에 대한 응답을 받고 난 후, 새 콘텐츠로 이동할 수 있는 권한을 요청합니다.
+        decisionHandler(.allow)
+    }
+    
+    // 4. 웹 뷰가 컨텐츠를 수신하기 시작했을 때 호출
+    // ex) 웹 뷰의 사이즈가 결정된다.
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
-        print("didCommit -> \(navigation.description)")
+        print("didCommit -> \(navigation.debugDescription)")
         print(myWebView.scrollView.contentSize)
     }
     
-    // 웹 페이지 로딩이 완전히 끝났을 경우 호출
+    // 5. 웹 페이지 로딩이 완전히 끝났을 경우 호출된다.
+    // ex) 인디케이터를 제거한다.
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         print("didFinish 호출 및 콘텐츠 사이즈 -> \(myWebView.scrollView.contentSize)")
         /// `didFinish 가 호출`되었다고 하더라도 실제 콘텐츠 사이즈가 지정된 것은 아닌듯 함.
@@ -176,20 +206,20 @@ extension ViewController: WKNavigationDelegate {
         }
     }
     
+    // 6. 웹 프로세스가 종료되었을 때 호출
+    func webViewWebContentProcessDidTerminate(_ webView: WKWebView) {
+        print("webViewWebContentProcessDidTerminate")
+    }
+    
     // 초기 네비게이션 프로세스 중 오류 발생 시 호출
     // MARK: 탐색 중 오류가 아닌, URL 이 잘못되었거나, 네트워크 연결이 해제되었을 때 등 웹페이지 자체를 불러오지 못한 경우
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
         print("didFailProvisionalNavigation > \(navigation.debugDescription), withError > \(error.localizedDescription)")
     }
     
-    // 네비게이션 중 오류가 발생하면 호출 (didCommit 이후)
+    // 웹 페이지를 불러오는데 실패한 경우 호출된다. (didCommit 이후)
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         print("didFail > \(navigation.description), error > \(error.localizedDescription)")
-    }
-    
-    // 웹 프로세스가 종료되었을 때 호출
-    func webViewWebContentProcessDidTerminate(_ webView: WKWebView) {
-        print("webViewWebContentProcessDidTerminate")
     }
 }
 

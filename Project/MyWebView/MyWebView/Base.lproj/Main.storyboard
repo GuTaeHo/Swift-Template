@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -33,7 +33,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Go"/>
                                                 <connections>
-                                                    <action selector="btForward:" destination="BYZ-38-t0r" eventType="touchUpInside" id="duj-MC-6MY"/>
+                                                    <action selector="btSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZQb-fi-fmB"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -132,9 +132,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="etUrlView" destination="OJn-cP-gBC" id="ebG-aZ-lLR"/>
                         <outlet property="myActivityIndicator" destination="cWC-Dz-Dg3" id="7YF-Jc-aP5"/>
                         <outlet property="myWebView" destination="2JA-6G-pJQ" id="6oQ-QS-Z1p"/>
+                        <outlet property="textField" destination="OJn-cP-gBC" id="eee-Jg-HZy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
