@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  MyWebView
+//  MyWKWebView
 //
 //  Created by 구태호 on 2021/11/24.
 //
