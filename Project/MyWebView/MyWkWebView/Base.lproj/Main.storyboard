@@ -3,7 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,129 +12,112 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyWebView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyWkWebView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="LRK-Xx-fWr">
-                                <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="lL1-10-2Fb">
+                                <rect key="frame" x="0.0" y="47" width="390" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Kk1-Az-apO"/>
+                                </connections>
+                            </searchBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="gib-ja-5Nd">
+                                <rect key="frame" x="0.0" y="103" width="390" height="34.333333333333343"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Xda-cJ-rud">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="34.333333333333336"/>
-                                        <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OJn-cP-gBC">
-                                                <rect key="frame" x="12" y="0.0" width="308" height="34.333333333333336"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Raa-cQ-7aY">
-                                                <rect key="frame" x="332" y="0.0" width="46" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Go"/>
-                                                <connections>
-                                                    <action selector="btSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZQb-fi-fmB"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="12" bottom="0.0" trailing="12"/>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="gib-ja-5Nd">
-                                        <rect key="frame" x="0.0" y="40.333333333333329" width="390" height="34.333333333333329"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJy-EH-37i">
-                                                <rect key="frame" x="12" y="0.0" width="84.666666666666671" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Site 1"/>
-                                                <connections>
-                                                    <action selector="btnSiteOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="syA-Lz-Kci"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZT-fg-jDx">
-                                                <rect key="frame" x="105.66666666666669" y="0.0" width="85" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Site 2"/>
-                                                <connections>
-                                                    <action selector="btnStieTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rHd-Ak-KNl"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqz-jf-Enq">
-                                                <rect key="frame" x="199.66666666666666" y="0.0" width="84.666666666666657" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="html"/>
-                                                <connections>
-                                                    <action selector="btnLoadHtmlString:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DQ7-wg-qek"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wC-3C-DI9">
-                                                <rect key="frame" x="293.33333333333331" y="0.0" width="84.666666666666686" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="File"/>
-                                                <connections>
-                                                    <action selector="btnSendHtmlFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D0X-lD-WPa"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="12" bottom="0.0" trailing="12"/>
-                                    </stackView>
-                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2JA-6G-pJQ">
-                                        <rect key="frame" x="0.0" y="80.666666666666686" width="390" height="576.66666666666652"/>
-                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <wkWebViewConfiguration key="configuration">
-                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                            <wkPreferences key="preferences"/>
-                                        </wkWebViewConfiguration>
-                                    </wkWebView>
-                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A0R-GZ-1D2">
-                                        <rect key="frame" x="0.0" y="663.33333333333337" width="390" height="99.666666666666629"/>
-                                        <items>
-                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="CGU-s4-ORW"/>
-                                            <barButtonItem systemItem="stop" id="9UJ-Ir-9lh">
-                                                <connections>
-                                                    <action selector="btnStop:" destination="BYZ-38-t0r" id="7H3-ln-a35"/>
-                                                </connections>
-                                            </barButtonItem>
-                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="z7V-Q9-Tof"/>
-                                            <barButtonItem systemItem="refresh" id="tIW-Y5-alB">
-                                                <connections>
-                                                    <action selector="btnRefresh:" destination="BYZ-38-t0r" id="yse-YV-che"/>
-                                                </connections>
-                                            </barButtonItem>
-                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="jXm-uW-fFK"/>
-                                            <barButtonItem systemItem="rewind" id="LX1-JH-lke">
-                                                <connections>
-                                                    <action selector="btnGoBack:" destination="BYZ-38-t0r" id="uZt-gs-djG"/>
-                                                </connections>
-                                            </barButtonItem>
-                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="oeD-Mu-jCF"/>
-                                            <barButtonItem systemItem="fastForward" id="8vW-RJ-K8d">
-                                                <connections>
-                                                    <action selector="btnGoForward:" destination="BYZ-38-t0r" id="7Dw-2N-Rbr"/>
-                                                </connections>
-                                            </barButtonItem>
-                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="TX1-cI-Kmh"/>
-                                        </items>
-                                    </toolbar>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJy-EH-37i">
+                                        <rect key="frame" x="12" y="0.0" width="84.666666666666671" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Site 1"/>
+                                        <connections>
+                                            <action selector="btnSiteOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="syA-Lz-Kci"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZT-fg-jDx">
+                                        <rect key="frame" x="105.66666666666669" y="0.0" width="85" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Site 2"/>
+                                        <connections>
+                                            <action selector="btnStieTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rHd-Ak-KNl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqz-jf-Enq">
+                                        <rect key="frame" x="199.66666666666666" y="0.0" width="84.666666666666657" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="html"/>
+                                        <connections>
+                                            <action selector="btnLoadHtmlString:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DQ7-wg-qek"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wC-3C-DI9">
+                                        <rect key="frame" x="293.33333333333331" y="0.0" width="84.666666666666686" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="File"/>
+                                        <connections>
+                                            <action selector="btnSendHtmlFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D0X-lD-WPa"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="12" bottom="0.0" trailing="12"/>
                             </stackView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="cWC-Dz-Dg3">
-                                <rect key="frame" x="178" y="423" width="34" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yZ5-Xf-a4R">
+                                <rect key="frame" x="0.0" y="103" width="390" height="658"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A0R-GZ-1D2">
+                                <rect key="frame" x="0.0" y="761" width="390" height="49"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="CGU-s4-ORW"/>
+                                    <barButtonItem systemItem="stop" id="9UJ-Ir-9lh">
+                                        <connections>
+                                            <action selector="btnStop:" destination="BYZ-38-t0r" id="7H3-ln-a35"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="z7V-Q9-Tof"/>
+                                    <barButtonItem systemItem="refresh" id="tIW-Y5-alB">
+                                        <connections>
+                                            <action selector="btnRefresh:" destination="BYZ-38-t0r" id="yse-YV-che"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="jXm-uW-fFK"/>
+                                    <barButtonItem systemItem="rewind" id="LX1-JH-lke">
+                                        <connections>
+                                            <action selector="btnGoBack:" destination="BYZ-38-t0r" id="uZt-gs-djG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="oeD-Mu-jCF"/>
+                                    <barButtonItem systemItem="fastForward" id="8vW-RJ-K8d">
+                                        <connections>
+                                            <action selector="btnGoForward:" destination="BYZ-38-t0r" id="7Dw-2N-Rbr"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="TX1-cI-Kmh"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="LRK-Xx-fWr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8Kw-4w-FGc"/>
-                            <constraint firstItem="LRK-Xx-fWr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="I6E-i9-ZAI"/>
-                            <constraint firstAttribute="trailing" secondItem="LRK-Xx-fWr" secondAttribute="trailing" id="fX1-Wg-IkZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LRK-Xx-fWr" secondAttribute="bottom" id="k6R-VV-IHf"/>
+                            <constraint firstItem="yZ5-Xf-a4R" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0IA-yL-DDh"/>
+                            <constraint firstItem="lL1-10-2Fb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6TS-E1-0lC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lL1-10-2Fb" secondAttribute="trailing" id="76n-EM-JfY"/>
+                            <constraint firstItem="yZ5-Xf-a4R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FKf-N0-VFy"/>
+                            <constraint firstItem="yZ5-Xf-a4R" firstAttribute="top" secondItem="gib-ja-5Nd" secondAttribute="top" id="O0v-dC-mKa"/>
+                            <constraint firstItem="A0R-GZ-1D2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="R02-tD-Wr6"/>
+                            <constraint firstItem="gib-ja-5Nd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SYz-Xy-f2S"/>
+                            <constraint firstItem="lL1-10-2Fb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TfY-TA-C3Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A0R-GZ-1D2" secondAttribute="trailing" id="e1E-QV-OTK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gib-ja-5Nd" secondAttribute="trailing" id="ecq-Co-Efe"/>
+                            <constraint firstItem="A0R-GZ-1D2" firstAttribute="top" secondItem="yZ5-Xf-a4R" secondAttribute="bottom" id="gbl-UM-Yxr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="A0R-GZ-1D2" secondAttribute="bottom" id="nbD-NC-0Ws"/>
+                            <constraint firstItem="gib-ja-5Nd" firstAttribute="top" secondItem="lL1-10-2Fb" secondAttribute="bottom" id="tYl-XP-BeB"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="myActivityIndicator" destination="cWC-Dz-Dg3" id="7YF-Jc-aP5"/>
-                        <outlet property="myWebView" destination="2JA-6G-pJQ" id="6oQ-QS-Z1p"/>
-                        <outlet property="textField" destination="OJn-cP-gBC" id="eee-Jg-HZy"/>
+                        <outlet property="proxyView" destination="yZ5-Xf-a4R" id="g12-hq-8qi"/>
+                        <outlet property="searchBar" destination="lL1-10-2Fb" id="yHA-56-UCO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

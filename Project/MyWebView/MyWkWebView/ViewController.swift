@@ -7,25 +7,47 @@
 
 import UIKit
 import WebKit
+import Then
+import SnapKit
 
 class ViewController: UIViewController {
-    @IBOutlet var textField: UITextField!
-    @IBOutlet var myActivityIndicator: UIActivityIndicatorView!
-    @IBOutlet var myWebView: WKWebView!
+    @IBOutlet var searchBar: UISearchBar!
+    @IBOutlet var proxyView: UIView!
+    lazy var webView: WKWebView? = nil
+    
+    let responseName = "response"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadWebPage("http://naver.com")
+        initViews()
+        loadWebPage("http://muangs.kr")
+    }
+    
+    func initViews() {
+        let contentController = WKUserContentController()
+        let configuration = WKWebViewConfiguration()
+        contentController.add(WebViewLeakAvoider(delegate: self), name: responseName)
+        configuration.userContentController = contentController
+        
+        webView = WKWebView(frame: .zero, configuration: configuration)
+        webView!.navigationDelegate = self
+        webView!.uiDelegate = self
+        webView!.addObserver(self, forKeyPath: #keyPath(WKWebView.isLoading), options: .new, context: nil)
+        
+        view.addSubview(webView!)
+        webView!.snp.makeConstraints {
+            $0.edges.equalTo(proxyView)
+        }
+        
+        searchBar.delegate = self
     }
     
     func loadWebPage(_ url: String) {
         if canOpen(urlString: url) {
-            textField.text = url
+            searchBar.text = url
             let myRequest = URLRequest(url: url.toURL!)
-            myWebView.navigationDelegate = self
-            myWebView.addObserver(self, forKeyPath: #keyPath(WKWebView.isLoading), options: .new, context: nil)
-            myWebView.load(myRequest)
+            webView?.load(myRequest)
         } else {
             print("URL 이 유효하지 않습니다")
         }
@@ -34,21 +56,14 @@ class ViewController: UIViewController {
     // 로딩 여부 옵저빙
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "loading" {
-            if myWebView.isLoading {
-                myActivityIndicator.startAnimating()
-                myActivityIndicator.isHidden = false
-            } else {
-                myActivityIndicator.stopAnimating()
-                myActivityIndicator.isHidden = true
-            }
+//            if webView?.isLoading == true {
+//                myActivityIndicator.startAnimating()
+//                myActivityIndicator.isHidden = false
+//            } else {
+//                myActivityIndicator.stopAnimating()
+//                myActivityIndicator.isHidden = true
+//            }
         }
-    }
-    
-    // 입력된 URL로 이동
-    @IBAction func btSearch(_ sender: UIButton) {
-        let myUrl = checkUrl(textField.text!)
-        textField.resignFirstResponder()
-        loadWebPage(myUrl)
     }
     
     func checkUrl(_ url: String) -> String {
@@ -83,7 +98,7 @@ class ViewController: UIViewController {
     // 세 번째 사이트로 이동 > 웹 뷰에 HTML 코드 그림
     @IBAction func btnLoadHtmlString(_ sender: UIButton) {
         let htmlString = "<h1> HTML String </h1><p> String 변수를 이용한 웹 페이지 </p><p><a href = \"http://2sam.net\">sam</a>으로 이동</p>"
-        myWebView.loadHTMLString(htmlString, baseURL: nil)
+        webView?.loadHTMLString(htmlString, baseURL: nil)
     }
     
     // 네 번째 사이트로 이동 > 웹 뷰에 HTML 파일 전달
@@ -91,27 +106,35 @@ class ViewController: UIViewController {
         let filePath = Bundle.main.path(forResource: "htmlView", ofType: "html")
         let myUrl = URL(fileURLWithPath: filePath!)
         let myRequest = URLRequest(url: myUrl)
-        myWebView.load(myRequest)
+        webView?.load(myRequest)
     }
     
     // 정지
     @IBAction func btnStop(_ sender: UIBarButtonItem) {
-        myWebView.stopLoading()
+        webView?.stopLoading()
     }
     
     // 새로고침
     @IBAction func btnRefresh(_ sender: UIBarButtonItem) {
-        myWebView.reload()
+        webView?.reload()
     }
     
     // 뒤로가기
     @IBAction func btnGoBack(_ sender: UIBarButtonItem) {
-        myWebView.goBack()
+        webView?.goBack()
     }
     
     // 다음으로
     @IBAction func btnGoForward(_ sender: UIBarButtonItem) {
-        myWebView.goForward()
+        webView?.goForward()
+    }
+}
+
+extension ViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let myUrl = checkUrl(searchBar.text!)
+        searchBar.resignFirstResponder()
+        loadWebPage(myUrl)
     }
 }
 
@@ -166,13 +189,13 @@ extension ViewController: WKNavigationDelegate {
     // ex) 웹 뷰의 사이즈가 결정된다.
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
         print("didCommit -> \(navigation.debugDescription)")
-        print(myWebView.scrollView.contentSize)
+        print(webView.scrollView.contentSize)
     }
     
     // 5. 웹 페이지 로딩이 완전히 끝났을 경우 호출된다.
     // ex) 인디케이터를 제거한다.
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        print("didFinish 호출 및 콘텐츠 사이즈 -> \(myWebView.scrollView.contentSize)")
+        print("didFinish 호출 및 콘텐츠 사이즈 -> \(webView.scrollView.contentSize)")
         /// `didFinish 가 호출`되었다고 하더라도 실제 콘텐츠 사이즈가 지정된 것은 아닌듯 함.
         /// 0.1초... 후 웹 콘텐츠 사이즈를 측정하면 정확한 값이 측정되지만, 완벽한 방법은 아님.
         /// 자바 스크립트의 DOM 구조 내부를 검색하는 `document` 와 콘텐츠의 전체높이를 가진 `document.documentElement.scrollHeight` 키워드를
@@ -255,6 +278,16 @@ extension ViewController {
                     }
                 }
             }
+        }
+    }
+}
+
+extension ViewController: WKScriptMessageHandler {
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        if message.name == responseName {
+            let alert = UIAlertController(title: "자바스크립트 브리지", message: "\(message.body)", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "확인", style: .default) { _ in })
+            present(alert, animated: true)
         }
     }
 }
