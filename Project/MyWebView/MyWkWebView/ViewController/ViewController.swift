@@ -87,17 +87,17 @@ class ViewController: UIViewController {
     
     // 첫 번째 사이트로 이동
     @IBAction func btnSiteOne(_ sender: UIButton) {
-        loadWebPage("http://fallinmac.tistory.com")
+        loadWebPage("http://naver.com")
     }
     
     // 두 번째 사이트로 이동
     @IBAction func btnStieTwo(_ sender: UIButton) {
-        loadWebPage("http://blog.2sam.net")
+        loadWebPage("http://muangs.kr")
     }
     
     // 세 번째 사이트로 이동 > 웹 뷰에 HTML 코드 그림
     @IBAction func btnLoadHtmlString(_ sender: UIButton) {
-        let htmlString = "<h1> HTML String </h1><p> String 변수를 이용한 웹 페이지 </p><p><a href = \"http://2sam.net\">sam</a>으로 이동</p>"
+        let htmlString = "<h1> HTML String </h1><p> String 변수를 이용한 웹 페이지 </p><p><a href = \"http://muangs.kr\">muang</a>으로 이동</p>"
         webView?.loadHTMLString(htmlString, baseURL: nil)
     }
     
