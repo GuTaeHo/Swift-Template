@@ -47,6 +47,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05F75F272C000EDD00DD6281 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				05CD13492BFC6C4600FC6383 /* String+URL.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		05F75F282C000EE800DD6281 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AFE9698D274E3ECA008DB0A8 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		05F75F292C000EF300DD6281 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AFE9698B274E3ECA008DB0A8 /* SceneDelegate.swift */,
+				AFE96989274E3ECA008DB0A8 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		05F75F2A2C000F0700DD6281 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				AFE9699D274F134F008DB0A8 /* htmlView.html */,
+				AFE96992274E3ECC008DB0A8 /* Assets.xcassets */,
+				AFE96997274E3ECC008DB0A8 /* Info.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		05F75F2B2C000F1400DD6281 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				AFE9698F274E3ECA008DB0A8 /* Main.storyboard */,
+				AFE96994274E3ECC008DB0A8 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		05F75F2C2C000F2600DD6281 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				60A4ED002BFF9B34000B22A8 /* WebViewLeakAvoider.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		AFE9697D274E3ECA008DB0A8 = {
 			isa = PBXGroup;
 			children = (
@@ -66,16 +118,12 @@
 		AFE96988274E3ECA008DB0A8 /* MyWkWebView */ = {
 			isa = PBXGroup;
 			children = (
-				AFE96989274E3ECA008DB0A8 /* AppDelegate.swift */,
-				AFE9698B274E3ECA008DB0A8 /* SceneDelegate.swift */,
-				AFE9698D274E3ECA008DB0A8 /* ViewController.swift */,
-				AFE9699D274F134F008DB0A8 /* htmlView.html */,
-				AFE9698F274E3ECA008DB0A8 /* Main.storyboard */,
-				AFE96992274E3ECC008DB0A8 /* Assets.xcassets */,
-				AFE96994274E3ECC008DB0A8 /* LaunchScreen.storyboard */,
-				AFE96997274E3ECC008DB0A8 /* Info.plist */,
-				05CD13492BFC6C4600FC6383 /* String+URL.swift */,
-				60A4ED002BFF9B34000B22A8 /* WebViewLeakAvoider.swift */,
+				05F75F2C2C000F2600DD6281 /* Util */,
+				05F75F2B2C000F1400DD6281 /* Storyboard */,
+				05F75F2A2C000F0700DD6281 /* Resource */,
+				05F75F292C000EF300DD6281 /* App */,
+				05F75F282C000EE800DD6281 /* ViewController */,
+				05F75F272C000EDD00DD6281 /* Extension */,
 			);
 			path = MyWkWebView;
 			sourceTree = "<group>";
@@ -317,7 +365,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L8WFLHVUYX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyWKWebView/Info.plist;
+				INFOPLIST_FILE = MyWKWebView/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -347,7 +395,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L8WFLHVUYX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyWKWebView/Info.plist;
+				INFOPLIST_FILE = MyWKWebView/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
