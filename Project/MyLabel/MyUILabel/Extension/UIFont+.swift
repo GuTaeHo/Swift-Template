@@ -1,6 +1,6 @@
 //
 //  UIFont+.swift
-//  MyLabel
+//  MyUILabel
 //
 //  Created by 구태호 on 1/31/24.
 //

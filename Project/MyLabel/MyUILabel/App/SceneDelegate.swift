@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  MyLabel
+//  MyUILabel
 //
 //  Created by 구태호 on 2023/07/04.
 //

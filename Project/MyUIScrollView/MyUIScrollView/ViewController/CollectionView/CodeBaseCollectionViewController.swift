@@ -101,9 +101,11 @@ class CodeBaseCollectionViewController: UIViewController {
             
             switch sectionKind {
             case .recents:
-                return collectionView.dequeueConfiguredReusableCell(using: horizontalCellRegistration, for: indexPath, item: item)
+                return .init()
+//                return collectionView.dequeueConfiguredReusableCell(using: horizontalCellRegistration, for: indexPath, item: item) ?? ""
             case .food:
-                return collectionView.dequeueConfiguredReusableCell(using: gridCellRegistration, for: indexPath, item: item)
+                return .init()
+//                return collectionView.dequeueConfiguredReusableCell(using: gridCellRegistration, for: indexPath, item: item)
             }
         }
         
@@ -124,8 +126,8 @@ class CodeBaseCollectionViewController: UIViewController {
         // ✅ 새로운 snapshot 생성
         var snapshot = NSDiffableDataSourceSnapshot<SectionHeaderKind, Item>()
         snapshot.appendSections([.recents, .food])
-        snapshot.appendItems(recentItems)
-        snapshot.appendItems(foodItems)
+//        snapshot.appendItems(recentItems)
+//        snapshot.appendItems(foodItems)
         
         // ✅ "DiffiableDataSource야, 업데이트한 snapshot을 apply해서 View를 다시 그려줘"
         dataSource.apply(snapshot, animatingDifferences: true)
