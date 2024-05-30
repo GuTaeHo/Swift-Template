@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		05F13FF32A68118E00FD9B7C /* MySplitViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySplitViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05F13FF32A68118E00FD9B7C /* MyUISplitViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyUISplitViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05F13FF62A68118E00FD9B7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05F13FF82A68118E00FD9B7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		05F13FFA2A68118E00FD9B7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		05F13FEA2A68118E00FD9B7C = {
 			isa = PBXGroup;
 			children = (
-				05F13FF52A68118E00FD9B7C /* MySplitViewController */,
+				05F13FF52A68118E00FD9B7C /* MyUISplitViewController */,
 				05F13FF42A68118E00FD9B7C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,12 +48,12 @@
 		05F13FF42A68118E00FD9B7C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				05F13FF32A68118E00FD9B7C /* MySplitViewController.app */,
+				05F13FF32A68118E00FD9B7C /* MyUISplitViewController.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		05F13FF52A68118E00FD9B7C /* MySplitViewController */ = {
+		05F13FF52A68118E00FD9B7C /* MyUISplitViewController */ = {
 			isa = PBXGroup;
 			children = (
 				05F13FF62A68118E00FD9B7C /* AppDelegate.swift */,
@@ -64,15 +64,15 @@
 				05F140012A68118F00FD9B7C /* LaunchScreen.storyboard */,
 				05F140042A68118F00FD9B7C /* Info.plist */,
 			);
-			path = MySplitViewController;
+			path = MyUISplitViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		05F13FF22A68118E00FD9B7C /* MySplitViewController */ = {
+		05F13FF22A68118E00FD9B7C /* MyUISplitViewController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 05F140072A68118F00FD9B7C /* Build configuration list for PBXNativeTarget "MySplitViewController" */;
+			buildConfigurationList = 05F140072A68118F00FD9B7C /* Build configuration list for PBXNativeTarget "MyUISplitViewController" */;
 			buildPhases = (
 				05F13FEF2A68118E00FD9B7C /* Sources */,
 				05F13FF02A68118E00FD9B7C /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = MySplitViewController;
+			name = MyUISplitViewController;
 			productName = MySplitViewController;
-			productReference = 05F13FF32A68118E00FD9B7C /* MySplitViewController.app */;
+			productReference = 05F13FF32A68118E00FD9B7C /* MyUISplitViewController.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 05F13FEE2A68118E00FD9B7C /* Build configuration list for PBXProject "MySplitViewController" */;
+			buildConfigurationList = 05F13FEE2A68118E00FD9B7C /* Build configuration list for PBXProject "MyUISplitViewController" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				05F13FF22A68118E00FD9B7C /* MySplitViewController */,
+				05F13FF22A68118E00FD9B7C /* MyUISplitViewController */,
 			);
 		};
 /* End PBXProject section */
@@ -289,7 +289,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L8WFLHVUYX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MySplitViewController/Info.plist;
+				INFOPLIST_FILE = MyUISplitViewController/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -318,7 +318,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L8WFLHVUYX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MySplitViewController/Info.plist;
+				INFOPLIST_FILE = MyUISplitViewController/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -341,7 +341,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		05F13FEE2A68118E00FD9B7C /* Build configuration list for PBXProject "MySplitViewController" */ = {
+		05F13FEE2A68118E00FD9B7C /* Build configuration list for PBXProject "MyUISplitViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				05F140052A68118F00FD9B7C /* Debug */,
@@ -350,7 +350,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		05F140072A68118F00FD9B7C /* Build configuration list for PBXNativeTarget "MySplitViewController" */ = {
+		05F140072A68118F00FD9B7C /* Build configuration list for PBXNativeTarget "MyUISplitViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				05F140082A68118F00FD9B7C /* Debug */,
