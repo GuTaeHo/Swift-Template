@@ -26,7 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		054BB5862A54523700930C33 /* MyLabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		054BB5862A54523700930C33 /* MyUILabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyUILabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		054BB5892A54523700930C33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		054BB58B2A54523700930C33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		054BB58D2A54523700930C33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 		054BB57D2A54523700930C33 = {
 			isa = PBXGroup;
 			children = (
-				054BB5882A54523700930C33 /* MyLabel */,
+				054BB5882A54523700930C33 /* MyUILabel */,
 				054BB5872A54523700930C33 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,12 +68,12 @@
 		054BB5872A54523700930C33 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				054BB5862A54523700930C33 /* MyLabel.app */,
+				054BB5862A54523700930C33 /* MyUILabel.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		054BB5882A54523700930C33 /* MyLabel */ = {
+		054BB5882A54523700930C33 /* MyUILabel */ = {
 			isa = PBXGroup;
 			children = (
 				0578FF012B71D65200FBCFD8 /* Resource */,
@@ -85,7 +85,7 @@
 				054BB59D2A54524900930C33 /* CommonLabel.swift */,
 				0578FEFB2B71D00100FBCFD8 /* NSAttrributedStringTestViewController.swift */,
 			);
-			path = MyLabel;
+			path = MyUILabel;
 			sourceTree = "<group>";
 		};
 		0578FEFF2B71D63100FBCFD8 /* Extension */ = {
@@ -124,9 +124,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		054BB5852A54523700930C33 /* MyLabel */ = {
+		054BB5852A54523700930C33 /* MyUILabel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 054BB59A2A54523800930C33 /* Build configuration list for PBXNativeTarget "MyLabel" */;
+			buildConfigurationList = 054BB59A2A54523800930C33 /* Build configuration list for PBXNativeTarget "MyUILabel" */;
 			buildPhases = (
 				054BB5822A54523700930C33 /* Sources */,
 				054BB5832A54523700930C33 /* Frameworks */,
@@ -136,9 +136,9 @@
 			);
 			dependencies = (
 			);
-			name = MyLabel;
+			name = MyUILabel;
 			productName = MyLabel;
-			productReference = 054BB5862A54523700930C33 /* MyLabel.app */;
+			productReference = 054BB5862A54523700930C33 /* MyUILabel.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -156,7 +156,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 054BB5812A54523700930C33 /* Build configuration list for PBXProject "MyLabel" */;
+			buildConfigurationList = 054BB5812A54523700930C33 /* Build configuration list for PBXProject "MyUILabel" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -169,7 +169,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				054BB5852A54523700930C33 /* MyLabel */,
+				054BB5852A54523700930C33 /* MyUILabel */,
 			);
 		};
 /* End PBXProject section */
@@ -353,7 +353,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L8WFLHVUYX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyLabel/Resource/Info.plist;
+				INFOPLIST_FILE = MyUILabel/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -382,7 +382,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L8WFLHVUYX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyLabel/Resource/Info.plist;
+				INFOPLIST_FILE = MyUILabel/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -405,7 +405,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		054BB5812A54523700930C33 /* Build configuration list for PBXProject "MyLabel" */ = {
+		054BB5812A54523700930C33 /* Build configuration list for PBXProject "MyUILabel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				054BB5982A54523800930C33 /* Debug */,
@@ -414,7 +414,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		054BB59A2A54523800930C33 /* Build configuration list for PBXNativeTarget "MyLabel" */ = {
+		054BB59A2A54523800930C33 /* Build configuration list for PBXNativeTarget "MyUILabel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				054BB59B2A54523800930C33 /* Debug */,

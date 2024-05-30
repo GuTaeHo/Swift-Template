@@ -10,13 +10,14 @@ import Then
 import SnapKit
 
 class TableViewController: BaseViewController, UICodeBasable {
-    lazy var testTableView = UITableView(frame: .zero, style: .insetGrouped).then {
+    lazy var testTableView = UITableView(frame: .zero, style: .plain).then {
         $0.delegate = self
         $0.dataSource = self
         $0.registerCell(fromNib: TestTableViewCell.self)
         (0...100).forEach {
             items.append("\($0). 텍스트")
         }
+        $0.contentInset = .init(top: 12, left: 18, bottom: 12, right: 18)
     }
     
     lazy var headerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 80)).then {
@@ -63,7 +64,7 @@ class TableViewController: BaseViewController, UICodeBasable {
         }
         footerView.addSubview(footerLabel)
         
-        testTableView.setHeaderView(headerView)
+//        testTableView.setHeaderView(headerView)
         testTableView.tableFooterView = footerView
     }
     
@@ -74,6 +75,12 @@ class TableViewController: BaseViewController, UICodeBasable {
         headerSecondButton.titleLabel?.adjustsFontSizeToFitWidth = true
         
         testTableView.reloadData()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        print(testTableView.contentLayoutGuide.frame(in: '))
     }
     
     func bindViews() {

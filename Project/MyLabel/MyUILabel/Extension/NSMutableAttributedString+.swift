@@ -1,6 +1,6 @@
 //
 //  NSMutableAttributedString+.swift
-//  MyLabel
+//  MyUILabel
 //
 //  Created by 구태호 on 2/6/24.
 //
