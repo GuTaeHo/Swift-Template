@@ -16,6 +16,7 @@
 		056CDD212A9B795000723CA3 /* PresentAnimationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056CDD202A9B795000723CA3 /* PresentAnimationTransition.swift */; };
 		056CDD232A9B7BD300723CA3 /* DismissAnimationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056CDD222A9B7BD300723CA3 /* DismissAnimationTransition.swift */; };
 		056CDD252A9B7C4D00723CA3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056CDD242A9B7C4D00723CA3 /* SecondViewController.swift */; };
+		05E6C1462C0ECB000032516B /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E6C1452C0ECB000032516B /* GreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		056CDD202A9B795000723CA3 /* PresentAnimationTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentAnimationTransition.swift; sourceTree = "<group>"; };
 		056CDD222A9B7BD300723CA3 /* DismissAnimationTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissAnimationTransition.swift; sourceTree = "<group>"; };
 		056CDD242A9B7C4D00723CA3 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		05E6C1452C0ECB000032516B /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				056CDD202A9B795000723CA3 /* PresentAnimationTransition.swift */,
 				056CDD222A9B7BD300723CA3 /* DismissAnimationTransition.swift */,
 				056CDD242A9B7C4D00723CA3 /* SecondViewController.swift */,
+				05E6C1452C0ECB000032516B /* GreenViewController.swift */,
 			);
 			path = MyTransitionsViewController;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				056CDD232A9B7BD300723CA3 /* DismissAnimationTransition.swift in Sources */,
 				056CDD0D2A9B790200723CA3 /* AppDelegate.swift in Sources */,
 				056CDD0F2A9B790200723CA3 /* SceneDelegate.swift in Sources */,
+				05E6C1462C0ECB000032516B /* GreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

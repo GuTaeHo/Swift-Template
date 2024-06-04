@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,15 +12,15 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyTransitionsViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="MyTransitionsViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFn-zb-Mc2">
-                                <rect key="frame" x="159" y="408.66666666666669" width="75" height="35"/>
+                                <rect key="frame" x="102.66666666666669" y="408.66666666666669" width="188" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Button">
+                                <buttonConfiguration key="configuration" style="gray" title="Present Transition VC">
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                     <color key="baseBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
@@ -27,11 +28,21 @@
                                     <action selector="transition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kRI-Zr-l2g"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1E-yP-X40">
+                                <rect key="frame" x="155" y="795" width="83" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Present"/>
+                                <connections>
+                                    <segue destination="d9e-zA-BIc" kind="show" id="ugW-vq-lvB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="QFn-zb-Mc2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WuF-FL-wpe"/>
+                            <constraint firstItem="G1E-yP-X40" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="12" id="ZL3-JE-L3Q"/>
+                            <constraint firstItem="G1E-yP-X40" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ex7-5l-UKl"/>
                             <constraint firstItem="QFn-zb-Mc2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="p4s-wa-VA1"/>
                         </constraints>
                     </view>
@@ -41,7 +52,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="4"/>
+            <point key="canvasLocation" x="136.64122137404578" y="3.5211267605633805"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="yKD-LF-dr7">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="d9e-zA-BIc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2UX-aF-Txc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2CK-IK-HLw">
+                                <rect key="frame" x="155" y="805" width="83" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Present"/>
+                                <connections>
+                                    <segue destination="fPI-5S-x0F" kind="show" id="qJq-Cr-g4A"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yJs-ys-MPA"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <constraints>
+                            <constraint firstItem="yJs-ys-MPA" firstAttribute="bottom" secondItem="2CK-IK-HLw" secondAttribute="bottom" constant="12" id="mtX-yg-HND"/>
+                            <constraint firstItem="2CK-IK-HLw" firstAttribute="centerX" secondItem="2UX-aF-Txc" secondAttribute="centerX" id="tXh-hH-t5b"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="WDq-Vx-Wpv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hu9-3J-yoz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135" y="765"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="KZG-47-Q9x">
@@ -52,9 +93,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFU-0n-kmf">
-                                <rect key="frame" x="159" y="403.66666666666669" width="75" height="35"/>
+                                <rect key="frame" x="102" y="403.66666666666669" width="189" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Button">
+                                <buttonConfiguration key="configuration" style="gray" title="Dismiss Transition VC">
                                     <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 </buttonConfiguration>
@@ -77,13 +118,82 @@
             </objects>
             <point key="canvasLocation" x="927" y="4"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Noh-6P-qPo">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="fPI-5S-x0F" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Ge-0m-cTH">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYW-cL-dDU">
+                                <rect key="frame" x="155" y="805" width="83" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Present"/>
+                                <connections>
+                                    <segue destination="Lgp-3h-sed" kind="show" id="Vi6-G1-11E"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CVa-Sf-fDQ"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="CVa-Sf-fDQ" firstAttribute="bottom" secondItem="tYW-cL-dDU" secondAttribute="bottom" constant="12" id="Bx3-fb-dEZ"/>
+                            <constraint firstItem="tYW-cL-dDU" firstAttribute="centerX" secondItem="5Ge-0m-cTH" secondAttribute="centerX" id="nEg-Tv-cw6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Blq-yS-7ui"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z62-Hc-NIA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="926" y="765"/>
+        </scene>
+        <!--Green View Controller-->
+        <scene sceneID="SwH-8O-OEh">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Lgp-3h-sed" customClass="GreenViewController" customModule="MyTransitionsViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Vy-14-OZw">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9Y-IG-NmJ">
+                                <rect key="frame" x="115.66666666666669" y="408.66666666666669" width="162" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="DismissToRootViC"/>
+                                <connections>
+                                    <action selector="dismissToRootVC:" destination="Lgp-3h-sed" eventType="touchUpInside" id="GlM-TP-6pD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ugD-Ay-2vd"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="n9Y-IG-NmJ" firstAttribute="centerX" secondItem="1Vy-14-OZw" secondAttribute="centerX" id="cRo-8j-7uv"/>
+                            <constraint firstItem="n9Y-IG-NmJ" firstAttribute="centerY" secondItem="1Vy-14-OZw" secondAttribute="centerY" id="hgt-DH-jok"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cj7-hg-GSp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sKq-mZ-kfV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1724" y="765"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

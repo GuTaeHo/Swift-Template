@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
     
     @IBAction func transition(_ sender: Any) {
@@ -19,6 +20,12 @@ class ViewController: UIViewController {
         vc2.transitioningDelegate = self // <- 델리게이트 conform
         vc2.modalPresentationStyle = .fullScreen
         self.present(vc2, animated: true)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        print(view.window?.rootViewController is ViewController)
     }
 }
 
