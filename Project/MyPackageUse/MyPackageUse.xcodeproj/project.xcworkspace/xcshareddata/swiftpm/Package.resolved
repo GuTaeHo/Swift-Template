@@ -1,0 +1,15 @@
+{
+  "originHash" : "50c3b61642bca0d5e02acc9a2001fae45a5bc548fe607c69e20642e767c54743",
+  "pins" : [
+    {
+      "identity" : "mypackage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/GuTaeHo/MyPackage.git",
+      "state" : {
+        "revision" : "825774daaed1c0f0cf59b213ebf95df8faf52d8f",
+        "version" : "1.0.2"
+      }
+    }
+  ],
+  "version" : 3
+}
