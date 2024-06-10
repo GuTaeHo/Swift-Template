@@ -58,13 +58,34 @@ class ViewController: UIViewController {
     
     func binding() {
         btGetPhotos.addAction(.init(handler: { [weak self] _ in
-            Task { await self?.manager.checkPermissions }
+            Task { await self?.manager.requestAuthorization }
         }), for: .touchUpInside)
     }
     
     func initData() {
         Task {
-            await manager.checkPermissions
+            await manager.requestAuthorization
+        }
+    }
+    
+    func moveSetting() {
+        let alertController = UIAlertController(title: "권한 거부됨", message: "앨범 접근이 거부 되었습니다.", preferredStyle: UIAlertController.Style.alert)
+        
+        let okAction = UIAlertAction(title: "설정으로 이동", style: .default) { (action) in
+            guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+                return
+            }
+            if UIApplication.shared.canOpenURL(settingsUrl) {
+                UIApplication.shared.open(settingsUrl)
+            }
+        }
+        let cancelAction = UIAlertAction(title: "확인", style: .cancel, handler: nil)
+        
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        
+        Task {
+            self.present(alertController, animated: true, completion: nil)
         }
     }
 }
@@ -94,7 +115,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension ViewController: PhotosDelegate {
-    func statusChange(_ status: PhotosManager.AuthorizationStatus) {
+    func statusChange(_ status: PHAuthorizationStatus) {
         switch status {
         case .authorized:
             Task {
@@ -104,6 +125,17 @@ extension ViewController: PhotosDelegate {
                 }
                 self.gridCollectionView.reloadData()
             }
+        case .limited:
+            // TODO: PHPickerViewController 로 이미지 가져오기 구현
+            Task {
+                let photos = await manager.photos
+                if let photos {
+                    self.gridImages = photos
+                }
+                self.gridCollectionView.reloadData()
+            }
+        case .denied:
+            moveSetting()
         default: break
         }
     }

@@ -12,7 +12,7 @@ import Combine
 
 protocol PhotosDelegate: AnyObject {
     /// 사진 접근 권한 변경 시 호출
-    func statusChange(_ status: PhotosManager.AuthorizationStatus)
+    func statusChange(_ status: PHAuthorizationStatus)
     /// 사진 추가 시 호출
 }
 
@@ -30,26 +30,14 @@ class PhotosManager {
     }
     
     /// 현재 접근 권한 반환
-    public var checkPermissions: AuthorizationStatus {
+    public var requestAuthorization: PHAuthorizationStatus {
         get async {
             let result = await withCheckedContinuation { continuation in
                 PHPhotoLibrary.requestAuthorization(for: .readWrite) { continuation.resume(returning: $0) }
             }
             
-            switch result {
-            case .notDetermined:
-                delegate?.statusChange(.notDetermined)
-                return AuthorizationStatus.notDetermined
-            case .restricted, .denied:
-                delegate?.statusChange(.rejected)
-                return AuthorizationStatus.rejected
-            case .authorized, .limited:
-                delegate?.statusChange(.authorized)
-                return AuthorizationStatus.authorized
-            @unknown default:
-                delegate?.statusChange(.rejected)
-                return AuthorizationStatus.rejected
-            }
+            delegate?.statusChange(result)
+            return result
         }
     }
     

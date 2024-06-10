@@ -35,7 +35,7 @@ class GridCollectionViewCell: UICollectionViewCell {
     }
     
     func configuration(_ item: PHAsset) {
-        PHImageManager.default().requestImage(for: item, targetSize: .init(width: self.bounds.width, height: self.bounds.height), contentMode: .aspectFill, options: nil) { [weak self] (image, dictionary) in
+        PHImageManager.default().requestImage(for: item, targetSize: .init(width: self.bounds.width * UIScreen.main.scale, height: self.bounds.height * UIScreen.main.scale), contentMode: .aspectFill, options: nil) { [weak self] (image, dictionary) in
             self?.ivThumbnail.image = image
         }
     }
