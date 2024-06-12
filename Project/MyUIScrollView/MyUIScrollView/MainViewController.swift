@@ -41,4 +41,10 @@ class MainViewController: UIViewController {
         vc.modalPresentationStyle = .fullScreen
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+    @IBAction func moveTableViewInScrollViewVC(_ sender: Any) {
+        let vc = TableViewInScrollView()
+        vc.modalPresentationStyle = .fullScreen
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
