@@ -20,12 +20,31 @@ class EscapingClosureTestNestedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // MARK: 클로저가 중첩으로 선언되어있더라도, (외부 변수를) 약하게 참조 한다면 순환참조가 일어나지않음
+        // MARK: 중첩된 클로저 내부에서 강한참조 시 순환참조가 발생한다.
+        // MARK: 해결방법은 강한참조를 제거 또는 중첩된 클로저에도 weak self 를 통해 약하게 참조.
+//        optionalClosure = { [weak self] in
+//            guard let self else { return }
+//            self.nestedOptionalClosure = {
+//                print(self.globalVariable ?? "")
+//            }
+//        }
+        
+        // 중첩된 클로저 해결
+        // 1. 약한 참조만 사용
         optionalClosure = { [weak self] in
             self?.nestedOptionalClosure = {
                 print(self?.globalVariable ?? "")
             }
         }
+        
+        // 2. 중첩된 클로저에서 약한 참조 추가
+//        optionalClosure = { [weak self] in
+//            guard let self else { return }
+//            self.nestedOptionalClosure = { [weak self] in
+//                guard let self else { return }
+//                print(self.globalVariable ?? "")
+//            }
+//        }
         
         optionalClosure?()
         nestedOptionalClosure?()
