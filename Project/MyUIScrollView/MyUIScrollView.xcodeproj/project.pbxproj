@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0532F2B32C1982B700EDCC76 /* SelfSizingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0532F2B22C1982B700EDCC76 /* SelfSizingTableView.swift */; };
+		0532F2B52C1983F900EDCC76 /* TableViewInScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0532F2B42C1983F900EDCC76 /* TableViewInScrollView.swift */; };
 		054D05652AE0200B0057C199 /* GridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D05642AE0200B0057C199 /* GridCollectionViewCell.swift */; };
 		057AB3D62C006DC600EF3639 /* SectionHeaderWithVariousTypeCellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AB3D32C006DC600EF3639 /* SectionHeaderWithVariousTypeCellsViewController.swift */; };
 		057AB3D72C006DC600EF3639 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AB3D42C006DC600EF3639 /* TableViewController.swift */; };
@@ -63,6 +65,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0532F2B22C1982B700EDCC76 /* SelfSizingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizingTableView.swift; sourceTree = "<group>"; };
+		0532F2B42C1983F900EDCC76 /* TableViewInScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewInScrollView.swift; sourceTree = "<group>"; };
 		054D05642AE0200B0057C199 /* GridCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCollectionViewCell.swift; sourceTree = "<group>"; };
 		057AB3D32C006DC600EF3639 /* SectionHeaderWithVariousTypeCellsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SectionHeaderWithVariousTypeCellsViewController.swift; path = ../../../../MyUITableView/MyUITableView/ViewController/SectionHeaderWithVariousTypeCellsViewController.swift; sourceTree = "<group>"; };
 		057AB3D42C006DC600EF3639 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ../../../../MyUITableView/MyUITableView/ViewController/TableViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 				057AB3D52C006DC600EF3639 /* ScrollViewWithHeaderFooterViewController.swift */,
 				057AB3D32C006DC600EF3639 /* SectionHeaderWithVariousTypeCellsViewController.swift */,
 				057AB3D42C006DC600EF3639 /* TableViewController.swift */,
+				0532F2B42C1983F900EDCC76 /* TableViewInScrollView.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 			children = (
 				60D468652BD026D700081F36 /* BaseViewController.swift */,
 				608B35C22BD15AF900BC6F78 /* BaseTableViewHeaderFooterView.swift */,
+				0532F2B22C1982B700EDCC76 /* SelfSizingTableView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -381,10 +387,12 @@
 				60D468662BD026D700081F36 /* BaseViewController.swift in Sources */,
 				05C8730B2AE3FCC800F5C2C7 /* UICollectionView+.swift in Sources */,
 				05C8730D2AE3FCF800F5C2C7 /* NSObject+.swift in Sources */,
+				0532F2B52C1983F900EDCC76 /* TableViewInScrollView.swift in Sources */,
 				60D468532BD0224E00081F36 /* ReviewInfomationTableViewCell.swift in Sources */,
 				60AAC7F12BD8025900D7771A /* CompositionalLayoutUtil.swift in Sources */,
 				60D468612BD022FD00081F36 /* Review.swift in Sources */,
 				60D468632BD0234600081F36 /* UITableView+.swift in Sources */,
+				0532F2B32C1982B700EDCC76 /* SelfSizingTableView.swift in Sources */,
 				60D468512BD0224E00081F36 /* ReviewHeaderFooterView.swift in Sources */,
 				05BFC7D62AC3164800F623BA /* SceneDelegate.swift in Sources */,
 				05BFC7EE2AC318CC00F623BA /* HorizontalScrollCollectionViewCell.swift in Sources */,
