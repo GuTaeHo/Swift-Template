@@ -18,20 +18,35 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
-        
-        /// `Async/Await 테스트`
+        // 버전 체크 요청
         Task {
-            let (version, message) = await versionViewModel.confirmWithUrlSession(url: "http://test.check.blossom.bumblebeecrew.com/")
-            
-            print("\(version), \(message)")
+            await versionViewModel.confirmWithUrlSession(url: "http://test.check.blossom.bumblebeecrew.com/")
         }
         
         bindingViews()
         initAction()
         // testCode()
         // jsonTypeMismatchTest()
+        
+//        /* 메인 큐 무거운 작업 테스트 */
+//        DispatchQueue.main.async {
+//            (0..<1000000).forEach {
+//                print("\($0)")
+//            }
+//        }
+//        
+//        Timer.publish(every: 1.0, on: .main, in: .common)
+//            .autoconnect()
+//            .scan(0) { counter, _ in
+//                counter + 1
+//            }.sink { [weak self] counter in
+//                if counter % 2 == 0 {
+//                    self?.btRequest.configuration?.title = "안녕!!"
+//                } else {
+//                    self?.btRequest.configuration?.title = "안녕??"
+//                }
+//            }.store(in: &cancelBag)
     }
     
     func bindingViews() {
@@ -39,6 +54,7 @@ class ViewController: UIViewController {
             // FIXME: 초기화 시 한번 호출됨...
             /// `MainActor`로 선언된 컨텍스트(UIView 나 UIViewController 같은 UIKit 속성들..) 내에서, Swift Concurrency 를 사용하면 시스템이 적절하게 MainThread 에 디스패치된다
             /// = 현재 스레드가 백그라운드 스레드인지 메인스레드인지 신경 쓸 필요없이 업데이트
+            self?.btRequest.configuration?.title = response.message
             print(Thread.isMainThread)
             Task {
                 self?.labelCollection[0].text = response.result?.iosCurrentVersion

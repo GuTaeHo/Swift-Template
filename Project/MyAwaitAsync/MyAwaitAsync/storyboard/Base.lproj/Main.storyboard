@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -60,9 +61,23 @@
                                             <constraint firstAttribute="height" constant="56" id="en5-UI-fZm"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="버전 체크"/>
                                     </button>
                                 </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gdT-Ko-v6w">
+                                <rect key="frame" x="0.0" y="283" width="393" height="58.333333333333314"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8i-xS-Skn">
+                                        <rect key="frame" x="18" y="12" width="357" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Delegate 테스트"/>
+                                        <connections>
+                                            <segue destination="qsa-7p-Szz" kind="show" id="5eN-Rd-Erj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="12" left="18" bottom="12" right="18"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -71,6 +86,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rHE-a9-4eG" secondAttribute="trailing" id="3vC-HX-jfY"/>
                             <constraint firstItem="rHE-a9-4eG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Igr-XC-1fF"/>
                             <constraint firstItem="rHE-a9-4eG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="K2b-g5-vDf"/>
+                            <constraint firstItem="gdT-Ko-v6w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Xg0-QN-PIp"/>
+                            <constraint firstItem="gdT-Ko-v6w" firstAttribute="top" secondItem="rHE-a9-4eG" secondAttribute="bottom" id="dps-Nc-hvX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gdT-Ko-v6w" secondAttribute="trailing" id="kXL-M0-bku"/>
                         </constraints>
                     </view>
                     <connections>
@@ -87,6 +105,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="129" y="4"/>
+        </scene>
+        <!--Delegate Test View Controller-->
+        <scene sceneID="fSm-vZ-XOO">
+            <objects>
+                <viewController id="qsa-7p-Szz" customClass="DelegateTestViewController" customModule="MyAwaitAsync" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7wD-hD-MmN">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="367-2L-Qc0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3Hg-tl-tzY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C9K-st-w9U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="938" y="4"/>
         </scene>
     </scenes>
     <resources>

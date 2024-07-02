@@ -10,7 +10,7 @@ import Combine
 
 
 class VersionViewModel: NSObject {
-    // @Published 어노테이션은 프로퍼티가 변경될 때 자동으로 변경됨을 호출
+    // @Published 어노테이션은 프로퍼티가 변경될 때 요소를 방출
     @Published var response = Response<Version>()
     var cancelBag = Set<AnyCancellable>()
     
@@ -21,7 +21,6 @@ class VersionViewModel: NSObject {
         request.httpMethod = "GET"
         request.setValue("0.6.0", forHTTPHeaderField: "appVersion")
         request.setValue("ios", forHTTPHeaderField: "OsType")
-        
         
         /// 전달한 URLRequest (또는 URL) 에 대한 (세션 데이터) 작업을 래핑한 publisher 를 리턴
         /// `publisher` 는 작업이 완료되면 데이터를 `발행`하거나, 실패한다면 `에러`와 함께 종료된다.
@@ -39,6 +38,7 @@ class VersionViewModel: NSObject {
             .store(in: &self.cancelBag)
     }
     
+    @discardableResult
     /// confirm 요청
     /// - Returns: version 정보 또는 서버 메시지
     func confirmWithUrlSession(url: String?) async -> (data: Version?, msg: String?) {
