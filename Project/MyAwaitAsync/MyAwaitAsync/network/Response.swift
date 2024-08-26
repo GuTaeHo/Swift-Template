@@ -45,11 +45,12 @@ struct Response<T: Codable>: Codable {
     }
     
     /// 서버 사양이 변경되어 JSON 형태가 변경된 경우 `keyNotFound, typeMismatch 에러`가 발생할 가능성이 있다.
-    /// 이 경우 init(from:) 메소드를 정의하여 예외처리를 진행해주면 된다.
+    /// 이 경우 init(decoder:) 메소드를 정의하여 예외처리를 진행해주면 된다.
     /**
      만약 Response.message 이 Int로 변경된 경우 (예외처리가 되지않은 경우에) `typeMismatch` 오류가 발생하지만,
-     init(from:) 처리가 되어있다면 해당 프로퍼티에만 nil 이 할당되게된다.
+     init(decoder:) 처리가 되어있다면 해당 프로퍼티에만 nil 이 할당되게된다.
      */
+    
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self._code = (try? container.decode(Int.self, forKey: ._code)) ?? CodeType.parseFailure.rawValue

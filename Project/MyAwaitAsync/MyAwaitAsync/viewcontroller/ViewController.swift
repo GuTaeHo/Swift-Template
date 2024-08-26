@@ -8,6 +8,12 @@
 import UIKit
 import Combine
 
+struct User: Codable {
+    var userId: Int
+    var title: String
+    var id: Int
+    var completed: Bool
+}
 
 class ViewController: UIViewController {
     @IBOutlet var labelCollection: [UILabel]!
@@ -24,29 +30,14 @@ class ViewController: UIViewController {
             await versionViewModel.confirmWithUrlSession(url: "http://test.check.blossom.bumblebeecrew.com/")
         }
         
+        requestUser { user, errorMsg in
+            print("\(user), \(errorMsg)")
+        }
         bindingViews()
         initAction()
         // testCode()
         // jsonTypeMismatchTest()
         
-//        /* 메인 큐 무거운 작업 테스트 */
-//        DispatchQueue.main.async {
-//            (0..<1000000).forEach {
-//                print("\($0)")
-//            }
-//        }
-//        
-//        Timer.publish(every: 1.0, on: .main, in: .common)
-//            .autoconnect()
-//            .scan(0) { counter, _ in
-//                counter + 1
-//            }.sink { [weak self] counter in
-//                if counter % 2 == 0 {
-//                    self?.btRequest.configuration?.title = "안녕!!"
-//                } else {
-//                    self?.btRequest.configuration?.title = "안녕??"
-//                }
-//            }.store(in: &cancelBag)
     }
     
     func bindingViews() {
@@ -74,6 +65,60 @@ class ViewController: UIViewController {
     
     @objc func requestVersion() {
         versionViewModel.requestVersion()
+    }
+    
+    func requestUser(completionHandler: @escaping (User?, String?) -> ()) {
+        let url = URL(string: "https://jsonplaceholder.typicode.com/todos/1")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                completionHandler(nil, error.localizedDescription)
+                return
+            }
+            
+            guard
+                let data,
+                let response = response as? HTTPURLResponse,
+                response.statusCode == 200
+            else {
+                completionHandler(nil, "response nil")
+                return
+            }
+            
+            guard let user = try? JSONDecoder().decode(User.self, from: data) else {
+                completionHandler(nil, "JSONDecoder Fail")
+                return
+            }
+            completionHandler(user, nil)
+        }
+        
+        task.resume()
+    }
+    
+    func requestUserWithAsync() async -> (User?, String?) {
+        let url = URL(string: "https://jsonplaceholder.typicode.com/todos/1")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        guard let (data, response) = try? await URLSession.shared.data(for: request) else {
+            return (nil, "request fail")
+        }
+        
+        guard
+            let response = response as? HTTPURLResponse,
+            response.statusCode == 200
+        else {
+            return (nil, "response nil")
+        }
+        
+        guard let user = try? JSONDecoder().decode(User.self, from: data) else {
+            return (nil, "JSONDecoder Fail")
+            
+        }
+        
+        return (user, nil)
     }
     
     func testCode() {

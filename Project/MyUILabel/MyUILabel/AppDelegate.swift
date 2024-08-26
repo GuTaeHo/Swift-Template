@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  MyUILabelSizeWithUIView
+//  MyUILabel
 //
-//  Created by 구태호 on 2022/11/10.
+//  Created by 구태호 on 8/24/24.
 //
 
 import UIKit
