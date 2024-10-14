@@ -6,7 +6,7 @@ struct SoyBeanPlayGroundApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MainView(isAnimating: $isAnimating)
+            MainTabView()
         }
     }
 }
