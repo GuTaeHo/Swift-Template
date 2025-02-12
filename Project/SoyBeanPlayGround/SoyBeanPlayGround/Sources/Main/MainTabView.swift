@@ -5,10 +5,10 @@ import SoyBeanUI
 public struct MainTabView: View {
     let core = SoyBeanCoreTest()
     let ui = SoyBeanUITest()
-    enum TabStatus {
-        case first
-        case second
-        case third
+    enum TabStatus: String {
+        case first = "first"
+        case second = "second"
+        case third = "example@example.com"
     }
     
     @State private var tab3Title = "Third"
@@ -37,7 +37,7 @@ public struct MainTabView: View {
                 .tag(TabStatus.third)
                 .badge(badgeCount)
         }.onChange(of: tabSelection) { newValue in
-            tab3Title = "안녕!".evaluate(with: .onlyEnglishKoreanNumAnsSomeSpecialCharacter) ? "통과" : "실패"
+            tab3Title = RegExpUtil.evaluate(type: .email, compareWith: newValue.rawValue) ? "이메일 O" : "이메일 X"
         }
     }
 }

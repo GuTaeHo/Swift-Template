@@ -10,7 +10,7 @@ struct SoyBeanPlayGroundApp: App {
             MainTabView(tabSelection: .constant(.first))
                 .onAppear(perform: {
                     let checkText = "안녕!"
-                    print(checkText.evaluate(with: .onlyEnglishKoreanNumAnsSomeSpecialCharacter) ? "통과" : "실패")
+                    print(RegExpUtil.evaluate(type: .email, compareWith: checkText))
                 })
         }
     }
