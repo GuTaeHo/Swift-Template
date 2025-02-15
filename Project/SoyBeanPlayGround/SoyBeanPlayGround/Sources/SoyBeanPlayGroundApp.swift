@@ -1,4 +1,5 @@
 import SwiftUI
+import SoyBeanCore
 
 @main
 struct SoyBeanPlayGroundApp: App {
@@ -10,7 +11,11 @@ struct SoyBeanPlayGroundApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MainView(isAnimating: $isAnimating)
+            MainTabView(tabSelection: .constant(.first))
+                .onAppear(perform: {
+                    let checkText = "안녕!"
+                    print(RegExpUtil.evaluate(type: .email, compareWith: checkText))
+                })
         }
     }
 }
