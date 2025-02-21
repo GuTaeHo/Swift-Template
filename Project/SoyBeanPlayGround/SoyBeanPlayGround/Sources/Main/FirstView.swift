@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SoyBeanUI
+import SoyBeanUtil
 
 
 struct FirstView: View {
@@ -14,11 +15,18 @@ struct FirstView: View {
     @State private var numberCount: Int = 0
     
     var body: some View {
-        NumberAnimationTextView(number: numberCount)
-            .onReceive(timer) { _ in
-                withAnimation {
-                    numberCount += Int.random(in: 0..<10)
+        VStack {
+            NumberAnimationTextView(number: numberCount)
+                .onReceive(timer) { _ in
+                    withAnimation {
+                        numberCount += Int.random(in: 0..<10)
+                    }
                 }
+            Button(action: {
+                Util.exitApp()
+            }) {
+                Text("앱 종료")
             }
+        }
     }
 }
