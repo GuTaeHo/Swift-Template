@@ -9,7 +9,7 @@ import SwiftUI
 import SoyBeanUI
 
 
-/// iOS 16 이상 애니메이션 적용
+/// - Note: iOS 16 이상 애니메이션 적용
 struct NumberAnimationTextView: View {
     @Binding var number: Int
     

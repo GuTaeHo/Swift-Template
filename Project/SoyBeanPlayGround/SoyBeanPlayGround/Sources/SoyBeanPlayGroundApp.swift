@@ -6,7 +6,7 @@ struct SoyBeanPlayGroundApp: App {
     @State var isAnimating: Bool = true
     
     init() {
-        print("등록된 폰트: \(UIFont.registerFonts())")
+        print("등록된 폰트: \(Font.registerFonts())")
     }
     
     var body: some Scene {
