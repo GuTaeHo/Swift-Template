@@ -1,5 +1,5 @@
 import SwiftUI
-import SoyBeanCore
+import SoyBeanUtil
 
 @main
 struct SoyBeanPlayGroundApp: App {
