@@ -24,5 +24,6 @@ struct LongPressView : View {
             .scaleEffect(isLongPressed ? 1.1 : 1)
             .gesture(longPress)
             .animation(.easeInOut, value: isLongPressed)
+            .contentShape(Rectangle())
     }
 }
