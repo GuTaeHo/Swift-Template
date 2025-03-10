@@ -16,7 +16,9 @@ struct FirstView: View {
     
     var body: some View {
         VStack {
-            NumberAnimationTextView(number: numberCount)
+            NumberAnimationTextView(font: .custom(.IBMPlexBold,
+                                                  size: 30),
+                                    number: numberCount)
                 .onReceive(timer) { _ in
                     withAnimation {
                         numberCount += Int.random(in: 0..<10)

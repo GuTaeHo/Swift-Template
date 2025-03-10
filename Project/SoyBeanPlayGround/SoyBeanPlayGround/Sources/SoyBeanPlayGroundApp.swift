@@ -4,6 +4,7 @@ import SoyBeanUI
 @main
 struct SoyBeanPlayGroundApp: App {
     init() {
+        _ = Font.registerFonts()
         print("등록된 폰트: \(Font.registerFonts())")
     }
     
