@@ -7,7 +7,6 @@
 
 import SwiftUI
 import SoyBeanCore
-import CoreHaptics
 
 
 
@@ -114,53 +113,53 @@ struct HapticView: View {
 
 
 
-class HapticManager {
-    private var engine: CHHapticEngine?
-
-    init() {
-        do {
-            engine = try CHHapticEngine()
-            try engine?.start()
-        } catch {
-            print("Haptic Engine 생성 실패: \(error.localizedDescription)")
-        }
-    }
-    
-    func playCustomHaptic() {
-        guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }
-
-        var events = [CHHapticEvent]()
-
-        // 강한 진동 (intensity: 1.0, sharpness: 1.0)
-        let strongHaptic = CHHapticEvent(
-            eventType: .hapticTransient,
-            parameters: [
-                CHHapticEventParameter(parameterID: .hapticIntensity, value: 1.0),
-                CHHapticEventParameter(parameterID: .hapticSharpness, value: 1.0)
-            ],
-            relativeTime: 0
-        )
-
-        // 약한 진동 (intensity: 0.5, sharpness: 0.5)
-        let weakHaptic = CHHapticEvent(
-            eventType: .hapticTransient,
-            parameters: [
-                CHHapticEventParameter(parameterID: .hapticIntensity, value: 0.5),
-                CHHapticEventParameter(parameterID: .hapticSharpness, value: 0.5)
-            ],
-            relativeTime: 0.2
-        )
-
-        events.append(strongHaptic)
-        events.append(weakHaptic)
-
-        // 패턴 생성
-        do {
-            let pattern = try CHHapticPattern(events: events, parameters: [])
-            let player = try engine?.makePlayer(with: pattern)
-            try player?.start(atTime: 0)
-        } catch {
-            print("Haptic Pattern 실행 실패: \(error.localizedDescription)")
-        }
-    }
-}
+//class HapticManager {
+//    private var engine: CHHapticEngine?
+//
+//    init() {
+//        do {
+//            engine = try CHHapticEngine()
+//            try engine?.start()
+//        } catch {
+//            print("Haptic Engine 생성 실패: \(error.localizedDescription)")
+//        }
+//    }
+//    
+//    func playCustomHaptic() {
+//        guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }
+//
+//        var events = [CHHapticEvent]()
+//
+//        // 강한 진동 (intensity: 1.0, sharpness: 1.0)
+//        let strongHaptic = CHHapticEvent(
+//            eventType: .hapticTransient,
+//            parameters: [
+//                CHHapticEventParameter(parameterID: .hapticIntensity, value: 1.0),
+//                CHHapticEventParameter(parameterID: .hapticSharpness, value: 1.0)
+//            ],
+//            relativeTime: 0
+//        )
+//
+//        // 약한 진동 (intensity: 0.5, sharpness: 0.5)
+//        let weakHaptic = CHHapticEvent(
+//            eventType: .hapticTransient,
+//            parameters: [
+//                CHHapticEventParameter(parameterID: .hapticIntensity, value: 0.5),
+//                CHHapticEventParameter(parameterID: .hapticSharpness, value: 0.5)
+//            ],
+//            relativeTime: 0.2
+//        )
+//
+//        events.append(strongHaptic)
+//        events.append(weakHaptic)
+//
+//        // 패턴 생성
+//        do {
+//            let pattern = try CHHapticPattern(events: events, parameters: [])
+//            let player = try engine?.makePlayer(with: pattern)
+//            try player?.start(atTime: 0)
+//        } catch {
+//            print("Haptic Pattern 실행 실패: \(error.localizedDescription)")
+//        }
+//    }
+//}
