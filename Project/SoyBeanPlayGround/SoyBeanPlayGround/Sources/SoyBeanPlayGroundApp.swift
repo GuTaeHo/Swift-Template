@@ -5,9 +5,14 @@ import SoyBeanCore
 @main
 struct SoyBeanPlayGroundApp: App {
     init() {
-        _ = Font.registerFonts()
         print("등록된 폰트: \(Font.registerFonts())")
-        print("로그 테스트: \(Log.debug("Hello, World!"))")
+        Log.debug("Hello, Debug!")
+        Log.info("Hello, Info!")
+        print("앱 명: \(Bundle.main.appName)")
+        print("앱 번들: \(Bundle.main.appBundleID)")
+        print("앱 버전: \(Bundle.main.appVersion)")
+        print("앱 빌드 번호: \(Bundle.main.appBuildNumber)")
+        print("앱 빌드 환경: \(Bundle.main.appInstallEnvironment.name)")
     }
     
     var body: some Scene {
