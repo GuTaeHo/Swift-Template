@@ -13,6 +13,7 @@
 		057327CB298A4C4000347730 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 057327C9298A4C4000347730 /* Main.storyboard */; };
 		057327CD298A4C4100347730 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 057327CC298A4C4100347730 /* Assets.xcassets */; };
 		057327D0298A4C4100347730 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 057327CE298A4C4100347730 /* LaunchScreen.storyboard */; };
+		05BEF0872DA3A837000CBBE7 /* Notification.Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BEF0862DA3A835000CBBE7 /* Notification.Name.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		057327CC298A4C4100347730 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		057327CF298A4C4100347730 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		057327D1298A4C4100347730 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05BEF0862DA3A835000CBBE7 /* Notification.Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.Name.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		057327C2298A4C4000347730 /* MyExternalAppOpen */ = {
 			isa = PBXGroup;
 			children = (
+				05BEF0862DA3A835000CBBE7 /* Notification.Name.swift */,
 				057327C3298A4C4000347730 /* AppDelegate.swift */,
 				057327C5298A4C4000347730 /* SceneDelegate.swift */,
 				057327C7298A4C4000347730 /* ViewController.swift */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05BEF0872DA3A837000CBBE7 /* Notification.Name.swift in Sources */,
 				057327C8298A4C4000347730 /* ViewController.swift in Sources */,
 				057327C4298A4C4000347730 /* AppDelegate.swift in Sources */,
 				057327C6298A4C4000347730 /* SceneDelegate.swift in Sources */,

@@ -1,15 +1,15 @@
 //
-//  GIFSDWebImageView.swift
+//  GIFKingfisherView.swift
 //  SoyBeanPlayGround
 //
-//  Created by 구태호 on 4/3/25.
+//  Created by 구태호 on 4/7/25.
 //
 
 import SwiftUI
-import SDWebImage
+import Kingfisher
 
 
-struct GIFSDWebImageView: UIViewRepresentable {
+struct GIFKingfisherView: UIViewRepresentable {
     var imageURL: String
     
     func makeUIView(context: Context) -> UIImageView {
@@ -18,7 +18,7 @@ struct GIFSDWebImageView: UIViewRepresentable {
         imageView.clipsToBounds = true
         
         if let url = URL(string: imageURL) {
-            imageView.sd_setImage(with: url)
+            imageView.kf.setImage(with: url)
         }
         return imageView
     }
@@ -27,13 +27,3 @@ struct GIFSDWebImageView: UIViewRepresentable {
         uiView.image = UIImage(named: imageURL)
     }
 }
-//
-//class SDWebImageViewUIKitView: UIImageView {
-//    override init(image: UIImage?) {
-//        super.init(image: image)
-//    }
-//    
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-//}
