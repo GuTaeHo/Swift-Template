@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		059E3AAB290BC9ED00CC30CB /* MyExternalAppUrlSchemeOpen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyExternalAppUrlSchemeOpen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		059E3AAB290BC9ED00CC30CB /* MyExternalAppOpener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyExternalAppOpener.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		059E3AAE290BC9ED00CC30CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		059E3AB0290BC9ED00CC30CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		059E3AB2290BC9ED00CC30CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		059E3AAC290BC9ED00CC30CB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				059E3AAB290BC9ED00CC30CB /* MyExternalAppUrlSchemeOpen.app */,
+				059E3AAB290BC9ED00CC30CB /* MyExternalAppOpener.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,15 +64,16 @@
 				059E3AB9290BC9EE00CC30CB /* LaunchScreen.storyboard */,
 				059E3ABC290BC9EE00CC30CB /* Info.plist */,
 			);
-			path = MyExternalAppUrlSchemeOpen;
+			name = MyExternalAppUrlSchemeOpen;
+			path = MyExternalAppOpener;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		059E3AAA290BC9ED00CC30CB /* MyExternalAppUrlSchemeOpen */ = {
+		059E3AAA290BC9ED00CC30CB /* MyExternalAppOpener */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 059E3ABF290BC9EE00CC30CB /* Build configuration list for PBXNativeTarget "MyExternalAppUrlSchemeOpen" */;
+			buildConfigurationList = 059E3ABF290BC9EE00CC30CB /* Build configuration list for PBXNativeTarget "MyExternalAppOpener" */;
 			buildPhases = (
 				059E3AA7290BC9ED00CC30CB /* Sources */,
 				059E3AA8290BC9ED00CC30CB /* Frameworks */,
@@ -82,9 +83,9 @@
 			);
 			dependencies = (
 			);
-			name = MyExternalAppUrlSchemeOpen;
+			name = MyExternalAppOpener;
 			productName = MyExternalAppUrlSchemeOpen;
-			productReference = 059E3AAB290BC9ED00CC30CB /* MyExternalAppUrlSchemeOpen.app */;
+			productReference = 059E3AAB290BC9ED00CC30CB /* MyExternalAppOpener.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +103,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 059E3AA6290BC9ED00CC30CB /* Build configuration list for PBXProject "MyExternalAppUrlSchemeOpen" */;
+			buildConfigurationList = 059E3AA6290BC9ED00CC30CB /* Build configuration list for PBXProject "MyExternalAppOpener" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +116,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				059E3AAA290BC9ED00CC30CB /* MyExternalAppUrlSchemeOpen */,
+				059E3AAA290BC9ED00CC30CB /* MyExternalAppOpener */,
 			);
 		};
 /* End PBXProject section */
@@ -287,9 +288,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L8WFLHVUYX;
+				DEVELOPMENT_TEAM = 3MDWMG7Z69;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyExternalAppUrlSchemeOpen/Info.plist;
+				INFOPLIST_FILE = MyExternalAppOpener/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -301,7 +302,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyExternalAppUrlSchemeOpen;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyExternalAppOpener;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -316,9 +317,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L8WFLHVUYX;
+				DEVELOPMENT_TEAM = 82F458XMQ9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyExternalAppUrlSchemeOpen/Info.plist;
+				INFOPLIST_FILE = MyExternalAppOpener/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -330,7 +331,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyExternalAppUrlSchemeOpen;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyExternalAppOpener;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -341,7 +342,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		059E3AA6290BC9ED00CC30CB /* Build configuration list for PBXProject "MyExternalAppUrlSchemeOpen" */ = {
+		059E3AA6290BC9ED00CC30CB /* Build configuration list for PBXProject "MyExternalAppOpener" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				059E3ABD290BC9EE00CC30CB /* Debug */,
@@ -350,7 +351,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		059E3ABF290BC9EE00CC30CB /* Build configuration list for PBXNativeTarget "MyExternalAppUrlSchemeOpen" */ = {
+		059E3ABF290BC9EE00CC30CB /* Build configuration list for PBXNativeTarget "MyExternalAppOpener" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				059E3AC0290BC9EE00CC30CB /* Debug */,
