@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         if let delegate = UIApplication
             .shared
             .connectedScenes
-            .first(where: { $0.activationState == .foregroundActive})?
+            .first?
             .delegate as? SceneDelegate,
            let receiveURL = delegate.receiveURL
         {
