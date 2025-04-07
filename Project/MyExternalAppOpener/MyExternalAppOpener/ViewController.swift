@@ -28,11 +28,11 @@ import UIKit
  ```xml
  <key>LSApplicationQueriesSchemes</key>
  <array>
-     <string>myExternalAppOpen</string>
+     <string>myExternalAppReceiver</string>
  </array>
  ```
  
- **작성된 URL Scheme (myExternalAppOpen)** 은 열리는 쪽에 등록된 URL Scheme 과 동일해야한다.
+ **작성된 URL Scheme (myExternalAppReceiver)** 은 열리는 쪽에 등록된 URL Scheme 과 동일해야한다.
  ```
  */
 
@@ -48,7 +48,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func openMyExternalAppOpenApp(_ sender: Any) {
-        let urlScheme = "myExternalAppOpen://\(tfHost.text ?? "")"
+        let urlScheme = "myExternalAppReceiver://\(tfHost.text ?? "")"
         var components = URLComponents(string: urlScheme)
         components?.queryItems = [
             .init(name: "name", value: tfName.text ?? ""),
