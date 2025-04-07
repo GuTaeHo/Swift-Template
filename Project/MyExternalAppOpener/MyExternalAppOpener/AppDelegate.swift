@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  MyExternalAppUrlSchemeOpen
+//  MyExternalAppOpener
 //
 //  Created by 구태호 on 2022/10/28.
 //

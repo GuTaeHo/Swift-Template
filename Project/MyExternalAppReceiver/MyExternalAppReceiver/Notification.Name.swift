@@ -1,6 +1,6 @@
 //
 //  Notification.Name.swift
-//  MyExternalAppOpen
+//  MyExternalAppReceiver
 //
 //  Created by 구태호 on 4/7/25.
 //

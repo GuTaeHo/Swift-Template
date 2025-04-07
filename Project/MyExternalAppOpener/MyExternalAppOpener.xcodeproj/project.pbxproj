@@ -13,6 +13,7 @@
 		059E3AB6290BC9ED00CC30CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059E3AB4290BC9ED00CC30CB /* Main.storyboard */; };
 		059E3AB8290BC9EE00CC30CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 059E3AB7290BC9EE00CC30CB /* Assets.xcassets */; };
 		059E3ABB290BC9EE00CC30CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059E3AB9290BC9EE00CC30CB /* LaunchScreen.storyboard */; };
+		60B99A542DA414D80030EE39 /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 60B99A532DA414D80030EE39 /* AppIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		059E3AB7290BC9EE00CC30CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		059E3ABA290BC9EE00CC30CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		059E3ABC290BC9EE00CC30CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60B99A532DA414D80030EE39 /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				059E3AB7290BC9EE00CC30CB /* Assets.xcassets */,
 				059E3AB9290BC9EE00CC30CB /* LaunchScreen.storyboard */,
 				059E3ABC290BC9EE00CC30CB /* Info.plist */,
+				60B99A532DA414D80030EE39 /* AppIcon.png */,
 			);
 			name = MyExternalAppUrlSchemeOpen;
 			path = MyExternalAppOpener;
@@ -126,6 +129,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60B99A542DA414D80030EE39 /* AppIcon.png in Resources */,
 				059E3ABB290BC9EE00CC30CB /* LaunchScreen.storyboard in Resources */,
 				059E3AB8290BC9EE00CC30CB /* Assets.xcassets in Resources */,
 				059E3AB6290BC9ED00CC30CB /* Main.storyboard in Resources */,
@@ -291,6 +295,7 @@
 				DEVELOPMENT_TEAM = 3MDWMG7Z69;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyExternalAppOpener/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "오프너";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -320,6 +325,7 @@
 				DEVELOPMENT_TEAM = 82F458XMQ9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyExternalAppOpener/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "오프너";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

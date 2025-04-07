@@ -4,16 +4,16 @@
 <dict>
 	<key>CFBundleURLTypes</key>
 	<array>
-        <dict>
-            <key>CFBundleTypeRole</key>
-            <string>Editor</string>
-            <key>CFBundleURLName</key>
-            <string>com.example.MyExternalAppOpen</string>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>myExternalAppOpen</string>
-            </array>
-        </dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.example.MyExternalAppReceiver</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>myExternalAppReceiver</string>
+			</array>
+		</dict>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
