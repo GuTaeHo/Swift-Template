@@ -73,13 +73,35 @@
                                 <edgeInsets key="layoutMargins" top="18" left="12" bottom="18" right="12"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="giu-jv-jFm">
-                                <rect key="frame" x="18" y="729.66666666666663" width="354" height="34.333333333333371"/>
+                                <rect key="frame" x="18" y="716" width="354" height="48"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6r-Sx-mav">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="34.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="tLp-I4-tj6"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="리시버 앱 열기">
-                                            <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule" titleAlignment="center">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="리시버 앱 열기">
+                                                    <attributes>
+                                                        <font key="NSFont" size="18" name="AppleSDGothicNeo-Bold"/>
+                                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <attributedString key="attributedSubtitle">
+                                                <fragment content="MyExternalAppReceiver">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="12" name="AppleSDGothicNeo-SemiBold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseForegroundColor" systemColor="darkTextColor"/>
+                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="openMyExternalAppOpenApp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aR2-ez-xVi"/>
@@ -121,11 +143,11 @@
     </scenes>
     <resources>
         <image name="AppIcon.png" width="1024" height="1024"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
