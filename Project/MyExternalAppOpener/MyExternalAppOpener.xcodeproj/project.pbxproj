@@ -295,7 +295,7 @@
 				DEVELOPMENT_TEAM = 3MDWMG7Z69;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyExternalAppOpener/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "오프너";
+				INFOPLIST_KEY_CFBundleDisplayName = "오프너(센더)";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -325,7 +325,7 @@
 				DEVELOPMENT_TEAM = 82F458XMQ9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyExternalAppOpener/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "오프너";
+				INFOPLIST_KEY_CFBundleDisplayName = "오프너(센더)";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
