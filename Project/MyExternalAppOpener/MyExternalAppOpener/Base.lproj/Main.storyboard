@@ -131,6 +131,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonStackView" destination="giu-jv-jFm" id="Ys6-Dw-hOc"/>
                         <outlet property="tfAge" destination="mhq-3r-xqG" id="tJ0-bb-tRz"/>
                         <outlet property="tfHost" destination="BHp-xK-d9w" id="w6B-mG-WbV"/>
                         <outlet property="tfName" destination="Spj-HE-8PS" id="NZR-iU-DkO"/>

@@ -41,10 +41,14 @@ class ViewController: UIViewController {
     @IBOutlet var tfName: UITextField!
     @IBOutlet var tfAge: UITextField!
     
+    @IBOutlet var buttonStackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        view.layoutIfNeeded()
+        buttonStackView.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor,
+                                                constant: -12).isActive = true
     }
     
     @IBAction func openMyExternalAppOpenApp(_ sender: Any) {
