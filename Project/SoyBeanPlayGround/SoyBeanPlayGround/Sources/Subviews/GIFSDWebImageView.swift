@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import SDWebImage
+//import SDWebImage
 
 
 struct GIFSDWebImageView: UIViewRepresentable {
@@ -18,7 +18,7 @@ struct GIFSDWebImageView: UIViewRepresentable {
         imageView.clipsToBounds = true
         
         if let url = URL(string: imageURL) {
-            imageView.sd_setImage(with: url)
+//            imageView.sd_setImage(with: url)
         }
         return imageView
     }

@@ -21,6 +21,7 @@ struct SoyBeanPlayGroundApp: App {
                 List {
                     NavigationLink("롱프레스 뷰", destination: LongPressView())
                     NavigationLink("햅틱 뷰", destination: HapticView())
+                    NavigationLink("숫자 애니매이션 카운트 뷰", destination: NumberAnimationView())
                     NavigationLink("SDWebImageView", destination: GIFImageTestView())
                 }
                 .navigationTitle("메인 뷰")

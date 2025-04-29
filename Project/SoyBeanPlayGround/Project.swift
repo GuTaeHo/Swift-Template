@@ -41,7 +41,8 @@ let project = Project(
                 .package(product: "Lottie"),
                 .package(product: "Swinject"),
                 .package(product: "SoyBeanUI"),
-                .package(product: "SoyBeanCore")
+                .package(product: "SoyBeanCore"),
+                .package(product: "SoyBeanUtil")
             ]
         ),
         .target(
