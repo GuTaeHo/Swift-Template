@@ -25,7 +25,7 @@ struct NumberAnimationView: View {
                 }
             }
         Button(action: {
-            Util.exitApp()
+            AppUtil.exitApp()
         }) {
             Text("앱 종료")
         }
