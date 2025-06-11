@@ -24,8 +24,9 @@ struct SoyBeanPlayGroundApp: App {
                     NavigationLink("숫자 애니매이션 카운트 뷰", destination: NumberAnimationView())
                     NavigationLink("SDWebImageView", destination: GIFImageTestView())
                     NavigationLink("SwiftUI 에서 UIKit 뷰 사용", destination: UIKitViewOnSwiftUIView())
+                    NavigationLink("KeyChainView", destination: KeyChainView())
                 }
-                .navigationTitle("메인 뷰")
+                .navigationTitle("SoyBean Playground")
             }
         }
     }
