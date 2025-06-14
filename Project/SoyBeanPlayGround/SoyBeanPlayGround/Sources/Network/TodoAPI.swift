@@ -10,7 +10,7 @@ import Moya
 
 
 enum TodoAPI {
-    case getTodo(id: Int)
+    case getTodo
 }
 
 extension TodoAPI: TargetType {
@@ -20,8 +20,8 @@ extension TodoAPI: TargetType {
     
     var path: String {
         switch self {
-        case .getTodo(let id):
-            return "/todos/\(id)"
+        case .getTodo:
+            return "/todos"
         }
     }
     

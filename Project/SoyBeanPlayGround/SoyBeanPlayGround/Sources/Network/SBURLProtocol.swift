@@ -21,9 +21,9 @@ final class SBURLProtocol: URLProtocol {
     // 무한 루프 방지를 위한 키
     static let handledKey = "SBURLProtocolHandlerKey"
     
-    static let shared = SBURLProtocol()
+    static weak var delegate: SBURLProtocol.Delegate?
     
-    weak var delegate: SBURLProtocol.Delegate?
+    private var customTask: URLSessionTask?
 
     // 이 요청을 처리할 것인지 여부 결정
     override class func canInit(with request: URLRequest) -> Bool {
@@ -31,7 +31,8 @@ final class SBURLProtocol: URLProtocol {
         if URLProtocol.property(forKey: handledKey, in: request) != nil {
             return false
         }
-        return true
+        
+        return request.url?.scheme == "http" || request.url?.scheme == "https"
     }
 
     override class func canonicalRequest(for request: URLRequest) -> URLRequest {
@@ -47,10 +48,10 @@ final class SBURLProtocol: URLProtocol {
     override func startLoading() {
         let newRequest = (request as NSURLRequest).mutableCopy() as! NSMutableURLRequest
         URLProtocol.setProperty(true, forKey: SBURLProtocol.handledKey, in: newRequest)
-        delegate?.didReceive(request: request)
+        SBURLProtocol.delegate?.didReceive(request: request)
 
         let session = URLSession(configuration: .default)
-        let task = session.dataTask(with: newRequest as URLRequest) { data, response, error in
+        customTask = session.dataTask(with: newRequest as URLRequest) { data, response, error in
             if let response = response {
                 self.client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .notAllowed)
             }
@@ -63,6 +64,10 @@ final class SBURLProtocol: URLProtocol {
                 self.client?.urlProtocolDidFinishLoading(self)
             }
         }
-        task.resume()
+        customTask?.resume()
+    }
+    
+    override func stopLoading() {
+        customTask?.cancel()
     }
 }

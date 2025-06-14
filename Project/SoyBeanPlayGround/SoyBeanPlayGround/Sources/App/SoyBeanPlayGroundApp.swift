@@ -13,6 +13,7 @@ struct SoyBeanPlayGroundApp: App {
         print("앱 버전: \(Bundle.main.appVersion)")
         print("앱 빌드 번호: \(Bundle.main.appBuildNumber)")
         print("앱 빌드 환경: \(Bundle.main.appInstallEnvironment.name)")
+        SBNetworkLoggingManager.shared.start()
     }
     
     var body: some Scene {
@@ -25,9 +26,12 @@ struct SoyBeanPlayGroundApp: App {
                     NavigationLink("SDWebImageView", destination: GIFImageTestView())
                     NavigationLink("SwiftUI 에서 UIKit 뷰 사용", destination: UIKitViewOnSwiftUIView())
                     NavigationLink("KeyChainView", destination: KeyChainView())
+                    NavigationLink("NetworkLoggingView", destination: NetworkLoggingView())
                 }
                 .navigationTitle("SoyBean Playground")
             }
         }
     }
+    
+    
 }
