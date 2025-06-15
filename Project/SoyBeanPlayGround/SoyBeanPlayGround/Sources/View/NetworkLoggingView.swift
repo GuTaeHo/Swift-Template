@@ -10,6 +10,9 @@ import Moya
 import SwiftUI
 import Combine
 import SoyBeanCore
+import netfox
+import Pulse
+import PulseUI
 
 
 let session = {
@@ -40,6 +43,12 @@ struct NetworkLoggingView: View {
             Button("from Alamofire") {
                 fetchTodoWithMoya()
             }
+            
+            Button("show netfox") {
+                NFX.sharedInstance().show()
+            }
+            
+            NavigationLink("show pulse", destination: ConsoleView())
         }
         
         ScrollView {

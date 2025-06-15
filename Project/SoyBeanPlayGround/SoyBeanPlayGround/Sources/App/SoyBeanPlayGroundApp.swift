@@ -1,6 +1,8 @@
 import SwiftUI
 import SoyBeanCore
 import SoyBeanUI
+import netfox
+import Pulse
 
 @main
 struct SoyBeanPlayGroundApp: App {
@@ -14,6 +16,11 @@ struct SoyBeanPlayGroundApp: App {
         print("앱 빌드 번호: \(Bundle.main.appBuildNumber)")
         print("앱 빌드 환경: \(Bundle.main.appInstallEnvironment.name)")
         SBNetworkLoggingManager.shared.start()
+        
+        #if DEBUG
+        // netfox > URLSession 캡처 활성화
+        NFX.sharedInstance().start()
+        #endif
     }
     
     var body: some Scene {
@@ -30,8 +37,10 @@ struct SoyBeanPlayGroundApp: App {
                 }
                 .navigationTitle("SoyBean Playground")
             }
+            .onAppear {
+                // Pulse > URLSession 캡처 활성화
+                URLSessionProxyDelegate.enableAutomaticRegistration()
+            }
         }
     }
-    
-    
 }

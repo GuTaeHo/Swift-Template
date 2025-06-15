@@ -84,8 +84,10 @@ public final class SBNetworkLoggingManager {
 
 extension SBNetworkLoggingManager: SBURLProtocol.Delegate {
     func didReceive(request: URLRequest) {
-        var requests = requestsSubject.value
-        requests.append(request)
-        self.requestsSubject.send(requests)
+        if status == .start {
+            var requests = requestsSubject.value
+            requests.append(request)
+            self.requestsSubject.send(requests)
+        }
     }
 }
