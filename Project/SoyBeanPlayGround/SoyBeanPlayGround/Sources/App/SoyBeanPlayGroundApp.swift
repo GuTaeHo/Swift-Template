@@ -15,6 +15,7 @@ struct SoyBeanPlayGroundApp: App {
         print("앱 버전: \(Bundle.main.appVersion)")
         print("앱 빌드 번호: \(Bundle.main.appBuildNumber)")
         print("앱 빌드 환경: \(Bundle.main.appInstallEnvironment.name)")
+        // SoyBean > URLSession 캡처 활성화
         SBNetworkLoggingManager.shared.start()
         
         #if DEBUG
