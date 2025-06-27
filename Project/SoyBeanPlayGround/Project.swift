@@ -1,22 +1,21 @@
 import ProjectDescription
 
-//Project(name: <#T##String#>, organizationName: <#T##String?#>, classPrefix: <#T##String?#>, options: <#T##Project.Options#>, packages: <#T##[Package]#>, settings: <#T##Settings?#>, targets: <#T##[Target]#>, schemes: <#T##[Scheme]#>, fileHeaderTemplate: <#T##FileHeaderTemplate?#>, additionalFiles: <#T##[FileElement]#>, resourceSynthesizers: <#T##[ResourceSynthesizer]#>)
-
     
 let project = Project(
     name: "SoyBeanPlayGround",
     packages: [
         .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.9.1")),
+        .package(url: "https://github.com/Moya/Moya.git", .upToNextMajor(from: "15.0.0")),
         .package(url: "https://github.com/devxoul/Then.git", .upToNextMajor(from: "3.0.0")),
         .package(url: "https://github.com/SnapKit/SnapKit.git", .upToNextMajor(from: "5.7.1")),
         .package(url: "https://github.com/onevcat/Kingfisher.git", .upToNextMajor(from: "8.0.3")),
         .package(url: "https://github.com/airbnb/lottie-spm.git", .upToNextMajor(from: "4.5.0")),
         .package(url: "https://github.com/Swinject/Swinject.git", .upToNextMajor(from: "2.9.0")),
-        .package(url: "https://github.com/Swinject/Swinject.git", .upToNextMajor(from: "2.9.0")),
-        .package(url: "https://github.com/GuTaeHo/SoyBean.git", .branch("main")),
+        .package(url: "https://github.com/GuTaeHo/SoyBean.git", .branch("develop")),
+        .package(url: "https://github.com/kean/Pulse.git", .upToNextMajor(from: "5.0.0")),
+        .package(url: "https://github.com/kasketis/netfox.git", .upToNextMajor(from: "1.0.0"))
     ],
     targets: [
-//        .target(name: <#T##String#>, destinations: <#T##Destinations#>, product: <#T##Product#>, productName: <#T##String?#>, bundleId: <#T##String#>, deploymentTargets: <#T##DeploymentTargets?#>, infoPlist: <#T##InfoPlist?#>, sources: <#T##SourceFilesList?#>, resources: <#T##ResourceFileElements?#>, copyFiles: <#T##[CopyFilesAction]?#>, headers: <#T##Headers?#>, entitlements: <#T##Entitlements?#>, scripts: <#T##[TargetScript]#>, dependencies: <#T##[TargetDependency]#>, settings: <#T##Settings?#>, coreDataModels: <#T##[CoreDataModel]#>, environmentVariables: <#T##[String : EnvironmentVariable]#>, launchArguments: <#T##[LaunchArgument]#>, additionalFiles: <#T##[FileElement]#>, buildRules: <#T##[BuildRule]#>, mergedBinaryType: <#T##MergedBinaryType#>, mergeable: <#T##Bool#>, onDemandResourcesTags: <#T##OnDemandResourcesTags?#>)
         .target(
             name: "SoyBeanPlayGround",
             destinations: .iOS,
@@ -35,6 +34,7 @@ let project = Project(
             resources: ["SoyBeanPlayGround/Resources/**"],
             dependencies: [
                 .package(product: "Alamofire"),
+                .package(product: "Moya"),
                 .package(product: "Then"),
                 .package(product: "SnapKit"),
                 .package(product: "Kingfisher"),
@@ -42,8 +42,19 @@ let project = Project(
                 .package(product: "Swinject"),
                 .package(product: "SoyBeanUI"),
                 .package(product: "SoyBeanCore"),
-                .package(product: "SoyBeanUtil")
-            ]
+                .package(product: "SoyBeanUtil"),
+                .package(product: "Pulse"),
+                .package(product: "PulseUI"),
+                .package(product: "netfox"),
+            ],
+            settings: .settings(
+                base: [
+                // 자동 서명
+                "CODE_SIGN_STYLE": "Automatic",
+                // Apple Developer Team ID
+                "DEVELOPMENT_TEAM": "3MDWMG7Z69",
+                ],
+            )
         ),
         .target(
             name: "SoyBeanPlayGroundTests",
