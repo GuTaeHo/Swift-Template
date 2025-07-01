@@ -34,6 +34,7 @@ struct SoyBeanPlayGroundApp: App {
                     NavigationLink("SDWebImageView", destination: GIFImageTestView())
                     NavigationLink("SwiftUI 에서 UIKit 뷰 사용", destination: UIKitViewOnSwiftUIView())
                     NavigationLink("KeyChainView", destination: KeyChainView())
+                    NavigationLink("UserDefaultsAnalyzerView", destination: UserDefaultsAnalyzerView())
                     NavigationLink("NetworkLoggingView", destination: NetworkLoggingView())
                 }
                 .navigationTitle("SoyBean Playground")
