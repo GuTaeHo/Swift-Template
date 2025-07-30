@@ -60,6 +60,10 @@ struct KeyChainView: View {
                         .clipShape(.capsule)
                     }
                 }
+                Button("키체인 일괄삭제") {
+                    print(KeychainManager.shared.deleteAll())
+                    reloadData()
+                }
             }
             .animation(.default, value: isDeleteMode)
             .animation(.default, value: key)
