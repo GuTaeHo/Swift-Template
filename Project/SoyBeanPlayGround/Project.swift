@@ -43,6 +43,7 @@ let project = Project(
                 .package(product: "SoyBeanUI"),
                 .package(product: "SoyBeanCore"),
                 .package(product: "SoyBeanUtil"),
+                .package(product: "SoyBean"),
                 .package(product: "Pulse"),
                 .package(product: "PulseUI"),
                 .package(product: "netfox"),

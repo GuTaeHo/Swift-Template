@@ -1,6 +1,5 @@
 import SwiftUI
-import SoyBeanCore
-import SoyBeanUI
+import SoyBean
 import netfox
 import Pulse
 
