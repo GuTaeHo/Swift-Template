@@ -35,6 +35,9 @@ struct SoyBeanPlayGroundApp: App {
                     NavigationLink("KeyChainView", destination: KeyChainView())
                     NavigationLink("UserDefaultsAnalyzerView", destination: UserDefaultsAnalyzerView())
                     NavigationLink("NetworkLoggingView", destination: NetworkLoggingView())
+                    if #available(iOS 17, *) {
+                        NavigationLink("ScrollTransitionView", destination: ScrollTransitionView())
+                    }
                 }
                 .navigationTitle("SoyBean Playground")
             }
